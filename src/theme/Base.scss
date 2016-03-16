@@ -1,0 +1,28 @@
+@import 'Reset';
+
+//@import 'Fonts/Lobster';
+//@import 'Fonts/PTSans';
+
+$baseFont: 'PT Sans';
+$baseFontSize: 16px;
+
+$baseColor: #7d7d7d;
+$baseBackgroundColor: #f3f4f4;
+$transparentColor: rgba(0, 0, 0, 0);
+
+$baseMinWidth: 320px;
+
+html {
+    font-family: $baseFont;
+    font-size: $baseFontSize;
+    // Disable touch highlight on Apple devices
+    -webkit-tap-highlight-color: $transparentColor;
+    // Disable font-size change on Apple devices
+    text-size-adjust: 100%;
+}
+
+body {
+    min-width: $baseMinWidth;
+    background-color: $baseBackgroundColor;
+    color: $baseColor;
+}

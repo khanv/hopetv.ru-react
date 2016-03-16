@@ -1,0 +1,22 @@
+scss_files: "src/**/*.scss"
+linters:
+  PropertySortOrder:
+    order: smacss
+
+  SelectorFormat:
+    convention: camel_case
+
+  NameFormat:
+    convention: camel_case
+
+  Indentation:
+    width: 4
+
+  SelectorDepth:
+    enabled: false
+
+  NestingDepth:
+    enabled: false
+
+  UnnecessaryParentReference:
+    enabled: false
