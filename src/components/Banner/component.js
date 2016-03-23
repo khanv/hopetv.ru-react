@@ -12,7 +12,7 @@ export default class Banner extends Component {
         
         return (
             <section>
-                <PixelPerfect templates={ templates } component={ this.constructor.displayName } opacity={ 45 }/>
+                <PixelPerfect templates={ templates } component={ this.constructor.displayName } opacity={ 40 }/>
                 <h1>Banner</h1>
             </section>
         );

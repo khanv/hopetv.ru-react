@@ -72,7 +72,8 @@ export default class PixelPerfect extends Component {
 
         this.setState({
             currentBreakpoint: getCurrentBreakpoint(global.window.innerWidth, this.props.breakPoints),
-            template: getCurrentTemplate(global.window.innerWidth, this.props.breakPoints)
+            template: getCurrentTemplate(global.window.innerWidth, this.props.breakPoints),
+            opacity: this.props.opacity
         })
 
         global.window.onresize = this.onResize;
@@ -83,7 +84,7 @@ export default class PixelPerfect extends Component {
         this.state = {
             currentBreakpoint: '',
             width: '',
-            opacity: 80,
+            opacity: '',
             visible: true,
             template: false
         };
