@@ -4,3 +4,4 @@
  *  ie: import { CounterButton, InfoBar } from 'components';
  *
  */
+export Banner from './Banner/component';
