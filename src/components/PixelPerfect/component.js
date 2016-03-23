@@ -30,7 +30,25 @@ function getCurrentBreakpoint(currentWidth, breakPoints) {
 }
 
 function getCurrentTemplate(currentWidth, breakPoints) {
-
+    if (currentWidth === breakPoints.phonePortrait.template) {
+        return true;
+    } else if (currentWidth === breakPoints.phoneLandscape.template) {
+        return true;
+    } else if (currentWidth === breakPoints.tabletPortrait.template) {
+        return true;
+    } else if (currentWidth === breakPoints.tabletLandscape.template) {
+        return true;
+    } else if (currentWidth === breakPoints.desktop.template) {
+        return true;
+    } else if (currentWidth === breakPoints.desktopWide.template) {
+        return true;
+    } else if (currentWidth === breakPoints.desktopHD.template) {
+        return true;
+    } else if (currentWidth === breakPoints.desktopMega.template) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 export default class PixelPerfect extends Component {
@@ -53,7 +71,8 @@ export default class PixelPerfect extends Component {
         });
 
         this.setState({
-            currentBreakpoint: getCurrentBreakpoint(global.window.innerWidth, this.props.breakPoints)
+            currentBreakpoint: getCurrentBreakpoint(global.window.innerWidth, this.props.breakPoints),
+            template: getCurrentTemplate(global.window.innerWidth, this.props.breakPoints)
         })
 
         global.window.onresize = this.onResize;
@@ -65,7 +84,8 @@ export default class PixelPerfect extends Component {
             currentBreakpoint: '',
             width: '',
             opacity: 80,
-            visible: true
+            visible: true,
+            template: false
         };
     }
 
@@ -112,7 +132,8 @@ export default class PixelPerfect extends Component {
 
         this.setState({
             width,
-            currentBreakpoint: getCurrentBreakpoint(width, this.props.breakPoints)
+            currentBreakpoint: getCurrentBreakpoint(width, this.props.breakPoints),
+            template: getCurrentTemplate(width, this.props.breakPoints)
         });
     };
 
@@ -120,8 +141,11 @@ export default class PixelPerfect extends Component {
         const { templates, component, opacity, breakPoints } = this.props;
         const { width, currentBreakpoint, visible } = this.state;
         const currentOpacity = this.state.opacity;
+        const templateStatus = this.state.template;
+
         const wrapClasses = cx({
             [Styles.hidden]: visible === false,
+            [Styles.disabled]: templateStatus === false,
             [Styles.pixelPerfectWrap]: true
         });
 
@@ -134,7 +158,7 @@ export default class PixelPerfect extends Component {
         const images = templates.map((breakPoint) => {
             const src = `/PixelPerfect/${component}/${breakPoint}.png`;
             const classes = cx({
-                [Styles.visible]: breakPoint === 'desktop'
+                [Styles.visible]: breakPoint === this.state.currentBreakpoint
             });
             return (
                 <img key={ breakPoint } src={ src } className={ classes }/>
