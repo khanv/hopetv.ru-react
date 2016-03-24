@@ -1,1 +1,0 @@
-// <PixelPerfect templates=['desktopWide, tabletPortrait, phonePortrait'] component='componentName' opacity='75'>
