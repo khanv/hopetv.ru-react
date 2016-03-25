@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom/server';
 import serialize from 'serialize-javascript';
 import Helmet from 'react-helmet';
-import gtm from 'react-google-tag-manager';
 
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
@@ -24,9 +23,6 @@ export default class Html extends Component {
         const { assets, component, store } = this.props;
         const content = component ? ReactDOM.renderToString(component) : '';
         const head = Helmet.rewind();
-        const gtmInstance = gtm({
-            id: ''
-        });
 
         return (
             <html lang="ru">
@@ -59,9 +55,6 @@ export default class Html extends Component {
                     ) }
                 </head>
                 <body>
-                    { gtmInstance.noScriptAsReact() }
-                    { gtmInstance.scriptAsReact() }
-
                     <div id="content" dangerouslySetInnerHTML={ { __html: content } }/>
                     <script
                         dangerouslySetInnerHTML={ { __html: `window.__data=${serialize(store.getState())};` } }
