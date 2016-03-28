@@ -1,0 +1,14 @@
+& {
+    path {
+        fill: #dfe1e2;
+        transition: fill 0.2s ease-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        path {
+            fill: #f9c90f;
+        }
+    }
+}

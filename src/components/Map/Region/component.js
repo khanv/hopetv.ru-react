@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { translate } from 'react-i18next';
+import Styles from './main.scss';
 
 function Region(props) {
     const { path, title, t } = props;
@@ -9,10 +10,10 @@ function Region(props) {
         fontSize: '28px'
     };
 
-    //let titleText = t(title.text).;
+    // let titleText = t(title.text).;
 
     return (
-        <g>
+        <g className={ Styles.region }>
             <path d={ path } fill="#DFE1E2"/>
             <text
                 x={ title.pos.x }
