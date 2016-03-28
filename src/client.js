@@ -16,6 +16,9 @@ const history = useScroll(() => browserHistory)();
 const dest = document.getElementById('content');
 const store = createStore(history, window.__data);
 
+import { I18nextProvider } from 'react-i18next';
+import i18n from 'helpers/i18n';
+
 /* eslint-disable react/jsx-no-bind, arrow-parens */
 const component = (
     <Router
@@ -29,7 +32,9 @@ const component = (
 
 ReactDOM.render(
     <Provider store={ store } key="provider">
-        { component }
+        <I18nextProvider i18n={ i18n }>
+            { component }
+        </I18nextProvider>
     </Provider>,
     dest
 );

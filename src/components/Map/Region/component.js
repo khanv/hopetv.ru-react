@@ -1,12 +1,15 @@
 import React, { Component, PropTypes } from 'react';
+import { translate } from 'react-i18next';
 
-export default function Region(props) {
-    const { path, title } = props;
+function Region(props) {
+    const { path, title, t } = props;
     const textStyle = {
         fill: '#6D7A7C',
         fontFamily: 'PTSans-Narrow',
         fontSize: '28px'
     };
+
+    //let titleText = t(title.text).;
 
     return (
         <g>
@@ -16,7 +19,7 @@ export default function Region(props) {
                 y={ title.pos.y }
                 style={ textStyle }
             >
-                { title.text }
+                { t(title.text) }
             </text>
         </g>
     );
@@ -24,5 +27,8 @@ export default function Region(props) {
 
 Region.propTypes = {
     path: PropTypes.string.isRequired,
-    title: PropTypes.object.isRequired
+    title: PropTypes.object.isRequired,
+    t: PropTypes.func
 };
+
+export default translate(['region'])(Region);
