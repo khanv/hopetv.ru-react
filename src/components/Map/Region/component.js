@@ -4,11 +4,6 @@ import Styles from './main.scss';
 
 function Region(props) {
     const { path, title, t } = props;
-    const textStyle = {
-        fill: '#6D7A7C',
-        fontFamily: 'PTSans-Narrow',
-        fontSize: '28px'
-    };
 
     // let titleText = t(title.text).;
 
@@ -18,7 +13,6 @@ function Region(props) {
             <text
                 x={ title.pos.x }
                 y={ title.pos.y }
-                style={ textStyle }
             >
                 { t(title.text) }
             </text>

@@ -114,6 +114,7 @@
     "superagent": "^1.4.0",
     "urijs": "^1.17.1",
     "url-loader": "^0.5.7",
+    "velocity-react": "^1.1.4",
     "warning": "^2.1.0",
     "webpack-isomorphic-tools": "^2.2.18"
   },
