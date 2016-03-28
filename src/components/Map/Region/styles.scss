@@ -1,0 +1,29 @@
+& {
+    path {
+        fill: #dfe1e2;
+        transition: fill 0.2s ease-out;
+    }
+
+    text {
+        font-family: 'PTSans-Narrow';
+        fill: #6D7A7C;
+        font-size: 28px;
+        text-anchor: middle;
+        transition: font-size 0.2s ease-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        path {
+            fill: #f9c90f;
+            transform: skewX(20deg);
+        }
+
+        text {
+            fill: #fff;
+            //font-weight: bold;
+            font-size: 32px;
+        }
+    }
+}
