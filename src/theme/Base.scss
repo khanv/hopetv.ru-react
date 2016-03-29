@@ -6,11 +6,12 @@
 $baseFont: 'PT Sans';
 $baseFontSize: 16px;
 
+$baseMinWidth: 320px;
+
+// Palette
 $baseColor: #7d7d7d;
 $baseBackgroundColor: #f3f4f4;
 $transparentColor: rgba(0, 0, 0, 0);
-
-$baseMinWidth: 320px;
 
 html {
     font-family: $baseFont;

@@ -12,9 +12,9 @@
     }
 
     text {
-        fill: $textColor;
-        font-size: 28px;
         font-family: PTSans-bold;
+        font-size: 28px;
+        fill: $textColor;
         text-anchor: middle;
 
         &:hover {
