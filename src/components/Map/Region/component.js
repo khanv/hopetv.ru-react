@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react';
+import { Map } from 'components';
 import { translate } from 'react-i18next';
 import Styles from './main.scss';
 
 function Region(props) {
+    const { Bubble } = Map;
     const { path, title, t } = props;
 
     let titleComponent;
@@ -42,6 +44,7 @@ function Region(props) {
         <g className={ Styles.region }>
             <path d={ path } fill="#DFE1E2"/>
             { titleComponent }
+            <Bubble x={ title.pos.x } y={ title.pos.y + 20 }>5</Bubble>
         </g>
     );
 }
