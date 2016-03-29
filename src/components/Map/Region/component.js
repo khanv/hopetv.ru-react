@@ -9,7 +9,7 @@ function Region(props) {
     const titleParts = t(title.text).split('-');
     if (titleParts.length > 1) {
         titleComponent = (
-            <text y={ title.pos.y } style={ textStyle }>
+            <text y={ title.pos.y }>
                 { titleParts.map((part, n) => {
                     if (n < titleParts.length - 1) {
                         part += '-';
@@ -32,7 +32,6 @@ function Region(props) {
             <text
                 x={ title.pos.x }
                 y={ title.pos.y }
-                style={ textStyle }
             >
                 { titleParts[0] }
             </text>
