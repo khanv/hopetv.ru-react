@@ -1,0 +1,24 @@
+& {
+    .background {
+        fill: $backgroundColor;
+    }
+
+    .shadow {
+        fill: $shadowColor;
+    }
+
+    .arrow {
+        fill: $backgroundColor;
+    }
+
+    text {
+        font-family: PTSans-bold;
+        font-size: 28px;
+        fill: $textColor;
+        text-anchor: middle;
+
+        &:hover {
+            fill: $textColor;
+        }
+    }
+}

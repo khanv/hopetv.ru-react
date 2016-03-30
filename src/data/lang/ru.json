@@ -1,0 +1,29 @@
+{
+  "region": {
+    "Kyivska": "Киевская",
+    "Vinnytska": "Винницкая",
+    "Volynska": "Волынская",
+    "Luhanska": "Луганская",
+    "Dnipropetrovska": "Днепропетровская",
+    "Donetska": "Донецкая",
+    "Zhytomyrska": "Житомирская",
+    "Zakarpatska": "Закарпатская",
+    "Zaporizka": "Запорожская",
+    "Ivano-Frankivska": "Ивано-Франковская",
+    "Kirovohradska": "Кировоградская",
+    "Avtonomna Respublika Krym": "АР Крым",
+    "Lvivska": "Львовская",
+    "Mykolaivska": "Николаевская",
+    "Odeska": "Одесская",
+    "Poltavska": "Полтавская",
+    "Rivnenska": "Ровненская",
+    "Sumska": "Сумская",
+    "Ternopilska": "Терно-польская",
+    "Kharkivska": "Харьковская",
+    "Khersonska": "Херсонская",
+    "Khmelnytska": "Хмельницкая",
+    "Cherkaska": "Черкасская",
+    "Chernihivska": "Черниговская",
+    "Chernivetska": "Черно-вицкая"
+  }
+}

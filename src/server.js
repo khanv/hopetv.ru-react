@@ -14,6 +14,9 @@ import createHistory from 'react-router/lib/createMemoryHistory';
 import { Provider } from 'react-redux';
 import getRoutes from './routes';
 
+import { I18nextProvider } from 'react-i18next';
+import i18n from 'helpers/i18n';
+
 const pretty = new PrettyError();
 const app = new Express();
 const server = new http.Server(app);
@@ -54,7 +57,9 @@ app.use((req, res) => {
             loadOnServer({ ...renderProps, store }).then(() => {
                 const component = (
                     <Provider store={ store } key="provider">
-                        <ReduxAsyncConnect { ...renderProps }/>
+                        <I18nextProvider i18n={ i18n }>
+                            <ReduxAsyncConnect { ...renderProps }/>
+                        </I18nextProvider>
                     </Provider>
                 );
 
