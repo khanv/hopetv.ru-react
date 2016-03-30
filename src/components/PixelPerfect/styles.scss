@@ -1,0 +1,127 @@
+.pixelPerfect {
+    $navBgColor: #2d2f2e;
+    $valueColor: #ccc;
+    $btnBgColor: #3f4140;
+
+    .menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 40px;
+        background-color: $navBgColor;
+        z-index: 9999;
+
+        .items {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 40px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+
+            .title {
+                margin-right: 10px;
+                user-select: none;
+            }
+
+            .value {
+                color: $valueColor;
+                font-style: italic;
+                user-select: none;
+            }
+
+            .opacity {
+                width: 30px;
+                color: $valueColor;
+                font-style: italic;
+                text-align: center;
+                user-select: none;
+            }
+
+            .down {
+                width: 10px;
+                margin-right: 5px;
+                background-color: $btnBgColor;
+                color: $valueColor;
+                text-align: center;
+                opacity: .7;
+                user-select: none;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 1;
+                }
+            }
+
+            .up {
+                width: 10px;
+                margin-left: 5px;
+                background-color: $btnBgColor;
+                color: $valueColor;
+                text-align: center;
+                opacity: .7;
+                user-select: none;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 1;
+                }
+            }
+
+            .hide {
+                width: 40px;
+                user-select: none;
+
+                &:hover {
+                    color: $valueColor;
+                    cursor: pointer;
+                }
+            }
+
+            .disabled {
+                visibility: hidden;
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                &:first-child {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 767px) {
+                &:first-child {
+                    display: none;
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .wrap {
+        position: relative;
+        width: 100%;
+
+        img {
+            display: none;
+            position: absolute;
+
+            &.visible {
+                display: block;
+            }
+        }
+    }
+}
+
+// scss-lint:disable ImportantRule
+body {
+    margin-top: 40px !important;
+}
