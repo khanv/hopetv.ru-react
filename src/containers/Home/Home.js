@@ -4,7 +4,6 @@ import { asyncConnect } from 'redux-async-connect';
 
 import Helmet from 'react-helmet';
 import Seo from 'data/seo.json';
-import { Banner } from 'components';
 
 import { connect } from 'react-redux';
 
@@ -33,7 +32,6 @@ export default class Home extends Component {
         return (
             <div>
                 <Helmet { ...Seo.Home }/>
-                <Banner/>
                 <div>Home page</div>
             </div>
         );
