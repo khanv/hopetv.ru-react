@@ -2,6 +2,7 @@
     $navBgColor: #2d2f2e;
     $valueColor: #ccc;
     $btnBgColor: #3f4140;
+    $stateBorderColor: #494b4a;
 
     .menu {
         position: fixed;
@@ -23,6 +24,7 @@
 
         .item {
             display: flex;
+            position: relative;
             align-items: center;
 
             .title {
@@ -31,9 +33,33 @@
             }
 
             .value {
+                display: block;
                 color: $valueColor;
                 font-style: italic;
                 user-select: none;
+
+                &:nth-child(2) {
+                    width: 120px;
+                    overflow: hidden;
+                }
+            }
+
+            .states {
+                position: absolute;
+                top: 28px;
+                left: 48px;
+
+                li {
+                    max-width: 180px;
+                    padding: 10px;
+                    border-top: 1px solid $stateBorderColor;
+                    background-color: $navBgColor;
+
+                    &:hover {
+                        color: $valueColor;
+                        cursor: pointer;
+                    }
+                }
             }
 
             .opacity {
@@ -111,12 +137,7 @@
         width: 100%;
 
         img {
-            display: none;
             position: absolute;
-
-            &.visible {
-                display: block;
-            }
         }
     }
 }

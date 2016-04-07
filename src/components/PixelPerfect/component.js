@@ -11,7 +11,13 @@ import cx from 'classnames';
  */
 function getCurrentBreakpoint(currentWidth, breakPoints) {
     const breakPoint = Object.keys(breakPoints).find((bp) => {
-        return currentWidth >= breakPoints[bp].min && currentWidth <= breakPoints[bp].max;
+        let current = bp;
+
+        if (typeof bp === 'object') {
+            current = bp.name;
+        }
+
+        return currentWidth >= breakPoints[current].min && currentWidth <= breakPoints[current].max;
     });
 
     return breakPoint;
@@ -45,6 +51,10 @@ export default class PixelPerfect extends Component {
         super();
         this.state = {
             currentBreakpoint: '',
+            state: {
+                isMenuVisible: false,
+                current: 'Default'
+            },
             width: null,
             opacity: null,
             visible: true
@@ -82,6 +92,28 @@ export default class PixelPerfect extends Component {
         });
     };
 
+    toggleStateMenu = (event) => {
+        if (event.target.tagName === 'LI') {
+            return;
+        }
+
+        this.setState({
+            state: {
+                ...this.state.state,
+                isMenuVisible: !this.state.state.isMenuVisible
+            }
+        });
+    };
+
+    changeState = (event) => {
+        this.setState({
+            state: {
+                isMenuVisible: false,
+                current: event.target.dataset.state
+            }
+        });
+    };
+
     /**
      * Resize window
      */
@@ -96,15 +128,40 @@ export default class PixelPerfect extends Component {
 
     render() {
         const { templates, component, opacity, breakPoints } = this.props;
-        const { width, currentBreakpoint, visible } = this.state;
+        const { width, currentBreakpoint, state, visible } = this.state;
         const currentOpacity = this.state.opacity;
         const hideClasses = cx({
             [Styles.hide]: true,
             [Styles.disabled]: currentOpacity === 0
         });
 
+        const StateClasses = cx({
+            [Styles.states]: true,
+            [Styles.disabled]: !state.isMenuVisible
+        });
+
+        const result = templates.find((current) => {
+            return typeof current === 'object' && current.name === currentBreakpoint;
+        });
+
+        const statesList = result ? result.states.map((current) => {
+            return (
+                <li key={ current } data-state={ current } onClick={ this.changeState }>{ current }</li>
+            );
+        }) : null;
+
         const images = templates.map((breakPoint) => {
-            const src = `/PixelPerfect/${component}/${breakPoint}.png`;
+            let filename = breakPoint;
+
+            if (typeof breakPoint === 'object') {
+                filename = breakPoint.name;
+
+                if (state.current !== 'Default') {
+                    filename += `__${state.current}`;
+                }
+            }
+
+            const src = `/PixelPerfect/${component}/${filename}.png`;
             const classes = cx({
                 [Styles.visible]:
                     breakPoint === this.state.currentBreakpoint
@@ -114,7 +171,31 @@ export default class PixelPerfect extends Component {
             });
 
             return (
-                <img key={ breakPoint } src={ src } className={ classes }/>
+                <img key={ filename } src={ src } className={ classes }/>
+            );
+        });
+
+        const image = templates.filter((breakPoint) => {
+            const bp = typeof breakPoint === 'object' ? breakPoint.name : breakPoint;
+
+            return bp === this.state.currentBreakpoint
+                && breakPoints[bp]
+                && global.window.innerWidth === breakPoints[bp].template
+                && visible;
+        }).map((breakPoint) => {
+            let filename = breakPoint;
+
+            if (typeof breakPoint === 'object') {
+                filename = breakPoint.name;
+
+                if (state.current !== 'Default') {
+                    filename += `__${state.current}`;
+                }
+            }
+            const src = `/PixelPerfect/${component}/${filename}.png`;
+
+            return (
+                <img key={ filename } src={ src }/>
             );
         });
 
@@ -123,12 +204,20 @@ export default class PixelPerfect extends Component {
                 <div className={ Styles.menu }>
                     <div className={ Styles.items }>
                         <div className={ Styles.item }>
-                            <p className={ Styles.title }>Component name:</p>
+                            <p className={ Styles.title }>Component:</p>
                             <p className={ Styles.value }>{ component }</p>
                         </div>
 
+                        <div className={ Styles.item } onClick={ this.toggleStateMenu }>
+                            <p className={ Styles.title }>State:</p>
+                            <p className={ Styles.value }>{ state.current }</p>
+                            <ul className={ StateClasses }>
+                                { statesList }
+                            </ul>
+                        </div>
+
                         <div className={ Styles.item }>
-                            <p className={ Styles.title }>Current media breakpoint:</p>
+                            <p className={ Styles.title }>Breakpoint:</p>
                             <p className={ Styles.value }>{ currentBreakpoint }</p>
                         </div>
 
@@ -156,7 +245,7 @@ export default class PixelPerfect extends Component {
                     </div>
                 </div>
                 <div className={ Styles.wrap } style={ { opacity: currentOpacity / 100 } }>
-                    { images }
+                    { image }
                 </div>
             </div>
         );
