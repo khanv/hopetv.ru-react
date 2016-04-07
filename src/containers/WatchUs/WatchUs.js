@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { Map } from 'components';
-import MapData from 'data/ukraine.json';
+import { Info, Locator } from 'components/WatchUs';
 
 export default class WatchUs extends Component {
     render() {
-        const { Country } = Map;
-
         return (
             <section>
-                <Country { ...MapData }/>
+                <Info/>
+                <Locator/>
             </section>
         );
     }
