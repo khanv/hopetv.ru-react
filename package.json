@@ -2,7 +2,7 @@
   "name": "tv.hope.ua",
   "description": "Tv.Hope.UA on React",
   "author": "Sergey Sadovoi <sergey@hope.ua>",
-  "version": "3.0.0",
+  "version": "3.0.0-dev",
   "homepage": "https://tv.hope.ua",
   "repository": {
     "type": "git",
