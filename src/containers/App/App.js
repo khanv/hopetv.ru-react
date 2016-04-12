@@ -4,7 +4,7 @@ import config from 'config';
 import Helmet from 'react-helmet';
 import { routeActions } from 'react-router-redux';
 import disableHoverOnTouch from 'helpers/disableHoverOnTouch';
-import Styles from './App.scss';
+import Styles from './main.scss'; // eslint-disable-line no-unused-vars
 
 @connect(
     (state) => state,
