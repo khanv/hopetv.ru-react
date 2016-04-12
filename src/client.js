@@ -30,16 +30,14 @@ const component = (
 );
 /* eslint-enable react/jsx-no-bind, arrow-parens */
 
-i18n.on('initialized', () => {
-    ReactDOM.render(
-        <Provider store={ store } key="provider">
-            <I18nextProvider i18n={ i18n }>
-                { component }
-            </I18nextProvider>
-        </Provider>,
-        dest
-    );
-});
+ReactDOM.render(
+    <Provider store={ store } key="provider">
+        <I18nextProvider i18n={ i18n }>
+            { component }
+        </I18nextProvider>
+    </Provider>,
+    dest
+);
 
 if (process.env.NODE_ENV !== 'production') {
     window.React = React; // enable debugger

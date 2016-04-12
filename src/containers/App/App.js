@@ -4,6 +4,7 @@ import config from 'config';
 import Helmet from 'react-helmet';
 import { routeActions } from 'react-router-redux';
 import disableHoverOnTouch from 'helpers/disableHoverOnTouch';
+import Styles from './App.scss';
 
 @connect(
     (state) => state,
@@ -24,8 +25,6 @@ export default class App extends Component {
     };
 
     render() {
-        require('./App.scss');
-
         return (
             <div>
                 <Helmet { ...config.app.head }/>
