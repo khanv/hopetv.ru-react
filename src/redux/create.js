@@ -1,11 +1,9 @@
 import { createStore as _createStore, applyMiddleware, compose } from 'redux';
 import apiMiddleware from './middleware/apiMiddleware';
-import { syncHistory } from 'react-router-redux';
+import { routerMiddleware } from 'react-router-redux';
 
 export default function createStore(history, data) {
-    // Sync dispatched route actions to the history
-    const reduxRouterMiddleware = syncHistory(history);
-
+    const reduxRouterMiddleware = routerMiddleware(history);
     const middleware = [apiMiddleware, reduxRouterMiddleware];
 
     let finalCreateStore;
@@ -22,8 +20,6 @@ export default function createStore(history, data) {
 
     const reducer = require('./modules/reducer');
     const store = finalCreateStore(reducer, data);
-
-    reduxRouterMiddleware.listenForReplays(store);
 
     if (__DEVELOPMENT__ && module.hot) {
         module.hot.accept('./modules/reducer', () => {

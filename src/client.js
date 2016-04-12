@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import createStore from './redux/create';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
 import { ReduxAsyncConnect } from 'redux-async-connect';
 import useScroll from 'scroll-behavior/lib/useStandardScroll';
 
@@ -15,9 +16,10 @@ import getRoutes from './routes';
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'helpers/i18n';
 
-const history = useScroll(() => browserHistory)();
+const _browserHistory = useScroll(() => browserHistory)();
 const dest = document.getElementById('content');
-const store = createStore(history, window.__data);
+const store = createStore(_browserHistory, window.__data);
+const history = syncHistoryWithStore(_browserHistory, store);
 
 /* eslint-disable react/jsx-no-bind, arrow-parens */
 const component = (
