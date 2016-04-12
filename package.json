@@ -120,7 +120,7 @@
     "concurrently": "^2.0.0",
     "eslint": "^2.7.0",
     "eslint-plugin-react": "^4.3.0",
-    "eslint-config-hope": "~2.0",
+    "eslint-config-hope": "^2.2.0",
     "eslint-loader": "^1.0.0",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
