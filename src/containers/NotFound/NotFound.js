@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-
 import Helmet from 'react-helmet';
 
-import Content from 'data/content.json';
 import Seo from 'data/seo.json';
 
+/* eslint-disable react/prefer-stateless-function */
 export default class NotFound extends Component {
     render() {
-        const page = Content.NotFound;
-
         return (
             <section>
                 <Helmet { ...Seo.NotFound }/>

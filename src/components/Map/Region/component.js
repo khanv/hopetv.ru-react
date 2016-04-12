@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import { Map } from 'components';
 import { translate } from 'react-i18next';
 import Styles from './main.scss';

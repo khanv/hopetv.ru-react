@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { routeReducer } from 'react-router-redux';
+import { routerReducer } from 'react-router-redux';
 import { reducer as reduxAsyncConnect } from 'redux-async-connect';
 import { createResponsiveStateReducer } from 'redux-responsive';
 
 export default combineReducers({
-    routing: routeReducer,
+    routing: routerReducer,
     browser: createResponsiveStateReducer({
         phonePortrait: 414,
         phoneLandscape: 667,

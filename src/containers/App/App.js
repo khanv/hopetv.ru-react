@@ -2,12 +2,13 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import config from 'config';
 import Helmet from 'react-helmet';
-import { routeActions } from 'react-router-redux';
+import { push } from 'react-router-redux';
 import disableHoverOnTouch from 'helpers/disableHoverOnTouch';
+import Styles from './main.scss'; // eslint-disable-line no-unused-vars
 
 @connect(
     (state) => state,
-    { pushState: routeActions.push }
+    { pushState: push }
 )
 export default class App extends Component {
     static propTypes = {
@@ -24,8 +25,6 @@ export default class App extends Component {
     };
 
     render() {
-        require('./App.scss');
-
         return (
             <div>
                 <Helmet { ...config.app.head }/>
