@@ -3,13 +3,13 @@ const breakpoints = {
         name: 'phonePortrait',
         min: 320,
         max: 414,
-        template: 414
+        template: 320
     },
     phoneLandscape: {
         name: 'phoneLandscape',
         min: 415,
         max: 667,
-        template: 415
+        template: 568
     },
     tabletPortrait: {
         name: 'tabletPortrait',

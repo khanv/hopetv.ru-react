@@ -26,6 +26,7 @@ function getCurrentBreakpoint(currentWidth, breakPoints) {
 export default class PixelPerfect extends Component {
     static propTypes = {
         component: PropTypes.string.isRequired,
+        children: PropTypes.array,
         opacity: PropTypes.number,
         breakPoints: PropTypes.object,
         templates: PropTypes.array
@@ -161,7 +162,7 @@ export default class PixelPerfect extends Component {
                 }
             }
 
-            const src = `/PixelPerfect/${component}/${filename}.png`;
+            const src = `/PixelPerfect/${component}/${filename}.jpg`;
             const classes = cx({
                 [Styles.visible]:
                     breakPoint === this.state.currentBreakpoint
@@ -192,7 +193,7 @@ export default class PixelPerfect extends Component {
                     filename += `__${state.current}`;
                 }
             }
-            const src = `/PixelPerfect/${component}/${filename}.png`;
+            const src = `/PixelPerfect/${component}/${filename}.jpg`;
 
             return (
                 <img key={ filename } src={ src }/>
@@ -200,52 +201,57 @@ export default class PixelPerfect extends Component {
         });
 
         return (
-            <div className={ Styles.pixelPerfect }>
-                <div className={ Styles.menu }>
-                    <div className={ Styles.items }>
-                        <div className={ Styles.item }>
-                            <p className={ Styles.title }>Component:</p>
-                            <p className={ Styles.value }>{ component }</p>
-                        </div>
+            <div>
+                <div className={ Styles.pixelPerfect }>
+                    <div className={ Styles.menu }>
+                        <div className={ Styles.items }>
+                            <div className={ Styles.item }>
+                                <p className={ Styles.title }>Component:</p>
+                                <p className={ Styles.value }>{ component }</p>
+                            </div>
 
-                        <div className={ Styles.item } onClick={ this.toggleStateMenu }>
-                            <p className={ Styles.title }>State:</p>
-                            <p className={ Styles.value }>{ state.current }</p>
-                            <ul className={ StateClasses }>
-                                { statesList }
-                            </ul>
-                        </div>
+                            <div className={ Styles.item } onClick={ this.toggleStateMenu }>
+                                <p className={ Styles.title }>State:</p>
+                                <p className={ Styles.value }>{ state.current }</p>
+                                <ul className={ StateClasses }>
+                                    { statesList }
+                                </ul>
+                            </div>
 
-                        <div className={ Styles.item }>
-                            <p className={ Styles.title }>Breakpoint:</p>
-                            <p className={ Styles.value }>{ currentBreakpoint }</p>
-                        </div>
+                            <div className={ Styles.item }>
+                                <p className={ Styles.title }>Breakpoint:</p>
+                                <p className={ Styles.value }>{ currentBreakpoint }</p>
+                            </div>
 
-                        <div className={ Styles.item }>
-                            <p className={ Styles.title }>Width:</p>
-                            <p className={ Styles.value }>{ `${width}px` } </p>
-                        </div>
+                            <div className={ Styles.item }>
+                                <p className={ Styles.title }>Width:</p>
+                                <p className={ Styles.value }>{ `${width}px` } </p>
+                            </div>
 
-                        <div className={ Styles.item }>
-                            <p className={ Styles.title }>Opacity:</p>
-                            <span onClick={ this.onOpacityClick } className={ Styles.down } data-opacity="down">
-                                -
-                            </span>
-                            <p className={ Styles.opacity }>{ currentOpacity }</p>
-                            <span onClick={ this.onOpacityClick } className={ Styles.up } data-opacity="up">
-                                +
-                            </span>
-                        </div>
+                            <div className={ Styles.item }>
+                                <p className={ Styles.title }>Opacity:</p>
+                                <span onClick={ this.onOpacityClick } className={ Styles.down } data-opacity="down">
+                                    -
+                                </span>
+                                <p className={ Styles.opacity }>{ currentOpacity }</p>
+                                <span onClick={ this.onOpacityClick } className={ Styles.up } data-opacity="up">
+                                    +
+                                </span>
+                            </div>
 
-                        <div className={ Styles.item }>
-                            <p onClick={ this.onHideClick } className={ hideClasses }>
-                                { visible ? 'Hide' : 'Show' }
-                            </p>
+                            <div className={ Styles.item }>
+                                <p onClick={ this.onHideClick } className={ hideClasses }>
+                                    { visible ? 'Hide' : 'Show' }
+                                </p>
+                            </div>
                         </div>
                     </div>
+                    <div className={ Styles.wrap } style={ { opacity: currentOpacity / 100 } }>
+                        { image }
+                    </div>
                 </div>
-                <div className={ Styles.wrap } style={ { opacity: currentOpacity / 100 } }>
-                    { image }
+                <div className={ Styles.component }>
+                    { this.props.children }
                 </div>
             </div>
         );
