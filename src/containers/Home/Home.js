@@ -34,7 +34,6 @@ export default class Home extends Component {
         return (
             <div>
                 <Helmet { ...Seo.Home }/>
-                <Banner/>
             </div>
         );
     }

@@ -1,2 +1,266 @@
 & {
+    display: flex;
+    flex-wrap: wrap;
+
+    > section {
+        &::after {
+            content: '';
+            width: px2vw(560, $scaleFactor);
+            margin: px2vw(80, $scaleFactor) auto;
+            height: 3px;
+            background-image: url($componentRoot + 'Images/divider-bg.svg');
+        }
+    }
+
+    .internet {
+        display: flex;
+        flex-wrap: wrap;
+
+        header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+
+            i {
+                width: px2vw(137, $scaleFactor);
+                margin: px2vw(60, $scaleFactor) 0 0 px2vw(38, $scaleFactor);
+            }
+
+            h1 {
+                width: max-content;
+                margin: px2vw(42, $scaleFactor) auto 0;
+                color:  #516569;
+                font-size: px2vw(44, $scaleFactor);
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: px2vw(60, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    margin: px2vw(51, $scaleFactor) auto 0;
+                    background-color:  #facb0e;
+                }
+            }
+        }
+
+        p {
+            width: px2vw(335, $scaleFactor);
+            margin: px2vw(50, $scaleFactor) auto 0;
+            font-size: px2vw(30, $scaleFactor);
+            line-height: px2vw(36, $scaleFactor);
+            text-align: center;
+        }
+
+        .apps {
+            display: flex;
+            width: px2vw(518, $scaleFactor);
+            margin: px2vw(50, $scaleFactor) auto;
+
+            a {
+                width: px2vw(120, $scaleFactor);
+                height: px2vw(120, $scaleFactor);
+                flex-shrink: 0;
+
+            }
+
+            .androidLink{
+                border: 1px solid #7fbf10;
+                border-radius: 6px;
+
+                i {
+                    width: px2vw(78, $scaleFactor);
+                    margin: px2vw(15, $scaleFactor) auto 0;
+                }
+            }
+
+            .appleLink{
+                border: 1px solid #6e7b7d;
+                border-radius: 6px;
+
+                i {
+                    width: px2vw(67, $scaleFactor);
+                    margin: px2vw(17, $scaleFactor) auto 0;
+                }
+            }
+
+
+            div {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                position: relative;
+
+                span {
+                    margin-bottom: px2vw(6, $scaleFactor);
+                    font-size: px2vw(32, $scaleFactor);
+                    line-height: px2vw(26, $scaleFactor);
+                    color:  #6e7b7d;
+                }
+
+                i {
+                    width: px2vw(67, $scaleFactor);
+                    position: absolute;
+                }
+
+                .appleArrow {
+                    right: px2vw(22, $scaleFactor);
+
+                    path {
+                        fill: #6e7b7d;
+                    }
+                }
+
+                .androidArrow {
+                    transform: rotate(180deg);
+                    left: px2vw(26, $scaleFactor);
+                    bottom: 0;
+
+                    path {
+                        fill: #7fbf10;
+                    }
+                }
+
+            }
+        }
+
+        .watchOnline {
+            margin-top: px2vw(4, $scaleFactor);
+        }
+    }
+
+    .satellite {
+        display: flex;
+        flex-wrap: wrap;
+
+        header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+
+            i {
+                width: px2vw(116, $scaleFactor);
+                margin: 0 px2vw(36, $scaleFactor) 0 0;
+            }
+
+            h1 {
+                width: max-content;
+                margin: px2vw(46, $scaleFactor) auto 0;
+                color:  #516569;
+                font-size: px2vw(44, $scaleFactor);
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: px2vw(60, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    margin: px2vw(51, $scaleFactor) auto 0;
+                    background-color:  #facb0e;
+                }
+            }
+        }
+
+        ul {
+            width: 100%;
+            margin: px2vw(54, $scaleFactor) auto 0;
+
+            li {
+                display: flex;
+                margin-bottom: px2vw(30, $scaleFactor);
+                span {
+                    &:nth-child(1) {
+                        display: block;
+                        flex-basis: 50%;
+                        margin-right: px2vw(8, $scaleFactor);
+                        color:  #6e7b7d;
+                        font-size: px2vw(30, $scaleFactor);
+                        font-weight: bold;
+                        text-align: right;
+                    }
+
+                    &:nth-child(2) {
+                        display: block;
+                        flex-basis: 50%;
+                        color:  #6e7b7d;
+                        font-size: px2vw(30, $scaleFactor);
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .television {
+        display: flex;
+        flex-wrap: wrap;
+
+        header {
+            width: 100%;
+
+            i {
+                width: px2vw(135, $scaleFactor);
+                margin: 0 auto;
+            }
+
+            h1 {
+                width: max-content;
+                margin: px2vw(40, $scaleFactor) auto 0;
+                color:  #516569;
+                font-size: px2vw(44, $scaleFactor);
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: px2vw(60, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    margin: px2vw(51, $scaleFactor) auto 0;
+                    background-color:  #facb0e;
+                }
+            }
+        }
+
+        p {
+            width: px2vw(507, $scaleFactor);
+            margin: px2vw(48, $scaleFactor) auto 0;
+            font-size: px2vw(30, $scaleFactor);
+            line-height: px2vw(36, $scaleFactor);
+            text-align: center;
+        }
+
+        .btnSearch {
+            padding: 0 0 0 px2vw(26, $scaleFactor);
+
+            i {
+                margin-right: px2vw(30, $scaleFactor);
+            }
+        }
+    }
+
+    .btn {
+        display: flex;
+        margin: px2vw(52, $scaleFactor) auto 0;
+        padding: 0 px2vw(26, $scaleFactor);
+        align-items: center;
+        height: px2vw(100, $scaleFactor);
+        width: px2vw(380, $scaleFactor);
+        border: 1px solid #2793b2;
+        border-radius: 6px;
+        color: #2793b2;
+        font-size: px2vw(30, $scaleFactor);
+
+        i {
+            width: px2vw(39, $scaleFactor);
+            margin-right: px2vw(26, $scaleFactor);
+        }
+    }
+
+    .btnTuner {
+        padding: 0 0 0 px2vw(26, $scaleFactor);
+        margin: px2vw(26, $scaleFactor) auto 0;
+
+        i {
+            margin-right: px2vw(17, $scaleFactor);
+        }
+    }
 }

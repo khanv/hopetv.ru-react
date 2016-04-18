@@ -128,21 +128,29 @@
                 &:nth-child(2) {
                     display: none;
                 }
+
+                &:nth-child(3) {
+                    display: none;
+                }
+
+                &:nth-child(4) {
+                    display: none;
+                }
             }
         }
     }
 
     .wrap {
-        position: relative;
+        position: absolute;
+        top: 40px;
         width: 100%;
 
         img {
-            position: absolute;
+            width: 100%;
         }
     }
 }
 
-// scss-lint:disable ImportantRule
-body {
-    margin-top: 40px !important;
+.component {
+    transform: translateY(40px);
 }
