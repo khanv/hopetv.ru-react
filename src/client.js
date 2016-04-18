@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import createStore from './redux/create';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
 import { ReduxAsyncConnect } from 'redux-async-connect';
 import useScroll from 'scroll-behavior/lib/useStandardScroll';
 
@@ -15,9 +16,10 @@ import getRoutes from './routes';
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'helpers/i18n';
 
-const history = useScroll(() => browserHistory)();
+const _browserHistory = useScroll(() => browserHistory)();
 const dest = document.getElementById('content');
-const store = createStore(history, window.__data);
+const store = createStore(_browserHistory, window.__data);
+const history = syncHistoryWithStore(_browserHistory, store);
 
 /* eslint-disable react/jsx-no-bind, arrow-parens */
 const component = (
@@ -30,16 +32,14 @@ const component = (
 );
 /* eslint-enable react/jsx-no-bind, arrow-parens */
 
-i18n.on('initialized', () => {
-    ReactDOM.render(
-        <Provider store={ store } key="provider">
-            <I18nextProvider i18n={ i18n }>
-                { component }
-            </I18nextProvider>
-        </Provider>,
-        dest
-    );
-});
+ReactDOM.render(
+    <Provider store={ store } key="provider">
+        <I18nextProvider i18n={ i18n }>
+            { component }
+        </I18nextProvider>
+    </Provider>,
+    dest
+);
 
 if (process.env.NODE_ENV !== 'production') {
     window.React = React; // enable debugger

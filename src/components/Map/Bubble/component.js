@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import Styles from './main.scss';
 
 export default function Bubble(props) {

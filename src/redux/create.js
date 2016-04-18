@@ -1,29 +1,30 @@
 import { createStore as _createStore, applyMiddleware, compose } from 'redux';
 import apiMiddleware from './middleware/apiMiddleware';
-import { syncHistory } from 'react-router-redux';
+import { routerMiddleware } from 'react-router-redux';
+import { responsiveStoreEnhancer } from 'redux-responsive';
 
 export default function createStore(history, data) {
-    // Sync dispatched route actions to the history
-    const reduxRouterMiddleware = syncHistory(history);
-
+    const reduxRouterMiddleware = routerMiddleware(history);
     const middleware = [apiMiddleware, reduxRouterMiddleware];
 
     let finalCreateStore;
     if (__DEVELOPMENT__ && __CLIENT__ && __DEVTOOLS__ && window.devToolsExtension) {
         const { persistState } = require('redux-devtools');
         finalCreateStore = compose(
+            responsiveStoreEnhancer,
             applyMiddleware(...middleware),
             window.devToolsExtension(),
             persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/))
         )(_createStore);
     } else {
-        finalCreateStore = applyMiddleware(...middleware)(_createStore);
+        finalCreateStore = compose(
+            responsiveStoreEnhancer,
+            applyMiddleware(...middleware)
+        )(_createStore);
     }
 
     const reducer = require('./modules/reducer');
     const store = finalCreateStore(reducer, data);
-
-    reduxRouterMiddleware.listenForReplays(store);
 
     if (__DEVELOPMENT__ && module.hot) {
         module.hot.accept('./modules/reducer', () => {

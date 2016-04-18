@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 const mapWidth = 2000;
 const mapHeight = 1335;
