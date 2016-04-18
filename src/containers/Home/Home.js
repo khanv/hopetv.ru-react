@@ -1,11 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 // import { asyncConnect } from 'redux-async-connect';
 import { connect } from 'react-redux';
 
 import Helmet from 'react-helmet';
 import Seo from 'data/seo.json';
-
-
 
 // @asyncConnect([{
 //     deferred: true,

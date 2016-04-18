@@ -4,6 +4,8 @@
     $btnBgColor: #3f4140;
     $stateBorderColor: #494b4a;
 
+    position: relative;
+
     .menu {
         position: fixed;
         top: 0;
@@ -139,18 +141,17 @@
             }
         }
     }
+}
+
+.component {
+    transform: translateY(40px);
 
     .wrap {
         position: absolute;
-        top: 40px;
         width: 100%;
 
         img {
             width: 100%;
         }
     }
-}
-
-.component {
-    transform: translateY(40px);
 }
