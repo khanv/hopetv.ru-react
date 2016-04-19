@@ -128,7 +128,7 @@ export default class PixelPerfect extends Component {
     };
 
     render() {
-        const { templates, component, opacity, breakPoints } = this.props;
+        const { templates, component, breakPoints } = this.props;
         const { width, currentBreakpoint, state, visible } = this.state;
         const currentOpacity = this.state.opacity;
         const hideClasses = cx({
@@ -150,31 +150,6 @@ export default class PixelPerfect extends Component {
                 <li key={ current } data-state={ current } onClick={ this.changeState }>{ current }</li>
             );
         }) : null;
-
-        const images = templates.map((breakPoint) => {
-            let filename = breakPoint;
-
-            if (typeof breakPoint === 'object') {
-                filename = breakPoint.name;
-
-                if (state.current !== 'Default') {
-                    filename += `__${state.current}`;
-                }
-            }
-
-            const src = `/PixelPerfect/${component}/${filename}.jpg`;
-            const classes = cx({
-                [Styles.visible]:
-                    breakPoint === this.state.currentBreakpoint
-                    && breakPoints[breakPoint]
-                    && global.window.innerWidth === breakPoints[breakPoint].template
-                    && visible
-            });
-
-            return (
-                <img key={ filename } src={ src } className={ classes }/>
-            );
-        });
 
         const image = templates.filter((breakPoint) => {
             const bp = typeof breakPoint === 'object' ? breakPoint.name : breakPoint;
