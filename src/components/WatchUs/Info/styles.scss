@@ -269,8 +269,8 @@
             width: px2vw(39, $scaleFactor);
             height: px2vw(39, $scaleFactor);
             margin-right: px2vw(26, $scaleFactor);
-            content: '';
             background-image: url($componentRoot + 'Images/play-bg.svg');
+            content: '';
 
             path {
                 fill: $btnColor;
