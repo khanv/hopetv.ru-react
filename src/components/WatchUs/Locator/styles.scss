@@ -1,4 +1,7 @@
 & {
+    position: relative;
+    padding-bottom: px2vw(236, $scaleFactor);
+
     header {
         display: flex;
         align-items: center;
@@ -23,6 +26,7 @@
 
     ul {
         background-color: #091a1e;
+        min-height: px2vw(675, $scaleFactor);
         padding-left: px2vw(40, $scaleFactor);
 
         li {
@@ -35,7 +39,7 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
-                padding: px2vw(6, $scaleFactor) px2vw(54, $scaleFactor) 0 px2vw(18, $scaleFactor);
+                padding: px2vw(14, $scaleFactor) px2vw(54, $scaleFactor) 0 px2vw(18, $scaleFactor);
                 font-size: px2vw(34, $scaleFactor);
                 font-weight: bold;
                 text-decoration: none;
@@ -43,7 +47,7 @@
 
                 span {
                     display: inline-block;
-                    margin-top: px2vw(0, $scaleFactor);
+                    margin-top: px2vw(-6, $scaleFactor);
                     margin-left: px2vw(24, $scaleFactor);
                     color: rgba(255, 255, 255, .4);
                     font-weight: normal;
@@ -56,11 +60,13 @@
                 }
 
                 &::after {
-                    content: '>';
+                    content: '';
                     display: block;
-                    width: 10px;
-                    height: 10px;
-                    color: #fff;
+                    width: px2vw(24, $scaleFactor);
+                    height: px2vw(24, $scaleFactor);
+                    margin-top: px2vw(4, $scaleFactor);
+                    background: url($componentRoot + 'Images/rightMenuIcon-bg.svg') no-repeat;
+                    background-position-x: right;
                     flex-grow: 1;
                     text-align: right;
                 }
@@ -81,8 +87,35 @@
                         border-color: rgba(255, 255, 255, .5);
                         color: rgba(255, 255, 255, .5);
                     }
+
+                    &::after {
+                        margin-top: px2vw(2, $scaleFactor);
+                        background: url($componentRoot + 'Images/rightMenuIconSelect-bg.svg') no-repeat;
+                        background-position-x: right;
+                        opacity: .5;
+                    }
                 }
             }
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: px2vw(236, $scaleFactor);
+        background-color: #091a1e;
+
+        &::after {
+            position: absolute;
+            bottom: px2vw(74, $scaleFactor);
+            content: '';
+            display: block;
+            width: 100%;
+            height: px2vw(80, $scaleFactor);
+            background: url($componentRoot + 'Images/logo-bg.svg') no-repeat;
+            background-position-x: center;
+            opacity: .2;
         }
     }
 }

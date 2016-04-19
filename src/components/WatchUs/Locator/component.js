@@ -33,7 +33,7 @@ export default class Locator extends Component {
                         <li><a href="#">Сумская<span>3</span></a></li>
                         <li><a href="#">Львовская<span>6</span></a></li>
                     </ul>
-                    <footer></footer>
+                    <footer/>
                 </section>
             </PixelPerfect>
         );
