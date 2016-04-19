@@ -1,7 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import PixelPerfect from 'components/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 
+/* eslint-disable react/prefer-stateless-function */
 export default class Locator extends Component {
     render() {
         const templates = [
