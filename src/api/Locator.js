@@ -1,6 +1,6 @@
 import Regions from 'data/ukraine.json';
 
-class Locator {
+export default class Locator {
     static getRegions() {
         return Regions;
     }

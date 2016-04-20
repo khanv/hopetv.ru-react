@@ -53,13 +53,13 @@ export function region(id) {
 export function city(id) {
     return {
         type: LOCATOR_CITY,
-        payload: city
-    }
+        payload: id
+    };
 }
 
 export function provider(id) {
     return {
         type: LOCATOR_PROVIDER,
-        payload: provider
-    }
+        payload: id
+    };
 }

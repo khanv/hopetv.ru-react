@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Info } from 'components/WatchUs';
+import { Info, Locator } from 'components/WatchUs';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class WatchUs extends Component {
@@ -7,6 +7,7 @@ export default class WatchUs extends Component {
         return (
             <section>
                 <Info/>
+                <Locator/>
             </section>
         );
     }
