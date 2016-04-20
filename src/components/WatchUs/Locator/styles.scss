@@ -1,3 +1,217 @@
 & {
-    display: none;
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: px2vw(140, $scaleFactor);
+        padding: 0 px2vw(42, $scaleFactor) 0 px2vw(40, $scaleFactor);
+        background-color: $color1;
+
+        a:first-child {
+            &::before {
+                display: block;
+                width: px2vw(23, $scaleFactor);
+                height: px2vw(40, $scaleFactor);
+                margin-right: px2vw(40, $scaleFactor);
+                background: url($componentRoot + 'Images/arrowBackIcon-bg.svg') no-repeat;
+                content: '';
+            }
+        }
+
+        h1 {
+            flex-grow: 1;
+            margin-top: px2vw(-4, $scaleFactor);
+            color: $color2;
+            font-size: px2vw(44, $scaleFactor);
+            font-weight: bold;
+        }
+
+        a:last-child {
+            i {
+                width: px2vw(41, $scaleFactor);
+            }
+        }
+    }
+
+    >ul {
+        min-height: px2vw(672, $scaleFactor);
+        padding-left: px2vw(40, $scaleFactor);
+        background-color: $color3;
+
+        >li {
+            display: flex;
+            align-items: center;
+            height: px2vw(135, $scaleFactor);
+            border-bottom: 1px solid $color4;
+
+            .title {
+                display: flex;
+                position: relative;
+                width: 100%;
+                padding: px2vw(12, $scaleFactor) px2vw(54, $scaleFactor) 0 px2vw(18, $scaleFactor);
+                color: $color5;
+                font-size: px2vw(34, $scaleFactor);
+                font-weight: bold;
+                text-decoration: none;
+
+                span {
+                    display: inline-block;
+                    min-width: px2vw(46, $scaleFactor);
+                    margin-top: px2vw(-6, $scaleFactor);
+                    margin-left: px2vw(24, $scaleFactor);
+                    padding: px2vw(6, $scaleFactor) px2vw(8, $scaleFactor) px2vw(4, $scaleFactor);
+                    border: 1px solid $color6;
+                    border-radius: px2vw(24, $scaleFactor);
+                    color: $color6;
+                    font-size: px2vw(30, $scaleFactor);
+                    font-weight: normal;
+                    text-align: center;
+                }
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: px2vw(20, $scaleFactor);
+                    right: px2vw(48, $scaleFactor);
+                    width: px2vw(24, $scaleFactor);
+                    height: px2vw(24, $scaleFactor);
+                    background: url($componentRoot + 'Images/rightMenuIcon-bg.svg') no-repeat;
+                    content: '';
+                }
+            }
+
+            &.select {
+                height: px2vw(133, $scaleFactor);
+                margin-left: px2vw(-40, $scaleFactor);
+                padding-left: px2vw(40, $scaleFactor);
+                border-bottom: 0;
+                background-color: $color7;
+
+                .title {
+                    margin-top: px2vw(-2, $scaleFactor);
+                    color: $color8;
+
+                    span {
+                        border-color: $color9;
+                        color: $color9;
+                    }
+
+                    &::after {
+                        margin-top: px2vw(2, $scaleFactor);
+                        background: url($componentRoot + 'Images/rightMenuIconSelect-bg.svg') no-repeat;
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+
+        &.operators {
+            li {
+                .title {
+                    &::after {
+                        transform: rotate(90deg);
+                    }
+                }
+
+                &.opened {
+                    flex-wrap: wrap;
+                    height: auto;
+                    margin-left: px2vw(-40, $scaleFactor);
+                    padding-right: px2vw(40, $scaleFactor);
+                    padding-left: px2vw(40, $scaleFactor);
+                    background-color: $color1;
+
+                    .title {
+                        margin-top: px2vw(41, $scaleFactor);
+                        padding-bottom: px2vw(44, $scaleFactor);
+                        color: $color8;
+
+                        &::after {
+                            top: px2vw(6, $scaleFactor);
+                            right: px2vw(8, $scaleFactor);
+                            transform: rotate(270deg);
+                        }
+                    }
+
+                    ul {
+                        position: relative;
+                        width: 100%;
+                        margin-bottom: px2vw(48, $scaleFactor);
+                        padding-top: px2vw(54, $scaleFactor);
+                        padding-bottom: px2vw(42, $scaleFactor);
+                        padding-left: px2vw(74, $scaleFactor);
+                        border-top: 1px solid $color4;
+                        border-bottom: 1px solid $color4;
+
+                        &::before {
+                            display: block;
+                            position: absolute;
+                            top: px2vw(50, $scaleFactor);
+                            left: px2vw(4, $scaleFactor);
+                            width: px2vw(40, $scaleFactor);
+                            height: px2vw(40, $scaleFactor);
+                            background: url($componentRoot + 'Images/phoneMenuIcon-bg.svg') no-repeat;
+                            content: '';
+                        }
+
+                        li {
+                            margin-bottom: px2vw(22, $scaleFactor);
+                            color: $color8;
+                            font-size: px2vw(34, $scaleFactor);
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    .website {
+                        display: flex;
+                        margin-bottom: px2vw(48, $scaleFactor);
+                        margin-left: px2vw(4, $scaleFactor);
+                        padding-top: 1px;
+                        color: $color8;
+                        font-size: px2vw(34, $scaleFactor);
+                        text-decoration: none;
+
+                        &::before {
+                            display: block;
+                            width: px2vw(40, $scaleFactor);
+                            height: px2vw(40, $scaleFactor);
+                            margin-top: px2vw(-4, $scaleFactor);
+                            margin-right: px2vw(28, $scaleFactor);
+                            background: url($componentRoot + 'Images/earthMenuIcon-bg.svg') no-repeat;
+                            content: '';
+                        }
+
+                        &::after {
+                            margin-top: px2vw(4, $scaleFactor);
+                            margin-left: px2vw(22, $scaleFactor);
+                            font-family: Arial;
+                            font-size: px2vw(26, $scaleFactor);
+                            content: '→';
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+        height: px2vw(236, $scaleFactor);
+        padding-top: px2vw(80, $scaleFactor);
+        background-color: $color3;
+
+        &::after {
+            display: block;
+            bottom: px2vw(74, $scaleFactor);
+            width: px2vw(258, $scaleFactor);
+            height: px2vw(80, $scaleFactor);
+            margin: 0 auto;
+            background: url($componentRoot + 'Images/logo-bg.svg') no-repeat;
+            content: '';
+            opacity: .2;
+        }
+    }
 }

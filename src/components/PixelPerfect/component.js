@@ -221,11 +221,11 @@ export default class PixelPerfect extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className={ Styles.component }>
                     <div className={ Styles.wrap } style={ { opacity: currentOpacity / 100 } }>
                         { image }
                     </div>
-                </div>
-                <div className={ Styles.component }>
                     { this.props.children }
                 </div>
             </div>

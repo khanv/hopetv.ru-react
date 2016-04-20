@@ -21,7 +21,7 @@ export default class Info extends Component {
     static propTypes = {
         browser: PropTypes.object.isRequired
     };
-
+    
     render() {
         const { browser } = this.props;
 
