@@ -75,6 +75,7 @@
     "classnames": "^2.2.3",
     "css-loader": "^0.23.1",
     "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "i18next": "^2.5.0",
     "isomorphic-fetch": "^2.2.1",
@@ -89,6 +90,7 @@
     "pretty-error": "^2.0.0",
     "raw-loader": "^0.5.1",
     "react": "^15.0.1",
+    "react-addons-css-transition-group": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-google-tag-manager": "^1.1.0",
     "react-helmet": "^3.0.1",
@@ -100,7 +102,8 @@
     "react-router-redux": "^4.0.2",
     "redux": "^3.4.0",
     "redux-async-connect": "1.0.0-rc2",
-    "redux-responsive": "^1.1.0",
+    "redux-responsive": "^2.0.0",
+    "redux-thunk": "^2.0.1",
     "sass-loader": "^3.1.2",
     "scroll-behavior": "^0.3.4",
     "serialize-javascript": "^1.1.2",
@@ -110,8 +113,7 @@
     "urijs": "^1.17.1",
     "url-loader": "^0.5.7",
     "warning": "^2.1.0",
-    "webpack": "^1.12.15",
-    "extract-text-webpack-plugin": "^1.0.1"
+    "webpack": "^1.12.15"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.2",
