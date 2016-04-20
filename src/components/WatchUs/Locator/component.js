@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import PixelPerfect from 'components/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 import InlineSvg from 'components/InlineSvg/component';

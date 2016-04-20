@@ -26,7 +26,7 @@ function getCurrentBreakpoint(currentWidth, breakPoints) {
 export default class PixelPerfect extends Component {
     static propTypes = {
         component: PropTypes.string.isRequired,
-        children: PropTypes.array,
+        children: PropTypes.object,
         opacity: PropTypes.number,
         breakPoints: PropTypes.object,
         templates: PropTypes.array

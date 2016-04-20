@@ -8,6 +8,7 @@ import createStore from './redux/create';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
+import { CALCULATE_RESPONSIVE_STATE } from 'redux-responsive';
 import { ReduxAsyncConnect } from 'redux-async-connect';
 import useScroll from 'scroll-behavior/lib/useStandardScroll';
 
@@ -40,6 +41,13 @@ ReactDOM.render(
     </Provider>,
     dest
 );
+
+store.dispatch({
+    type: CALCULATE_RESPONSIVE_STATE,
+    innerWidth: window.innerWidth,
+    innerHeight: window.innerHeight,
+    matchMedia: window.matchMedia
+});
 
 if (process.env.NODE_ENV !== 'production') {
     window.React = React; // enable debugger
