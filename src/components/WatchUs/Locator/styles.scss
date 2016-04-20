@@ -5,25 +5,25 @@
         justify-content: space-between;
         height: px2vw(140, $scaleFactor);
         padding: 0 px2vw(42, $scaleFactor) 0 px2vw(40, $scaleFactor);
-        background-color: #0c262d;
+        background-color: $color1;
 
         a:first-child {
             &::before {
-                content: '';
                 display: block;
                 width: px2vw(23, $scaleFactor);
                 height: px2vw(40, $scaleFactor);
                 margin-right: px2vw(40, $scaleFactor);
                 background: url($componentRoot + 'Images/arrowBackIcon-bg.svg') no-repeat;
+                content: '';
             }
         }
 
         h1 {
+            flex-grow: 1;
             margin-top: px2vw(-4, $scaleFactor);
+            color: $color2;
             font-size: px2vw(44, $scaleFactor);
             font-weight: bold;
-            color: rgba(255, 255, 255, .2);
-            flex-grow: 1;
         }
 
         a:last-child {
@@ -34,42 +34,41 @@
     }
 
     >ul {
-        background-color: #091a1e;
         min-height: px2vw(672, $scaleFactor);
         padding-left: px2vw(40, $scaleFactor);
+        background-color: $color3;
 
         >li {
             display: flex;
             align-items: center;
             height: px2vw(135, $scaleFactor);
-            border-bottom: 1px solid rgba(255, 255, 255, .06);
+            border-bottom: 1px solid $color4;
 
             .title {
+                display: flex;
                 position: relative;
                 width: 100%;
-                display: flex;
                 padding: px2vw(12, $scaleFactor) px2vw(54, $scaleFactor) 0 px2vw(18, $scaleFactor);
+                color: $color5;
                 font-size: px2vw(34, $scaleFactor);
                 font-weight: bold;
                 text-decoration: none;
-                color: #7f8e91;
 
                 span {
                     display: inline-block;
+                    min-width: px2vw(46, $scaleFactor);
                     margin-top: px2vw(-6, $scaleFactor);
                     margin-left: px2vw(24, $scaleFactor);
-                    color: rgba(255, 255, 255, .4);
-                    font-weight: normal;
-                    font-size: px2vw(30, $scaleFactor);
-                    border: 1px solid rgba(255, 255, 255, .4);
-                    border-radius: px2vw(24, $scaleFactor);
                     padding: px2vw(6, $scaleFactor) px2vw(8, $scaleFactor) px2vw(4, $scaleFactor);
-                    min-width: px2vw(46, $scaleFactor);
+                    border: 1px solid $color6;
+                    border-radius: px2vw(24, $scaleFactor);
+                    color: $color6;
+                    font-size: px2vw(30, $scaleFactor);
+                    font-weight: normal;
                     text-align: center;
                 }
 
                 &::after {
-                    content: '';
                     display: block;
                     position: absolute;
                     top: px2vw(20, $scaleFactor);
@@ -77,23 +76,24 @@
                     width: px2vw(24, $scaleFactor);
                     height: px2vw(24, $scaleFactor);
                     background: url($componentRoot + 'Images/rightMenuIcon-bg.svg') no-repeat;
+                    content: '';
                 }
             }
 
             &.select {
                 height: px2vw(133, $scaleFactor);
-                background-color: #2792b2;
-                padding-left: px2vw(40, $scaleFactor);
                 margin-left: px2vw(-40, $scaleFactor);
-                border-bottom: none;
+                padding-left: px2vw(40, $scaleFactor);
+                border-bottom: 0;
+                background-color: $color7;
 
                 .title {
                     margin-top: px2vw(-2, $scaleFactor);
-                    color: #fff;
+                    color: $color8;
 
                     span {
-                        border-color: rgba(255, 255, 255, .5);
-                        color: rgba(255, 255, 255, .5);
+                        border-color: $color9;
+                        color: $color9;
                     }
 
                     &::after {
@@ -114,17 +114,17 @@
                 }
 
                 &.opened {
-                    height: auto;
                     flex-wrap: wrap;
-                    padding-left: px2vw(40, $scaleFactor);
-                    padding-right: px2vw(40, $scaleFactor);
+                    height: auto;
                     margin-left: px2vw(-40, $scaleFactor);
-                    background-color: #0c262d;
+                    padding-right: px2vw(40, $scaleFactor);
+                    padding-left: px2vw(40, $scaleFactor);
+                    background-color: $color1;
 
                     .title {
-                        padding-bottom: px2vw(44, $scaleFactor);
                         margin-top: px2vw(41, $scaleFactor);
-                        color: #fff;
+                        padding-bottom: px2vw(44, $scaleFactor);
+                        color: $color8;
 
                         &::after {
                             top: px2vw(6, $scaleFactor);
@@ -134,30 +134,30 @@
                     }
 
                     ul {
-                        width: 100%;
-                        padding-top: px2vw(54, $scaleFactor);
-                        padding-left: px2vw(74, $scaleFactor);
-                        padding-bottom: px2vw(42, $scaleFactor);
-                        margin-bottom: px2vw(48, $scaleFactor);
-                        border-top: 1px solid rgba(255, 255, 255, .06);
-                        border-bottom: 1px solid rgba(255, 255, 255, .06);
                         position: relative;
+                        width: 100%;
+                        margin-bottom: px2vw(48, $scaleFactor);
+                        padding-top: px2vw(54, $scaleFactor);
+                        padding-bottom: px2vw(42, $scaleFactor);
+                        padding-left: px2vw(74, $scaleFactor);
+                        border-top: 1px solid $color4;
+                        border-bottom: 1px solid $color4;
 
                         &::before {
-                            content: '';
                             display: block;
                             position: absolute;
-                            left: px2vw(4, $scaleFactor);
                             top: px2vw(50, $scaleFactor);
+                            left: px2vw(4, $scaleFactor);
                             width: px2vw(40, $scaleFactor);
                             height: px2vw(40, $scaleFactor);
                             background: url($componentRoot + 'Images/phoneMenuIcon-bg.svg') no-repeat;
+                            content: '';
                         }
 
                         li {
-                            color: #fff;
-                            font-size: px2vw(34, $scaleFactor);
                             margin-bottom: px2vw(22, $scaleFactor);
+                            color: $color8;
+                            font-size: px2vw(34, $scaleFactor);
 
                             &:last-child {
                                 margin-bottom: 0;
@@ -166,30 +166,30 @@
                     }
 
                     .website {
-                        color: #fff;
-                        font-size: px2vw(34, $scaleFactor);
-                        text-decoration: none;
+                        display: flex;
                         margin-bottom: px2vw(48, $scaleFactor);
                         margin-left: px2vw(4, $scaleFactor);
                         padding-top: 1px;
-                        display: flex;
+                        color: $color8;
+                        font-size: px2vw(34, $scaleFactor);
+                        text-decoration: none;
 
                         &::before {
-                            content: '';
                             display: block;
                             width: px2vw(40, $scaleFactor);
                             height: px2vw(40, $scaleFactor);
-                            margin-right: px2vw(28, $scaleFactor);
                             margin-top: px2vw(-4, $scaleFactor);
+                            margin-right: px2vw(28, $scaleFactor);
                             background: url($componentRoot + 'Images/earthMenuIcon-bg.svg') no-repeat;
+                            content: '';
                         }
 
                         &::after {
-                            content: '→';
+                            margin-top: px2vw(4, $scaleFactor);
+                            margin-left: px2vw(22, $scaleFactor);
                             font-family: Arial;
                             font-size: px2vw(26, $scaleFactor);
-                            margin-left: px2vw(22, $scaleFactor);
-                            margin-top: px2vw(4, $scaleFactor);
+                            content: '→';
                         }
                     }
                 }
@@ -201,16 +201,16 @@
         width: 100%;
         height: px2vw(236, $scaleFactor);
         padding-top: px2vw(80, $scaleFactor);
-        background-color: #091a1e;
+        background-color: $color3;
 
         &::after {
-            bottom: px2vw(74, $scaleFactor);
-            content: '';
             display: block;
+            bottom: px2vw(74, $scaleFactor);
             width: px2vw(258, $scaleFactor);
             height: px2vw(80, $scaleFactor);
             margin: 0 auto;
             background: url($componentRoot + 'Images/logo-bg.svg') no-repeat;
+            content: '';
             opacity: .2;
         }
     }
