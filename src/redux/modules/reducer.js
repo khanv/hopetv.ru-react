@@ -3,6 +3,8 @@ import { routerReducer } from 'react-router-redux';
 import { reducer as reduxAsyncConnect } from 'redux-async-connect';
 import { createResponsiveStateReducer } from 'redux-responsive';
 
+import watchUs from './watchUs';
+
 export default combineReducers({
     routing: routerReducer,
     browser: createResponsiveStateReducer({
@@ -15,5 +17,6 @@ export default combineReducers({
         desktopHD: 1920,
         desktopMega: 2560
     }),
-    reduxAsyncConnect
+    reduxAsyncConnect,
+    watchUs
 });
