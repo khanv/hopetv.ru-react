@@ -1,7 +1,4 @@
 & {
-    position: relative;
-    padding-bottom: px2vw(236, $scaleFactor);
-
     header {
         display: flex;
         align-items: center;
@@ -10,36 +7,48 @@
         padding: 0 px2vw(42, $scaleFactor) 0 px2vw(40, $scaleFactor);
         background-color: #0c262d;
 
+        a:first-child {
+            &::before {
+                content: '';
+                display: block;
+                width: px2vw(23, $scaleFactor);
+                height: px2vw(40, $scaleFactor);
+                margin-right: px2vw(40, $scaleFactor);
+                background: url($componentRoot + 'Images/arrowBackIcon-bg.svg') no-repeat;
+            }
+        }
+
         h1 {
             margin-top: px2vw(-4, $scaleFactor);
             font-size: px2vw(44, $scaleFactor);
             font-weight: bold;
             color: rgba(255, 255, 255, .2);
+            flex-grow: 1;
         }
 
-        a {
+        a:last-child {
             i {
                 width: px2vw(41, $scaleFactor);
             }
         }
     }
 
-    ul {
+    >ul {
         background-color: #091a1e;
-        min-height: px2vw(675, $scaleFactor);
+        min-height: px2vw(672, $scaleFactor);
         padding-left: px2vw(40, $scaleFactor);
 
-        li {
+        >li {
             display: flex;
             align-items: center;
             height: px2vw(135, $scaleFactor);
             border-bottom: 1px solid rgba(255, 255, 255, .06);
 
-            a {
+            .title {
+                position: relative;
                 width: 100%;
                 display: flex;
-                justify-content: space-between;
-                padding: px2vw(14, $scaleFactor) px2vw(54, $scaleFactor) 0 px2vw(18, $scaleFactor);
+                padding: px2vw(12, $scaleFactor) px2vw(54, $scaleFactor) 0 px2vw(18, $scaleFactor);
                 font-size: px2vw(34, $scaleFactor);
                 font-weight: bold;
                 text-decoration: none;
@@ -62,13 +71,12 @@
                 &::after {
                     content: '';
                     display: block;
+                    position: absolute;
+                    top: px2vw(20, $scaleFactor);
+                    right: px2vw(48, $scaleFactor);
                     width: px2vw(24, $scaleFactor);
                     height: px2vw(24, $scaleFactor);
-                    margin-top: px2vw(4, $scaleFactor);
                     background: url($componentRoot + 'Images/rightMenuIcon-bg.svg') no-repeat;
-                    background-position-x: right;
-                    flex-grow: 1;
-                    text-align: right;
                 }
             }
 
@@ -79,7 +87,7 @@
                 margin-left: px2vw(-40, $scaleFactor);
                 border-bottom: none;
 
-                a {
+                .title {
                     margin-top: px2vw(-2, $scaleFactor);
                     color: #fff;
 
@@ -91,8 +99,98 @@
                     &::after {
                         margin-top: px2vw(2, $scaleFactor);
                         background: url($componentRoot + 'Images/rightMenuIconSelect-bg.svg') no-repeat;
-                        background-position-x: right;
                         opacity: .5;
+                    }
+                }
+            }
+        }
+
+        &.operators {
+            li {
+                .title {
+                    &::after {
+                        transform: rotate(90deg);
+                    }
+                }
+
+                &.opened {
+                    height: auto;
+                    flex-wrap: wrap;
+                    padding-left: px2vw(40, $scaleFactor);
+                    padding-right: px2vw(40, $scaleFactor);
+                    margin-left: px2vw(-40, $scaleFactor);
+                    background-color: #0c262d;
+
+                    .title {
+                        padding-bottom: px2vw(44, $scaleFactor);
+                        margin-top: px2vw(41, $scaleFactor);
+                        color: #fff;
+
+                        &::after {
+                            top: px2vw(6, $scaleFactor);
+                            right: px2vw(8, $scaleFactor);
+                            transform: rotate(270deg);
+                        }
+                    }
+
+                    ul {
+                        width: 100%;
+                        padding-top: px2vw(54, $scaleFactor);
+                        padding-left: px2vw(74, $scaleFactor);
+                        padding-bottom: px2vw(42, $scaleFactor);
+                        margin-bottom: px2vw(48, $scaleFactor);
+                        border-top: 1px solid rgba(255, 255, 255, .06);
+                        border-bottom: 1px solid rgba(255, 255, 255, .06);
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            left: px2vw(4, $scaleFactor);
+                            top: px2vw(50, $scaleFactor);
+                            width: px2vw(40, $scaleFactor);
+                            height: px2vw(40, $scaleFactor);
+                            background: url($componentRoot + 'Images/phoneMenuIcon-bg.svg') no-repeat;
+                        }
+
+                        li {
+                            color: #fff;
+                            font-size: px2vw(34, $scaleFactor);
+                            margin-bottom: px2vw(22, $scaleFactor);
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    .website {
+                        color: #fff;
+                        font-size: px2vw(34, $scaleFactor);
+                        text-decoration: none;
+                        margin-bottom: px2vw(48, $scaleFactor);
+                        margin-left: px2vw(4, $scaleFactor);
+                        padding-top: 1px;
+                        display: flex;
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            width: px2vw(40, $scaleFactor);
+                            height: px2vw(40, $scaleFactor);
+                            margin-right: px2vw(28, $scaleFactor);
+                            margin-top: px2vw(-4, $scaleFactor);
+                            background: url($componentRoot + 'Images/earthMenuIcon-bg.svg') no-repeat;
+                        }
+
+                        &::after {
+                            content: '→';
+                            font-family: Arial;
+                            font-size: px2vw(26, $scaleFactor);
+                            margin-left: px2vw(22, $scaleFactor);
+                            margin-top: px2vw(4, $scaleFactor);
+                        }
                     }
                 }
             }
@@ -100,21 +198,19 @@
     }
 
     footer {
-        position: absolute;
-        bottom: 0;
         width: 100%;
         height: px2vw(236, $scaleFactor);
+        padding-top: px2vw(80, $scaleFactor);
         background-color: #091a1e;
 
         &::after {
-            position: absolute;
             bottom: px2vw(74, $scaleFactor);
             content: '';
             display: block;
-            width: 100%;
+            width: px2vw(258, $scaleFactor);
             height: px2vw(80, $scaleFactor);
+            margin: 0 auto;
             background: url($componentRoot + 'Images/logo-bg.svg') no-repeat;
-            background-position-x: center;
             opacity: .2;
         }
     }

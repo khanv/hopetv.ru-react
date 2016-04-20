@@ -21,17 +21,32 @@ export default class Locator extends Component {
             <PixelPerfect templates={ templates } component="Locator">
                 <section className={ Styles.locator }>
                     <header>
-                        <h1>Выберите область</h1>
+                        <a href="#"></a>
+                        <h1>Переяслав-Хмельн...</h1>
                         <a href="#"><InlineSvg content={ SvgCloseIcon }/></a>
                     </header>
-                    <ul>
-                        <li><a href="#">Киевская<span>36</span></a></li>
-                        <li><a href="#">Черкасская<span>10</span></a></li>
-                        <li><a href="#">Днепропетровская<span>26</span></a></li>
-                        <li className={ Styles.select }><a href="#">Волынская<span>12</span></a></li>
-                        <li><a href="#">Харьковская<span>5</span></a></li>
-                        <li><a href="#">Сумская<span>3</span></a></li>
-                        <li><a href="#">Львовская<span>6</span></a></li>
+                    <ul className={ Styles.operators }>
+                        <li><a href="#" className={ Styles.title }>Жмеринка</a></li>
+                        <li><a href="#" className={ Styles.title }>Прискакановка</a></li>
+                        <li><a href="#" className={ Styles.title }>Переяслав-Хмельницкий</a></li>
+                        <li className={ Styles.opened }>
+                            <a href="#" className={ Styles.title }>Забитовка</a>
+                            <ul>
+                                <li>+380 (93) 576 87 32</li>
+                                <li>+380 (63) 356 39 11</li>
+                            </ul>
+                            <a href="#" className={ Styles.website }>primitivecompany.com.ua</a>
+                        </li>
+                        <li><a href="#" className={ Styles.title }>Лютовичи</a></li>
+                        <li><a href="#" className={ Styles.title }>Киевская<span>36</span></a></li>
+                        <li><a href="#" className={ Styles.title }>Черкасская<span>10</span></a></li>
+                        <li><a href="#" className={ Styles.title }>Днепропетровская<span>26</span></a></li>
+                        <li className={ Styles.select }>
+                            <a href="#" className={ Styles.title }>Волынская<span>12</span></a>
+                        </li>
+                        <li><a href="#" className={ Styles.title }>Харьковская<span>5</span></a></li>
+                        <li><a href="#" className={ Styles.title }>Сумская<span>3</span></a></li>
+                        <li><a href="#" className={ Styles.title }>Львовская<span>6</span></a></li>
                     </ul>
                     <footer/>
                 </section>
