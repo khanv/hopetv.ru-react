@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import cx from 'classnames';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PixelPerfect from 'components/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
@@ -13,17 +14,32 @@ import SvgArrow from 'theme/components/Info/Images/pointerArrow.svg';
 import SvgSatellite from 'theme/components/Info/Images/satellite.svg';
 import SvgTv from 'theme/components/Info/Images/tv.svg';
 
+import { toggle } from 'redux/modules/watchUs';
+
 /* eslint-disable react/prefer-stateless-function */
-@connect(({ browser }) => {
-    return { browser };
+@connect(({ browser, watchUs }) => {
+    return { browser, watchUs };
+}, (dispatch) => {
+    return bindActionCreators({ toggle }, dispatch);
 })
 export default class Info extends Component {
     static propTypes = {
-        browser: PropTypes.object.isRequired
+        browser: PropTypes.object.isRequired,
+        watchUs: PropTypes.object.isRequired,
+        toggle: PropTypes.func.isRequired
+    };
+
+    showLocator = (event) => {
+        event.preventDefault();
+        this.props.toggle(true);
     };
 
     render() {
-        const { browser } = this.props;
+        const { browser, watchUs } = this.props;
+
+        if (watchUs.locatorActive) {
+            return null;
+        }
 
         const templates = [
             BreakPoints.phonePortrait.name,
@@ -103,7 +119,7 @@ export default class Info extends Component {
                         </header>
                         <p>Телеканал «Надія» вещает через операторов кабельных сетей. Узнайте, можно ли смотреть нас
                         через кабельних операторов вашего населенного пункта – используйте карту ниже</p>
-                        <a className={ cx(Styles.btn, Styles.btnSearch) } href="#">
+                        <a className={ cx(Styles.btn, Styles.btnSearch) } href="#" onClick={ this.showLocator }>
                             Поиск операторов
                         </a>
                     </section>
