@@ -1,8 +1,14 @@
 & {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
     header {
         display: flex;
+        flex-grow: 0;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
         height: px2vw(140, $scaleFactor);
         padding: 0 px2vw(42, $scaleFactor) 0 px2vw(40, $scaleFactor);
         background-color: $color1;
@@ -19,11 +25,17 @@
         }
 
         h1 {
+            display: block;
             flex-grow: 1;
+            width: 100%;
             margin-top: px2vw(-4, $scaleFactor);
+            padding-right: px2vw(57, $scaleFactor);
             color: $color2;
             font-size: px2vw(44, $scaleFactor);
             font-weight: bold;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         a:last-child {
@@ -34,7 +46,8 @@
     }
 
     >ul {
-        min-height: px2vw(672, $scaleFactor);
+        flex-grow: 1;
+        width: 100%;
         padding-left: px2vw(40, $scaleFactor);
         background-color: $color3;
 
@@ -133,33 +146,37 @@
                         }
                     }
 
-                    ul {
-                        position: relative;
+                    div {
                         width: 100%;
-                        padding-top: px2vw(54, $scaleFactor);
-                        padding-bottom: px2vw(42, $scaleFactor);
-                        padding-left: px2vw(74, $scaleFactor);
-                        border-top: 1px solid $color4;
-                        border-bottom: 1px solid $color4;
 
-                        &::before {
-                            display: block;
-                            position: absolute;
-                            top: px2vw(50, $scaleFactor);
-                            left: px2vw(4, $scaleFactor);
-                            width: px2vw(40, $scaleFactor);
-                            height: px2vw(40, $scaleFactor);
-                            background: url($componentRoot + 'Images/phoneMenuIcon-bg.svg') no-repeat;
-                            content: '';
-                        }
+                        ul {
+                            position: relative;
+                            width: 100%;
+                            padding-top: px2vw(54, $scaleFactor);
+                            padding-bottom: px2vw(42, $scaleFactor);
+                            padding-left: px2vw(74, $scaleFactor);
+                            border-top: 1px solid $color4;
+                            border-bottom: 1px solid $color4;
 
-                        li {
-                            margin-bottom: px2vw(22, $scaleFactor);
-                            color: $color8;
-                            font-size: px2vw(34, $scaleFactor);
+                            &::before {
+                                display: block;
+                                position: absolute;
+                                top: px2vw(50, $scaleFactor);
+                                left: px2vw(4, $scaleFactor);
+                                width: px2vw(40, $scaleFactor);
+                                height: px2vw(40, $scaleFactor);
+                                background: url($componentRoot + 'Images/phoneMenuIcon-bg.svg') no-repeat;
+                                content: '';
+                            }
 
-                            &:last-child {
-                                margin-bottom: 0;
+                            li {
+                                margin-bottom: px2vw(22, $scaleFactor);
+                                color: $color8;
+                                font-size: px2vw(34, $scaleFactor);
+
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
                             }
                         }
                     }
@@ -198,6 +215,7 @@
     }
 
     footer {
+        flex-grow: 0;
         width: 100%;
         height: px2vw(236, $scaleFactor);
         padding-top: px2vw(80, $scaleFactor);
