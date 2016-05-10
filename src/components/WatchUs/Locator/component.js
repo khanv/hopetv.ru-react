@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import cx from 'classnames';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import InlineSvg from 'components/InlineSvg/component';
@@ -6,24 +7,52 @@ import Styles from './main.scss';
 
 import SvgCloseIcon from 'theme/components/Locator/Images/closeListIcon.svg';
 
-import { region as selectRegion, city as selectCity, provider as selectProvider } from 'redux/modules/watchUs';
+import {
+    region as selectRegion,
+    city as selectCity,
+    provider as selectProvider,
+    back as locationBack,
+    toggle
+} from 'redux/modules/watchUs';
 
 /* eslint-disable react/prefer-stateless-function */
 @connect(({ watchUs }) => {
     return { state: watchUs };
 }, (dispatch) => {
-    return bindActionCreators({ selectRegion, selectCity, selectProvider }, dispatch);
+    return bindActionCreators({ selectRegion, selectCity, selectProvider, locationBack, toggle }, dispatch);
 })
 export default class Locator extends Component {
     static propTypes = {
         state: PropTypes.object.isRequired,
         regions: PropTypes.array,
-        selectRegion: PropTypes.func.isRequired
+        selectRegion: PropTypes.func.isRequired,
+        selectCity: PropTypes.func.isRequired,
+        selectProvider: PropTypes.func.isRequired,
+        locationBack: PropTypes.func.isRequired,
+        toggle: PropTypes.func.isRequired
     };
 
-    selectRegion = (event) => {
-        console.log(event);
-        this.props.selectRegion(1200000000);
+    selectRegion = (id) => {
+        this.props.selectRegion(id);
+    };
+
+    selectCity = (id) => {
+        this.props.selectCity(id);
+    };
+
+    selectProvider = (id) => {
+        this.props.selectProvider(id);
+    };
+
+    locationBack = (event) => {
+        event.preventDefault();
+        console.log('location back');
+        this.props.locationBack();
+    };
+
+    close = (event) => {
+        event.preventDefault();
+        this.props.toggle();
     };
 
     render() {
@@ -33,38 +62,103 @@ export default class Locator extends Component {
             return null;
         }
 
+        // Init
+        const currentRegion = state.region ? regions.find((region) => {
+            return region.id === state.region;
+        }) : null;
+        const currentCity = state.city ? currentRegion.cities.find((city) => {
+            return city.id === state.city;
+        }) : null;
+        const currentProvider = state.provider ? currentCity.providers.find((provider) => {
+            return provider.id === state.provider;
+        }) : null;
+
         // Back
-        const backButton = state.region ? (<a href="#"></a>) : null;
+        const backButton = state.region ? (<a href="#" onClick={ this.locationBack }></a>) : null;
 
         // Title
         let title = '';
         if (state.region === null) {
             title = 'Выберите область';
         } else if (state.region !== null && state.city === null) {
-            const currentRegion = regions.find((region) => {
-                return region.id === state.region;
-            });
             title = currentRegion.title.text;
         } else if (state.city !== null) {
-            title = state.city;
+            title = currentCity.title;
         }
 
         // List
+        const listClass = cx({
+            [Styles.operators]: state.city !== null
+        });
         let list = [];
         if (state.region === null) {
             list = regions.map((region) => {
-                let total = 0;
+                const total = region.cities.reduce((total, city) => {
+                    return total + city.providers.length;
+                }, 0);
 
-                region.cities.forEach((city) => {
-                    total += city.providers.length;
-                });
-
+                /* eslint-disable react/jsx-no-bind */
                 return (
-                    <li key={ region.id } onClick={ this.selectRegion }>
-                        <a href="#" className={ Styles.title }>
+                    <li key={ region.id } onClick={ () => this.selectRegion(region.id) }>
+                        <span className={ Styles.title }>
                             { region.title.text }
                             <span>{ total }</span>
-                        </a>
+                        </span>
+                    </li>
+                );
+            });
+        } else if (state.city === null) {
+            list = currentRegion.cities.map((city) => {
+                const total = city.providers.length;
+
+                /* eslint-disable react/jsx-no-bind */
+                return (
+                    <li key={ city.id } onClick={ () => this.selectCity(city.id) }>
+                        <span className={ Styles.title }>
+                            { city.title }
+                            <span>{ total }</span>
+                        </span>
+                    </li>
+                );
+            });
+        } else {
+            console.log(currentProvider);
+            list = currentCity.providers.map((provider) => {
+                const itemClass = cx({
+                    [Styles.opened]: state.provider === provider.id
+                });
+
+                const webSite = provider.website !== '' ? (
+                    <a href={ provider.website } className={ Styles.website }>{ provider.website }</a>
+                ) : null;
+
+                const phones = provider.phones.map((phone) => {
+                    const phoneNew = `+${phone.slice(0, 3)} 
+                    (${phone.slice(3, 5)}) 
+                    ${phone.slice(5, 8)} 
+                    ${phone.slice(8, 10)} 
+                    ${phone.slice(10)}`;
+
+                    return (
+                        <li key={ phone }>{ phoneNew }</li>
+                    );
+                });
+
+                const providerInfo = state.provider === provider.id ? (
+                    <div>
+                        <ul>
+                            { phones }
+                        </ul>
+                        { webSite }
+                    </div>
+                ) : null;
+
+                return (
+                    <li key={ provider.id } className={ itemClass } onClick={ () => this.selectProvider(provider.id) }>
+                        <span className={ Styles.title }>
+                            { provider.title }
+                        </span>
+                        { providerInfo }
                     </li>
                 );
             });
@@ -75,9 +169,9 @@ export default class Locator extends Component {
                 <header>
                     { backButton }
                     <h1>{ title }</h1>
-                    <a href="#"><InlineSvg content={ SvgCloseIcon }/></a>
+                    <a href="#" onClick={ this.close }><InlineSvg content={ SvgCloseIcon }/></a>
                 </header>
-                <ul className={ Styles.operators }>
+                <ul className={ listClass }>
                     { list }
                 </ul>
                 <footer/>

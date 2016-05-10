@@ -2,6 +2,7 @@
 
 const LOCATOR_OPEN     = 'hope/watchUs/locator/open';
 const LOCATOR_CLOSE    = 'hope/watchUs/locator/close';
+const LOCATOR_BACK = 'hope/watchUs/locator/back';
 const LOCATOR_REGION   = 'hope/watchUs/locator/region';
 const LOCATOR_CITY     = 'hope/watchUs/locator/city';
 const LOCATOR_PROVIDER = 'hope/watchUs/locator/provider';
@@ -26,6 +27,21 @@ export default function reducer(state = initialState, action = {}) {
             return {
                 ...state,
                 locatorActive: false
+            };
+        case LOCATOR_BACK:
+            if (state.city !== null) {
+                return {
+                    ...state,
+                    city: null,
+                    provider: null
+                };
+            }
+
+            return {
+                ...state,
+                region: null,
+                city: null,
+                provider: null
             };
         case LOCATOR_REGION:
             return {
@@ -59,7 +75,6 @@ export function toggle(state) {
 
 export function region(id) {
     return (dispatch) => {
-        // const region = LocatorApi.getRegion(id);
         dispatch({
             type: LOCATOR_REGION,
             payload: id
@@ -78,5 +93,11 @@ export function provider(id) {
     return {
         type: LOCATOR_PROVIDER,
         payload: id
+    };
+}
+
+export function back() {
+    return {
+        type: LOCATOR_BACK
     };
 }
