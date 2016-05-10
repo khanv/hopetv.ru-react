@@ -27,7 +27,10 @@ export default class Info extends Component {
 
         const templates = [
             BreakPoints.phonePortrait.name,
-            BreakPoints.phoneLandscape.name
+            BreakPoints.phoneLandscape.name,
+            BreakPoints.tabletPortrait.name,
+            BreakPoints.tabletLandscape.name,
+            BreakPoints.desktop.name
         ];
 
         return (
@@ -96,16 +99,32 @@ export default class Info extends Component {
                             ) : null }
                         </div>
                     </section>
-                    <section className={ Styles.television }>
+                    <section className={ Styles.cable }>
                         <header>
                             <InlineSvg content={ SvgTv }/>
                             <h1>Кабельные сети</h1>
                         </header>
                         <p>Телеканал «Надія» вещает через операторов кабельных сетей. Узнайте, можно ли смотреть нас
                         через кабельних операторов вашего населенного пункта – используйте карту ниже</p>
-                        <a className={ cx(Styles.btn, Styles.btnSearch) } href="#">
-                            Поиск операторов
-                        </a>
+
+                        { [
+                            BreakPoints.phonePortrait.name,
+                            BreakPoints.phoneLandscape.name
+                        ].indexOf(browser.mediaType) !== -1 ? (
+                            <a className={ cx(Styles.btn, Styles.btnSearch) } href="#">
+                                Поиск операторов
+                            </a>
+                        ) : null }
+
+                        { [
+                            BreakPoints.tabletLandscape.name,
+                            BreakPoints.desktop.name,
+                            BreakPoints.desktopWide.name,
+                            BreakPoints.desktopHD.name,
+                            BreakPoints.desktopMega.name
+                        ].indexOf(browser.mediaType) !== -1 ? (
+                            <div className={ Styles.providerSearch }>Найти оператора на карте</div>
+                        ) : null }
                     </section>
                 </section>
             </PixelPerfect>

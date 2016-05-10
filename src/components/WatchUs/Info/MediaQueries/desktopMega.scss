@@ -1,7 +1,19 @@
 @import 'theme/MediaQueries';
 
 @media #{$desktopMega} {
-    $scaleFactor: .05;
+    $scaleFactor: .03;
 
-    @import '../styles';
+    @import '../desktop';
+
+    .internet {
+        .watchOnline {
+            margin-right: px2vw(70, $scaleFactor);
+            margin-left: 0;
+        }
+
+        .btn {
+            margin-right: px2vw(66, $scaleFactor);
+            margin-left: 0;
+        }
+    }
 }

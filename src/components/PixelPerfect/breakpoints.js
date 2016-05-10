@@ -27,25 +27,25 @@ const breakpoints = {
         name: 'desktop',
         min: 1025,
         max: 1366,
-        template: 1025
+        template: 1026
     },
     desktopWide: {
         name: 'desktopWide',
         min: 1367,
         max: 1680,
-        template: 1367
+        template: 1368
     },
     desktopHD: {
         name: 'desktopHD',
         min: 1681,
         max: 1920,
-        template: 1681
+        template: 1682
     },
     desktopMega: {
         name: 'desktopMega',
         min: 1921,
         max: 2560,
-        template: 1921
+        template: 1922
     }
 };
 
