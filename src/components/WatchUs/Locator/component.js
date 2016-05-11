@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import cx from 'classnames';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { routerActions } from 'react-router-redux';
 import InlineSvg from 'components/InlineSvg/component';
 import Styles from './main.scss';
 
@@ -12,47 +13,58 @@ import {
     city as selectCity,
     provider as selectProvider,
     back as locationBack,
-    toggle
+    close
 } from 'redux/modules/watchUs';
 
 /* eslint-disable react/prefer-stateless-function */
-@connect(({ watchUs }) => {
-    return { state: watchUs };
+@connect(({ watchUs, routing }) => {
+    return {
+        state: watchUs,
+        location: routing.locationBeforeTransitions.pathname
+    };
 }, (dispatch) => {
-    return bindActionCreators({ selectRegion, selectCity, selectProvider, locationBack, toggle }, dispatch);
+    return bindActionCreators({
+        push: routerActions.push,
+        selectRegion,
+        selectCity,
+        selectProvider,
+        locationBack,
+        close
+    }, dispatch);
 })
 export default class Locator extends Component {
     static propTypes = {
         state: PropTypes.object.isRequired,
+        location: PropTypes.string.isRequired,
         regions: PropTypes.array,
+        push: PropTypes.func.isRequired,
         selectRegion: PropTypes.func.isRequired,
         selectCity: PropTypes.func.isRequired,
         selectProvider: PropTypes.func.isRequired,
         locationBack: PropTypes.func.isRequired,
-        toggle: PropTypes.func.isRequired
+        close: PropTypes.func.isRequired
     };
 
     selectRegion = (id) => {
-        this.props.selectRegion(id);
+        this.props.selectRegion(id, this.props.state);
     };
 
     selectCity = (id) => {
-        this.props.selectCity(id);
+        this.props.selectCity(id, this.props.state);
     };
 
     selectProvider = (id) => {
-        this.props.selectProvider(id);
+        this.props.selectProvider(id, this.props.state);
     };
 
     locationBack = (event) => {
         event.preventDefault();
-        console.log('location back');
-        this.props.locationBack();
+        this.props.locationBack(this.props.state);
     };
 
     close = (event) => {
         event.preventDefault();
-        this.props.toggle();
+        this.props.close();
     };
 
     render() {
