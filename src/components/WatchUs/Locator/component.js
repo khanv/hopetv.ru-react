@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-import PixelPerfect from 'components/PixelPerfect/component';
-import BreakPoints from 'components/PixelPerfect/breakpoints';
+// import PixelPerfect from 'components/PixelPerfect/component';
+// import BreakPoints from 'components/PixelPerfect/breakpoints';
 import cx from 'classnames';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { routerActions } from 'react-router-redux';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 import InlineSvg from 'components/InlineSvg/component';
 import Styles from './main.scss';
 
@@ -87,6 +88,18 @@ export default class Locator extends Component {
             return provider.id === state.provider;
         }) : null;
 
+        console.log(currentProvider);
+
+        // Page id
+        let pageId = '';
+        if (state.region !== null && state.city === null) {
+            pageId = 'regions';
+        } else if (state.city !== null) {
+            pageId = 'cities';
+        } else if (state.provider !== null) {
+            pageId = 'providers';
+        }
+
         // Back
         const backButton = state.region ? (<a href="#" onClick={ this.locationBack }></a>) : null;
 
@@ -102,6 +115,7 @@ export default class Locator extends Component {
 
         // List
         const listClass = cx({
+            [Styles.listItems]: true,
             [Styles.operators]: state.city !== null
         });
         let list = [];
@@ -136,7 +150,6 @@ export default class Locator extends Component {
                 );
             });
         } else {
-            console.log(currentProvider);
             list = currentCity.providers.map((provider) => {
                 const itemClass = cx({
                     [Styles.opened]: state.provider === provider.id
@@ -178,28 +191,42 @@ export default class Locator extends Component {
             });
         }
 
-        const templates = [
-            {
-                name: BreakPoints.tabletPortrait.name,
-                states: ['choose-1', 'choose-2', 'choose-3']
-            },
-            BreakPoints.desktopMega.name
-        ];
+        // const templates = [
+        //     {
+        //         name: BreakPoints.tabletPortrait.name,
+        //         states: ['choose-1', 'choose-2', 'choose-3']
+        //     },
+        //     BreakPoints.desktopMega.name
+        // ];
+
+        // forward back
+        const transitionForward = {
+            enter: Styles.sliderEnter,
+            enterActive: Styles.sliderEnterActive,
+            leave: Styles.sliderLeave,
+            leaveActive: Styles.sliderLeaveActive
+        };
+        // const transitionBack = {
+        //     enter: Styles.sliderBackEnter,
+        //     enterActive: Styles.sliderBackEnterActive,
+        //     leave: Styles.sliderBackLeave,
+        //     leaveActive: Styles.sliderBackLeaveActive
+        // };
 
         return (
-            <PixelPerfect templates={ templates } component="Locator">
-                <section className={ Styles.locator }>
-                    <header>
-                        { backButton }
-                        <h1>{ title }</h1>
-                        <a href="#" onClick={ this.close }><InlineSvg content={ SvgCloseIcon }/></a>
-                    </header>
-                    <ul className={ listClass }>
+            <section className={ Styles.locator }>
+                <header>
+                    { backButton }
+                    <h1>{ title }</h1>
+                    <a href="#" onClick={ this.close }><InlineSvg content={ SvgCloseIcon }/></a>
+                </header>
+                <CSSTransitionGroup transitionName={ transitionForward } component="div">
+                    <ul key={ pageId } className={ listClass }>
                         { list }
                     </ul>
-                    <footer/>
-                </section>
-            </PixelPerfect>
+                </CSSTransitionGroup>
+                <footer/>
+            </section>
         );
     }
 }

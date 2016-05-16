@@ -52,8 +52,6 @@ export default function reducer(state = initialState, action = {}) {
                 return state;
             }
 
-            console.log(regionName, cityName, providerShortId);
-
             const region = LocatorApi.getRegion({
                 name: decodeURIComponent(regionName)
             });
