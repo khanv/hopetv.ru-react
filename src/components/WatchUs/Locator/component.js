@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import PixelPerfect from 'components/PixelPerfect/component';
+import BreakPoints from 'components/PixelPerfect/breakpoints';
 import cx from 'classnames';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -176,18 +178,28 @@ export default class Locator extends Component {
             });
         }
 
+        const templates = [
+            {
+                name: BreakPoints.tabletPortrait.name,
+                states: ['choose-1', 'choose-2', 'choose-3']
+            },
+            BreakPoints.desktopMega.name
+        ];
+
         return (
-            <section className={ Styles.locator }>
-                <header>
-                    { backButton }
-                    <h1>{ title }</h1>
-                    <a href="#" onClick={ this.close }><InlineSvg content={ SvgCloseIcon }/></a>
-                </header>
-                <ul className={ listClass }>
-                    { list }
-                </ul>
-                <footer/>
-            </section>
+            <PixelPerfect templates={ templates } component="Locator">
+                <section className={ Styles.locator }>
+                    <header>
+                        { backButton }
+                        <h1>{ title }</h1>
+                        <a href="#" onClick={ this.close }><InlineSvg content={ SvgCloseIcon }/></a>
+                    </header>
+                    <ul className={ listClass }>
+                        { list }
+                    </ul>
+                    <footer/>
+                </section>
+            </PixelPerfect>
         );
     }
 }

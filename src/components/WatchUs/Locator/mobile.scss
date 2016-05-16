@@ -129,6 +129,7 @@
                 &.opened {
                     flex-wrap: wrap;
                     height: auto;
+                    margin-top: px2vw(-2, $scaleFactor);
                     margin-left: px2vw(-40, $scaleFactor);
                     padding-right: px2vw(40, $scaleFactor);
                     padding-left: px2vw(40, $scaleFactor);
@@ -148,6 +149,8 @@
 
                     div {
                         width: 100%;
+                        min-height: px2vw(132, $scaleFactor);
+                        overflow: hidden;
 
                         ul {
                             position: relative;
