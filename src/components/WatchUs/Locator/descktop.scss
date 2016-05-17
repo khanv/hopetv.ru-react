@@ -1,41 +1,49 @@
 & {
-    position: relative;
-    width: px2vw(1416, $scaleFactor);
-    margin: 0 auto;
-    padding-top: px2vw(110, $scaleFactor);
+    .map {
+        position: relative;
+        width: px2vw(1416, $scaleFactor);
+        margin: 0 auto;
+        padding-top: px2vw(110, $scaleFactor);
 
-    .hint {
-        position: absolute;
-        bottom: px2vw(150, $scaleFactor);
-        left: px2vw(80, $scaleFactor);
-
-        p {
-            color: $color10;
-            font-size: px2vw(30, $scaleFactor);
-            font-weight: bold;
-            text-align: right;
-        }
-
-        span {
-            display: inline-block;
-            width: px2vw(286, $scaleFactor);
-            margin-top: px2vw(15, $scaleFactor);
-            color: $color10;
-            font-size: px2vw(26, $scaleFactor);
-            font-style: italic;
-            line-height: px2vw(30, $scaleFactor);
-            text-align: right;
-        }
-
-        &::before {
-            display: block;
+        .hint {
             position: absolute;
-            top: px2vw(-106, $scaleFactor);
-            right: px2vw(-148, $scaleFactor);
-            width: px2vw(128, $scaleFactor);
-            height: px2vw(130, $scaleFactor);
-            background: url($componentRoot + 'Images/arrowsIcon-bg.svg') no-repeat;
-            content: '';
+            bottom: px2vw(150, $scaleFactor);
+            left: px2vw(80, $scaleFactor);
+
+            p {
+                color: $color10;
+                font-size: px2vw(30, $scaleFactor);
+                font-weight: bold;
+                text-align: right;
+            }
+
+            span {
+                display: inline-block;
+                width: px2vw(286, $scaleFactor);
+                margin-top: px2vw(15, $scaleFactor);
+                color: $color10;
+                font-size: px2vw(26, $scaleFactor);
+                font-style: italic;
+                line-height: px2vw(30, $scaleFactor);
+                text-align: right;
+            }
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: px2vw(-106, $scaleFactor);
+                right: px2vw(-148, $scaleFactor);
+                width: px2vw(128, $scaleFactor);
+                height: px2vw(130, $scaleFactor);
+                background: url($componentRoot + 'Images/arrowsIcon-bg.svg') no-repeat;
+                content: '';
+            }
         }
+    }
+
+    .region {
+        position: fixed;
+        width: 100%;
+        height: 700px;
     }
 }

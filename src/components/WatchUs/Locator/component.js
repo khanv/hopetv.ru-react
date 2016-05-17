@@ -239,6 +239,13 @@ export default class Locator extends Component {
             );
         }
 
+        // Region popup
+        const region = state.region !== null ? (
+            <section className={ Styles.region }>
+                <h1>Work!</h1>
+            </section>
+        ) : null;
+
         const templates = [
             {
                 name: BreakPoints.tabletPortrait.name,
@@ -250,11 +257,14 @@ export default class Locator extends Component {
         return (
             <PixelPerfect templates={ templates } component="Locator">
                 <section className={ Styles.locator }>
-                    <Country regions={ regions }/>
-                    <div className={ Styles.hint }>
-                        <p>Выберите область</p>
-                        <span>чтобы увидеть список операторов в доступных городах этой области</span>
-                    </div>
+                    <section className={ Styles.map }>
+                        <Country regions={ regions }/>
+                        <div className={ Styles.hint }>
+                            <p>Выберите область</p>
+                            <span>чтобы увидеть список операторов в доступных городах этой области</span>
+                        </div>
+                    </section>
+                    { region }
                 </section>
             </PixelPerfect>
         );
