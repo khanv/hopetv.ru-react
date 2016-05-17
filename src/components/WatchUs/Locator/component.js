@@ -242,7 +242,46 @@ export default class Locator extends Component {
         // Region popup
         const region = state.region !== null ? (
             <section className={ Styles.region }>
-                <h1>Work!</h1>
+                <header>
+                    <h1>Кировоградская область</h1>
+                    <a href="#" className={ Styles.close }></a>
+                </header>
+                <div className={ Styles.head }>
+                    <p className={ Styles.cities }><span>Города</span></p>
+                    <p className={ Styles.operators }><span>Кабельные операторы</span></p>
+                </div>
+                <div className={ Styles.content }>
+                    <ul className={ Styles.cities }>
+                        <li>Кировоград</li>
+                        <li className={ Styles.selected }>Переяслав-Хмельницкий</li>
+                        <li>Димитрово</li>
+                        <li>Знамянка</li>
+                        <li>Новоукраинка</li>
+                        <li>Пантаивка</li>
+                        <li>Димитрово</li>
+                        <li>Знамянка</li>
+                        <li>Новоукраинка</li>
+                    </ul>
+                    <ul className={ Styles.operators }>
+                        <li>Компания Сервис РПП</li>
+                        <li>ТРК «Контакт-ЛТД»</li>
+                        <li className={ Styles.selected }>
+                            <div className={ Styles.title }>
+                                <span>Телерадиокомпания «Интелкон»</span>
+                                <a href="#" className={ Styles.close }></a>
+                            </div>
+                            <div className={ Styles.contacts }>
+                                <ul>
+                                    <li>+380 (93) 756-88-26</li>
+                                    <li>+380 (63) 364-24-76</li>
+                                </ul>
+                                <a href="#">intelcom.com.ua</a>
+                            </div>
+                        </li>
+                        <li>Компания Сервис РПП</li>
+                        <li>ТРК «Контакт-ЛТД»</li>
+                    </ul>
+                </div>
             </section>
         ) : null;
 
