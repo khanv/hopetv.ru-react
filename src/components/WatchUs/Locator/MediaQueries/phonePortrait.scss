@@ -3,5 +3,5 @@
 @media #{$phonePortrait} {
     $scaleFactor: .1562500;
 
-    @import '../styles';
+    @import '../mobile';
 }

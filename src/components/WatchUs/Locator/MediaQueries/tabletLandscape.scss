@@ -3,5 +3,214 @@
 @media #{$tabletLandscape} {
     $scaleFactor: .04882826;
 
-    @import '../styles';
+    @import '../descktop';
+
+    .region {
+        header {
+            margin-top: px2vw(64, $scaleFactor);
+            padding-right: px2vw(122, $scaleFactor);
+
+            h1 {
+                width: 100%;
+                margin-top: px2vw(10, $scaleFactor);
+                margin-left: px2vw(100, $scaleFactor);
+                font-size: px2vw(44, $scaleFactor);
+                text-align: center;
+
+                &::after {
+                    top: px2vw(78, $scaleFactor);
+                    left: 50%;
+                    width: px2vw(50, $scaleFactor);
+                    margin-left: px2vw(-25, $scaleFactor);
+                }
+            }
+
+            .close {
+                width: px2vw(90, $scaleFactor);
+                height: px2vw(90, $scaleFactor);
+            }
+        }
+
+        .head {
+            margin-top: px2vw(84, $scaleFactor);
+            padding-left: px2vw(120, $scaleFactor);
+
+            .mapTitle {
+                display: flex;
+                width: px2vw(620, $scaleFactor);
+                margin-right: px2vw(12, $scaleFactor);
+                color: $color10;
+                font-size: px2vw(28, $scaleFactor);
+                font-weight: bold;
+
+                span {
+                    margin-top: px2vw(10, $scaleFactor);
+                    margin-left: px2vw(2, $scaleFactor);
+                }
+
+                &::before {
+                    display: block;
+                    width: px2vw(42, $scaleFactor);
+                    height: px2vw(50, $scaleFactor);
+                    margin-right: px2vw(30, $scaleFactor);
+                    background: url($componentRoot + 'Images/mapIcon-bg.svg') no-repeat;
+                    content: '';
+                }
+
+                &::after {
+                    width: px2vw(300, $scaleFactor);
+                    height: px2vw(2, $scaleFactor);
+                    margin-top: px2vw(26, $scaleFactor);
+                    margin-left: px2vw(40, $scaleFactor);
+                    background-color: $color13;
+                    content: '';
+                }
+            }
+
+            .cities {
+                width: px2vw(500, $scaleFactor);
+                font-size: px2vw(28, $scaleFactor);
+
+                &::before {
+                    width: px2vw(64, $scaleFactor);
+                    height: px2vw(48, $scaleFactor);
+                    margin-right: px2vw(34, $scaleFactor);
+                }
+
+                &::after {
+                    width: px2vw(230, $scaleFactor);
+                    margin-left: px2vw(46, $scaleFactor);
+                }
+            }
+
+            .operators {
+                font-size: px2vw(28, $scaleFactor);
+
+                &::before {
+                    width: px2vw(46, $scaleFactor);
+                    height: px2vw(42, $scaleFactor);
+                    margin-right: px2vw(34, $scaleFactor);
+                }
+
+                &::after {
+                    width: px2vw(278, $scaleFactor);
+                    margin-left: px2vw(40, $scaleFactor);
+                }
+            }
+        }
+
+        .content {
+            .regionMap {
+                width: px2vw(590, $scaleFactor);
+                height: px2vw(330, $scaleFactor);
+                margin-top: px2vw(108, $scaleFactor);
+                margin-left: px2vw(20, $scaleFactor);
+                background-color: $color12;
+            }
+
+            .cities {
+                width: px2vw(500, $scaleFactor);
+                margin-top: px2vw(66, $scaleFactor);
+                padding-left: px2vw(110, $scaleFactor);
+
+                li {
+                    padding-top: px2vw(30, $scaleFactor);
+                    padding-bottom: px2vw(30, $scaleFactor);
+                    padding-left: px2vw(28, $scaleFactor);
+                    font-size: px2vw(28, $scaleFactor);
+
+                    &:first-child {
+                        &::after {
+                            top: px2vw(-36, $scaleFactor);
+                            height: px2vw(126, $scaleFactor);
+                        }
+                    }
+
+                    &:last-child {
+                        &::after {
+                            height: px2vw(122, $scaleFactor);
+                        }
+                    }
+
+                    &::after {
+                        right: px2vw(-60, $scaleFactor);
+                    }
+
+                    &.selected {
+                        width: px2vw(456, $scaleFactor);
+                        padding-top: px2vw(30, $scaleFactor);
+                        padding-bottom: px2vw(30, $scaleFactor);
+                        padding-left: px2vw(30, $scaleFactor);
+                    }
+                }
+            }
+
+            .operators {
+                width: px2vw(640, $scaleFactor);
+                margin-left: px2vw(60, $scaleFactor);
+                padding-top: px2vw(100, $scaleFactor);
+                padding-left: px2vw(62, $scaleFactor);
+
+                li {
+                    margin-bottom: px2vw(54, $scaleFactor);
+                    font-size: px2vw(28, $scaleFactor);
+
+                    &.selected {
+                        margin-bottom: px2vw(44, $scaleFactor);
+
+                        .title {
+                            margin-top: px2vw(62, $scaleFactor);
+
+                            .close {
+                                width: px2vw(18, $scaleFactor);
+                                height: px2vw(18, $scaleFactor);
+                                margin-top: px2vw(6, $scaleFactor);
+                                margin-left: px2vw(16, $scaleFactor);
+                            }
+                        }
+
+                        .contacts {
+                            width: px2vw(560, $scaleFactor);
+                            margin-top: px2vw(40, $scaleFactor);
+
+                            ul {
+                                margin-top: px2vw(40, $scaleFactor);
+                                padding-bottom: px2vw(0, $scaleFactor);
+                                padding-left: px2vw(80, $scaleFactor);
+
+                                &::before {
+                                    left: px2vw(30, $scaleFactor);
+                                    width: px2vw(36, $scaleFactor);
+                                    height: px2vw(36, $scaleFactor);
+                                }
+
+                                li {
+                                    margin-bottom: px2vw(26, $scaleFactor);
+                                }
+                            }
+
+                            a {
+                                margin-top: px2vw(30, $scaleFactor);
+                                margin-bottom: px2vw(34, $scaleFactor);
+                                margin-left: px2vw(26, $scaleFactor);
+                                padding-left: px2vw(54, $scaleFactor);
+                                font-size: px2vw(28, $scaleFactor);
+
+                                &::before {
+                                    top: px2vw(10, $scaleFactor);
+                                    left: px2vw(0, $scaleFactor);
+                                    width: px2vw(36, $scaleFactor);
+                                    height: px2vw(36, $scaleFactor);
+                                }
+
+                                &::after {
+                                    font-size: px2vw(28, $scaleFactor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
