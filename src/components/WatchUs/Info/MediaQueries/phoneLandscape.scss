@@ -3,7 +3,7 @@
 @media #{$phoneLandscape} {
     $scaleFactor: .08803;
 
-    @import '../styles';
+    @import '../mobile';
 
     > section {
         &::after {
@@ -112,10 +112,11 @@
                 flex-basis: 50%;
                 flex-direction: column;
                 align-items: flex-start;
+                height: px2vw(62, $scaleFactor);
                 margin-bottom: px2vw(48, $scaleFactor);
 
                 span {
-                    &:nth-child(1) {
+                    &:nth-child(2) {
                         margin-bottom: 1px;
                     }
                 }
@@ -178,7 +179,7 @@
         }
     }
 
-    .television {
+    .cable {
         order: 3;
 
         &::after {

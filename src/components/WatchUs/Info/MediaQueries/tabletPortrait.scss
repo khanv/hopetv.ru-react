@@ -3,5 +3,208 @@
 @media #{$tabletPortrait} {
     $scaleFactor: .065106;
 
-    @import '../styles';
+    @import '../mobile';
+
+    > section {
+        &::after {
+            display: none;
+        }
+    }
+
+    .satellite {
+        flex-basis: 50%;
+        order: 1;
+
+        header {
+            i {
+                width: px2vw(136, $scaleFactor);
+                margin: px2vw(104, $scaleFactor) px2vw(20, $scaleFactor) 0 0;
+            }
+
+            h1 {
+                margin: px2vw(74, $scaleFactor) 0 0  px2vw(28, $scaleFactor);
+                font-size: px2vw(50, $scaleFactor);
+
+                &::after {
+                    width: px2vw(66, $scaleFactor);
+                    margin-top: px2vw(60, $scaleFactor);
+                }
+            }
+        }
+
+        ul {
+            margin-top: px2vw(74, $scaleFactor);
+
+            li {
+                margin-bottom: px2vw(57, $scaleFactor);
+
+                span {
+                    &:nth-child(1) {
+                        margin: 0 px2vw(32, $scaleFactor) 0 px2vw(24, $scaleFactor);
+                        font-size: px2vw(34, $scaleFactor);
+                    }
+
+                    &:nth-child(2) {
+                        font-size: px2vw(34, $scaleFactor);
+                    }
+                }
+            }
+        }
+
+    }
+
+    .internet {
+        flex-basis: 50%;
+        flex-direction: column;
+        order: 2;
+
+        header {
+            i {
+                width: px2vw(163, $scaleFactor);
+                margin: px2vw(104, $scaleFactor) 0 0;
+            }
+
+            h1 {
+                margin: px2vw(74, $scaleFactor) px2vw(50, $scaleFactor) 0 0;
+                font-size: px2vw(50, $scaleFactor);
+
+                &::after {
+                    width: px2vw(66, $scaleFactor);
+                    margin-top: px2vw(60, $scaleFactor);
+                }
+            }
+        }
+
+        .searchUs {
+            width: px2vw(570, $scaleFactor);
+            height: px2vw(70, $scaleFactor);
+            margin-top: px2vw(70, $scaleFactor);
+            margin-left: px2vw(62, $scaleFactor);
+            font-size: px2vw(34, $scaleFactor);
+        }
+
+        .apps {
+            width: px2vw(570, $scaleFactor);
+            height: px2vw(146, $scaleFactor);
+            margin-top: px2vw(84, $scaleFactor);
+            margin-right: px2vw(130, $scaleFactor);
+
+            a {
+                flex-shrink: 0;
+                width: px2vw(146, $scaleFactor);
+                height: px2vw(146, $scaleFactor);
+
+            }
+
+            div {
+                span {
+                    margin-bottom: px2vw(12, $scaleFactor);
+                    padding-right: px2vw(8, $scaleFactor);
+                    font-size: px2vw(35, $scaleFactor);
+                    font-weight: bold;
+                    line-height: px2vw(36, $scaleFactor);
+                }
+
+                i {
+                    width: px2vw(78, $scaleFactor);
+                }
+            }
+
+            .androidLink {
+                i {
+                    width: px2vw(87, $scaleFactor);
+                }
+            }
+
+            .appleLink {
+                i {
+                    width: px2vw(78, $scaleFactor);
+                }
+            }
+        }
+
+        .watchOnline {
+            width: px2vw(600, $scaleFactor);
+            margin-top: px2vw(16, $scaleFactor);
+            margin-left: px2vw(56, $scaleFactor);
+            font-size: px2vw(34, $scaleFactor);
+        }
+    }
+
+    .cable {
+        flex-basis: 100%;
+        order: 3;
+
+        header {
+            margin-top: px2vw(96, $scaleFactor);
+
+            i {
+                position: relative;
+                width: px2vw(159, $scaleFactor);
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: 63%;
+                    right: px2vw(-590, $scaleFactor);
+                    width: px2vw(540, $scaleFactor);
+                    height: 3px;
+                    background-image: url($componentRoot + 'Images/divider-bg.svg');
+                    content: '';
+
+                }
+
+                &::before {
+                    display: block;
+                    position: absolute;
+                    top: 63%;
+                    left: px2vw(-580, $scaleFactor);
+                    width: px2vw(540, $scaleFactor);
+                    height: 3px;
+                    background-image: url($componentRoot + 'Images/divider-bg.svg');
+                    content: '';
+                }
+            }
+
+            h1 {
+                margin-top: px2vw(76, $scaleFactor);
+                font-size: px2vw(52, $scaleFactor);
+
+                &::after {
+                    margin-top: px2vw(71, $scaleFactor);
+                }
+            }
+        }
+
+        p {
+            width: px2vw(1075, $scaleFactor);
+            margin-top: px2vw(75, $scaleFactor);
+            margin-left: px2vw(228, $scaleFactor);
+            font-size: px2vw(34, $scaleFactor);
+            line-height: px2vw(43, $scaleFactor);
+        }
+    }
+
+    .btn {
+        width: px2vw(460, $scaleFactor);
+        height: px2vw(112, $scaleFactor);
+        margin: px2vw(92, $scaleFactor) 0 0 px2vw(128, $scaleFactor);
+        padding: 0 px2vw(26, $scaleFactor) 0 px2vw(44, $scaleFactor);
+        font-size: px2vw(34, $scaleFactor);
+
+        &::before {
+            margin-right: px2vw(32, $scaleFactor);
+        }
+    }
+
+    .btn.btnTuner {
+        margin-top: px2vw(34, $scaleFactor);
+        margin-left: px2vw(36, $scaleFactor);
+        padding-left: px2vw(34, $scaleFactor);
+        font-size: px2vw(34, $scaleFactor);
+
+        &::before {
+            margin-right: px2vw(24, $scaleFactor);
+        }
+    }
 }

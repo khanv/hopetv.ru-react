@@ -1,43 +1,61 @@
 & {
     display: flex;
+    position: relative;
     flex-wrap: wrap;
+    padding-bottom: px2vw(112, $scaleFactor);
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: px2vw(56, $scaleFactor);
+        width: 95%;
+        height: 4px;
+        background-image: url($componentRoot + 'Images/divider-bg.svg');
+        content: '';
+    }
 
     > section {
+        flex-basis: 33%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: px2vw(78, $scaleFactor);
+
         &::after {
-            width: px2vw(560, $scaleFactor);
-            height: 3px;
-            margin: px2vw(80, $scaleFactor) auto;
-            background-image: url($componentRoot + 'Images/divider-bg.svg');
-            content: '';
+            display: none;
         }
     }
 
     .internet {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        order: 3;
 
         header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 100%;
+            width: auto;
+            margin-right: px2vw(100, $scaleFactor);
+            padding-right: 0;
 
             i {
-                width: px2vw(137, $scaleFactor);
-                margin: px2vw(60, $scaleFactor) 0 0 px2vw(38, $scaleFactor);
+                width: px2vw(126, $scaleFactor);
+                margin-left: px2vw(16, $scaleFactor);
             }
 
             h1 {
                 width: max-content;
-                margin: px2vw(42, $scaleFactor) auto 0;
+                margin: px2vw(42, $scaleFactor) px2vw(16, $scaleFactor) 0;
                 color: $titleColor;
                 font-size: px2vw(44, $scaleFactor);
 
                 &::after {
                     display: block;
-                    width: px2vw(60, $scaleFactor);
+                    width: px2vw(50, $scaleFactor);
                     height: px2vw(6, $scaleFactor);
-                    margin: px2vw(51, $scaleFactor) auto 0;
+                    margin-top: px2vw(36, $scaleFactor);
+                    margin-left: px2vw(196, $scaleFactor);
                     background-color: $titleAfterColor;
                     content: '';
                 }
@@ -54,8 +72,10 @@
 
         .apps {
             display: flex;
-            width: px2vw(518, $scaleFactor);
-            margin: px2vw(50, $scaleFactor) auto;
+            width: px2vw(490, $scaleFactor);
+            margin-top: px2vw(50, $scaleFactor);
+            margin-right: px2vw(92, $scaleFactor);
+            margin-left: 0;
 
             a {
                 flex-shrink: 0;
@@ -68,6 +88,16 @@
                 border: 1px solid $androidColor;
                 border-radius: 6px;
 
+                &:active {
+                    background: $androidColor;
+
+                    i {
+                        path {
+                            fill: $btnHoverColor;
+                        }
+                    }
+                }
+
                 i {
                     width: px2vw(78, $scaleFactor);
                     margin: px2vw(15, $scaleFactor) auto 0;
@@ -77,6 +107,16 @@
             .appleLink {
                 border: 1px solid $textTuner;
                 border-radius: 6px;
+
+                &:active {
+                    background: $textTuner;
+
+                    i {
+                        path {
+                            fill: $btnHoverColor;
+                        }
+                    }
+                }
 
                 i {
                     width: px2vw(67, $scaleFactor);
@@ -92,7 +132,7 @@
                 text-align: center;
 
                 span {
-                    margin-bottom: px2vw(6, $scaleFactor);
+                    margin-bottom: 0;
                     color: $textTuner;
                     font-size: px2vw(32, $scaleFactor);
                     line-height: px2vw(26, $scaleFactor);
@@ -124,14 +164,39 @@
             }
         }
 
+        .searchUs {
+            width: px2vw(500, $scaleFactor);
+            height: px2vw(68, $scaleFactor);
+            margin: px2vw(40, $scaleFactor) px2vw(86, $scaleFactor) 0 0;
+        }
+
         .watchOnline {
-            margin-top: px2vw(4, $scaleFactor);
+            width: auto;
+            margin-top: px2vw(56, $scaleFactor);
+            margin-left: px2vw(64, $scaleFactor);
+            font-size: px2vw(28, $scaleFactor);
+            text-align: left;
+        }
+
+        .btn {
+            width: px2vw(384, $scaleFactor);
+            height: px2vw(80, $scaleFactor);
+            margin-top: px2vw(40, $scaleFactor);
+            margin-left: px2vw(90, $scaleFactor);
+            font-size: px2vw(28, $scaleFactor);
+
+            &::before {
+                margin-right: px2vw(32, $scaleFactor);
+            }
         }
     }
 
     .satellite {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+        padding-left: px2vw(120, $scaleFactor);
 
         header {
             display: flex;
@@ -140,21 +205,22 @@
             width: 100%;
 
             i {
-                width: px2vw(116, $scaleFactor);
+                width: px2vw(106, $scaleFactor);
                 margin: 0 px2vw(36, $scaleFactor) 0 0;
             }
 
             h1 {
                 width: max-content;
-                margin: px2vw(46, $scaleFactor) auto 0;
+                margin: px2vw(42, $scaleFactor) 0 0 px2vw(30, $scaleFactor);
                 color: $titleColor;
                 font-size: px2vw(44, $scaleFactor);
 
                 &::after {
                     display: block;
-                    width: px2vw(60, $scaleFactor);
+                    width: px2vw(50, $scaleFactor);
                     height: px2vw(6, $scaleFactor);
-                    margin: px2vw(51, $scaleFactor) auto 0;
+                    margin-top: px2vw(40, $scaleFactor);
+                    margin-left: px2vw(178, $scaleFactor);
                     background-color: $titleAfterColor;
                     content: '';
                 }
@@ -163,11 +229,11 @@
 
         ul {
             width: 100%;
-            margin: px2vw(54, $scaleFactor) auto 0;
+            margin: px2vw(32, $scaleFactor) auto 0;
 
             li {
                 display: flex;
-                margin-bottom: px2vw(30, $scaleFactor);
+                margin-bottom: px2vw(35, $scaleFactor);
 
                 span {
                     &:nth-child(1) {
@@ -191,34 +257,55 @@
             }
         }
 
+        .btnTuner {
+            width: px2vw(424, $scaleFactor);
+            height: px2vw(80, $scaleFactor);
+            margin-top: px2vw(50, $scaleFactor);
+            margin-left: px2vw(4, $scaleFactor);
+
+            &::before {
+                margin-right: px2vw(38, $scaleFactor);
+            }
+        }
+
         .tunerContainer {
             margin: 0 auto;
         }
     }
 
-    .television {
+    .cable {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
+
+        &::after {
+            display: none;
+        }
 
         header {
-            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             i {
-                width: px2vw(135, $scaleFactor);
-                margin: 0 auto;
+                width: px2vw(122, $scaleFactor);
+                margin-left: px2vw(10, $scaleFactor);
             }
 
             h1 {
                 width: max-content;
-                margin: px2vw(40, $scaleFactor) auto 0;
+                margin-top: px2vw(40, $scaleFactor);
+                margin-right: px2vw(20, $scaleFactor);
                 color: $titleColor;
                 font-size: px2vw(44, $scaleFactor);
 
                 &::after {
                     display: block;
-                    width: px2vw(60, $scaleFactor);
+                    width: px2vw(50, $scaleFactor);
                     height: px2vw(6, $scaleFactor);
-                    margin: px2vw(51, $scaleFactor) auto 0;
+                    margin-top: px2vw(40, $scaleFactor);
+                    margin-left: px2vw(148, $scaleFactor);
                     background-color: $titleAfterColor;
                     content: '';
                 }
@@ -226,11 +313,50 @@
         }
 
         p {
-            width: px2vw(507, $scaleFactor);
-            margin: px2vw(48, $scaleFactor) auto 0;
-            font-size: px2vw(30, $scaleFactor);
+            width: px2vw(406, $scaleFactor);
+            margin-top: px2vw(36, $scaleFactor);
+            margin-left: px2vw(8, $scaleFactor);
+            font-size: px2vw(28, $scaleFactor);
             line-height: px2vw(36, $scaleFactor);
             text-align: center;
+        }
+
+        .providerSearch {
+            position: relative;
+            width: px2vw(356, $scaleFactor);
+            margin: px2vw(178, $scaleFactor) auto 0;
+            padding-left: px2vw(16, $scaleFactor);
+            color: $providerSearchColor;
+            font-size: px2vw(28, $scaleFactor);
+            font-style: italic;
+            z-index: 1;
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: px2vw(-40, $scaleFactor);
+                left: 50%;
+                width: px2vw(70, $scaleFactor);
+                height: 1px;
+                margin-left: px2vw(-26, $scaleFactor);
+                background: $providerSearchBeforeColor;
+                content: '';
+            }
+
+            &::after {
+                display: block;
+                position: absolute;
+                top: px2vw(56, $scaleFactor);
+                left: 50%;
+                width: px2vw(230, $scaleFactor);
+                height: px2vw(212, $scaleFactor);
+                margin-left: px2vw(-100, $scaleFactor);
+                background-color: $backgroundColor;
+                background-image: url($componentRoot + 'Images/arrowMapDownIcon-bg.svg');
+                background-repeat: no-repeat;
+                content: '';
+                background-position-x: px2vw(70, $scaleFactor);
+            }
         }
 
         .btn.btnSearch {
@@ -240,13 +366,13 @@
                 width: px2vw(39, $scaleFactor);
                 height: px2vw(39, $scaleFactor);
                 margin-right: px2vw(30, $scaleFactor);
-                background-image: url($componentRoot + 'Images/search-bg.svg');
+                background: url($componentRoot + 'Images/search-bg.svg') no-repeat;
                 content: '';
             }
 
             &:active {
                 &::before {
-                    background-image: url($componentRoot + 'Images/searchHover-bg.svg');
+                    background: url($componentRoot + 'Images/searchHover-bg.svg') no-repeat;
                 }
             }
         }
@@ -265,11 +391,17 @@
         font-size: px2vw(30, $scaleFactor);
         text-decoration: none;
 
+        &.btnTuner {
+            &::before {
+                margin-right: px2vw(16, $scaleFactor);
+            }
+        }
+
         &::before {
             width: px2vw(39, $scaleFactor);
             height: px2vw(39, $scaleFactor);
             margin-right: px2vw(26, $scaleFactor);
-            background-image: url($componentRoot + 'Images/play-bg.svg');
+            background: url($componentRoot + 'Images/play-bg.svg') no-repeat;
             content: '';
 
             path {
@@ -282,7 +414,7 @@
             color: $btnHoverColor;
 
             &::before {
-                background-image: url($componentRoot + 'Images/playHover-bg.svg');
+                background: url($componentRoot + 'Images/playHover-bg.svg') no-repeat;
             }
         }
     }

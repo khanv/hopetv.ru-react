@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import cx from 'classnames';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 import InlineSvg from 'components/InlineSvg/component';
 import Styles from './main.scss';
@@ -14,21 +13,16 @@ import SvgSatellite from 'theme/components/Info/Images/satellite.svg';
 import SvgTv from 'theme/components/Info/Images/tv.svg';
 
 /* eslint-disable react/prefer-stateless-function */
-@connect(({ browser, watchUs }) => {
-    return { browser, watchUs };
+@connect(({ browser }) => {
+    return { browser };
 })
 export default class Info extends Component {
     static propTypes = {
-        browser: PropTypes.object.isRequired,
-        watchUs: PropTypes.object.isRequired
+        browser: PropTypes.object.isRequired
     };
 
     render() {
-        const { browser, watchUs } = this.props;
-
-        if (watchUs.locatorActive) {
-            return null;
-        }
+        const { browser } = this.props;
 
         return (
             <section className={ Styles.infoComponent }>
@@ -95,16 +89,32 @@ export default class Info extends Component {
                         ) : null }
                     </div>
                 </section>
-                <section className={ Styles.television }>
+                <section className={ Styles.cable }>
                     <header>
                         <InlineSvg content={ SvgTv }/>
                         <h1>Кабельные сети</h1>
                     </header>
                     <p>Телеканал «Надія» вещает через операторов кабельных сетей. Узнайте, можно ли смотреть нас
-                    через кабельних операторов вашего населенного пункта – используйте карту ниже</p>
-                    <Link className={ cx(Styles.btn, Styles.btnSearch) } to="/watch-us/locator">
-                        Поиск операторов
-                    </Link>
+                        через кабельних операторов вашего населенного пункта – используйте карту ниже</p>
+
+                    { [
+                        BreakPoints.phonePortrait.name,
+                        BreakPoints.phoneLandscape.name
+                    ].indexOf(browser.mediaType) !== -1 ? (
+                        <a className={ cx(Styles.btn, Styles.btnSearch) } href="#">
+                            Поиск операторов
+                        </a>
+                    ) : null }
+
+                    { [
+                        BreakPoints.tabletLandscape.name,
+                        BreakPoints.desktop.name,
+                        BreakPoints.desktopWide.name,
+                        BreakPoints.desktopHD.name,
+                        BreakPoints.desktopMega.name
+                    ].indexOf(browser.mediaType) !== -1 ? (
+                        <div className={ Styles.providerSearch }>Найти оператора на карте</div>
+                    ) : null }
                 </section>
             </section>
         );
