@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import PixelPerfect from 'components/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 import { Country } from 'components/Map';
 import cx from 'classnames';
@@ -247,10 +246,28 @@ export default class Locator extends Component {
                     <a href="#" className={ Styles.close }></a>
                 </header>
                 <div className={ Styles.head }>
+                    { [
+                        BreakPoints.tabletLandscape.name,
+                        BreakPoints.desktop.name,
+                        BreakPoints.desktopWide.name,
+                        BreakPoints.desktopHD.name,
+                        BreakPoints.desktopMega.name
+                    ].indexOf(browser.mediaType) !== -1 ? (
+                        <p className={ Styles.mapTitle }><span>Карта области</span></p>
+                    ) : null }
                     <p className={ Styles.cities }><span>Города</span></p>
                     <p className={ Styles.operators }><span>Кабельные операторы</span></p>
                 </div>
                 <div className={ Styles.content }>
+                    { [
+                        BreakPoints.tabletLandscape.name,
+                        BreakPoints.desktop.name,
+                        BreakPoints.desktopWide.name,
+                        BreakPoints.desktopHD.name,
+                        BreakPoints.desktopMega.name
+                    ].indexOf(browser.mediaType) !== -1 ? (
+                        <div className={ Styles.regionMap }></div>
+                    ) : null }
                     <ul className={ Styles.cities }>
                         <li>Кировоград</li>
                         <li className={ Styles.selected }>Переяслав-Хмельницкий</li>
@@ -285,27 +302,17 @@ export default class Locator extends Component {
             </section>
         ) : null;
 
-        const templates = [
-            {
-                name: BreakPoints.tabletPortrait.name,
-                states: ['choose-1', 'choose-2', 'choose-3']
-            },
-            BreakPoints.tabletPortrait.name
-        ];
-
         return (
-            <PixelPerfect templates={ templates } component="Locator">
-                <section className={ Styles.locator }>
-                    <section className={ Styles.map }>
-                        <Country regions={ regions }/>
-                        <div className={ Styles.hint }>
-                            <p>Выберите область</p>
-                            <span>чтобы увидеть список операторов в доступных городах этой области</span>
-                        </div>
-                    </section>
-                    { region }
+            <section className={ Styles.locator }>
+                <section className={ Styles.map }>
+                    <Country regions={ regions }/>
+                    <div className={ Styles.hint }>
+                        <p>Выберите область</p>
+                        <span>чтобы увидеть список операторов в доступных городах этой области</span>
+                    </div>
                 </section>
-            </PixelPerfect>
+                { region }
+            </section>
         );
     }
 }
