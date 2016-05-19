@@ -233,19 +233,11 @@
 
                     &.selected {
                         margin-bottom: px2vw(68, $scaleFactor);
-                        color: $color7;
-                        font-weight: bold;
 
                         .title {
                             display: flex;
-
-                            .close {
-                                width: px2vw(19, $scaleFactor);
-                                height: px2vw(19, $scaleFactor);
-                                margin-top: px2vw(8, $scaleFactor);
-                                margin-left: px2vw(20, $scaleFactor);
-                                background: url($componentRoot + 'Images/closeListIcon-bg.svg') no-repeat;
-                            }
+                            color: $color7;
+                            font-weight: bold;
                         }
 
                         .contacts {
@@ -258,10 +250,9 @@
                             ul {
                                 position: relative;
                                 margin-top: px2vw(56, $scaleFactor);
+                                margin-bottom: px2vw(56, $scaleFactor);
                                 padding-top: px2vw(8, $scaleFactor);
-                                padding-bottom: px2vw(30, $scaleFactor);
                                 padding-left: px2vw(100, $scaleFactor);
-                                border-bottom: 1px solid $color15;
 
                                 &::before {
                                     display: block;
@@ -277,14 +268,24 @@
                                 li {
                                     margin-bottom: px2vw(28, $scaleFactor);
                                     font-weight: normal;
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+
+                                &.withWebsite {
+                                    margin-bottom: 0;
+                                    padding-bottom: px2vw(56, $scaleFactor);
+                                    border-bottom: 1px solid $color15;
                                 }
                             }
 
                             a {
                                 display: inline-block;
                                 position: relative;
-                                margin-top: px2vw(52, $scaleFactor);
-                                margin-bottom: px2vw(52, $scaleFactor);
+                                margin-top: px2vw(30, $scaleFactor);
+                                margin-bottom: px2vw(32, $scaleFactor);
                                 margin-left: px2vw(32, $scaleFactor);
                                 padding-top: px2vw(14, $scaleFactor);
                                 padding-left: px2vw(70, $scaleFactor);
