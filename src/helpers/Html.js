@@ -35,7 +35,7 @@ export default function Html(props) {
                     sizes="152x152"
                 />
 
-                {/* styles (will be present only in production with webpack extract text plugin) */}
+                { /* styles (will be present only in production with webpack extract text plugin) */ }
                 { Object.keys(assets.styles).map((style, key) =>
                     <link
                         href={ assets.styles[style] }

@@ -15,6 +15,7 @@
     "fetch": true
   },
   "rules": {
-    "generator-star-spacing": 0
+    "space-in-brackets": 0,
+    "object-property-newline": 0
   }
 }
