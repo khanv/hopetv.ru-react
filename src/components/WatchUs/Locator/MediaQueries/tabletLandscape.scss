@@ -158,23 +158,11 @@
                     &.selected {
                         margin-bottom: px2vw(44, $scaleFactor);
 
-                        .title {
-                            margin-top: px2vw(62, $scaleFactor);
-
-                            .close {
-                                width: px2vw(18, $scaleFactor);
-                                height: px2vw(18, $scaleFactor);
-                                margin-top: px2vw(6, $scaleFactor);
-                                margin-left: px2vw(16, $scaleFactor);
-                            }
-                        }
-
                         .contacts {
                             width: px2vw(560, $scaleFactor);
                             margin-top: px2vw(40, $scaleFactor);
 
                             ul {
-                                margin-top: px2vw(40, $scaleFactor);
                                 padding-bottom: px2vw(0, $scaleFactor);
                                 padding-left: px2vw(80, $scaleFactor);
 
@@ -190,7 +178,6 @@
                             }
 
                             a {
-                                margin-top: px2vw(30, $scaleFactor);
                                 margin-bottom: px2vw(34, $scaleFactor);
                                 margin-left: px2vw(26, $scaleFactor);
                                 padding-left: px2vw(54, $scaleFactor);
