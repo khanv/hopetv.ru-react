@@ -79,23 +79,23 @@ export default class Locator extends Component {
             BreakPoints.phoneLandscape.name
         ].indexOf(browser.mediaType) !== -1;
 
+        // Init
+        const currentRegion = state.region ? regions.find((region) => {
+            return region.id === state.region;
+        }) : null;
+        const currentCity = state.city ? currentRegion.cities.find((city) => {
+            return city.id === state.city;
+        }) : null;
+        const currentProvider = state.provider ? currentCity.providers.find((provider) => {
+            return provider.id === state.provider;
+        }) : null;
+
+        console.log(currentProvider);
+
         if (isMobile) {
             if (!state.locatorActive) {
                 return null;
             }
-
-            // Init
-            const currentRegion = state.region ? regions.find((region) => {
-                return region.id === state.region;
-            }) : null;
-            const currentCity = state.city ? currentRegion.cities.find((city) => {
-                return city.id === state.city;
-            }) : null;
-            const currentProvider = state.provider ? currentCity.providers.find((provider) => {
-                return provider.id === state.provider;
-            }) : null;
-
-            console.log(currentProvider);
 
             // Page id
             let pageId = '';
@@ -238,12 +238,74 @@ export default class Locator extends Component {
             );
         }
 
+        // Title
+        const title = state.region !== null ? `${currentRegion.title.text} область` : null;
+
+        // City list
+        const cityList = state.region !== null ? currentRegion.cities.map((city) => {
+            const cityClass = cx({
+                [Styles.selected]: state.city === city.id
+            });
+
+            /* eslint-disable react/jsx-no-bind */
+            return (
+                <li key={ city.id } className={ cityClass } onClick={ () => this.selectCity(city.id) }>
+                    { city.title }
+                </li>
+            );
+        }) : null;
+
+        // Provider list
+        const providersList = state.region !== null ? currentCity.providers.map((provider) => {
+            const providerClass = cx({
+                [Styles.selected]: state.provider === provider.id
+            });
+
+            const webSite = provider.website !== '' ? (
+                <a href={ provider.website }>{ provider.website }</a>
+            ) : null;
+
+            const phones = provider.phones.map((phone) => {
+                const phoneNew = `+${phone.slice(0, 3)} 
+                    (${phone.slice(3, 5)}) 
+                    ${phone.slice(5, 8)} 
+                    ${phone.slice(8, 10)} 
+                    ${phone.slice(10)}`;
+
+                return (
+                    <li key={ phone }>{ phoneNew }</li>
+                );
+            });
+
+            const phonesClass = cx({
+                [Styles.withWebsite]: provider.website !== ''
+            });
+
+            const providerInfo = state.provider === provider.id ? (
+                <div className={ Styles.contacts }>
+                    <ul className={ phonesClass }>
+                        { phones }
+                    </ul>
+                    { webSite }
+                </div>
+
+            ) : null;
+
+            /* eslint-disable react/jsx-no-bind */
+            return (
+                <li key={ provider.id } className={ providerClass } onClick={ () => this.selectProvider(provider.id) }>
+                    <div className={ Styles.title }>{ provider.title }</div>
+                    { providerInfo }
+                </li>
+            );
+        }) : null;
+
         // Region popup
         const region = state.region !== null ? (
             <section className={ Styles.region }>
                 <header>
-                    <h1>Кировоградская область</h1>
-                    <a href="#" className={ Styles.close }></a>
+                    <h1>{ title }</h1>
+                    <a href="#" className={ Styles.close } onClick={ this.close }></a>
                 </header>
                 <div className={ Styles.head }>
                     { [
@@ -269,34 +331,10 @@ export default class Locator extends Component {
                         <div className={ Styles.regionMap }></div>
                     ) : null }
                     <ul className={ Styles.cities }>
-                        <li>Кировоград</li>
-                        <li className={ Styles.selected }>Переяслав-Хмельницкий</li>
-                        <li>Димитрово</li>
-                        <li>Знамянка</li>
-                        <li>Новоукраинка</li>
-                        <li>Пантаивка</li>
-                        <li>Димитрово</li>
-                        <li>Знамянка</li>
-                        <li>Новоукраинка</li>
+                        { cityList }
                     </ul>
                     <ul className={ Styles.operators }>
-                        <li>Компания Сервис РПП</li>
-                        <li>ТРК «Контакт-ЛТД»</li>
-                        <li className={ Styles.selected }>
-                            <div className={ Styles.title }>
-                                <span>Телерадиокомпания «Интелкон»</span>
-                                <a href="#" className={ Styles.close }></a>
-                            </div>
-                            <div className={ Styles.contacts }>
-                                <ul>
-                                    <li>+380 (93) 756-88-26</li>
-                                    <li>+380 (63) 364-24-76</li>
-                                </ul>
-                                <a href="#">intelcom.com.ua</a>
-                            </div>
-                        </li>
-                        <li>Компания Сервис РПП</li>
-                        <li>ТРК «Контакт-ЛТД»</li>
+                        { providersList }
                     </ul>
                 </div>
             </section>
