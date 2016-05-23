@@ -42,7 +42,7 @@ function Region(props) {
 
     const cityComponents = cities.map((city) => {
         return (
-            <City { ...city.pos } key={ `city-${city.id}` }>{ city.title }</City>
+            <City { ...city.pos } key={ `city-${city.id}` }/>
         );
     });
 
