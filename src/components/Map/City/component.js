@@ -22,8 +22,8 @@ function convertGeoToPixel(latitude, longitude) {
 }
 
 export default function City(props) {
-    const { lat, lon, children } = props;
-    const { x, y } = convertGeoToPixel(lat, lon);
+    const { lat, lng } = props;
+    const { x, y } = convertGeoToPixel(lat, lng);
 
     return (
         <g>
@@ -39,13 +39,12 @@ export default function City(props) {
                 r="5"
                 fill="#f9c90f"
             />
-            <text x={ x } y={ y + 40 }>{ children }</text>
         </g>
     );
 }
 
 City.propTypes = {
     lat: PropTypes.number.isRequired,
-    lon: PropTypes.number.isRequired,
+    lng: PropTypes.number.isRequired,
     children: PropTypes.string
 };
