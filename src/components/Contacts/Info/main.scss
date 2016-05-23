@@ -1,0 +1,5 @@
+.infoComponent {
+    @import 'theme/mixins/px2vw';
+    @import 'variables';
+    @import 'MediaQueries/all';
+}

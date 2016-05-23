@@ -1,0 +1,434 @@
+& {
+    section::after {
+        width: px2vw(560, $scaleFactor);
+        height: 3px;
+        margin: px2vw(80, $scaleFactor) auto 0;
+        background-image: url($componentRoot + 'divider-bg.svg');
+        content: '';
+    }
+
+    .live {
+        display: flex;
+        flex-direction: column;
+
+        header {
+            display: flex;
+            flex-basis: 100%;
+            flex-direction: column;
+            align-items: center;
+
+            i {
+                width: px2vw(173, $scaleFactor);
+                margin-top: px2vw(60, $scaleFactor);
+            }
+
+            h1 {
+                margin-top: px2vw(46, $scaleFactor);
+                color: $titleColor;
+                font-size: px2vw(44, $scaleFactor);
+
+                &::after {
+                    display: block;
+                    width: px2vw(60, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    margin: px2vw(52, $scaleFactor) auto 0;
+                    background-color: $yellow;
+                    content: '';
+                }
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: px2vw(10, $scaleFactor);
+
+            p {
+                width: px2vw(406, $scaleFactor);
+                font-size: px2vw(30, $scaleFactor);
+                font-style: italic;
+                line-height: px2vw(36, $scaleFactor);
+                text-align: center;
+
+                b {
+                    font-style: initial;
+                }
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                width: px2vw(450, $scaleFactor);
+                height: px2vw(100, $scaleFactor);
+                margin: auto;
+                border: 1px solid $blue;
+                border-radius: px2vw(12, $scaleFactor);
+                color: $blue;
+                font-size: px2vw(30, $scaleFactor);
+                text-decoration: none;
+
+                &::before {
+                    display: block;
+                    width: px2vw(92, $scaleFactor);
+                    height: 100%;
+                    margin-right: px2vw(30, $scaleFactor);
+                    border-right: 1px solid $blue;
+                    content: '';
+                }
+            }
+        }
+
+        .chat {
+            &::after {
+                display: block;
+                width: px2vw(60, $scaleFactor);
+                height: 1px;
+                margin-top: px2vw(52, $scaleFactor);
+                background: $color4;
+                content: '';
+            }
+
+            a {
+                margin-top: px2vw(40, $scaleFactor);
+
+                &::before {
+                    background: url($componentRoot + 'writeButton-bg.svg') no-repeat;
+                    background-position: center;
+                    background-size: px2vw(44, $scaleFactor);
+                }
+            }
+
+            p {
+                margin: px2vw(38, $scaleFactor) auto 0;
+                line-height: px2vw(38, $scaleFactor);
+            }
+        }
+
+        .call {
+            margin-top: px2vw(42, $scaleFactor);
+
+            a {
+                margin-top: px2vw(40, $scaleFactor);
+
+                &::before {
+                    background: url($componentRoot + 'phoneButton-bg.svg') no-repeat;
+                    background-position: center;
+                    background-size: px2vw(44, $scaleFactor);
+                }
+            }
+
+            p {
+                margin: px2vw(0, $scaleFactor) auto 0;
+                line-height: px2vw(38, $scaleFactor);
+            }
+        }
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::after {
+            margin-top: px2vw(70, $scaleFactor);
+        }
+
+        header {
+            display: flex;
+            flex-basis: 100%;
+            flex-direction: column;
+            align-items: center;
+
+            i {
+                width: px2vw(138, $scaleFactor);
+                margin-top: px2vw(80, $scaleFactor);
+            }
+
+            h1 {
+                margin-top: px2vw(56, $scaleFactor);
+                color: $titleColor;
+                font-size: px2vw(44, $scaleFactor);
+
+                &::after {
+                    display: block;
+                    width: px2vw(60, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    margin: px2vw(51, $scaleFactor) auto 0;
+                    background-color: $yellow;
+                    content: '';
+                }
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: px2vw(28, $scaleFactor);
+
+            .row {
+                flex-direction: row;
+                width: max-content;
+            }
+
+            div {
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+                width: px2vw(316, $scaleFactor);
+                margin-left: px2vw(34, $scaleFactor);
+
+                >span {
+                    position: relative;
+                    margin-left: px2vw(54, $scaleFactor);
+                    color: $titleColor;
+                    font-size: px2vw(42, $scaleFactor);
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        top: px2vw(4, $scaleFactor);
+                        left: px2vw(-30, $scaleFactor);
+                        width: 1px;
+                        height: px2vw(35, $scaleFactor);
+                        background: $color4;
+                        content: '';
+                    }
+                }
+
+                p {
+                    margin-top: px2vw(14, $scaleFactor);
+                    margin-left: px2vw(24, $scaleFactor);
+                    color: $color5;
+                    font-size: px2vw(30, $scaleFactor);
+                    font-style: italic;
+                    line-height: px2vw(34, $scaleFactor);
+
+                    b {
+                        font-style: normal;
+                    }
+                }
+
+                a {
+                    position: relative;
+                    color: $blue;
+                    font-size: px2vw(42, $scaleFactor);
+                    text-decoration: none;
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        top: px2vw(4, $scaleFactor);
+                        left: px2vw(-8, $scaleFactor);
+                        width: 1px;
+                        height: px2vw(35, $scaleFactor);
+                        background: $color4;
+                        content: '';
+                    }
+                }
+            }
+
+            i {
+                width: px2vw(48, $scaleFactor);
+            }
+        }
+
+        .phone {
+            margin-top: px2vw(54, $scaleFactor);
+
+            div {
+                margin-top: px2vw(6, $scaleFactor);
+
+                p {
+                    margin-top: px2vw(2, $scaleFactor);
+                    margin-left: px2vw(26, $scaleFactor);
+                    line-height: px2vw(40, $scaleFactor);
+                }
+            }
+
+            .row {
+                margin-top: px2vw(4, $scaleFactor);
+                margin-right: px2vw(46, $scaleFactor);
+                margin-left: 0;
+
+                i {
+                    margin-top: px2vw(-4, $scaleFactor);
+                }
+            }
+        }
+
+        .skype {
+            margin-top: px2vw(30, $scaleFactor);
+            margin-bottom: px2vw(12, $scaleFactor);
+
+            .row {
+                margin-top: px2vw(2, $scaleFactor);
+                margin-right: px2vw(42, $scaleFactor);
+                margin-left: 0;
+
+                i {
+                    fill: $blue;
+                }
+
+                a {
+                    position: relative;
+                    margin-top: px2vw(2, $scaleFactor);
+                    margin-right: px2vw(42, $scaleFactor);
+                    margin-left: px2vw(54, $scaleFactor);
+                    font-size: px2vw(42, $scaleFactor);
+
+                    &::before {
+                        left: px2vw(-30, $scaleFactor);
+                    }
+
+                    &::after {
+                        position: absolute;
+                        top: px2vw(4, $scaleFactor);
+                        right: px2vw(-54, $scaleFactor);
+                        content: '→';
+                    }
+                }
+            }
+
+            div {
+                p {
+                    margin-top: px2vw(10, $scaleFactor);
+                    margin-left: px2vw(28, $scaleFactor);
+                    line-height: px2vw(40, $scaleFactor);
+                }
+            }
+        }
+
+        .mail {
+            margin-top: px2vw(16, $scaleFactor);
+            margin-right: 0;
+            margin-left: 0;
+
+            .row {
+                margin-right: px2vw(28, $scaleFactor);
+
+                a {
+                    position: relative;
+                    margin-top: px2vw(2, $scaleFactor);
+                    margin-right: px2vw(36, $scaleFactor);
+                    margin-left: px2vw(54, $scaleFactor);
+                    color: $titleColor;
+                    font-size: px2vw(42, $scaleFactor);
+
+                    &::before {
+                        left: px2vw(-30, $scaleFactor);
+                    }
+                }
+
+                i {
+                    margin-top: px2vw(2, $scaleFactor);
+                }
+            }
+
+            div {
+                margin-right: px2vw(64, $scaleFactor);
+
+                p {
+                    margin-top: px2vw(10, $scaleFactor);
+                    margin-right: px2vw(46, $scaleFactor);
+                    margin-left: 0;
+                    line-height: px2vw(38, $scaleFactor);
+                }
+            }
+        }
+    }
+
+    .social {
+        header {
+            display: flex;
+            flex-basis: 100%;
+            flex-direction: column;
+            align-items: center;
+
+            i {
+                width: px2vw(169, $scaleFactor);
+                margin-top: px2vw(80, $scaleFactor);
+            }
+
+            h1 {
+                margin-top: px2vw(56, $scaleFactor);
+                color: $titleColor;
+                font-size: px2vw(44, $scaleFactor);
+
+                &::after {
+                    display: block;
+                    width: px2vw(60, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    margin: px2vw(52, $scaleFactor) auto 0;
+                    background-color: $yellow;
+                    content: '';
+                }
+            }
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: px2vw(532, $scaleFactor);
+            margin: px2vw(-28, $scaleFactor) auto 0;
+
+            .item {
+                display: flex;
+                flex-basis: 33%;
+                flex-direction: column;
+                align-items: center;
+                margin: px2vw(88, $scaleFactor) 0 0;
+
+                &:nth-child(2) {
+                    position: relative;
+
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        bottom: px2vw(-44, $scaleFactor);
+                        left: 50%;
+                        width: px2vw(60, $scaleFactor);
+                        height: 1px;
+                        margin-left: px2vw(-30, $scaleFactor);
+                        background: $color4;
+                        content: '';
+                    }
+                }
+
+                i {
+                    width: px2vw(96, $scaleFactor);
+                }
+
+                span {
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    width: px2vw(70, $scaleFactor);
+                    height: px2vw(66, $scaleFactor);
+                    margin: px2vw(24, $scaleFactor) 0 0;
+                    border: 1px solid $color4;
+                    border-radius: 5px;
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        top: px2vw(-8, $scaleFactor);
+                        left: 50%;
+                        width: px2vw(16, $scaleFactor);
+                        height: px2vw(16, $scaleFactor);
+                        margin-left: px2vw(-8, $scaleFactor);
+                        transform: rotate(-45deg);
+                        border-top: 1px solid $color4;
+                        border-right: 1px solid $color4;
+                        border-radius: 0 px2vw(2, $scaleFactor) 0 0;
+                        background: $color6;
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
