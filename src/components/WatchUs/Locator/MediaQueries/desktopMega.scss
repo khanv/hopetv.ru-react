@@ -3,5 +3,5 @@
 @media #{$desktopMega} {
     $scaleFactor: .05;
 
-    @import '../styles';
+    @import '../mobile';
 }

@@ -3,5 +3,30 @@
 @media #{$phoneLandscape} {
     $scaleFactor: .08803;
 
-    @import '../styles';
+    @import '../mobile';
+
+    header {
+        padding: 0 px2vw(58, $scaleFactor) 0 px2vw(60, $scaleFactor);
+    }
+
+    .listItems {
+        padding-left: px2vw(60, $scaleFactor);
+
+        >li {
+            .title {
+                &::after {
+                    top: px2vw(16, $scaleFactor);
+                }
+            }
+        }
+
+        &.operators {
+            li {
+                &.opened {
+                    margin-left: px2vw(-60, $scaleFactor);
+                    padding-left: px2vw(60, $scaleFactor);
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,321 @@
+& {
+    height: 2000px;
+
+    .map {
+        position: relative;
+        width: px2vw(1416, $scaleFactor);
+        margin: 0 auto;
+        padding-top: px2vw(110, $scaleFactor);
+
+        .hint {
+            position: absolute;
+            bottom: px2vw(150, $scaleFactor);
+            left: px2vw(80, $scaleFactor);
+
+            p {
+                color: $color10;
+                font-size: px2vw(30, $scaleFactor);
+                font-weight: bold;
+                text-align: right;
+            }
+
+            span {
+                display: inline-block;
+                width: px2vw(286, $scaleFactor);
+                margin-top: px2vw(15, $scaleFactor);
+                color: $color10;
+                font-size: px2vw(26, $scaleFactor);
+                font-style: italic;
+                line-height: px2vw(30, $scaleFactor);
+                text-align: right;
+            }
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: px2vw(-106, $scaleFactor);
+                right: px2vw(-148, $scaleFactor);
+                width: px2vw(128, $scaleFactor);
+                height: px2vw(130, $scaleFactor);
+                background: url($componentRoot + 'Images/arrowsIcon-bg.svg') no-repeat;
+                content: '';
+            }
+        }
+    }
+
+    .region {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: $color8;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            height: px2vw(90, $scaleFactor);
+            margin-top: px2vw(90, $scaleFactor);
+            padding-right: px2vw(100, $scaleFactor);
+            padding-left: px2vw(96, $scaleFactor);
+
+            h1 {
+                position: relative;
+                margin-top: px2vw(16, $scaleFactor);
+                color: $color11;
+                font-size: px2vw(52, $scaleFactor);
+                font-weight: bold;
+
+                &::after {
+                    position: absolute;
+                    top: px2vw(92, $scaleFactor);
+                    left: px2vw(2, $scaleFactor);
+                    width: px2vw(66, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    border-radius: 3px;
+                    background-color: $color12;
+                    content: '';
+                }
+            }
+
+            .close {
+                display: block;
+                width: px2vw(92, $scaleFactor);
+                height: px2vw(92, $scaleFactor);
+                background: url($componentRoot + 'Images/closeOperatorsIcon-bg.svg') no-repeat;
+            }
+        }
+
+        .head {
+            display: flex;
+            margin-top: px2vw(120, $scaleFactor);
+            padding-right: px2vw(100, $scaleFactor);
+            padding-left: px2vw(96, $scaleFactor);
+
+            .cities {
+                display: flex;
+                width: px2vw(570, $scaleFactor);
+                color: $color10;
+                font-size: px2vw(34, $scaleFactor);
+                font-weight: bold;
+
+                span {
+                    margin-top: px2vw(10, $scaleFactor);
+                    margin-left: px2vw(2, $scaleFactor);
+                }
+
+                &::before {
+                    display: block;
+                    width: px2vw(74, $scaleFactor);
+                    height: px2vw(60, $scaleFactor);
+                    margin-right: px2vw(47, $scaleFactor);
+                    background: url($componentRoot + 'Images/cityIcon-bg.svg') no-repeat;
+                    content: '';
+                }
+
+                &::after {
+                    width: px2vw(243, $scaleFactor);
+                    height: px2vw(2, $scaleFactor);
+                    margin-top: px2vw(26, $scaleFactor);
+                    margin-left: px2vw(50, $scaleFactor);
+                    background-color: $color13;
+                    content: '';
+                }
+            }
+
+            .operators {
+                display: flex;
+                color: $color10;
+                font-size: px2vw(34, $scaleFactor);
+                font-weight: bold;
+
+                span {
+                    margin-top: px2vw(10, $scaleFactor);
+                }
+
+                &::before {
+                    display: block;
+                    width: px2vw(54, $scaleFactor);
+                    height: px2vw(50, $scaleFactor);
+                    margin-right: px2vw(47, $scaleFactor);
+                    background: url($componentRoot + 'Images/cablesIcon-bg.svg') no-repeat;
+                    content: '';
+                }
+
+                &::after {
+                    width: px2vw(280, $scaleFactor);
+                    height: px2vw(2, $scaleFactor);
+                    margin-top: px2vw(26, $scaleFactor);
+                    margin-left: px2vw(44, $scaleFactor);
+                    background-color: $color13;
+                    content: '';
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            padding-right: px2vw(98, $scaleFactor);
+            padding-left: px2vw(98, $scaleFactor);
+
+            .cities {
+                width: px2vw(515, $scaleFactor);
+                margin-top: px2vw(56, $scaleFactor);
+                margin-bottom: px2vw(96, $scaleFactor);
+                padding-top: px2vw(8, $scaleFactor);
+                padding-left: px2vw(71, $scaleFactor);
+
+                li {
+                    position: relative;
+                    padding-top: px2vw(50, $scaleFactor);
+                    padding-bottom: px2vw(50, $scaleFactor);
+                    padding-left: px2vw(46, $scaleFactor);
+                    border-bottom: 1px solid $color13;
+                    color: $color11;
+                    font-size: px2vw(34, $scaleFactor);
+
+                    &:first-child {
+                        &::after {
+                            top: px2vw(-28, $scaleFactor);
+                            height: px2vw(163, $scaleFactor);
+                        }
+                    }
+
+                    &:last-child {
+                        border-bottom: 0;
+
+                        &::after {
+                            height: px2vw(152, $scaleFactor);
+                        }
+                    }
+
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: px2vw(-76, $scaleFactor);
+                        width: 1px;
+                        height: px2vw(136, $scaleFactor);
+                        background-color: $color13;
+                        content: '';
+                    }
+
+                    &.selected {
+                        width: px2vw(526, $scaleFactor);
+                        margin-top: -1px;
+                        margin-left: -3px;
+                        padding-top: px2vw(50, $scaleFactor);
+                        padding-bottom: px2vw(48, $scaleFactor);
+                        padding-left: px2vw(48, $scaleFactor);
+                        border-top: 1px solid $color13;
+                        border-right: 0;
+                        border-bottom: 1px solid $color13;
+                        border-left: 1px solid $color13;
+                        border-radius: 6px 0 0 6px;
+                        color: $color7;
+                        font-weight: bold;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .operators {
+                width: px2vw(748, $scaleFactor);
+                margin-left: px2vw(74, $scaleFactor);
+                padding-top: px2vw(110, $scaleFactor);
+                padding-left: px2vw(76, $scaleFactor);
+
+                li {
+                    margin-bottom: px2vw(100, $scaleFactor);
+                    color: $color10;
+                    font-size: px2vw(34, $scaleFactor);
+
+                    &.selected {
+                        margin-bottom: px2vw(68, $scaleFactor);
+
+                        .title {
+                            display: flex;
+                            color: $color7;
+                            font-weight: bold;
+                        }
+
+                        .contacts {
+                            width: px2vw(654, $scaleFactor);
+                            margin-top: px2vw(64, $scaleFactor);
+                            border: 1px solid $color15;
+                            border-radius: 6px;
+                            background-color: $color14;
+
+                            ul {
+                                position: relative;
+                                margin-top: px2vw(56, $scaleFactor);
+                                margin-bottom: px2vw(56, $scaleFactor);
+                                padding-top: px2vw(8, $scaleFactor);
+                                padding-left: px2vw(100, $scaleFactor);
+
+                                &::before {
+                                    display: block;
+                                    position: absolute;
+                                    top: 0;
+                                    left: px2vw(34, $scaleFactor);
+                                    width: px2vw(42, $scaleFactor);
+                                    height: px2vw(42, $scaleFactor);
+                                    background: url($componentRoot + 'Images/phoneMenuIcon-bg.svg') no-repeat;
+                                    content: '';
+                                }
+
+                                li {
+                                    margin-bottom: px2vw(28, $scaleFactor);
+                                    font-weight: normal;
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+
+                                &.withWebsite {
+                                    margin-bottom: 0;
+                                    padding-bottom: px2vw(56, $scaleFactor);
+                                    border-bottom: 1px solid $color15;
+                                }
+                            }
+
+                            a {
+                                display: inline-block;
+                                position: relative;
+                                margin-top: px2vw(30, $scaleFactor);
+                                margin-bottom: px2vw(32, $scaleFactor);
+                                margin-left: px2vw(32, $scaleFactor);
+                                padding-top: px2vw(14, $scaleFactor);
+                                padding-left: px2vw(70, $scaleFactor);
+                                color: $color7;
+                                font-size: px2vw(34, $scaleFactor);
+                                font-weight: bold;
+                                text-decoration: none;
+
+                                &::before {
+                                    display: block;
+                                    position: absolute;
+                                    top: px2vw(6, $scaleFactor);
+                                    left: px2vw(4, $scaleFactor);
+                                    width: px2vw(42, $scaleFactor);
+                                    height: px2vw(42, $scaleFactor);
+                                    background: url($componentRoot + 'Images/earthMenuIcon-bg.svg') no-repeat;
+                                    content: '';
+                                }
+
+                                &::after {
+                                    margin-left: px2vw(8, $scaleFactor);
+                                    font-family: Arial;
+                                    font-size: px2vw(34, $scaleFactor);
+                                    content: '→';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
