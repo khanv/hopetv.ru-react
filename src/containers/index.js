@@ -3,3 +3,4 @@ export Home from './Home/Home';
 export NotFound from './NotFound/NotFound';
 
 export WatchUs from './WatchUs/WatchUs';
+export Contacts from './Contacts/Contacts';
