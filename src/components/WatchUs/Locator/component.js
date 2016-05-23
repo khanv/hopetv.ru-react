@@ -75,9 +75,9 @@ export default class Locator extends Component {
     render() {
         const { state, regions, browser } = this.props;
         const isMobile = [
-                BreakPoints.phonePortrait.name,
-                BreakPoints.phoneLandscape.name
-            ].indexOf(browser.mediaType) !== -1;
+            BreakPoints.phonePortrait.name,
+            BreakPoints.phoneLandscape.name
+        ].indexOf(browser.mediaType) !== -1;
 
         // Init
         const currentRegion = state.region ? regions.find((region) => {
