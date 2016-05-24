@@ -15,7 +15,6 @@ export default class Info extends Component {
 
     render() {
         const background = 'https://cdn.hope.ua/web/tv.hope.ua/assets/page-background.png';
-        
         const { browser } = this.props;
 
         const scaleFactor = {
@@ -30,8 +29,6 @@ export default class Info extends Component {
             [BreakPoints.tabletPortrait.name]: 560,
             [BreakPoints.tabletLandscape.name]: 222
         };
-
-
         let pageHeadComponentStyles = {
             height: `${scaleFactor[browser.mediaType] * heightValues[browser.mediaType]}vw`,
             backgroundImage: `url(${background})`
