@@ -1,0 +1,32 @@
+@import 'theme/MediaQueries';
+
+@media #{$tabletLandscape} {
+    $scaleFactor: .04882826;
+
+    @import '../mobile';
+
+    h1 {
+        margin-top: 0;
+        font-size: px2vw(52, $scaleFactor);
+        font-weight: 100;
+
+        &::after {
+            width: px2vw(48, $scaleFactor);
+            margin-top: px2vw(52, $scaleFactor);
+        }
+    }
+
+    p {
+        width: px2vw(816, $scaleFactor);
+        margin-top: px2vw(54, $scaleFactor);
+        color: $colorDescription;
+        font-size: px2vw(26, $scaleFactor);
+        font-style: italic;
+        line-height: px2vw(32, $scaleFactor);
+        text-align: center;
+
+        b {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+& {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: px2vw(280, $scaleFactor);
+    background-image: url($componentRoot + 'images/background.png');
+    background-size: cover;
+
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: px2vw(10, $scaleFactor);
+        color: $white;
+        font-size: px2vw(44, $scaleFactor);
+
+        &::after {
+            display: block;
+            width: px2vw(60, $scaleFactor);
+            height: px2vw(6, $scaleFactor);
+            margin-top: px2vw(32, $scaleFactor);
+            border-radius: 2px;
+            background-color: $yellow;
+            content: '';
+        }
+    }
+}

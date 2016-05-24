@@ -5,3 +5,4 @@
  *
  */
 export * as Map from './Map';
+export * as Shared from './Shared';
