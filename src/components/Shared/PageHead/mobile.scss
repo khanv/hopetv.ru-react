@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     height: px2vw(280, $scaleFactor);
-    background-image: url($componentRoot + 'images/background.png');
     background-size: cover;
 
     h1 {
@@ -12,7 +11,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: px2vw(10, $scaleFactor);
-        color: $white;
+        color: $color2;
         font-size: px2vw(44, $scaleFactor);
 
         &::after {
@@ -21,7 +20,7 @@
             height: px2vw(6, $scaleFactor);
             margin-top: px2vw(32, $scaleFactor);
             border-radius: 2px;
-            background-color: $yellow;
+            background-color: $color3;
             content: '';
         }
     }

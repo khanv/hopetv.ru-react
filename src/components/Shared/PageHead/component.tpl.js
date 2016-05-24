@@ -29,8 +29,11 @@ export default class Info extends Component {
             [BreakPoints.tabletLandscape.name]: 222
         };
 
+        const background = 'https://cdn.hope.ua/web/tv.hope.ua/assets/page-background.png';
+
         let pageHeadComponentStyles = {
-            height: `${scaleFactor[browser.mediaType] * heightValues[browser.mediaType]}vw`
+            height: `${scaleFactor[browser.mediaType] * heightValues[browser.mediaType]}vw`,
+            backgroundImage: `url(${background})`
         };
 
         return (
