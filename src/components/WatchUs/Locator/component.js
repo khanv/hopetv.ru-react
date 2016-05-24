@@ -16,7 +16,8 @@ import {
     city as selectCity,
     provider as selectProvider,
     back as locationBack,
-    close
+    close,
+    fullRegion
 } from 'redux/modules/watchUs';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -33,7 +34,8 @@ import {
         selectCity,
         selectProvider,
         locationBack,
-        close
+        close,
+        fullRegion
     }, dispatch);
 })
 export default class Locator extends Component {
@@ -43,6 +45,7 @@ export default class Locator extends Component {
         regions: PropTypes.array,
         push: PropTypes.func.isRequired,
         selectRegion: PropTypes.func.isRequired,
+        fullRegion: PropTypes.func.isRequired,
         selectCity: PropTypes.func.isRequired,
         selectProvider: PropTypes.func.isRequired,
         locationBack: PropTypes.func.isRequired,
@@ -73,7 +76,7 @@ export default class Locator extends Component {
     };
 
     render() {
-        const { state, regions, browser } = this.props;
+        const { state, regions, browser, fullRegion } = this.props;
         const isMobile = [
             BreakPoints.phonePortrait.name,
             BreakPoints.phoneLandscape.name
@@ -343,7 +346,7 @@ export default class Locator extends Component {
         return (
             <section className={ Styles.locator }>
                 <section className={ Styles.map }>
-                    <Country regions={ regions }/>
+                    <Country regions={ regions } selectRegion={ fullRegion } state={ state }/>
                     <div className={ Styles.hint }>
                         <p>Выберите область</p>
                         <span>чтобы увидеть список операторов в доступных городах этой области</span>

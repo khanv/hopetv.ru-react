@@ -2,12 +2,17 @@ import React, { PropTypes } from 'react';
 import { Map } from 'components';
 
 export default function Country(props) {
-    const { regions } = props;
+    const { regions, selectRegion, state } = props;
     const { Region } = Map;
 
     const regionItems = regions.map((region) => {
         return (
-            <Region { ...region } key={ region.id }/>
+            <Region
+                { ...region }
+                key={ region.id }
+                selectRegion={ selectRegion }
+                state={ state }
+            />
         );
     });
 
@@ -25,5 +30,7 @@ export default function Country(props) {
 }
 
 Country.propTypes = {
-    regions: PropTypes.array.isRequired
+    regions: PropTypes.array.isRequired,
+    selectRegion: PropTypes.func.isRequired,
+    state: PropTypes.object.isRequired
 };

@@ -3,7 +3,7 @@
 @media #{$tabletLandscape} {
     $scaleFactor: .04882826;
 
-    @import '../descktop';
+    @import '../desktop';
 
     .region {
         header {

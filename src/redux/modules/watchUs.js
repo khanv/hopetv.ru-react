@@ -142,3 +142,26 @@ export function close() {
         );
     };
 }
+
+export function fullRegion(id) {
+    const region = LocatorApi.getRegion({
+        id
+    });
+    const city = region.cities[0];
+    const cityId = city.id;
+    const provider = city.providers[0];
+    const providerId = provider.id;
+
+    return (dispatch) => {
+        dispatch(
+            routerActions.push(
+                buildUrl({
+                    locatorActive: true,
+                    region: id,
+                    city: cityId,
+                    provider: providerId
+                })
+            )
+        );
+    };
+}
