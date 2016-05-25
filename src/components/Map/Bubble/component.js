@@ -2,7 +2,11 @@ import React, { PropTypes } from 'react';
 import Styles from './main.scss';
 
 export default function Bubble(props) {
-    const { x, y, width, height, children } = props;
+    const { x, y, width, height, total } = props;
+
+    if (!total) {
+        return null;
+    }
 
     return (
         <g className={ Styles.bubble }>
@@ -35,7 +39,7 @@ export default function Bubble(props) {
                 className={ Styles.arrow }
             />
             <text x={ x } y={ y + height / 2 + height / 4 }>
-                { children }
+                { total }
             </text>
         </g>
     );
@@ -44,7 +48,7 @@ export default function Bubble(props) {
 Bubble.propTypes = {
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired,
-    children: PropTypes.string,
+    total: PropTypes.number.isRequired,
     width: PropTypes.number,
     height: PropTypes.number
 };

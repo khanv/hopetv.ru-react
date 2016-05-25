@@ -12,7 +12,7 @@ export default () => {
     return (
         <Route path="/" component={ App }>
             <IndexRoute component={ Home }/>
-            <Route path="/watch-us" component={ WatchUs }/>
+            <Route path="/watch-us*" component={ WatchUs }/>
             <Route path="/contacts" component={ Contacts }/>
             <Route path="*" component={ NotFound } status={ 404 }/>
         </Route>

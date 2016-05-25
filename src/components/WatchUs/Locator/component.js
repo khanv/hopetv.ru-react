@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
-import { Country } from 'components/Map';
+import { Country, Region } from 'components/Map';
 import cx from 'classnames';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -16,7 +16,8 @@ import {
     city as selectCity,
     provider as selectProvider,
     back as locationBack,
-    close
+    close,
+    fullRegion
 } from 'redux/modules/watchUs';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -33,7 +34,8 @@ import {
         selectCity,
         selectProvider,
         locationBack,
-        close
+        close,
+        fullRegion
     }, dispatch);
 })
 export default class Locator extends Component {
@@ -43,6 +45,7 @@ export default class Locator extends Component {
         regions: PropTypes.array,
         push: PropTypes.func.isRequired,
         selectRegion: PropTypes.func.isRequired,
+        fullRegion: PropTypes.func.isRequired,
         selectCity: PropTypes.func.isRequired,
         selectProvider: PropTypes.func.isRequired,
         locationBack: PropTypes.func.isRequired,
@@ -73,7 +76,7 @@ export default class Locator extends Component {
     };
 
     render() {
-        const { state, regions, browser } = this.props;
+        const { state, regions, browser, fullRegion } = this.props;
         const isMobile = [
             BreakPoints.phonePortrait.name,
             BreakPoints.phoneLandscape.name
@@ -328,7 +331,11 @@ export default class Locator extends Component {
                         BreakPoints.desktopHD.name,
                         BreakPoints.desktopMega.name
                     ].indexOf(browser.mediaType) !== -1 ? (
-                        <div className={ Styles.regionMap }></div>
+                        <div className={ Styles.regionMap }>
+                            <svg version="1.1" viewBox="0 0 2000 1335" x="-1000">
+                                <Region { ...currentRegion }/>
+                            </svg>
+                        </div>
                     ) : null }
                     <ul className={ Styles.cities }>
                         { cityList }
@@ -343,7 +350,7 @@ export default class Locator extends Component {
         return (
             <section className={ Styles.locator }>
                 <section className={ Styles.map }>
-                    <Country regions={ regions }/>
+                    <Country regions={ regions } selectRegion={ fullRegion } state={ state }/>
                     <div className={ Styles.hint }>
                         <p>Выберите область</p>
                         <span>чтобы увидеть список операторов в доступных городах этой области</span>

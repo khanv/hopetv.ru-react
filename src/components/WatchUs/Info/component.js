@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import cx from 'classnames';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 import InlineSvg from 'components/InlineSvg/component';
 import Styles from './main.scss';
@@ -13,16 +14,21 @@ import SvgSatellite from 'theme/components/Info/Images/satellite.svg';
 import SvgTv from 'theme/components/Info/Images/tv.svg';
 
 /* eslint-disable react/prefer-stateless-function */
-@connect(({ browser }) => {
-    return { browser };
+@connect(({ browser, watchUs }) => {
+    return { browser, watchUs };
 })
 export default class Info extends Component {
     static propTypes = {
-        browser: PropTypes.object.isRequired
+        browser: PropTypes.object.isRequired,
+        watchUs: PropTypes.object.isRequired
     };
 
     render() {
-        const { browser } = this.props;
+        const { browser, watchUs } = this.props;
+
+        if (watchUs.locatorActive) {
+            return null;
+        }
 
         return (
             <section className={ Styles.infoComponent }>
@@ -101,9 +107,9 @@ export default class Info extends Component {
                         BreakPoints.phonePortrait.name,
                         BreakPoints.phoneLandscape.name
                     ].indexOf(browser.mediaType) !== -1 ? (
-                        <a className={ cx(Styles.btn, Styles.btnSearch) } href="#">
-                            Поиск операторов
-                        </a>
+                        <Link className={ cx(Styles.btn, Styles.btnSearch) } to="/watch-us/locator">
+                        Поиск операторов
+                        </Link>
                     ) : null }
 
                     { [

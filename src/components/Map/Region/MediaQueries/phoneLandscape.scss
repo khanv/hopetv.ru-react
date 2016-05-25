@@ -3,5 +3,5 @@
 @media #{$phoneLandscape} {
     $scaleFactor: .08803;
 
-    @import '../styles';
+    @import '../mobile';
 }
