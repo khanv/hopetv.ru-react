@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
-import { Country } from 'components/Map';
+import { Country, Region } from 'components/Map';
 import cx from 'classnames';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -331,7 +331,11 @@ export default class Locator extends Component {
                         BreakPoints.desktopHD.name,
                         BreakPoints.desktopMega.name
                     ].indexOf(browser.mediaType) !== -1 ? (
-                        <div className={ Styles.regionMap }></div>
+                        <div className={ Styles.regionMap }>
+                            <svg version="1.1" viewBox="0 0 2000 1335" x="-1000">
+                                <Region { ...currentRegion }/>
+                            </svg>
+                        </div>
                     ) : null }
                     <ul className={ Styles.cities }>
                         { cityList }
