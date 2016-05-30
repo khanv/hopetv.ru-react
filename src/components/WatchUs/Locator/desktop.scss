@@ -1,4 +1,6 @@
 & {
+    position: relative;
+
     .map {
         position: relative;
         width: px2vw(1812, $scaleFactor);
@@ -43,7 +45,7 @@
 
     .region {
         position: absolute;
-        top: px2vw(476, $scaleFactor);
+        top: px2vw(500, $scaleFactor);
         width: 100%;
         background-color: $color8;
         z-index: 1;
