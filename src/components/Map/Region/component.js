@@ -12,6 +12,8 @@ function Region(props) {
 
     const regionClass = cx({
         [Styles.region]: true,
+        [Styles.part]: !single,
+        [Styles.single]: single,
         [Styles.disabled]: !cities.length
     });
 
@@ -38,8 +40,12 @@ function Region(props) {
         });
 
         regionComponent = (
-            <svg viewBox={ viewBox }>
-                <g id={ id }>
+            <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox={ viewBox }
+            >
+                <g id={ id } className={ regionClass }>
                     <path d={ regionPath }/>
                     <g>{ cityComponents }</g>
                 </g>

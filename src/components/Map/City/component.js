@@ -40,7 +40,7 @@ export default function City(props) {
                 cx={ x }
                 cy={ y }
                 r="5"
-                fill="#f9c90f"
+                fill="#d3d6d8"
             />
         </g>
     );

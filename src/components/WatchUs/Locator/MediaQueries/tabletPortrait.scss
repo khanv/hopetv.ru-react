@@ -5,7 +5,16 @@
 
     @import '../desktop';
 
+    .map {
+        width: px2vw(1436, $scaleFactor);
+    }
+
     .region {
+        position: fixed;
+        top: 0;
+        max-height: 85vh;
+        overflow-y: scroll;
+
         header {
             margin-top: px2vw(90, $scaleFactor);
             padding-right: px2vw(100, $scaleFactor);
@@ -13,12 +22,6 @@
             h1 {
                 margin-top: px2vw(16, $scaleFactor);
                 font-size: px2vw(52, $scaleFactor);
-
-                &::after {
-                    top: px2vw(92, $scaleFactor);
-                    left: px2vw(2, $scaleFactor);
-                    width: px2vw(66, $scaleFactor);
-                }
             }
 
             .close {

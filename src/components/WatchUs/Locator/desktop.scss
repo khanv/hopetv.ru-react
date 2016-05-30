@@ -42,8 +42,8 @@
     }
 
     .region {
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: px2vw(476, $scaleFactor);
         width: 100%;
         background-color: $color8;
 
@@ -192,10 +192,9 @@
 
             .regionMap {
                 width: px2vw(590, $scaleFactor);
-                height: px2vw(330, $scaleFactor);
                 margin-top: px2vw(108, $scaleFactor);
+                margin-bottom: px2vw(60, $scaleFactor);
                 margin-left: px2vw(20, $scaleFactor);
-                background-color: $color12;
             }
 
             .cities {
@@ -213,6 +212,12 @@
                     border-bottom: 1px solid $color13;
                     color: $color11;
                     font-size: px2vw(28, $scaleFactor);
+
+                    &:hover {
+                        color: $color16;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
 
                     &:first-child {
                         &::after {
@@ -233,9 +238,9 @@
                         display: block;
                         position: absolute;
                         top: 0;
-                        right: px2vw(-60, $scaleFactor);
+                        right: px2vw(-62, $scaleFactor);
                         width: 1px;
-                        height: px2vw(136, $scaleFactor);
+                        height: px2vw(90, $scaleFactor);
                         background-color: $color13;
                         content: '';
                     }
@@ -273,13 +278,28 @@
                     color: $color10;
                     font-size: px2vw(28, $scaleFactor);
 
+                    .title {
+                        display: inline-flex;
+                        color: $color10;
+
+                        &:hover {
+                            color: $color16;
+                            font-weight: bold;
+                            cursor: pointer;
+                        }
+                    }
+
                     &.selected {
                         margin-bottom: px2vw(44, $scaleFactor);
 
                         .title {
-                            display: flex;
+                            display: inline-flex;
                             color: $color7;
-                            font-weight: bold;
+
+                            &:hover {
+                                font-weight: normal;
+                                cursor: default;
+                            }
                         }
 
                         .contacts {
