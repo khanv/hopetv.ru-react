@@ -7,57 +7,13 @@ import Styles from './main.scss';
 
 function Region(props) {
     const { City, Bubble } = Map;
-    const { path, title, t, cities, id, state, selectRegion } = props;
-
-    let titleComponent;
-    const titleParts = t(title.text).split('-');
-    if (titleParts.length > 1) {
-        titleComponent = (
-            <text y={ title.pos.y }>
-                { titleParts.map((part, n) => {
-                    if (n < titleParts.length - 1) {
-                        part += '-';
-                    }
-
-                    const style = {
-                        baselineShift: `${-(n * 20)}px`
-                    };
-
-                    return (
-                        <tspan key={ `part-${n}` } x={ title.pos.x } style={ style }>
-                            { part }
-                        </tspan>
-                    );
-                }) }
-            </text>
-        );
-    } else {
-        titleComponent = (
-            <text
-                x={ title.pos.x }
-                y={ title.pos.y }
-            >
-                { titleParts[0] }
-            </text>
-        );
-    }
-
-    /* eslint-disable no-constant-condition */
-    const cityComponents = false ? cities.map((city) => {
-        return (
-            <City { ...city.pos } key={ `city-${city.id}` }/>
-        );
-    }) : null;
-    /* eslint-enable no-constant-condition */
+    const { path, title, t, cities, id, state, selectRegion, single } = props;
+    const regionPath = single ? path.region.path : path.country;
 
     const regionClass = cx({
         [Styles.region]: true,
         [Styles.disabled]: !cities.length
     });
-
-    const providersCount = cities.reduce((total, city) => {
-        return total + city.providers.length;
-    }, 0);
 
     const onClickRegion = (event) => {
         const target = findParent(event.target, 'active');
@@ -71,32 +27,89 @@ function Region(props) {
         selectRegion(id, state);
     };
 
-    return (
-        <g
-            className={ regionClass }
-            id={ id }
-            data-active={ cities.length ? 1 : 0 }
-            onClick={ onClickRegion }
-        >
-            <path d={ path }/>
-            { titleComponent }
-            <Bubble x={ title.pos.x } y={ title.pos.y + 20 } total={ providersCount }/>
-            <g>{ cityComponents }</g>
-        </g>
-    );
+    let regionComponent;
+    if (single) {
+        const viewBox = `0 0 ${path.region.width} ${path.region.height}`;
+
+        const cityComponents = cities.map((city) => {
+            return (
+                <City { ...city.pos } offset={ path.region.offset } key={ `city-${city.id}` }/>
+            );
+        });
+
+        regionComponent = (
+            <svg viewBox={ viewBox }>
+                <g id={ id }>
+                    <path d={ regionPath }/>
+                    <g>{ cityComponents }</g>
+                </g>
+            </svg>
+        );
+    } else {
+        let titleComponent;
+        const titleParts = t(title.text).split('-');
+        if (titleParts.length > 1) {
+            titleComponent = (
+                <text y={ title.pos.y }>
+                    { titleParts.map((part, n) => {
+                        if (n < titleParts.length - 1) {
+                            part += '-';
+                        }
+
+                        const style = {
+                            baselineShift: `${-(n * 20)}px`
+                        };
+
+                        return (
+                            <tspan key={ `part-${n}` } x={ title.pos.x } style={ style }>
+                                { part }
+                            </tspan>
+                        );
+                    }) }
+                </text>
+            );
+        } else {
+            titleComponent = (
+                <text x={ title.pos.x } y={ title.pos.y }>
+                    { titleParts[0] }
+                </text>
+            );
+        }
+
+        const providersCount = cities.reduce((total, city) => {
+            return total + city.providers.length;
+        }, 0);
+
+        regionComponent = (
+            <g
+                className={ regionClass }
+                id={ id }
+                data-active={ cities.length ? 1 : 0 }
+                onClick={ onClickRegion }
+            >
+                <path d={ regionPath }/>
+                { titleComponent }
+                <Bubble x={ title.pos.x } y={ title.pos.y + 20 } total={ providersCount }/>
+            </g>
+        );
+    }
+
+    return regionComponent;
 }
 
 Region.propTypes = {
     id: PropTypes.number.isRequired,
-    path: PropTypes.string.isRequired,
+    path: PropTypes.object.isRequired,
     title: PropTypes.object.isRequired,
     cities: PropTypes.array,
     t: PropTypes.func,
     state: PropTypes.object.isRequired,
-    selectRegion: PropTypes.func.isRequired
+    selectRegion: PropTypes.func.isRequired,
+    single: PropTypes.bool
 };
 Region.defaultProps = {
-    cities: []
+    cities: [],
+    single: false
 };
 
 export default translate(['region'])(Region);
