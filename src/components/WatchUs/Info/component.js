@@ -26,7 +26,10 @@ export default class Info extends Component {
     render() {
         const { browser, watchUs } = this.props;
 
-        if (watchUs.locatorActive) {
+        if (watchUs.locatorActive && [
+            BreakPoints.phonePortrait.name,
+            BreakPoints.phoneLandscape.name
+        ].indexOf(browser.mediaType) !== -1) {
             return null;
         }
 

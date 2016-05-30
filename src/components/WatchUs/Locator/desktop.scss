@@ -46,6 +46,7 @@
         top: px2vw(476, $scaleFactor);
         width: 100%;
         background-color: $color8;
+        z-index: 1;
 
         header {
             display: flex;
