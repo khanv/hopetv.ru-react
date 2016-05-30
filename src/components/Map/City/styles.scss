@@ -1,0 +1,18 @@
+& {
+    .outer {
+        fill: $color1;
+    }
+
+    .inner {
+        transition: fill .1s ease-out;
+        fill: $color2;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .inner {
+            fill: $color3;
+        }
+    }
+}

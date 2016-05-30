@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import Styles from './main.scss';
 
 const mapWidth = 2000;
 const mapHeight = 1335;
@@ -25,22 +26,33 @@ function convertGeoToPixel(latitude, longitude, offset) {
 }
 
 export default function City(props) {
-    const { lat, lng, offset } = props;
+    const { lat, lng, offset, id, state, selectCity } = props;
     const { x, y } = convertGeoToPixel(lat, lng, offset);
 
+    const onClickCity = (event) => {
+        const target = event.target.parentElement;
+        const id = target.id;
+
+        selectCity(id, state);
+    };
+
     return (
-        <g>
+        <g
+            className={ Styles.city }
+            onClick={ onClickCity }
+            id={ id }
+        >
             <circle
                 cx={ x }
                 cy={ y }
                 r="10"
-                fill="#fff"
+                className={ Styles.outer }
             />
             <circle
                 cx={ x }
                 cy={ y }
                 r="5"
-                fill="#d3d6d8"
+                className={ Styles.inner }
             />
         </g>
     );
@@ -49,5 +61,8 @@ export default function City(props) {
 City.propTypes = {
     lat: PropTypes.number.isRequired,
     lng: PropTypes.number.isRequired,
-    offset: PropTypes.object.isRequired
+    offset: PropTypes.object.isRequired,
+    id: PropTypes.number.isRequired,
+    state: PropTypes.object.isRequired,
+    selectCity: PropTypes.func.isRequired
 };

@@ -10,6 +10,7 @@ const initialState = {
 };
 
 function buildUrl(state) {
+    console.log(state);
     const parts = [''];
     parts.push(basePath);
 
@@ -32,6 +33,7 @@ function buildUrl(state) {
             }
         }
     }
+    console.log(parts);
 
     return parts.join('/');
 }
@@ -97,7 +99,7 @@ export function city(id, state) {
             routerActions.push(
                 buildUrl({
                     ...state,
-                    city: id,
+                    city: parseInt(id, 10),
                     provider: `${id}-1`
                 })
             )

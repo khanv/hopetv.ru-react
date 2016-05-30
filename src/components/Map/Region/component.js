@@ -7,7 +7,7 @@ import Styles from './main.scss';
 
 function Region(props) {
     const { City, Bubble } = Map;
-    const { path, title, t, cities, id, state, selectRegion, single } = props;
+    const { path, title, t, cities, id, state, selectRegion, selectCity, single } = props;
     const regionPath = single ? path.region.path : path.country;
 
     const regionClass = cx({
@@ -35,7 +35,14 @@ function Region(props) {
 
         const cityComponents = cities.map((city) => {
             return (
-                <City { ...city.pos } offset={ path.region.offset } key={ `city-${city.id}` }/>
+                <City
+                    { ...city.pos }
+                    offset={ path.region.offset }
+                    key={ `city-${city.id}` }
+                    id={ city.id }
+                    state={ state }
+                    selectCity={ selectCity }
+                />
             );
         });
 
@@ -110,7 +117,8 @@ Region.propTypes = {
     cities: PropTypes.array,
     t: PropTypes.func,
     state: PropTypes.object.isRequired,
-    selectRegion: PropTypes.func.isRequired,
+    selectRegion: PropTypes.func,
+    selectCity: PropTypes.func,
     single: PropTypes.bool
 };
 Region.defaultProps = {

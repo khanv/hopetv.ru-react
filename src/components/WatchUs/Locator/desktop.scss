@@ -202,10 +202,12 @@
 
             .cities {
                 width: px2vw(500, $scaleFactor);
+                max-height: px2vw(800, $scaleFactor);
                 margin-top: px2vw(66, $scaleFactor);
                 margin-bottom: px2vw(96, $scaleFactor);
                 padding-top: px2vw(8, $scaleFactor);
                 padding-left: px2vw(110, $scaleFactor);
+                overflow-y: scroll;
 
                 li {
                     position: relative;

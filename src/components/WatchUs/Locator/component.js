@@ -332,7 +332,12 @@ export default class Locator extends Component {
                         BreakPoints.desktopMega.name
                     ].indexOf(browser.mediaType) !== -1 ? (
                         <div className={ Styles.regionMap }>
-                            <Region { ...currentRegion } single/>
+                            <Region
+                                { ...currentRegion }
+                                single
+                                selectCity={ this.props.selectCity }
+                                state={ state }
+                            />
                         </div>
                     ) : null }
                     <ul className={ Styles.cities }>
