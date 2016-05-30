@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Styles from './main.scss';
+import cx from 'classnames';
 
 const mapWidth = 2000;
 const mapHeight = 1335;
@@ -36,9 +37,14 @@ export default function City(props) {
         selectCity(id, state);
     };
 
+    const cityClass = cx({
+        [Styles.city]: true,
+        [Styles.selected]: state.city === id
+    });
+
     return (
         <g
-            className={ Styles.city }
+            className={ cityClass }
             onClick={ onClickCity }
             id={ id }
         >

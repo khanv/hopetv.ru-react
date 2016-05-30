@@ -15,4 +15,10 @@
             fill: $color3;
         }
     }
+
+    &.selected {
+        .inner {
+            fill: $color4;
+        }
+    }
 }
