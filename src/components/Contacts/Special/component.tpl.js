@@ -14,13 +14,16 @@ export default function Special() {
     ];
 
     const itemImage = {
-        backgroundImage: 'url(http://static1.businessinsider.com/image/5228c23beab8ea9c4f8b456b/7-ways-companies-deter-women-in-tech-jobs.jpg)'
+        // backgroundImage: 'url(http://static1.businessinsider.com/image/5228c23beab8ea9c4f8b456b/7-ways-companies-deter-women-in-tech-jobs.jpg)'
+        backgroundColor: 'red'
     };
 
     const itemCustom = cx({
         [Styles.item]: true,
         [Styles.custom]: true
     });
+
+    console.log(itemCustom);
 
     return (
         <PixelPerfect templates={ templates } component="special" opacity="30">
@@ -53,35 +56,6 @@ export default function Special() {
                         </div>
                         <a href="#">Написать</a>
                     </div>
-                    <div className={ itemCustom }>
-                        <div className={ Styles.person }>
-                            <div className={ Styles.poster } style={ itemImage }></div>
-                            <span>Юлия Копанишена-Отепко</span>
-                        </div>
-                        <div className={ Styles.wrap }>
-                            <div className={ Styles.contacts }>
-                                <div className={ Styles.info }>
-                                    <div className={ Styles.title }>Общественность и СМИ</div>
-                                    <span className={ Styles.email }>pr@hope.ua</span>
-                                </div>
-                                <a href="#">Написать</a>
-                            </div>
-                            <div className={ Styles.contacts }>
-                                <div className={ Styles.info }>
-                                    <div className={ Styles.title }>Вопросы рекламы</div>
-                                    <span className={ Styles.email }>ad@hope.ua</span>
-                                </div>
-                                <a href="#">Написать</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className={ Styles.controls }>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#" className={ Styles.selected }></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
                 </div>
             </section>
         </PixelPerfect>

@@ -1,15 +1,18 @@
 & {
     .container {
         display: flex;
-        width: 100%;
+        width: px2vw(1890, $scaleFactor);
         margin: 0 auto;
+        padding-top: px2vw(40, $scaleFactor);
         overflow: hidden;
+        justify-content: space-between;
 
         .item {
             flex-shrink: 0;
-            width: px2vw(392, $scaleFactor);
+            width: px2vw(630, $scaleFactor);
             height: px2vw(757, $scaleFactor);
             padding-top: px2vw(66, $scaleFactor);
+            border: solid 1px red;
 
             .poster {
                 width: px2vw(240, $scaleFactor);
@@ -28,7 +31,7 @@
                     position: relative;
                     width: 100%;
                     color: #636466;
-                    font-size: px2vw(36, $scaleFactor);
+                    font-size: px2vw(40, $scaleFactor);
                     text-align: center;
 
                     &::after {
@@ -48,7 +51,7 @@
                     width: 100%;
                     margin-top: px2vw(76, $scaleFactor);
                     color: #707c7e;
-                    font-size: px2vw(32, $scaleFactor);
+                    font-size: px2vw(36, $scaleFactor);
                     text-align: center;
                 }
 
@@ -57,7 +60,7 @@
                     width: 100%;
                     margin-top: px2vw(16, $scaleFactor);
                     color: #7d7d7d;
-                    font-size: px2vw(28, $scaleFactor);
+                    font-size: px2vw(36, $scaleFactor);
                     font-style: italic;
                     text-align: center;
                 }
@@ -71,7 +74,7 @@
                 border: 1px solid #2793b2;
                 border-radius: 6px;
                 color: #2793b2;
-                font-size: px2vw(30, $scaleFactor);
+                font-size: px2vw(36, $scaleFactor);
                 text-decoration: none;
 
                 &::before {
