@@ -332,9 +332,7 @@ export default class Locator extends Component {
                         BreakPoints.desktopMega.name
                     ].indexOf(browser.mediaType) !== -1 ? (
                         <div className={ Styles.regionMap }>
-                            <svg version="1.1" viewBox="0 0 2000 1335" x="-1000">
-                                <Region { ...currentRegion }/>
-                            </svg>
+                            <Region { ...currentRegion } single/>
                         </div>
                     ) : null }
                     <ul className={ Styles.cities }>

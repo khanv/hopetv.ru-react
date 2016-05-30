@@ -8,7 +8,7 @@ const mapLonDelta = mapLonRight - mapLonLeft;
 const mapLatBottom = 44.38722;
 const mapLatBottomDegree = mapLatBottom * Math.PI / 180;
 
-function convertGeoToPixel(latitude, longitude) {
+function convertGeoToPixel(latitude, longitude, offset) {
     const x = (longitude - mapLonLeft) * (mapWidth / mapLonDelta);
 
     latitude = latitude * Math.PI / 180;
@@ -18,12 +18,15 @@ function convertGeoToPixel(latitude, longitude) {
     const y = mapHeight - ((worldMapWidth / 2 * Math.log((1 + Math.sin(latitude))
         / (1 - Math.sin(latitude)))) - mapOffsetY);
 
-    return { x, y };
+    return {
+        x: x - offset.x,
+        y: y - offset.y
+    };
 }
 
 export default function City(props) {
-    const { lat, lng } = props;
-    const { x, y } = convertGeoToPixel(lat, lng);
+    const { lat, lng, offset } = props;
+    const { x, y } = convertGeoToPixel(lat, lng, offset);
 
     return (
         <g>
@@ -46,5 +49,5 @@ export default function City(props) {
 City.propTypes = {
     lat: PropTypes.number.isRequired,
     lng: PropTypes.number.isRequired,
-    children: PropTypes.string
+    offset: PropTypes.object.isRequired
 };
