@@ -3,5 +3,5 @@
 @media #{$desktop} {
     $scaleFactor: .04882826;
 
-    @import '../mobile';
+    @import '../desktop';
 }
