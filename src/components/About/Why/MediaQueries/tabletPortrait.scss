@@ -1,0 +1,157 @@
+@import 'theme/MediaQueries';
+
+@media #{$tabletPortrait} {
+    $scaleFactor: .065106;
+
+    @import '../desktop';
+
+    .why {
+        header {
+            i {
+                width: px2vw(166, $scaleFactor);
+                margin-top: px2vw(100, $scaleFactor);
+                margin-right: px2vw(2, $scaleFactor);
+                margin-left: 0;
+            }
+
+            h1 {
+                margin-top: px2vw(56, $scaleFactor);
+                font-size: px2vw(50, $scaleFactor);
+
+                &::after {
+                    width: px2vw(66, $scaleFactor);
+                    margin-top: px2vw(62, $scaleFactor);
+                }
+            }
+        }
+
+        .arguments {
+            width: px2vw(1300, $scaleFactor);
+            margin-top: px2vw(60, $scaleFactor);
+            padding-right: px2vw(54, $scaleFactor);
+
+            div {
+                i {
+                    width: px2vw(120, $scaleFactor);
+                    margin-left: px2vw(4, $scaleFactor);
+                }
+
+                .label {
+                    width: px2vw(66, $scaleFactor);
+                    height: px2vw(38, $scaleFactor);
+                    margin-top: px2vw(-82, $scaleFactor);
+                    margin-left: px2vw(-42, $scaleFactor);
+                    padding-top: px2vw(2, $scaleFactor);
+                    font-size: px2vw(24, $scaleFactor);
+                }
+
+                .text {
+                    margin-left: px2vw(-20, $scaleFactor);
+                    font-size: px2vw(40, $scaleFactor);
+                }
+            }
+
+            .violence {
+                margin-right: px2vw(12, $scaleFactor);
+                margin-left: 0;
+
+                .label {
+                    margin-left: px2vw(-38, $scaleFactor);
+                }
+
+                .text {
+                    margin-left: px2vw(-26, $scaleFactor);
+                }
+            }
+
+            .advert {
+                i {
+                    margin-left: px2vw(-38, $scaleFactor);
+                }
+            }
+        }
+    }
+
+    .aroundTheClock {
+        header {
+            margin-top: px2vw(60, $scaleFactor);
+
+            span {
+                width: px2vw(190, $scaleFactor);
+                height: px2vw(190, $scaleFactor);
+                font-size: px2vw(42, $scaleFactor);
+
+                &::before {
+                    left: px2vw(-650, $scaleFactor);
+                    width: px2vw(580, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                }
+
+                &::after {
+                    right: px2vw(-650, $scaleFactor);
+                    width: px2vw(580, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                }
+            }
+
+            h1 {
+                margin-top: px2vw(58, $scaleFactor);
+                font-size: px2vw(46, $scaleFactor);
+            }
+
+            h2 {
+                font-size: px2vw(40, $scaleFactor);
+            }
+        }
+
+        ul {
+            margin-top: px2vw(58, $scaleFactor);
+            padding-right: px2vw(24, $scaleFactor);
+
+            li {
+                div {
+                    font-size: px2vw(32, $scaleFactor);
+                    line-height: px2vw(36, $scaleFactor);
+                }
+
+                i {
+                    width: px2vw(52, $scaleFactor);
+                    margin-top: px2vw(2, $scaleFactor);
+                }
+            }
+
+            &::before {
+                width: px2vw(240, $scaleFactor);
+                height: px2vw(258, $scaleFactor);
+            }
+
+            .everydaySpeech {
+                margin-top: px2vw(30, $scaleFactor);
+                margin-right: px2vw(80, $scaleFactor);
+                margin-bottom: px2vw(60, $scaleFactor);
+            }
+
+            .varietyPrograms {
+                margin-right: px2vw(80, $scaleFactor);
+            }
+
+            .interactiveCommunication {
+                margin-top: px2vw(30, $scaleFactor);
+                margin-bottom: px2vw(60, $scaleFactor);
+                margin-left: px2vw(80, $scaleFactor);
+
+                i {
+                    margin-right: px2vw(42, $scaleFactor);
+                }
+            }
+
+            .holisticChristianity {
+                margin-left: px2vw(80, $scaleFactor);
+
+                i {
+                    margin-right: px2vw(42, $scaleFactor);
+                }
+            }
+        }
+    }
+}

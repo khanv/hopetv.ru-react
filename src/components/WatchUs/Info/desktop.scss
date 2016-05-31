@@ -73,7 +73,7 @@
         .apps {
             display: flex;
             width: px2vw(490, $scaleFactor);
-            margin-top: px2vw(50, $scaleFactor);
+            margin-top: px2vw(44, $scaleFactor);
             margin-right: px2vw(92, $scaleFactor);
             margin-left: 0;
 
@@ -88,8 +88,9 @@
                 border: 1px solid $androidColor;
                 border-radius: 6px;
 
-                &:active {
+                &:hover {
                     background: $androidColor;
+                    cursor: pointer;
 
                     i {
                         path {
@@ -108,8 +109,9 @@
                 border: 1px solid $textTuner;
                 border-radius: 6px;
 
-                &:active {
+                &:hover {
                     background: $textTuner;
+                    cursor: pointer;
 
                     i {
                         path {
@@ -119,7 +121,7 @@
                 }
 
                 i {
-                    width: px2vw(67, $scaleFactor);
+                    width: px2vw(64, $scaleFactor);
                     margin: px2vw(17, $scaleFactor) auto 0;
                 }
             }
@@ -134,8 +136,9 @@
                 span {
                     margin-bottom: 0;
                     color: $textTuner;
-                    font-size: px2vw(32, $scaleFactor);
-                    line-height: px2vw(26, $scaleFactor);
+                    font-size: px2vw(28, $scaleFactor);
+                    font-weight: bold;
+                    line-height: px2vw(28, $scaleFactor);
                 }
 
                 i {
@@ -166,8 +169,8 @@
 
         .searchUs {
             width: px2vw(500, $scaleFactor);
-            height: px2vw(68, $scaleFactor);
             margin: px2vw(40, $scaleFactor) px2vw(86, $scaleFactor) 0 0;
+            font-size: px2vw(28, $scaleFactor);
         }
 
         .watchOnline {
@@ -181,11 +184,12 @@
         .btn {
             width: px2vw(384, $scaleFactor);
             height: px2vw(80, $scaleFactor);
-            margin-top: px2vw(40, $scaleFactor);
+            margin-top: px2vw(48, $scaleFactor);
             margin-left: px2vw(90, $scaleFactor);
             font-size: px2vw(28, $scaleFactor);
 
             &::before {
+                width: px2vw(39, $scaleFactor);
                 margin-right: px2vw(32, $scaleFactor);
             }
         }
@@ -229,19 +233,20 @@
 
         ul {
             width: 100%;
-            margin: px2vw(32, $scaleFactor) auto 0;
+            margin: px2vw(38, $scaleFactor) auto 0;
 
             li {
                 display: flex;
-                margin-bottom: px2vw(35, $scaleFactor);
+                margin-bottom: px2vw(36, $scaleFactor);
 
                 span {
                     &:nth-child(1) {
                         display: block;
                         flex-basis: 50%;
-                        margin-right: px2vw(8, $scaleFactor);
+                        margin-top: px2vw(-2, $scaleFactor);
+                        margin-right: px2vw(18, $scaleFactor);
                         color: $textTuner;
-                        font-size: px2vw(30, $scaleFactor);
+                        font-size: px2vw(28, $scaleFactor);
                         font-weight: bold;
                         text-align: right;
                     }
@@ -250,26 +255,27 @@
                         display: block;
                         flex-basis: 50%;
                         color: $textTuner;
-                        font-size: px2vw(30, $scaleFactor);
+                        font-size: px2vw(28, $scaleFactor);
                         text-align: left;
                     }
                 }
             }
         }
 
-        .btnTuner {
-            width: px2vw(424, $scaleFactor);
-            height: px2vw(80, $scaleFactor);
-            margin-top: px2vw(50, $scaleFactor);
-            margin-left: px2vw(4, $scaleFactor);
-
-            &::before {
-                margin-right: px2vw(38, $scaleFactor);
-            }
-        }
-
         .tunerContainer {
             margin: 0 auto;
+
+            .btnTuner {
+                width: px2vw(424, $scaleFactor);
+                height: px2vw(80, $scaleFactor);
+                margin-top: px2vw(18, $scaleFactor);
+                margin-left: px2vw(4, $scaleFactor);
+                font-size: px2vw(28, $scaleFactor);
+
+                &::before {
+                    margin-right: px2vw(42, $scaleFactor);
+                }
+            }
         }
     }
 
@@ -324,11 +330,12 @@
         .providerSearch {
             position: relative;
             width: px2vw(356, $scaleFactor);
-            margin: px2vw(178, $scaleFactor) auto 0;
+            margin: px2vw(146, $scaleFactor) auto 0;
             padding-left: px2vw(16, $scaleFactor);
             color: $providerSearchColor;
             font-size: px2vw(28, $scaleFactor);
             font-style: italic;
+            font-weight: bold;
             z-index: 1;
 
             &::before {
@@ -370,7 +377,9 @@
                 content: '';
             }
 
-            &:active {
+            &:hover {
+                cursor: pointer;
+
                 &::before {
                     background: url($componentRoot + 'Images/searchHover-bg.svg') no-repeat;
                 }
@@ -409,9 +418,10 @@
             }
         }
 
-        &:active {
+        &:hover {
             background: $btnColor;
             color: $btnHoverColor;
+            cursor: pointer;
 
             &::before {
                 background: url($componentRoot + 'Images/playHover-bg.svg') no-repeat;
