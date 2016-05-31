@@ -44,7 +44,7 @@ export default class Info extends Component {
             : 'Ищите в соц. сетях';
 
         return (
-            <PixelPerfect templates={ templates } component="Why">
+            <PixelPerfect templates={ templates } component="Info">
                 <section className={ Grids.container }>
                     <section className={ Styles.infoComponent }>
                         <section className={ Styles.live }>

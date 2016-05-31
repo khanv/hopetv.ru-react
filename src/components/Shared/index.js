@@ -1,1 +1,1 @@
-export PageHead from './PageHead/component.tpl';
+export PageHead from './PageHead/component';
