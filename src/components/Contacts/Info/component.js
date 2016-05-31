@@ -70,11 +70,11 @@ export default class Info extends Component {
                             <h1>Общайтесь онлайн</h1>
                         </header>
                         <div className={ Styles.chat }>
-                            <p>Онлайн чат работает каждый день с <b>8:00 до 20:00</b></p>
+                            <p>Онлайн чат работает каждый день с <b>9:00 до 17:00</b></p>
                             <a href="#" onClick={ this.startChat }>Написать в онлайн чат</a>
                         </div>
                         <div className={ Styles.call }>
-                            <p>Контакт-центр работает каждый день с <b>8:00 до 20:00</b></p>
+                            <p>Контакт-центр работает каждый день с <b>9:00 до 21:00</b></p>
                             <a href="skype:contact-hope?call">Позвонить нам сейчас</a>
                         </div>
                     </section>
@@ -89,7 +89,7 @@ export default class Info extends Component {
                                 <span>0 800 30 20 20</span>
                             </div>
                             <div>
-                                <p><span>Звоните</span> ежедневно: <b>8:00-20:00</b></p>
+                                <p><span>Звоните</span> ежедневно: <b>9:00-21:00</b></p>
                             </div>
                         </div>
                         <div className={ Styles.skype }>
@@ -98,7 +98,7 @@ export default class Info extends Component {
                                 <a href="skype:contact-hope?chat">contact-hope</a>
                             </div>
                             <div>
-                                <p>Ответ <span>в сети Skype</span> в течение <b>1 мин</b></p>
+                                <p>Ответ <span>в сети Skype</span> в течение <b>5 мин</b></p>
                             </div>
                         </div>
                         <div className={ Styles.mail }>
