@@ -1,0 +1,21 @@
+@import 'MediaQueries';
+
+.container {
+    padding: 0;
+
+    @media #{$desktop} {
+        padding: 0 2vw;
+    }
+
+    @media #{$desktopWide} {
+        padding: 0 5vw;
+    }
+
+    @media #{$desktopHD} {
+        padding: 0 10vw;
+    }
+
+    @media #{$desktopMega} {
+        padding: 0 15vw;
+    }
+}

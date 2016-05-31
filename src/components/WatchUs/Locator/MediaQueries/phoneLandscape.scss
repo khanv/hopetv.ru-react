@@ -1,21 +1,21 @@
 @import 'theme/MediaQueries';
 
 @media #{$phoneLandscape} {
-    $scaleFactor: .08803;
+    $m: phoneLandscape;
 
     @import '../mobile';
 
     header {
-        padding: 0 px2vw(58, $scaleFactor) 0 px2vw(60, $scaleFactor);
+        padding: 0 px2vw(58, $m) 0 px2vw(60, $m);
     }
 
     .listItems {
-        padding-left: px2vw(60, $scaleFactor);
+        padding-left: px2vw(60, $m);
 
         >li {
             .title {
                 &::after {
-                    top: px2vw(16, $scaleFactor);
+                    top: px2vw(16, $m);
                 }
             }
         }
@@ -23,8 +23,8 @@
         &.operators {
             li {
                 &.opened {
-                    margin-left: px2vw(-60, $scaleFactor);
-                    padding-left: px2vw(60, $scaleFactor);
+                    margin-left: px2vw(-60, $m);
+                    padding-left: px2vw(60, $m);
                 }
             }
         }

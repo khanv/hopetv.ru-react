@@ -1,26 +1,25 @@
 & {
     .container {
         display: flex;
+        justify-content: space-between;
         width: px2vw(1890, $scaleFactor);
         margin: 0 auto;
         padding-top: px2vw(40, $scaleFactor);
         overflow: hidden;
-        justify-content: space-between;
 
         .item {
             flex-shrink: 0;
             width: px2vw(630, $scaleFactor);
             height: px2vw(757, $scaleFactor);
             padding-top: px2vw(66, $scaleFactor);
-            border: solid 1px red;
 
             .poster {
                 width: px2vw(240, $scaleFactor);
                 height: px2vw(240, $scaleFactor);
                 margin: 0 auto;
-                border: 5px solid #fff;
+                border: 5px solid $color2;
                 border-radius: 50%;
-                background: #fff center;
+                background: $color2 center;
                 background-size: cover;
             }
 
@@ -30,7 +29,7 @@
                 .title {
                     position: relative;
                     width: 100%;
-                    color: #636466;
+                    color: $color3;
                     font-size: px2vw(40, $scaleFactor);
                     text-align: center;
 
@@ -42,7 +41,7 @@
                         height: px2vw(6, $scaleFactor);
                         margin-left: px2vw(-30, $scaleFactor);
                         border-radius: 3px;
-                        background-color: #facb0e;
+                        background-color: $color4;
                         content: '';
                     }
                 }
@@ -50,7 +49,7 @@
                 .name {
                     width: 100%;
                     margin-top: px2vw(76, $scaleFactor);
-                    color: #707c7e;
+                    color: $color5;
                     font-size: px2vw(36, $scaleFactor);
                     text-align: center;
                 }
@@ -59,7 +58,7 @@
                     display: inline-block;
                     width: 100%;
                     margin-top: px2vw(16, $scaleFactor);
-                    color: #7d7d7d;
+                    color: $color6;
                     font-size: px2vw(36, $scaleFactor);
                     font-style: italic;
                     text-align: center;
@@ -71,9 +70,9 @@
                 width: max-content;
                 margin: px2vw(56, $scaleFactor) auto;
                 padding: px2vw(34, $scaleFactor) px2vw(38, $scaleFactor) px2vw(30, $scaleFactor) px2vw(30, $scaleFactor);
-                border: 1px solid #2793b2;
+                border: 1px solid $color7;
                 border-radius: 6px;
-                color: #2793b2;
+                color: $color7;
                 font-size: px2vw(36, $scaleFactor);
                 text-decoration: none;
 
@@ -101,14 +100,14 @@
             height: px2vw(16, $scaleFactor);
             margin-right: px2vw(30, $scaleFactor);
             border-radius: 50%;
-            background-color: #d6d7d8;
+            background-color: $color8;
 
             &:last-child {
                 margin-right: 0;
             }
 
             &.selected {
-                background-color: #facb0e;
+                background-color: $color4;
             }
         }
     }

@@ -3,40 +3,40 @@
 
     .map {
         position: relative;
-        width: px2vw(1812, $scaleFactor);
+        width: px2vw(1812, $m);
         margin: 0 auto;
-        padding-top: px2vw(110, $scaleFactor);
+        padding-top: px2vw(110, $m);
 
         .hint {
             position: absolute;
-            bottom: px2vw(150, $scaleFactor);
-            left: px2vw(80, $scaleFactor);
+            bottom: px2vw(280, $m);
+            left: px2vw(200, $m);
 
             p {
                 color: $color10;
-                font-size: px2vw(30, $scaleFactor);
+                font-size: px2vw(30, $m);
                 font-weight: bold;
                 text-align: right;
             }
 
             span {
                 display: inline-block;
-                width: px2vw(286, $scaleFactor);
-                margin-top: px2vw(15, $scaleFactor);
+                width: px2vw(286, $m);
+                margin-top: px2vw(15, $m);
                 color: $color10;
-                font-size: px2vw(26, $scaleFactor);
+                font-size: px2vw(26, $m);
                 font-style: italic;
-                line-height: px2vw(30, $scaleFactor);
+                line-height: px2vw(30, $m);
                 text-align: right;
             }
 
             &::before {
                 display: block;
                 position: absolute;
-                top: px2vw(-106, $scaleFactor);
-                right: px2vw(-148, $scaleFactor);
-                width: px2vw(128, $scaleFactor);
-                height: px2vw(130, $scaleFactor);
+                top: px2vw(-106, $m);
+                right: px2vw(-148, $m);
+                width: px2vw(128, $m);
+                height: px2vw(130, $m);
                 background: url($componentRoot + 'Images/arrowsIcon-bg.svg') no-repeat;
                 content: '';
             }
@@ -45,7 +45,7 @@
 
     .region {
         position: absolute;
-        top: px2vw(500, $scaleFactor);
+        top: px2vw(500, $m);
         width: 100%;
         background-color: $color8;
         z-index: 1;
@@ -53,28 +53,28 @@
         header {
             display: flex;
             justify-content: space-between;
-            height: px2vw(90, $scaleFactor);
-            margin-top: px2vw(64, $scaleFactor);
-            padding-right: px2vw(122, $scaleFactor);
-            padding-left: px2vw(96, $scaleFactor);
+            height: px2vw(90, $m);
+            margin-top: px2vw(64, $m);
+            padding-right: px2vw(122, $m);
+            padding-left: px2vw(96, $m);
 
             h1 {
                 position: relative;
                 width: 100%;
-                margin-top: px2vw(10, $scaleFactor);
-                margin-left: px2vw(100, $scaleFactor);
+                margin-top: px2vw(10, $m);
+                margin-left: px2vw(100, $m);
                 color: $color11;
-                font-size: px2vw(44, $scaleFactor);
+                font-size: px2vw(44, $m);
                 font-weight: bold;
                 text-align: center;
 
                 &::after {
                     position: absolute;
-                    top: px2vw(78, $scaleFactor);
+                    top: px2vw(78, $m);
                     left: 50%;
-                    width: px2vw(50, $scaleFactor);
-                    height: px2vw(6, $scaleFactor);
-                    margin-left: px2vw(-25, $scaleFactor);
+                    width: px2vw(50, $m);
+                    height: px2vw(6, $m);
+                    margin-left: px2vw(-25, $m);
                     border-radius: 3px;
                     background-color: $color12;
                     content: '';
@@ -83,45 +83,44 @@
 
             .close {
                 display: block;
-                width: px2vw(90, $scaleFactor);
-                height: px2vw(90, $scaleFactor);
+                width: px2vw(90, $m);
+                height: px2vw(90, $m);
                 background: url($componentRoot + 'Images/closeOperatorsIcon-bg.svg') no-repeat;
             }
         }
 
         .head {
             display: flex;
-            margin-top: px2vw(84, $scaleFactor);
-            padding-right: px2vw(100, $scaleFactor);
-            padding-left: px2vw(120, $scaleFactor);
+            width: px2vw(1828, $m);
+            margin: px2vw(84, $m) auto 0;
 
             .mapTitle {
                 display: flex;
-                width: px2vw(620, $scaleFactor);
-                margin-right: px2vw(12, $scaleFactor);
+                width: px2vw(620, $m);
+                margin-right: px2vw(12, $m);
                 color: $color10;
-                font-size: px2vw(28, $scaleFactor);
+                font-size: px2vw(28, $m);
                 font-weight: bold;
 
                 span {
-                    margin-top: px2vw(10, $scaleFactor);
-                    margin-left: px2vw(2, $scaleFactor);
+                    margin-top: px2vw(10, $m);
+                    margin-left: px2vw(2, $m);
                 }
 
                 &::before {
                     display: block;
-                    width: px2vw(42, $scaleFactor);
-                    height: px2vw(50, $scaleFactor);
-                    margin-right: px2vw(30, $scaleFactor);
+                    width: px2vw(42, $m);
+                    height: px2vw(50, $m);
+                    margin-right: px2vw(30, $m);
                     background: url($componentRoot + 'Images/mapIcon-bg.svg') no-repeat;
                     content: '';
                 }
 
                 &::after {
-                    width: px2vw(300, $scaleFactor);
-                    height: px2vw(2, $scaleFactor);
-                    margin-top: px2vw(26, $scaleFactor);
-                    margin-left: px2vw(40, $scaleFactor);
+                    width: px2vw(300, $m);
+                    height: px2vw(2, $m);
+                    margin-top: px2vw(26, $m);
+                    margin-left: px2vw(40, $m);
                     background-color: $color13;
                     content: '';
                 }
@@ -129,30 +128,30 @@
 
             .cities {
                 display: flex;
-                width: px2vw(500, $scaleFactor);
+                width: px2vw(500, $m);
                 color: $color10;
-                font-size: px2vw(28, $scaleFactor);
+                font-size: px2vw(28, $m);
                 font-weight: bold;
 
                 span {
-                    margin-top: px2vw(10, $scaleFactor);
-                    margin-left: px2vw(2, $scaleFactor);
+                    margin-top: px2vw(10, $m);
+                    margin-left: px2vw(2, $m);
                 }
 
                 &::before {
                     display: block;
-                    width: px2vw(64, $scaleFactor);
-                    height: px2vw(48, $scaleFactor);
-                    margin-right: px2vw(34, $scaleFactor);
+                    width: px2vw(64, $m);
+                    height: px2vw(48, $m);
+                    margin-right: px2vw(34, $m);
                     background: url($componentRoot + 'Images/cityIcon-bg.svg') no-repeat;
                     content: '';
                 }
 
                 &::after {
-                    width: px2vw(230, $scaleFactor);
-                    height: px2vw(2, $scaleFactor);
-                    margin-top: px2vw(26, $scaleFactor);
-                    margin-left: px2vw(46, $scaleFactor);
+                    width: px2vw(230, $m);
+                    height: px2vw(2, $m);
+                    margin-top: px2vw(26, $m);
+                    margin-left: px2vw(46, $m);
                     background-color: $color13;
                     content: '';
                 }
@@ -161,27 +160,27 @@
             .operators {
                 display: flex;
                 color: $color10;
-                font-size: px2vw(28, $scaleFactor);
+                font-size: px2vw(28, $m);
                 font-weight: bold;
 
                 span {
-                    margin-top: px2vw(10, $scaleFactor);
+                    margin-top: px2vw(10, $m);
                 }
 
                 &::before {
                     display: block;
-                    width: px2vw(46, $scaleFactor);
-                    height: px2vw(42, $scaleFactor);
-                    margin-right: px2vw(34, $scaleFactor);
+                    width: px2vw(46, $m);
+                    height: px2vw(42, $m);
+                    margin-right: px2vw(34, $m);
                     background: url($componentRoot + 'Images/cablesIcon-bg.svg') no-repeat;
                     content: '';
                 }
 
                 &::after {
-                    width: px2vw(278, $scaleFactor);
-                    height: px2vw(2, $scaleFactor);
-                    margin-top: px2vw(26, $scaleFactor);
-                    margin-left: px2vw(40, $scaleFactor);
+                    width: px2vw(278, $m);
+                    height: px2vw(2, $m);
+                    margin-top: px2vw(26, $m);
+                    margin-left: px2vw(40, $m);
                     background-color: $color13;
                     content: '';
                 }
@@ -190,33 +189,33 @@
 
         .content {
             display: flex;
-            padding-right: px2vw(98, $scaleFactor);
-            padding-left: px2vw(98, $scaleFactor);
+            width: px2vw(1652, $m);
+            margin: 0 auto;
 
             .regionMap {
-                width: px2vw(590, $scaleFactor);
-                margin-top: px2vw(108, $scaleFactor);
-                margin-bottom: px2vw(60, $scaleFactor);
-                margin-left: px2vw(20, $scaleFactor);
+                width: px2vw(590, $m);
+                margin-top: px2vw(108, $m);
+                margin-bottom: px2vw(60, $m);
+                margin-left: px2vw(20, $m);
             }
 
             .cities {
-                width: px2vw(500, $scaleFactor);
-                max-height: px2vw(800, $scaleFactor);
-                margin-top: px2vw(66, $scaleFactor);
-                margin-bottom: px2vw(96, $scaleFactor);
-                padding-top: px2vw(8, $scaleFactor);
-                padding-left: px2vw(110, $scaleFactor);
+                width: px2vw(500, $m);
+                max-height: px2vw(800, $m);
+                margin-top: px2vw(66, $m);
+                margin-bottom: px2vw(96, $m);
+                padding-top: px2vw(8, $m);
+                padding-left: px2vw(110, $m);
                 overflow-y: scroll;
 
                 li {
                     position: relative;
-                    padding-top: px2vw(30, $scaleFactor);
-                    padding-bottom: px2vw(30, $scaleFactor);
-                    padding-left: px2vw(28, $scaleFactor);
+                    padding-top: px2vw(30, $m);
+                    padding-bottom: px2vw(30, $m);
+                    padding-left: px2vw(28, $m);
                     border-bottom: 1px solid $color13;
                     color: $color11;
-                    font-size: px2vw(28, $scaleFactor);
+                    font-size: px2vw(28, $m);
 
                     &:hover {
                         color: $color16;
@@ -226,8 +225,8 @@
 
                     &:first-child {
                         &::after {
-                            top: px2vw(-36, $scaleFactor);
-                            height: px2vw(126, $scaleFactor);
+                            top: px2vw(-36, $m);
+                            height: px2vw(126, $m);
                         }
                     }
 
@@ -235,7 +234,7 @@
                         border-bottom: 0;
 
                         &::after {
-                            height: px2vw(122, $scaleFactor);
+                            height: px2vw(122, $m);
                         }
                     }
 
@@ -243,20 +242,20 @@
                         display: block;
                         position: absolute;
                         top: 0;
-                        right: px2vw(-62, $scaleFactor);
+                        right: px2vw(-62, $m);
                         width: 1px;
-                        height: px2vw(90, $scaleFactor);
+                        height: px2vw(90, $m);
                         background-color: $color13;
                         content: '';
                     }
 
                     &.selected {
-                        width: px2vw(456, $scaleFactor);
+                        width: px2vw(456, $m);
                         margin-top: -1px;
                         margin-left: -3px;
-                        padding-top: px2vw(30, $scaleFactor);
-                        padding-bottom: px2vw(30, $scaleFactor);
-                        padding-left: px2vw(30, $scaleFactor);
+                        padding-top: px2vw(30, $m);
+                        padding-bottom: px2vw(30, $m);
+                        padding-left: px2vw(30, $m);
                         border-top: 1px solid $color13;
                         border-right: 0;
                         border-bottom: 1px solid $color13;
@@ -273,15 +272,15 @@
             }
 
             .operators {
-                width: px2vw(640, $scaleFactor);
-                margin-left: px2vw(60, $scaleFactor);
-                padding-top: px2vw(100, $scaleFactor);
-                padding-left: px2vw(62, $scaleFactor);
+                width: px2vw(640, $m);
+                margin-left: px2vw(60, $m);
+                padding-top: px2vw(100, $m);
+                padding-left: px2vw(62, $m);
 
                 li {
-                    margin-bottom: px2vw(54, $scaleFactor);
+                    margin-bottom: px2vw(54, $m);
                     color: $color10;
-                    font-size: px2vw(28, $scaleFactor);
+                    font-size: px2vw(28, $m);
 
                     .title {
                         display: inline-flex;
@@ -295,7 +294,7 @@
                     }
 
                     &.selected {
-                        margin-bottom: px2vw(44, $scaleFactor);
+                        margin-bottom: px2vw(44, $m);
 
                         .title {
                             display: inline-flex;
@@ -308,33 +307,33 @@
                         }
 
                         .contacts {
-                            width: px2vw(560, $scaleFactor);
-                            margin-top: px2vw(40, $scaleFactor);
+                            width: px2vw(560, $m);
+                            margin-top: px2vw(40, $m);
                             border: 1px solid $color15;
                             border-radius: 6px;
                             background-color: $color14;
 
                             ul {
                                 position: relative;
-                                margin-top: px2vw(56, $scaleFactor);
-                                margin-bottom: px2vw(56, $scaleFactor);
-                                padding-top: px2vw(8, $scaleFactor);
-                                padding-bottom: px2vw(0, $scaleFactor);
-                                padding-left: px2vw(80, $scaleFactor);
+                                margin-top: px2vw(56, $m);
+                                margin-bottom: px2vw(56, $m);
+                                padding-top: px2vw(8, $m);
+                                padding-bottom: px2vw(0, $m);
+                                padding-left: px2vw(80, $m);
 
                                 &::before {
                                     display: block;
                                     position: absolute;
                                     top: 0;
-                                    left: px2vw(30, $scaleFactor);
-                                    width: px2vw(36, $scaleFactor);
-                                    height: px2vw(36, $scaleFactor);
+                                    left: px2vw(30, $m);
+                                    width: px2vw(36, $m);
+                                    height: px2vw(36, $m);
                                     background: url($componentRoot + 'Images/phoneMenuIcon-bg.svg') no-repeat;
                                     content: '';
                                 }
 
                                 li {
-                                    margin-bottom: px2vw(26, $scaleFactor);
+                                    margin-bottom: px2vw(26, $m);
                                     font-weight: normal;
 
                                     &:last-child {
@@ -344,7 +343,7 @@
 
                                 &.withWebsite {
                                     margin-bottom: 0;
-                                    padding-bottom: px2vw(56, $scaleFactor);
+                                    padding-bottom: px2vw(56, $m);
                                     border-bottom: 1px solid $color15;
                                 }
                             }
@@ -352,31 +351,31 @@
                             a {
                                 display: inline-block;
                                 position: relative;
-                                margin-top: px2vw(30, $scaleFactor);
-                                margin-bottom: px2vw(34, $scaleFactor);
-                                margin-left: px2vw(26, $scaleFactor);
-                                padding-top: px2vw(14, $scaleFactor);
-                                padding-left: px2vw(54, $scaleFactor);
+                                margin-top: px2vw(30, $m);
+                                margin-bottom: px2vw(34, $m);
+                                margin-left: px2vw(26, $m);
+                                padding-top: px2vw(14, $m);
+                                padding-left: px2vw(54, $m);
                                 color: $color7;
-                                font-size: px2vw(28, $scaleFactor);
+                                font-size: px2vw(28, $m);
                                 font-weight: bold;
                                 text-decoration: none;
 
                                 &::before {
                                     display: block;
                                     position: absolute;
-                                    top: px2vw(10, $scaleFactor);
-                                    left: px2vw(0, $scaleFactor);
-                                    width: px2vw(36, $scaleFactor);
-                                    height: px2vw(36, $scaleFactor);
+                                    top: px2vw(10, $m);
+                                    left: px2vw(0, $m);
+                                    width: px2vw(36, $m);
+                                    height: px2vw(36, $m);
                                     background: url($componentRoot + 'Images/earthMenuIcon-bg.svg') no-repeat;
                                     content: '';
                                 }
 
                                 &::after {
-                                    margin-left: px2vw(8, $scaleFactor);
+                                    margin-left: px2vw(8, $m);
                                     font-family: Arial;
-                                    font-size: px2vw(28, $scaleFactor);
+                                    font-size: px2vw(28, $m);
                                     content: '→';
                                 }
                             }

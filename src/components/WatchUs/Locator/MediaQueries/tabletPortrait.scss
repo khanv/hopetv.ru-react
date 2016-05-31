@@ -1,12 +1,12 @@
 @import 'theme/MediaQueries';
 
 @media #{$tabletPortrait} {
-    $scaleFactor: .065106;
+    $m: tabletPortrait;
 
     @import '../desktop';
 
     .map {
-        width: px2vw(1436, $scaleFactor);
+        width: px2vw(1436, $m);
     }
 
     .region {
@@ -16,140 +16,140 @@
         overflow-y: scroll;
 
         header {
-            margin-top: px2vw(90, $scaleFactor);
-            padding-right: px2vw(100, $scaleFactor);
+            margin-top: px2vw(90, $m);
+            padding-right: px2vw(100, $m);
 
             h1 {
-                margin-top: px2vw(16, $scaleFactor);
-                font-size: px2vw(52, $scaleFactor);
+                margin-top: px2vw(16, $m);
+                font-size: px2vw(52, $m);
             }
 
             .close {
-                width: px2vw(92, $scaleFactor);
-                height: px2vw(92, $scaleFactor);
+                width: px2vw(92, $m);
+                height: px2vw(92, $m);
             }
         }
 
         .head {
-            margin-top: px2vw(120, $scaleFactor);
-            padding-left: px2vw(96, $scaleFactor);
+            margin-top: px2vw(120, $m);
+            padding-left: px2vw(96, $m);
 
             .cities {
-                width: px2vw(570, $scaleFactor);
-                font-size: px2vw(34, $scaleFactor);
+                width: px2vw(570, $m);
+                font-size: px2vw(34, $m);
 
                 &::before {
-                    width: px2vw(74, $scaleFactor);
-                    height: px2vw(60, $scaleFactor);
-                    margin-right: px2vw(47, $scaleFactor);
+                    width: px2vw(74, $m);
+                    height: px2vw(60, $m);
+                    margin-right: px2vw(47, $m);
                 }
 
                 &::after {
-                    width: px2vw(243, $scaleFactor);
-                    margin-left: px2vw(50, $scaleFactor);
+                    width: px2vw(243, $m);
+                    margin-left: px2vw(50, $m);
                 }
             }
 
             .operators {
-                font-size: px2vw(34, $scaleFactor);
+                font-size: px2vw(34, $m);
 
                 &::before {
-                    width: px2vw(54, $scaleFactor);
-                    height: px2vw(50, $scaleFactor);
-                    margin-right: px2vw(47, $scaleFactor);
+                    width: px2vw(54, $m);
+                    height: px2vw(50, $m);
+                    margin-right: px2vw(47, $m);
                 }
 
                 &::after {
-                    width: px2vw(280, $scaleFactor);
-                    margin-left: px2vw(44, $scaleFactor);
+                    width: px2vw(280, $m);
+                    margin-left: px2vw(44, $m);
                 }
             }
         }
 
         .content {
             .cities {
-                width: px2vw(515, $scaleFactor);
-                margin-top: px2vw(56, $scaleFactor);
-                padding-left: px2vw(71, $scaleFactor);
+                width: px2vw(515, $m);
+                margin-top: px2vw(56, $m);
+                padding-left: px2vw(71, $m);
 
                 li {
-                    padding-top: px2vw(50, $scaleFactor);
-                    padding-bottom: px2vw(50, $scaleFactor);
-                    padding-left: px2vw(46, $scaleFactor);
-                    font-size: px2vw(34, $scaleFactor);
+                    padding-top: px2vw(50, $m);
+                    padding-bottom: px2vw(50, $m);
+                    padding-left: px2vw(46, $m);
+                    font-size: px2vw(34, $m);
 
                     &:first-child {
                         &::after {
-                            top: px2vw(-28, $scaleFactor);
-                            height: px2vw(163, $scaleFactor);
+                            top: px2vw(-28, $m);
+                            height: px2vw(163, $m);
                         }
                     }
 
                     &:last-child {
                         &::after {
-                            height: px2vw(152, $scaleFactor);
+                            height: px2vw(152, $m);
                         }
                     }
 
                     &::after {
-                        right: px2vw(-76, $scaleFactor);
+                        right: px2vw(-76, $m);
                     }
 
                     &.selected {
-                        width: px2vw(526, $scaleFactor);
-                        padding-top: px2vw(50, $scaleFactor);
-                        padding-bottom: px2vw(48, $scaleFactor);
-                        padding-left: px2vw(48, $scaleFactor);
+                        width: px2vw(526, $m);
+                        padding-top: px2vw(50, $m);
+                        padding-bottom: px2vw(48, $m);
+                        padding-left: px2vw(48, $m);
                     }
                 }
             }
 
             .operators {
-                width: px2vw(748, $scaleFactor);
-                margin-left: px2vw(74, $scaleFactor);
-                padding-top: px2vw(110, $scaleFactor);
-                padding-left: px2vw(76, $scaleFactor);
+                width: px2vw(748, $m);
+                margin-left: px2vw(74, $m);
+                padding-top: px2vw(110, $m);
+                padding-left: px2vw(76, $m);
 
                 li {
-                    margin-bottom: px2vw(100, $scaleFactor);
-                    font-size: px2vw(34, $scaleFactor);
+                    margin-bottom: px2vw(100, $m);
+                    font-size: px2vw(34, $m);
 
                     &.selected {
-                        margin-bottom: px2vw(68, $scaleFactor);
+                        margin-bottom: px2vw(68, $m);
 
                         .contacts {
-                            width: px2vw(654, $scaleFactor);
-                            margin-top: px2vw(64, $scaleFactor);
+                            width: px2vw(654, $m);
+                            margin-top: px2vw(64, $m);
 
                             ul {
-                                padding-left: px2vw(100, $scaleFactor);
+                                padding-left: px2vw(100, $m);
 
                                 &::before {
-                                    left: px2vw(34, $scaleFactor);
-                                    width: px2vw(42, $scaleFactor);
-                                    height: px2vw(42, $scaleFactor);
+                                    left: px2vw(34, $m);
+                                    width: px2vw(42, $m);
+                                    height: px2vw(42, $m);
                                 }
 
                                 li {
-                                    margin-bottom: px2vw(28, $scaleFactor);
+                                    margin-bottom: px2vw(28, $m);
                                 }
                             }
 
                             a {
-                                margin-bottom: px2vw(32, $scaleFactor);
-                                margin-left: px2vw(32, $scaleFactor);
-                                padding-left: px2vw(70, $scaleFactor);
-                                font-size: px2vw(34, $scaleFactor);
+                                margin-bottom: px2vw(32, $m);
+                                margin-left: px2vw(32, $m);
+                                padding-left: px2vw(70, $m);
+                                font-size: px2vw(34, $m);
 
                                 &::before {
-                                    top: px2vw(6, $scaleFactor);
-                                    left: px2vw(4, $scaleFactor);
-                                    width: px2vw(42, $scaleFactor);
-                                    height: px2vw(42, $scaleFactor);
+                                    top: px2vw(6, $m);
+                                    left: px2vw(4, $m);
+                                    width: px2vw(42, $m);
+                                    height: px2vw(42, $m);
                                 }
 
                                 &::after {
-                                    font-size: px2vw(34, $scaleFactor);
+                                    font-size: px2vw(34, $m);
                                 }
                             }
                         }
