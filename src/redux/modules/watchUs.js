@@ -10,6 +10,7 @@ const initialState = {
 };
 
 function buildUrl(state) {
+    console.log(state);
     const parts = [''];
     parts.push(basePath);
 
@@ -32,6 +33,7 @@ function buildUrl(state) {
             }
         }
     }
+    console.log(parts);
 
     return parts.join('/');
 }
@@ -97,7 +99,7 @@ export function city(id, state) {
             routerActions.push(
                 buildUrl({
                     ...state,
-                    city: id,
+                    city: parseInt(id, 10),
                     provider: `${id}-1`
                 })
             )
@@ -139,6 +141,29 @@ export function close() {
             routerActions.push(buildUrl({
                 initialState
             }))
+        );
+    };
+}
+
+export function fullRegion(id) {
+    const region = LocatorApi.getRegion({
+        id
+    });
+    const city = region.cities[0];
+    const cityId = city.id;
+    const provider = city.providers[0];
+    const providerId = provider.id;
+
+    return (dispatch) => {
+        dispatch(
+            routerActions.push(
+                buildUrl({
+                    locatorActive: true,
+                    region: id,
+                    city: cityId,
+                    provider: providerId
+                })
+            )
         );
     };
 }

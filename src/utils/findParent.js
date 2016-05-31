@@ -1,7 +1,7 @@
-export default function findParent(el) {
-    if (el.dataset && el.dataset.handler) {
+export default function findParent(el, key) {
+    if (el.getAttribute(`data-${key}`) !== null) {
         return el;
     }
 
-    return findParent(el.parentElement);
+    return findParent(el.parentElement, key);
 }

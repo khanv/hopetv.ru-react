@@ -1,24 +1,24 @@
 & {
     .background {
-        fill: $backgroundColor;
+        fill: $color1;
     }
 
     .shadow {
-        fill: $shadowColor;
+        fill: $color2;
     }
 
     .arrow {
-        fill: $backgroundColor;
+        fill: $color1;
     }
 
     text {
         font-family: PTSans-bold;
         font-size: 28px;
-        fill: $textColor;
+        fill: $color3;
         text-anchor: middle;
 
         &:hover {
-            fill: $textColor;
+            fill: $color3;
         }
     }
 }

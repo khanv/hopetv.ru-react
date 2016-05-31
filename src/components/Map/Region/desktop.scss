@@ -1,0 +1,49 @@
+& {
+    &.part {
+        transform: scale(1);
+        transform-origin: center center;
+        transition: transform .2s ease-out;
+
+        path {
+            transition: fill .2s ease-out;
+            fill: $color1;
+        }
+
+        text {
+            transition: fill .2s ease-out;
+            font-family: 'PTSans-Narrow';
+            font-size: 28px;
+            text-anchor: middle;
+            fill: $color2;
+        }
+
+        > text {
+            fill: $color3;
+        }
+
+        &:not(.disabled):hover {
+            transform: scale(1.05);
+            cursor: pointer;
+
+            path {
+                fill: $color2;
+            }
+
+            > text {
+                fill: $color5;
+            }
+        }
+
+        &.disabled {
+            path {
+                fill: $color4;
+            }
+        }
+    }
+
+    &.single {
+        path {
+            fill: $color2;
+        }
+    }
+}

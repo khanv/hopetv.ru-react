@@ -7,3 +7,4 @@
 export * as Map from './Map';
 export * as Shared from './Shared';
 export * as About from './About';
+export * as Contacts from './Contacts';

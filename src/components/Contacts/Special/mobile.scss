@@ -1,0 +1,112 @@
+& {
+    .container {
+        display: flex;
+        width: px2vw(392, $scaleFactor);
+        margin: 0 auto;
+        overflow: hidden;
+
+        .item {
+            flex-shrink: 0;
+            width: 100%;
+            height: px2vw(757, $scaleFactor);
+            padding-top: px2vw(66, $scaleFactor);
+
+            .poster {
+                width: px2vw(240, $scaleFactor);
+                height: px2vw(240, $scaleFactor);
+                margin: 0 auto;
+                border: 5px solid #fff;
+                border-radius: 50%;
+                background: #fff center;
+                background-size: cover;
+            }
+
+            .info {
+                margin-top: px2vw(52, $scaleFactor);
+
+                .title {
+                    position: relative;
+                    width: 100%;
+                    color: #636466;
+                    font-size: px2vw(36, $scaleFactor);
+                    text-align: center;
+
+                    &::after {
+                        position: absolute;
+                        top: px2vw(74, $scaleFactor);
+                        left: 50%;
+                        width: px2vw(60, $scaleFactor);
+                        height: px2vw(6, $scaleFactor);
+                        margin-left: px2vw(-30, $scaleFactor);
+                        border-radius: 3px;
+                        background-color: #facb0e;
+                        content: '';
+                    }
+                }
+
+                .name {
+                    width: 100%;
+                    margin-top: px2vw(76, $scaleFactor);
+                    color: #707c7e;
+                    font-size: px2vw(32, $scaleFactor);
+                    text-align: center;
+                }
+
+                .email {
+                    display: inline-block;
+                    width: 100%;
+                    margin-top: px2vw(16, $scaleFactor);
+                    color: #7d7d7d;
+                    font-size: px2vw(28, $scaleFactor);
+                    font-style: italic;
+                    text-align: center;
+                }
+            }
+
+            a {
+                display: flex;
+                width: max-content;
+                margin: px2vw(56, $scaleFactor) auto;
+                padding: px2vw(34, $scaleFactor) px2vw(38, $scaleFactor) px2vw(30, $scaleFactor) px2vw(30, $scaleFactor);
+                border: 1px solid #2793b2;
+                border-radius: 6px;
+                color: #2793b2;
+                font-size: px2vw(30, $scaleFactor);
+                text-decoration: none;
+
+                &::before {
+                    width: px2vw(45, $scaleFactor);
+                    height: px2vw(35, $scaleFactor);
+                    margin-top: px2vw(-4, $scaleFactor);
+                    margin-right: px2vw(34, $scaleFactor);
+                    background: url($componentRoot + 'envelopeButton-bg.svg') no-repeat;
+                    content: '';
+                }
+            }
+        }
+    }
+
+    .controls {
+        display: flex;
+        width: max-content;
+        margin: 0 auto;
+        padding-top: px2vw(4, $scaleFactor);
+
+        a {
+            display: block;
+            width: px2vw(16, $scaleFactor);
+            height: px2vw(16, $scaleFactor);
+            margin-right: px2vw(30, $scaleFactor);
+            border-radius: 50%;
+            background-color: #d6d7d8;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.selected {
+                background-color: #facb0e;
+            }
+        }
+    }
+}

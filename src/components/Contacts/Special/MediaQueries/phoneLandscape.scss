@@ -1,0 +1,96 @@
+@import 'theme/MediaQueries';
+
+@media #{$phoneLandscape} {
+    $scaleFactor: .08803;
+
+    @import '../mobile';
+
+    .container {
+        display: block;
+        width: 100%;
+        padding-top: px2vw(100, $scaleFactor);
+        padding-right: px2vw(60, $scaleFactor);
+        padding-left: px2vw(60, $scaleFactor);
+
+        .item {
+            display: flex;
+            height: auto;
+            margin-bottom: px2vw(80, $scaleFactor);
+            padding-top: 0;
+            padding-bottom: px2vw(80, $scaleFactor);
+            border-bottom: 1px solid #d0d3d4;
+
+            .poster {
+                margin: 0 px2vw(66, $scaleFactor) 0 0;
+            }
+
+            .info {
+                width: px2vw(440, $scaleFactor);
+                margin-top: px2vw(36, $scaleFactor);
+
+                .title {
+                    text-align: left;
+
+                    &::after {
+                        left: 0;
+                        margin-left: px2vw(0, $scaleFactor);
+                    }
+                }
+
+                .name {
+                    text-align: left;
+                }
+
+                .email {
+                    text-align: left;
+                }
+            }
+
+            a {
+                height: max-content;
+                margin: px2vw(80, $scaleFactor) 0 0;
+                padding: px2vw(30, $scaleFactor) px2vw(38, $scaleFactor) px2vw(62, $scaleFactor) px2vw(26, $scaleFactor);
+
+                &::before {
+                    margin-top: px2vw(-2, $scaleFactor);
+                }
+            }
+
+            &.custom {
+                .person {
+                    span {
+                        display: block;
+                        width: px2vw(242, $scaleFactor);
+                        margin-top: px2vw(42, $scaleFactor);
+                        line-height: px2vw(38, $scaleFactor);
+                        text-align: center;
+                    }
+                }
+
+                .wrap {
+                    .contacts {
+                        display: flex;
+                        padding-bottom: px2vw(82, $scaleFactor);
+                        border-bottom: 1px solid #d0d3d4;
+
+                        &:first-child {
+                            margin-bottom: px2vw(40, $scaleFactor);
+                        }
+
+                        .info {
+                            .email {
+                                margin-top: px2vw(76, $scaleFactor);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+}

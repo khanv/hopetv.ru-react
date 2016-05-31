@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Locator, Info } from 'components/WatchUs';
+import { Info, Locator } from 'components/WatchUs';
 import LocatorApi from 'api/Locator';
 
 /* eslint-disable react/prefer-stateless-function */

@@ -3,5 +3,159 @@
 @media #{$tabletPortrait} {
     $scaleFactor: .065106;
 
-    @import '../descktop';
+    @import '../desktop';
+
+    .map {
+        width: px2vw(1436, $scaleFactor);
+    }
+
+    .region {
+        position: fixed;
+        top: 0;
+        max-height: 85vh;
+        overflow-y: scroll;
+
+        header {
+            margin-top: px2vw(90, $scaleFactor);
+            padding-right: px2vw(100, $scaleFactor);
+
+            h1 {
+                margin-top: px2vw(16, $scaleFactor);
+                font-size: px2vw(52, $scaleFactor);
+            }
+
+            .close {
+                width: px2vw(92, $scaleFactor);
+                height: px2vw(92, $scaleFactor);
+            }
+        }
+
+        .head {
+            margin-top: px2vw(120, $scaleFactor);
+            padding-left: px2vw(96, $scaleFactor);
+
+            .cities {
+                width: px2vw(570, $scaleFactor);
+                font-size: px2vw(34, $scaleFactor);
+
+                &::before {
+                    width: px2vw(74, $scaleFactor);
+                    height: px2vw(60, $scaleFactor);
+                    margin-right: px2vw(47, $scaleFactor);
+                }
+
+                &::after {
+                    width: px2vw(243, $scaleFactor);
+                    margin-left: px2vw(50, $scaleFactor);
+                }
+            }
+
+            .operators {
+                font-size: px2vw(34, $scaleFactor);
+
+                &::before {
+                    width: px2vw(54, $scaleFactor);
+                    height: px2vw(50, $scaleFactor);
+                    margin-right: px2vw(47, $scaleFactor);
+                }
+
+                &::after {
+                    width: px2vw(280, $scaleFactor);
+                    margin-left: px2vw(44, $scaleFactor);
+                }
+            }
+        }
+
+        .content {
+            .cities {
+                width: px2vw(515, $scaleFactor);
+                margin-top: px2vw(56, $scaleFactor);
+                padding-left: px2vw(71, $scaleFactor);
+
+                li {
+                    padding-top: px2vw(50, $scaleFactor);
+                    padding-bottom: px2vw(50, $scaleFactor);
+                    padding-left: px2vw(46, $scaleFactor);
+                    font-size: px2vw(34, $scaleFactor);
+
+                    &:first-child {
+                        &::after {
+                            top: px2vw(-28, $scaleFactor);
+                            height: px2vw(163, $scaleFactor);
+                        }
+                    }
+
+                    &:last-child {
+                        &::after {
+                            height: px2vw(152, $scaleFactor);
+                        }
+                    }
+
+                    &::after {
+                        right: px2vw(-76, $scaleFactor);
+                    }
+
+                    &.selected {
+                        width: px2vw(526, $scaleFactor);
+                        padding-top: px2vw(50, $scaleFactor);
+                        padding-bottom: px2vw(48, $scaleFactor);
+                        padding-left: px2vw(48, $scaleFactor);
+                    }
+                }
+            }
+
+            .operators {
+                width: px2vw(748, $scaleFactor);
+                margin-left: px2vw(74, $scaleFactor);
+                padding-top: px2vw(110, $scaleFactor);
+                padding-left: px2vw(76, $scaleFactor);
+
+                li {
+                    margin-bottom: px2vw(100, $scaleFactor);
+                    font-size: px2vw(34, $scaleFactor);
+
+                    &.selected {
+                        margin-bottom: px2vw(68, $scaleFactor);
+
+                        .contacts {
+                            width: px2vw(654, $scaleFactor);
+                            margin-top: px2vw(64, $scaleFactor);
+
+                            ul {
+                                padding-left: px2vw(100, $scaleFactor);
+
+                                &::before {
+                                    left: px2vw(34, $scaleFactor);
+                                    width: px2vw(42, $scaleFactor);
+                                    height: px2vw(42, $scaleFactor);
+                                }
+
+                                li {
+                                    margin-bottom: px2vw(28, $scaleFactor);
+                                }
+                            }
+
+                            a {
+                                margin-bottom: px2vw(32, $scaleFactor);
+                                margin-left: px2vw(32, $scaleFactor);
+                                padding-left: px2vw(70, $scaleFactor);
+                                font-size: px2vw(34, $scaleFactor);
+
+                                &::before {
+                                    top: px2vw(6, $scaleFactor);
+                                    left: px2vw(4, $scaleFactor);
+                                    width: px2vw(42, $scaleFactor);
+                                    height: px2vw(42, $scaleFactor);
+                                }
+
+                                &::after {
+                                    font-size: px2vw(34, $scaleFactor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
