@@ -1,13 +1,13 @@
 @import 'theme/MediaQueries';
 
 @media #{$phoneLandscape} {
-    $scaleFactor: .08803;
+    $m: phoneLandscape;
 
     @import '../mobile';
 
     section::after {
         width: 100%;
-        margin-top: px2vw(100, $scaleFactor);
+        margin-top: px2vw(100, $m);
     }
 
     .live {
@@ -18,21 +18,21 @@
             justify-content: center;
 
             i {
-                margin-right: px2vw(114, $scaleFactor);
+                margin-right: px2vw(114, $m);
             }
 
             h1 {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                width: px2vw(472, $scaleFactor);
-                margin-top: px2vw(48, $scaleFactor);
-                margin-right: px2vw(178, $scaleFactor);
+                width: px2vw(472, $m);
+                margin-top: px2vw(48, $m);
+                margin-right: px2vw(178, $m);
                 margin-left: 0;
 
                 &::after {
-                    width: px2vw(6, $scaleFactor);
-                    height: px2vw(60, $scaleFactor);
+                    width: px2vw(6, $m);
+                    height: px2vw(60, $m);
                     margin-top: 0;
                     margin-right: 0;
                 }
@@ -48,11 +48,11 @@
         }
 
         .chat {
-            margin-top: px2vw(20, $scaleFactor);
+            margin-top: px2vw(20, $m);
 
             a {
-                margin-right: px2vw(38, $scaleFactor);
-                margin-left: px2vw(80, $scaleFactor);
+                margin-right: px2vw(38, $m);
+                margin-left: px2vw(80, $m);
             }
 
             &::after {
@@ -62,20 +62,20 @@
 
         .call {
             a {
-                margin-top: px2vw(38, $scaleFactor);
-                margin-right: px2vw(38, $scaleFactor);
-                margin-left: px2vw(80, $scaleFactor);
+                margin-top: px2vw(38, $m);
+                margin-right: px2vw(38, $m);
+                margin-left: px2vw(80, $m);
             }
 
             p {
-                margin-top: px2vw(38, $scaleFactor);
+                margin-top: px2vw(38, $m);
             }
         }
     }
 
     .contacts {
         &::after {
-            margin-top: px2vw(98, $scaleFactor);
+            margin-top: px2vw(98, $m);
         }
 
         header {
@@ -86,52 +86,52 @@
                 display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
-                width: px2vw(386, $scaleFactor);
-                margin-top: px2vw(74, $scaleFactor);
-                margin-right: px2vw(154, $scaleFactor);
-                margin-left: px2vw(100, $scaleFactor);
+                width: px2vw(386, $m);
+                margin-top: px2vw(74, $m);
+                margin-right: px2vw(154, $m);
+                margin-left: px2vw(100, $m);
 
                 &::after {
-                    width: px2vw(6, $scaleFactor);
-                    height: px2vw(60, $scaleFactor);
+                    width: px2vw(6, $m);
+                    height: px2vw(60, $m);
                     margin-top: 0;
                     margin-left: 0;
                 }
             }
 
             i {
-                margin-top: px2vw(80, $scaleFactor);
+                margin-top: px2vw(80, $m);
             }
         }
 
         .phone {
             flex-direction: row-reverse;
             align-items: center;
-            margin-top: px2vw(68, $scaleFactor);
-            margin-right: px2vw(132, $scaleFactor);
+            margin-top: px2vw(68, $m);
+            margin-right: px2vw(132, $m);
 
             span {
                 width: max-content;
             }
 
             .row {
-                margin-top: px2vw(8, $scaleFactor);
+                margin-top: px2vw(8, $m);
 
                 span {
-                    margin-left: px2vw(54, $scaleFactor);
+                    margin-left: px2vw(54, $m);
 
                     &::before {
-                        left: px2vw(-30, $scaleFactor);
+                        left: px2vw(-30, $m);
                     }
                 }
 
                 i {
-                    margin-top: px2vw(-2, $scaleFactor);
+                    margin-top: px2vw(-2, $m);
                 }
             }
 
             div {
-                margin-right: px2vw(74, $scaleFactor);
+                margin-right: px2vw(74, $m);
 
                 p {
                     width: max-content;
@@ -149,28 +149,28 @@
         .skype {
             flex-direction: row-reverse;
             align-items: center;
-            margin-top: px2vw(66, $scaleFactor);
-            margin-right: px2vw(142, $scaleFactor);
+            margin-top: px2vw(66, $m);
+            margin-right: px2vw(142, $m);
             margin-bottom: 0;
 
             .row {
-                margin-top: px2vw(8, $scaleFactor);
+                margin-top: px2vw(8, $m);
 
                 a {
-                    margin-left: px2vw(52, $scaleFactor);
+                    margin-left: px2vw(52, $m);
 
                     &::before {
-                        left: px2vw(-28, $scaleFactor);
+                        left: px2vw(-28, $m);
                     }
                 }
             }
 
             div {
-                margin-right: px2vw(82, $scaleFactor);
+                margin-right: px2vw(82, $m);
 
                 p {
                     width: max-content;
-                    margin-top: px2vw(6, $scaleFactor);
+                    margin-top: px2vw(6, $m);
                     margin-left: 0;
                     text-transform: lowercase;
 
@@ -184,30 +184,30 @@
         .mail {
             flex-direction: row-reverse;
             align-items: center;
-            margin-top: px2vw(64, $scaleFactor);
-            margin-right: px2vw(82, $scaleFactor);
+            margin-top: px2vw(64, $m);
+            margin-right: px2vw(82, $m);
 
             .row {
-                margin-top: px2vw(4, $scaleFactor);
+                margin-top: px2vw(4, $m);
                 margin-left: 0;
 
                 a {
-                    margin-left: px2vw(54, $scaleFactor);
+                    margin-left: px2vw(54, $m);
 
                     &::before {
-                        left: px2vw(-28, $scaleFactor);
+                        left: px2vw(-28, $m);
                     }
                 }
             }
 
             div {
                 width: max-content;
-                margin-right: px2vw(38, $scaleFactor);
+                margin-right: px2vw(38, $m);
                 margin-left: 0;
 
                 p {
                     width: max-content;
-                    margin-top: px2vw(6, $scaleFactor);
+                    margin-top: px2vw(6, $m);
                     text-transform: lowercase;
 
                     span {
@@ -224,22 +224,22 @@
             justify-content: center;
 
             i {
-                margin-top: px2vw(56, $scaleFactor);
-                margin-right: px2vw(104, $scaleFactor);
+                margin-top: px2vw(56, $m);
+                margin-right: px2vw(104, $m);
             }
 
             h1 {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                width: px2vw(462, $scaleFactor);
-                margin-top: px2vw(58, $scaleFactor);
-                margin-right: px2vw(180, $scaleFactor);
+                width: px2vw(462, $m);
+                margin-top: px2vw(58, $m);
+                margin-right: px2vw(180, $m);
                 margin-left: 0;
 
                 &::after {
-                    width: px2vw(6, $scaleFactor);
-                    height: px2vw(60, $scaleFactor);
+                    width: px2vw(6, $m);
+                    height: px2vw(60, $m);
                     margin-top: 0;
                     margin-right: 0;
                 }
@@ -247,7 +247,7 @@
         }
 
         .list {
-            width: px2vw(982, $scaleFactor);
+            width: px2vw(982, $m);
 
             .item {
                 flex-basis: auto;

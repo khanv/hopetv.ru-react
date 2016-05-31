@@ -1,7 +1,7 @@
 @import 'theme/MediaQueries';
 
 @media #{$tabletPortrait} {
-    $scaleFactor: .065106;
+    $m: tabletPortrait;
 
     @import '../mobile';
 
@@ -20,19 +20,19 @@
 
         header {
             i {
-                width: px2vw(204, $scaleFactor);
-                margin-top: px2vw(106, $scaleFactor);
-                margin-left: px2vw(34, $scaleFactor);
+                width: px2vw(204, $m);
+                margin-top: px2vw(106, $m);
+                margin-left: px2vw(34, $m);
             }
 
             h1 {
-                margin-top: px2vw(76, $scaleFactor);
-                margin-left: px2vw(34, $scaleFactor);
-                font-size: px2vw(50, $scaleFactor);
+                margin-top: px2vw(76, $m);
+                margin-left: px2vw(34, $m);
+                font-size: px2vw(50, $m);
 
                 &::after {
-                    width: px2vw(66, $scaleFactor);
-                    margin-top: px2vw(62, $scaleFactor);
+                    width: px2vw(66, $m);
+                    margin-top: px2vw(62, $m);
                     border-radius: 1px;
                 }
             }
@@ -40,57 +40,57 @@
 
         .chat {
             p {
-                line-height: px2vw(44, $scaleFactor);
+                line-height: px2vw(44, $m);
             }
 
             a {
-                margin-top: px2vw(48, $scaleFactor);
+                margin-top: px2vw(48, $m);
 
                 &::before {
-                    margin-right: px2vw(36, $scaleFactor);
-                    background-size: px2vw(50, $scaleFactor);
+                    margin-right: px2vw(36, $m);
+                    background-size: px2vw(50, $m);
                 }
             }
 
             &::after {
-                width: px2vw(66, $scaleFactor);
-                margin-top: px2vw(60, $scaleFactor);
+                width: px2vw(66, $m);
+                margin-top: px2vw(60, $m);
             }
         }
 
         .call {
-            margin-top: px2vw(50, $scaleFactor);
+            margin-top: px2vw(50, $m);
 
             p {
-                line-height: px2vw(44, $scaleFactor);
+                line-height: px2vw(44, $m);
             }
 
             a {
-                margin-top: px2vw(48, $scaleFactor);
+                margin-top: px2vw(48, $m);
 
                 &::before {
-                    margin-right: px2vw(38, $scaleFactor);
-                    background-size: px2vw(50, $scaleFactor);
+                    margin-right: px2vw(38, $m);
+                    background-size: px2vw(50, $m);
                 }
             }
         }
 
         div {
-            margin-top: px2vw(28, $scaleFactor);
-            margin-left: px2vw(34, $scaleFactor);
+            margin-top: px2vw(28, $m);
+            margin-left: px2vw(34, $m);
 
             p {
-                width: px2vw(460, $scaleFactor);
-                font-size: px2vw(34, $scaleFactor);
+                width: px2vw(460, $m);
+                font-size: px2vw(34, $m);
             }
 
             a {
-                width: px2vw(516, $scaleFactor);
-                height: px2vw(112, $scaleFactor);
-                font-size: px2vw(34, $scaleFactor);
+                width: px2vw(516, $m);
+                height: px2vw(112, $m);
+                font-size: px2vw(34, $m);
 
                 &::before {
-                    width: px2vw(105, $scaleFactor);
+                    width: px2vw(105, $m);
                 }
             }
         }
@@ -105,19 +105,19 @@
 
         header {
             i {
-                width: px2vw(166, $scaleFactor);
-                margin-top: px2vw(106, $scaleFactor);
-                margin-right: px2vw(52, $scaleFactor);
+                width: px2vw(166, $m);
+                margin-top: px2vw(106, $m);
+                margin-right: px2vw(52, $m);
             }
 
             h1 {
-                margin-top: px2vw(74, $scaleFactor);
-                margin-right: px2vw(52, $scaleFactor);
-                font-size: px2vw(50, $scaleFactor);
+                margin-top: px2vw(74, $m);
+                margin-right: px2vw(52, $m);
+                font-size: px2vw(50, $m);
 
                 &::after {
-                    width: px2vw(66, $scaleFactor);
-                    margin-top: px2vw(62, $scaleFactor);
+                    width: px2vw(66, $m);
+                    margin-top: px2vw(62, $m);
                     border-radius: 1px;
                 }
             }
@@ -125,112 +125,112 @@
 
         div {
             div {
-                width: px2vw(354, $scaleFactor);
+                width: px2vw(354, $m);
             }
         }
 
         .phone {
-            margin-top: px2vw(72, $scaleFactor);
-            margin-right: px2vw(86, $scaleFactor);
+            margin-top: px2vw(72, $m);
+            margin-right: px2vw(86, $m);
 
             .row {
                 span {
-                    margin-top: px2vw(2, $scaleFactor);
-                    margin-left: px2vw(62, $scaleFactor);
-                    font-size: px2vw(50, $scaleFactor);
+                    margin-top: px2vw(2, $m);
+                    margin-left: px2vw(62, $m);
+                    font-size: px2vw(50, $m);
                     font-weight: bold;
 
                     &::before {
-                        left: px2vw(-32, $scaleFactor);
-                        height: px2vw(40, $scaleFactor);
+                        left: px2vw(-32, $m);
+                        height: px2vw(40, $m);
                     }
                 }
 
                 i {
-                    width: px2vw(58, $scaleFactor);
+                    width: px2vw(58, $m);
                 }
             }
 
             div {
-                margin-top: px2vw(10, $scaleFactor);
-                margin-right: px2vw(48, $scaleFactor);
+                margin-top: px2vw(10, $m);
+                margin-right: px2vw(48, $m);
 
                 p {
-                    font-size: px2vw(34, $scaleFactor);
-                    line-height: px2vw(46, $scaleFactor);
+                    font-size: px2vw(34, $m);
+                    line-height: px2vw(46, $m);
                 }
             }
         }
 
         .skype {
-            margin-top: px2vw(72, $scaleFactor);
-            margin-right: px2vw(86, $scaleFactor);
+            margin-top: px2vw(72, $m);
+            margin-right: px2vw(86, $m);
 
             .row {
                 margin-top: 0;
-                margin-right: px2vw(60, $scaleFactor);
+                margin-right: px2vw(60, $m);
 
                 a {
                     margin-top: 0;
-                    margin-left: px2vw(64, $scaleFactor);
-                    font-size: px2vw(50, $scaleFactor);
+                    margin-left: px2vw(64, $m);
+                    font-size: px2vw(50, $m);
                     font-weight: bold;
 
                     &::before {
-                        left: px2vw(-32, $scaleFactor);
-                        height: px2vw(40, $scaleFactor);
+                        left: px2vw(-32, $m);
+                        height: px2vw(40, $m);
                     }
 
                     &::after {
-                        right: px2vw(-64, $scaleFactor);
+                        right: px2vw(-64, $m);
                     }
                 }
 
                 i {
-                    width: px2vw(58, $scaleFactor);
-                    margin-top: px2vw(-2, $scaleFactor);
+                    width: px2vw(58, $m);
+                    margin-top: px2vw(-2, $m);
                 }
             }
 
             div {
-                margin-top: px2vw(2, $scaleFactor);
-                margin-right: px2vw(52, $scaleFactor);
+                margin-top: px2vw(2, $m);
+                margin-right: px2vw(52, $m);
 
                 p {
-                    font-size: px2vw(34, $scaleFactor);
-                    line-height: px2vw(46, $scaleFactor);
+                    font-size: px2vw(34, $m);
+                    line-height: px2vw(46, $m);
                 }
             }
         }
 
         .mail {
-            margin-top: px2vw(48, $scaleFactor);
-            margin-right: px2vw(56, $scaleFactor);
+            margin-top: px2vw(48, $m);
+            margin-right: px2vw(56, $m);
 
             .row {
                 a {
-                    margin-left: px2vw(66, $scaleFactor);
-                    font-size: px2vw(50, $scaleFactor);
+                    margin-left: px2vw(66, $m);
+                    font-size: px2vw(50, $m);
                     font-weight: bold;
 
                     &::before {
-                        left: px2vw(-32, $scaleFactor);
-                        height: px2vw(40, $scaleFactor);
+                        left: px2vw(-32, $m);
+                        height: px2vw(40, $m);
                     }
                 }
 
                 i {
-                    width: px2vw(58, $scaleFactor);
+                    width: px2vw(58, $m);
                 }
             }
 
             div {
-                margin-top: px2vw(4, $scaleFactor);
-                margin-right: px2vw(88, $scaleFactor);
+                margin-top: px2vw(4, $m);
+                margin-right: px2vw(88, $m);
 
                 p {
-                    font-size: px2vw(34, $scaleFactor);
-                    line-height: px2vw(46, $scaleFactor);
+                    font-size: px2vw(34, $m);
+                    line-height: px2vw(46, $m);
                 }
             }
         }
@@ -239,28 +239,28 @@
     .social {
         header {
             h1 {
-                margin-top: px2vw(76, $scaleFactor);
-                margin-right: px2vw(2, $scaleFactor);
-                font-size: px2vw(52, $scaleFactor);
+                margin-top: px2vw(76, $m);
+                margin-right: px2vw(2, $m);
+                font-size: px2vw(52, $m);
 
                 &::after {
-                    width: px2vw(66, $scaleFactor);
-                    margin-top: px2vw(72, $scaleFactor);
+                    width: px2vw(66, $m);
+                    margin-top: px2vw(72, $m);
                 }
             }
 
             i {
                 position: relative;
-                width: px2vw(202, $scaleFactor);
-                margin-top: px2vw(86, $scaleFactor);
-                margin-right: px2vw(2, $scaleFactor);
+                width: px2vw(202, $m);
+                margin-top: px2vw(86, $m);
+                margin-right: px2vw(2, $m);
 
                 &::after {
                     display: block;
                     position: absolute;
                     top: 63%;
-                    right: px2vw(-590, $scaleFactor);
-                    width: px2vw(500, $scaleFactor);
+                    right: px2vw(-590, $m);
+                    width: px2vw(500, $m);
                     height: 3px;
                     background-image: url($componentRoot + 'divider-bg.svg');
                     content: '';
@@ -271,8 +271,8 @@
                     display: block;
                     position: absolute;
                     top: 63%;
-                    left: px2vw(-580, $scaleFactor);
-                    width: px2vw(500, $scaleFactor);
+                    left: px2vw(-580, $m);
+                    width: px2vw(500, $m);
                     height: 3px;
                     background-image: url($componentRoot + 'divider-bg.svg');
                     content: '';
@@ -281,11 +281,11 @@
         }
 
         .list {
-            width: px2vw(1174, $scaleFactor);
+            width: px2vw(1174, $m);
 
             .item {
                 flex-basis: auto;
-                margin-top: px2vw(106, $scaleFactor);
+                margin-top: px2vw(106, $m);
 
                 &:nth-child(2) {
                     &::after {
@@ -294,22 +294,22 @@
                 }
 
                 i {
-                    width: px2vw(114, $scaleFactor);
+                    width: px2vw(114, $m);
                 }
 
                 span {
-                    width: px2vw(82, $scaleFactor);
-                    height: px2vw(78, $scaleFactor);
-                    margin-top: px2vw(30, $scaleFactor);
-                    font-size: px2vw(36, $scaleFactor);
+                    width: px2vw(82, $m);
+                    height: px2vw(78, $m);
+                    margin-top: px2vw(30, $m);
+                    font-size: px2vw(36, $m);
 
                     &::before {
-                        top: px2vw(-10, $scaleFactor);
+                        top: px2vw(-10, $m);
                         left: 50%;
-                        width: px2vw(20, $scaleFactor);
-                        height: px2vw(20, $scaleFactor);
-                        margin-left: px2vw(-8, $scaleFactor);
-                        border-radius: 0 px2vw(2, $scaleFactor) 0 0;
+                        width: px2vw(20, $m);
+                        height: px2vw(20, $m);
+                        margin-left: px2vw(-8, $m);
+                        border-radius: 0 px2vw(2, $m) 0 0;
                     }
                 }
             }

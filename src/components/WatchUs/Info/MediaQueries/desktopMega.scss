@@ -1,18 +1,18 @@
 @import 'theme/MediaQueries';
 
 @media #{$desktopMega} {
-    $scaleFactor: .03;
+    $m: desktopMega;
 
     @import '../desktop';
 
     .internet {
         .watchOnline {
-            margin-right: px2vw(70, $scaleFactor);
+            margin-right: px2vw(70, $m);
             margin-left: 0;
         }
 
         .btn {
-            margin-right: px2vw(66, $scaleFactor);
+            margin-right: px2vw(66, $m);
             margin-left: 0;
         }
     }

@@ -1,7 +1,7 @@
 @import 'theme/MediaQueries';
 
 @media #{$tabletLandscape} {
-    $scaleFactor: .04882826;
+    $m: tabletLandscape;
 
     @import '../desktop';
 }

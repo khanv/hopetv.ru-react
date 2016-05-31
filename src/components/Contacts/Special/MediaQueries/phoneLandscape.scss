@@ -18,7 +18,7 @@
             margin-bottom: px2vw(80, $scaleFactor);
             padding-top: 0;
             padding-bottom: px2vw(80, $scaleFactor);
-            border-bottom: 1px solid #d0d3d4;
+            border-bottom: 1px solid $color1;
 
             .poster {
                 margin: 0 px2vw(66, $scaleFactor) 0 0;
@@ -71,7 +71,7 @@
                     .contacts {
                         display: flex;
                         padding-bottom: px2vw(82, $scaleFactor);
-                        border-bottom: 1px solid #d0d3d4;
+                        border-bottom: 1px solid $color1;
 
                         &:first-child {
                             margin-bottom: px2vw(40, $scaleFactor);

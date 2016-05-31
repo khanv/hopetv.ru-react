@@ -4,9 +4,9 @@
 
     > section {
         &::after {
-            width: px2vw(560, $scaleFactor);
+            width: px2vw(560, $m);
             height: 3px;
-            margin: px2vw(80, $scaleFactor) auto;
+            margin: px2vw(80, $m) auto;
             background-image: url($componentRoot + 'Images/divider-bg.svg');
             content: '';
         }
@@ -23,21 +23,21 @@
             width: 100%;
 
             i {
-                width: px2vw(137, $scaleFactor);
-                margin: px2vw(60, $scaleFactor) 0 0 px2vw(38, $scaleFactor);
+                width: px2vw(137, $m);
+                margin: px2vw(60, $m) 0 0 px2vw(38, $m);
             }
 
             h1 {
                 width: max-content;
-                margin: px2vw(42, $scaleFactor) auto 0;
+                margin: px2vw(42, $m) auto 0;
                 color: $titleColor;
-                font-size: px2vw(44, $scaleFactor);
+                font-size: px2vw(44, $m);
 
                 &::after {
                     display: block;
-                    width: px2vw(60, $scaleFactor);
-                    height: px2vw(6, $scaleFactor);
-                    margin: px2vw(51, $scaleFactor) auto 0;
+                    width: px2vw(60, $m);
+                    height: px2vw(6, $m);
+                    margin: px2vw(51, $m) auto 0;
                     background-color: $titleAfterColor;
                     content: '';
                 }
@@ -45,22 +45,22 @@
         }
 
         p {
-            width: px2vw(335, $scaleFactor);
-            margin: px2vw(50, $scaleFactor) auto 0;
-            font-size: px2vw(30, $scaleFactor);
-            line-height: px2vw(36, $scaleFactor);
+            width: px2vw(335, $m);
+            margin: px2vw(50, $m) auto 0;
+            font-size: px2vw(30, $m);
+            line-height: px2vw(36, $m);
             text-align: center;
         }
 
         .apps {
             display: flex;
-            width: px2vw(518, $scaleFactor);
-            margin: px2vw(50, $scaleFactor) auto;
+            width: px2vw(518, $m);
+            margin: px2vw(50, $m) auto;
 
             a {
                 flex-shrink: 0;
-                width: px2vw(120, $scaleFactor);
-                height: px2vw(120, $scaleFactor);
+                width: px2vw(120, $m);
+                height: px2vw(120, $m);
 
             }
 
@@ -79,8 +79,8 @@
                 }
 
                 i {
-                    width: px2vw(78, $scaleFactor);
-                    margin: px2vw(15, $scaleFactor) auto 0;
+                    width: px2vw(78, $m);
+                    margin: px2vw(15, $m) auto 0;
                 }
             }
 
@@ -99,8 +99,8 @@
                 }
 
                 i {
-                    width: px2vw(67, $scaleFactor);
-                    margin: px2vw(17, $scaleFactor) auto 0;
+                    width: px2vw(67, $m);
+                    margin: px2vw(17, $m) auto 0;
                 }
             }
 
@@ -112,19 +112,19 @@
                 text-align: center;
 
                 span {
-                    margin-bottom: px2vw(6, $scaleFactor);
+                    margin-bottom: px2vw(6, $m);
                     color: $textTuner;
-                    font-size: px2vw(32, $scaleFactor);
-                    line-height: px2vw(26, $scaleFactor);
+                    font-size: px2vw(32, $m);
+                    line-height: px2vw(26, $m);
                 }
 
                 i {
                     position: absolute;
-                    width: px2vw(67, $scaleFactor);
+                    width: px2vw(67, $m);
                 }
 
                 .appleArrow {
-                    right: px2vw(22, $scaleFactor);
+                    right: px2vw(22, $m);
 
                     path {
                         fill: $textTuner;
@@ -133,7 +133,7 @@
 
                 .androidArrow {
                     bottom: 0;
-                    left: px2vw(26, $scaleFactor);
+                    left: px2vw(26, $m);
                     transform: rotate(180deg);
 
                     path {
@@ -145,7 +145,7 @@
         }
 
         .watchOnline {
-            margin-top: px2vw(4, $scaleFactor);
+            margin-top: px2vw(4, $m);
         }
     }
 
@@ -160,21 +160,21 @@
             width: 100%;
 
             i {
-                width: px2vw(116, $scaleFactor);
-                margin: 0 px2vw(36, $scaleFactor) 0 0;
+                width: px2vw(116, $m);
+                margin: 0 px2vw(36, $m) 0 0;
             }
 
             h1 {
                 width: max-content;
-                margin: px2vw(46, $scaleFactor) auto 0;
+                margin: px2vw(46, $m) auto 0;
                 color: $titleColor;
-                font-size: px2vw(44, $scaleFactor);
+                font-size: px2vw(44, $m);
 
                 &::after {
                     display: block;
-                    width: px2vw(60, $scaleFactor);
-                    height: px2vw(6, $scaleFactor);
-                    margin: px2vw(51, $scaleFactor) auto 0;
+                    width: px2vw(60, $m);
+                    height: px2vw(6, $m);
+                    margin: px2vw(51, $m) auto 0;
                     background-color: $titleAfterColor;
                     content: '';
                 }
@@ -183,19 +183,19 @@
 
         ul {
             width: 100%;
-            margin: px2vw(54, $scaleFactor) auto 0;
+            margin: px2vw(54, $m) auto 0;
 
             li {
                 display: flex;
-                margin-bottom: px2vw(30, $scaleFactor);
+                margin-bottom: px2vw(30, $m);
 
                 span {
                     &:nth-child(1) {
                         display: block;
                         flex-basis: 50%;
-                        margin-right: px2vw(8, $scaleFactor);
+                        margin-right: px2vw(8, $m);
                         color: $textTuner;
-                        font-size: px2vw(30, $scaleFactor);
+                        font-size: px2vw(30, $m);
                         font-weight: bold;
                         text-align: right;
                     }
@@ -204,7 +204,7 @@
                         display: block;
                         flex-basis: 50%;
                         color: $textTuner;
-                        font-size: px2vw(30, $scaleFactor);
+                        font-size: px2vw(30, $m);
                         text-align: left;
                     }
                 }
@@ -228,21 +228,21 @@
             width: 100%;
 
             i {
-                width: px2vw(135, $scaleFactor);
+                width: px2vw(135, $m);
                 margin: 0 auto;
             }
 
             h1 {
                 width: max-content;
-                margin: px2vw(40, $scaleFactor) auto 0;
+                margin: px2vw(40, $m) auto 0;
                 color: $titleColor;
-                font-size: px2vw(44, $scaleFactor);
+                font-size: px2vw(44, $m);
 
                 &::after {
                     display: block;
-                    width: px2vw(60, $scaleFactor);
-                    height: px2vw(6, $scaleFactor);
-                    margin: px2vw(51, $scaleFactor) auto 0;
+                    width: px2vw(60, $m);
+                    height: px2vw(6, $m);
+                    margin: px2vw(51, $m) auto 0;
                     background-color: $titleAfterColor;
                     content: '';
                 }
@@ -250,20 +250,20 @@
         }
 
         p {
-            width: px2vw(507, $scaleFactor);
-            margin: px2vw(48, $scaleFactor) auto 0;
-            font-size: px2vw(30, $scaleFactor);
-            line-height: px2vw(36, $scaleFactor);
+            width: px2vw(507, $m);
+            margin: px2vw(48, $m) auto 0;
+            font-size: px2vw(30, $m);
+            line-height: px2vw(36, $m);
             text-align: center;
         }
 
         .btn.btnSearch {
-            padding: 0 0 0 px2vw(26, $scaleFactor);
+            padding: 0 0 0 px2vw(26, $m);
 
             &::before {
-                width: px2vw(39, $scaleFactor);
-                height: px2vw(39, $scaleFactor);
-                margin-right: px2vw(30, $scaleFactor);
+                width: px2vw(39, $m);
+                height: px2vw(39, $m);
+                margin-right: px2vw(30, $m);
                 background: url($componentRoot + 'Images/search-bg.svg') no-repeat;
                 content: '';
             }
@@ -279,26 +279,26 @@
     .btn {
         display: flex;
         align-items: center;
-        width: px2vw(380, $scaleFactor);
-        height: px2vw(100, $scaleFactor);
-        margin: px2vw(52, $scaleFactor) auto 0;
-        padding: 0 px2vw(26, $scaleFactor);
+        width: px2vw(380, $m);
+        height: px2vw(100, $m);
+        margin: px2vw(52, $m) auto 0;
+        padding: 0 px2vw(26, $m);
         border: 1px solid $btnColor;
         border-radius: 6px;
         color: $btnColor;
-        font-size: px2vw(30, $scaleFactor);
+        font-size: px2vw(30, $m);
         text-decoration: none;
 
         &.btnTuner {
             &::before {
-                margin-right: px2vw(16, $scaleFactor);
+                margin-right: px2vw(16, $m);
             }
         }
 
         &::before {
-            width: px2vw(39, $scaleFactor);
-            height: px2vw(39, $scaleFactor);
-            margin-right: px2vw(26, $scaleFactor);
+            width: px2vw(39, $m);
+            height: px2vw(39, $m);
+            margin-right: px2vw(26, $m);
             background: url($componentRoot + 'Images/play-bg.svg') no-repeat;
             content: '';
 
@@ -318,7 +318,7 @@
     }
 
     .btnTuner {
-        margin: px2vw(26, $scaleFactor) auto 0;
-        padding: 0 0 0 px2vw(26, $scaleFactor);
+        margin: px2vw(26, $m) auto 0;
+        padding: 0 0 0 px2vw(26, $m);
     }
 }
