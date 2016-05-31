@@ -1,27 +1,27 @@
 @import 'theme/MediaQueries';
 
 @media #{$tabletPortrait} {
-    $scaleFactor: .065106;
+    $m: tabletPortrait;
 
     @import '../mobile';
 
     h1 {
-        margin-top: px2vw(-4, $scaleFactor);
-        font-size: px2vw(52, $scaleFactor);
+        margin-top: px2vw(-4, $m);
+        font-size: px2vw(52, $m);
 
         &::after {
-            width: px2vw(66, $scaleFactor);
-            margin-top: px2vw(68, $scaleFactor);
+            width: px2vw(66, $m);
+            margin-top: px2vw(68, $m);
         }
     }
 
     p {
-        width: px2vw(744, $scaleFactor);
-        margin-top: px2vw(72, $scaleFactor);
+        width: px2vw(744, $m);
+        margin-top: px2vw(72, $m);
         color: $color1;
-        font-size: px2vw(34, $scaleFactor);
+        font-size: px2vw(34, $m);
         font-style: italic;
-        line-height: px2vw(42, $scaleFactor);
+        line-height: px2vw(42, $m);
         text-align: center;
 
         b {

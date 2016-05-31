@@ -1,7 +1,7 @@
 @import 'theme/MediaQueries';
 
 @media #{$desktopMega} {
-    $scaleFactor: .03;
+    $m: desktopMega;
 
     @import '../desktop';
 }
