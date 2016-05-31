@@ -1,0 +1,181 @@
+& {
+    .why {
+        display: flex;
+        flex-direction: column;
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            i {
+                width: px2vw(180, $scaleFactor);
+                margin-top: px2vw(96, $scaleFactor);
+            }
+
+            h1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: px2vw(46, $scaleFactor);
+                color: $color1;
+                font-size: px2vw(44, $scaleFactor);
+
+                &::after {
+                    display: block;
+                    width: px2vw(60, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    margin-top: px2vw(52, $scaleFactor);
+                    border-radius: 2px;
+                    background-color: $color2;
+                    content: '';
+                }
+            }
+        }
+
+        .arguments {
+            display: flex;
+            justify-content: space-between;
+            width: px2vw(498, $scaleFactor);
+            margin: px2vw(60, $scaleFactor) auto 0;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                i {
+                    width: px2vw(84, $scaleFactor);
+                    margin-left: px2vw(18, $scaleFactor);
+                    color: $color3;
+                    font-size: 34px;
+                }
+
+                .label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: px2vw(66, $scaleFactor);
+                    height: px2vw(40, $scaleFactor);
+                    margin-top: px2vw(20, $scaleFactor);
+                    border: px2vw(4, $scaleFactor) solid $color4;
+                    border-radius: px2vw(4, $scaleFactor);
+                    color: $color4;
+                    font-size: px2vw(22, $scaleFactor);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                .text {
+                    margin-top: px2vw(12, $scaleFactor);
+                    font-size: px2vw(34, $scaleFactor);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .aroundTheClock {
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: px2vw(52, $scaleFactor);
+
+            span {
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                width: px2vw(150, $scaleFactor);
+                height: px2vw(150, $scaleFactor);
+                background-image: url($componentRoot + '24hBackground-bg.svg');
+                color: $color1;
+                font-size: px2vw(34, $scaleFactor);
+
+                &::before {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: px2vw(-210, $scaleFactor);
+                    width: px2vw(170, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    margin-top: px2vw(-2, $scaleFactor);
+                    background-image: url($componentRoot + 'divider-bg.svg');
+                    content: '';
+                }
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: px2vw(-210, $scaleFactor);
+                    width: px2vw(170, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    margin-top: px2vw(-2, $scaleFactor);
+                    background-image: url($componentRoot + 'divider-bg.svg');
+                    content: '';
+                }
+            }
+
+            h1 {
+                margin-top: px2vw(46, $scaleFactor);
+                color: $color1;
+                font-size: px2vw(44, $scaleFactor);
+                font-weight: bold;
+            }
+
+            h2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: px2vw(8, $scaleFactor);
+                color: $color1;
+                font-size: px2vw(34, $scaleFactor);
+                font-weight: 100;
+
+                &::after {
+                    display: block;
+                    width: px2vw(60, $scaleFactor);
+                    height: px2vw(6, $scaleFactor);
+                    margin-top: px2vw(46, $scaleFactor);
+                    border-radius: 2px;
+                    background-color: $color2;
+                    content: '';
+                }
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: px2vw(8, $scaleFactor);
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-top: px2vw(42, $scaleFactor);
+                margin-left: px2vw(60, $scaleFactor);
+
+
+                i {
+                    width: px2vw(50, $scaleFactor);
+                    margin-top: px2vw(-2, $scaleFactor);
+                    margin-right: px2vw(40, $scaleFactor);
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: px2vw(30, $scaleFactor);
+                    line-height: px2vw(34, $scaleFactor);
+
+                    b {
+                        color: $color1;
+                    }
+                }
+            }
+        }
+    }
+}
