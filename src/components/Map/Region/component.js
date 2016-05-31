@@ -102,7 +102,7 @@ function Region(props) {
             >
                 <path d={ regionPath }/>
                 { titleComponent }
-                <Bubble x={ title.pos.x } y={ title.pos.y + 20 } total={ providersCount }/>
+                <Bubble x={ title.pos.x } y={ title.pos.y + 20 * titleParts.length } total={ providersCount }/>
             </g>
         );
     }
