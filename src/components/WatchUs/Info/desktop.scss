@@ -2,12 +2,12 @@
     display: flex;
     position: relative;
     flex-wrap: wrap;
-    padding-bottom: px2vw(112, $scaleFactor);
+    padding-bottom: px2vw(112, $m);
 
     &::after {
         position: absolute;
         bottom: 0;
-        left: px2vw(56, $scaleFactor);
+        left: px2vw(56, $m);
         width: 95%;
         height: 4px;
         background-image: url($componentRoot + 'Images/divider-bg.svg');
@@ -18,7 +18,7 @@
         flex-basis: 33%;
         flex-direction: column;
         align-items: center;
-        margin-top: px2vw(78, $scaleFactor);
+        margin-top: px2vw(78, $m);
 
         &::after {
             display: none;
@@ -36,26 +36,26 @@
             flex-direction: column;
             align-items: center;
             width: auto;
-            margin-right: px2vw(100, $scaleFactor);
+            margin-right: px2vw(100, $m);
             padding-right: 0;
 
             i {
-                width: px2vw(126, $scaleFactor);
-                margin-left: px2vw(16, $scaleFactor);
+                width: px2vw(126, $m);
+                margin-left: px2vw(16, $m);
             }
 
             h1 {
                 width: max-content;
-                margin: px2vw(42, $scaleFactor) px2vw(16, $scaleFactor) 0;
+                margin: px2vw(42, $m) px2vw(16, $m) 0;
                 color: $titleColor;
-                font-size: px2vw(44, $scaleFactor);
+                font-size: px2vw(44, $m);
 
                 &::after {
                     display: block;
-                    width: px2vw(50, $scaleFactor);
-                    height: px2vw(6, $scaleFactor);
-                    margin-top: px2vw(36, $scaleFactor);
-                    margin-left: px2vw(196, $scaleFactor);
+                    width: px2vw(50, $m);
+                    height: px2vw(6, $m);
+                    margin-top: px2vw(36, $m);
+                    margin-left: px2vw(196, $m);
                     background-color: $titleAfterColor;
                     content: '';
                 }
@@ -63,24 +63,24 @@
         }
 
         p {
-            width: px2vw(335, $scaleFactor);
-            margin: px2vw(50, $scaleFactor) auto 0;
-            font-size: px2vw(30, $scaleFactor);
-            line-height: px2vw(36, $scaleFactor);
+            width: px2vw(335, $m);
+            margin: px2vw(50, $m) auto 0;
+            font-size: px2vw(30, $m);
+            line-height: px2vw(36, $m);
             text-align: center;
         }
 
         .apps {
             display: flex;
-            width: px2vw(490, $scaleFactor);
-            margin-top: px2vw(44, $scaleFactor);
-            margin-right: px2vw(92, $scaleFactor);
+            width: px2vw(490, $m);
+            margin-top: px2vw(44, $m);
+            margin-right: px2vw(92, $m);
             margin-left: 0;
 
             a {
                 flex-shrink: 0;
-                width: px2vw(120, $scaleFactor);
-                height: px2vw(120, $scaleFactor);
+                width: px2vw(120, $m);
+                height: px2vw(120, $m);
 
             }
 
@@ -100,8 +100,8 @@
                 }
 
                 i {
-                    width: px2vw(78, $scaleFactor);
-                    margin: px2vw(15, $scaleFactor) auto 0;
+                    width: px2vw(78, $m);
+                    margin: px2vw(15, $m) auto 0;
                 }
             }
 
@@ -121,8 +121,8 @@
                 }
 
                 i {
-                    width: px2vw(64, $scaleFactor);
-                    margin: px2vw(17, $scaleFactor) auto 0;
+                    width: px2vw(64, $m);
+                    margin: px2vw(17, $m) auto 0;
                 }
             }
 
@@ -136,18 +136,18 @@
                 span {
                     margin-bottom: 0;
                     color: $textTuner;
-                    font-size: px2vw(28, $scaleFactor);
+                    font-size: px2vw(28, $m);
                     font-weight: bold;
-                    line-height: px2vw(28, $scaleFactor);
+                    line-height: px2vw(28, $m);
                 }
 
                 i {
                     position: absolute;
-                    width: px2vw(67, $scaleFactor);
+                    width: px2vw(67, $m);
                 }
 
                 .appleArrow {
-                    right: px2vw(22, $scaleFactor);
+                    right: px2vw(22, $m);
 
                     path {
                         fill: $textTuner;
@@ -156,7 +156,7 @@
 
                 .androidArrow {
                     bottom: 0;
-                    left: px2vw(26, $scaleFactor);
+                    left: px2vw(26, $m);
                     transform: rotate(180deg);
 
                     path {
@@ -168,29 +168,29 @@
         }
 
         .searchUs {
-            width: px2vw(500, $scaleFactor);
-            margin: px2vw(40, $scaleFactor) px2vw(86, $scaleFactor) 0 0;
-            font-size: px2vw(28, $scaleFactor);
+            width: px2vw(500, $m);
+            margin: px2vw(40, $m) px2vw(86, $m) 0 0;
+            font-size: px2vw(28, $m);
         }
 
         .watchOnline {
             width: auto;
-            margin-top: px2vw(56, $scaleFactor);
-            margin-left: px2vw(64, $scaleFactor);
-            font-size: px2vw(28, $scaleFactor);
+            margin-top: px2vw(56, $m);
+            margin-left: px2vw(64, $m);
+            font-size: px2vw(28, $m);
             text-align: left;
         }
 
         .btn {
-            width: px2vw(384, $scaleFactor);
-            height: px2vw(80, $scaleFactor);
-            margin-top: px2vw(48, $scaleFactor);
-            margin-left: px2vw(90, $scaleFactor);
-            font-size: px2vw(28, $scaleFactor);
+            width: px2vw(384, $m);
+            height: px2vw(80, $m);
+            margin-top: px2vw(48, $m);
+            margin-left: px2vw(90, $m);
+            font-size: px2vw(28, $m);
 
             &::before {
-                width: px2vw(39, $scaleFactor);
-                margin-right: px2vw(32, $scaleFactor);
+                width: px2vw(39, $m);
+                margin-right: px2vw(32, $m);
             }
         }
     }
@@ -200,7 +200,7 @@
         flex-direction: column;
         align-items: center;
         order: 1;
-        padding-left: px2vw(120, $scaleFactor);
+        padding-left: px2vw(120, $m);
 
         header {
             display: flex;
@@ -209,22 +209,22 @@
             width: 100%;
 
             i {
-                width: px2vw(106, $scaleFactor);
-                margin: 0 px2vw(36, $scaleFactor) 0 0;
+                width: px2vw(106, $m);
+                margin: 0 px2vw(36, $m) 0 0;
             }
 
             h1 {
                 width: max-content;
-                margin: px2vw(42, $scaleFactor) 0 0 px2vw(30, $scaleFactor);
+                margin: px2vw(42, $m) 0 0 px2vw(30, $m);
                 color: $titleColor;
-                font-size: px2vw(44, $scaleFactor);
+                font-size: px2vw(44, $m);
 
                 &::after {
                     display: block;
-                    width: px2vw(50, $scaleFactor);
-                    height: px2vw(6, $scaleFactor);
-                    margin-top: px2vw(40, $scaleFactor);
-                    margin-left: px2vw(178, $scaleFactor);
+                    width: px2vw(50, $m);
+                    height: px2vw(6, $m);
+                    margin-top: px2vw(40, $m);
+                    margin-left: px2vw(178, $m);
                     background-color: $titleAfterColor;
                     content: '';
                 }
@@ -233,20 +233,20 @@
 
         ul {
             width: 100%;
-            margin: px2vw(38, $scaleFactor) auto 0;
+            margin: px2vw(38, $m) auto 0;
 
             li {
                 display: flex;
-                margin-bottom: px2vw(36, $scaleFactor);
+                margin-bottom: px2vw(36, $m);
 
                 span {
                     &:nth-child(1) {
                         display: block;
                         flex-basis: 50%;
-                        margin-top: px2vw(-2, $scaleFactor);
-                        margin-right: px2vw(18, $scaleFactor);
+                        margin-top: px2vw(-2, $m);
+                        margin-right: px2vw(18, $m);
                         color: $textTuner;
-                        font-size: px2vw(28, $scaleFactor);
+                        font-size: px2vw(28, $m);
                         font-weight: bold;
                         text-align: right;
                     }
@@ -255,7 +255,7 @@
                         display: block;
                         flex-basis: 50%;
                         color: $textTuner;
-                        font-size: px2vw(28, $scaleFactor);
+                        font-size: px2vw(28, $m);
                         text-align: left;
                     }
                 }
@@ -266,14 +266,14 @@
             margin: 0 auto;
 
             .btnTuner {
-                width: px2vw(424, $scaleFactor);
-                height: px2vw(80, $scaleFactor);
-                margin-top: px2vw(18, $scaleFactor);
-                margin-left: px2vw(4, $scaleFactor);
-                font-size: px2vw(28, $scaleFactor);
+                width: px2vw(424, $m);
+                height: px2vw(80, $m);
+                margin-top: px2vw(18, $m);
+                margin-left: px2vw(4, $m);
+                font-size: px2vw(28, $m);
 
                 &::before {
-                    margin-right: px2vw(42, $scaleFactor);
+                    margin-right: px2vw(42, $m);
                 }
             }
         }
@@ -295,23 +295,23 @@
             align-items: center;
 
             i {
-                width: px2vw(122, $scaleFactor);
-                margin-left: px2vw(10, $scaleFactor);
+                width: px2vw(122, $m);
+                margin-left: px2vw(10, $m);
             }
 
             h1 {
                 width: max-content;
-                margin-top: px2vw(40, $scaleFactor);
-                margin-right: px2vw(20, $scaleFactor);
+                margin-top: px2vw(40, $m);
+                margin-right: px2vw(20, $m);
                 color: $titleColor;
-                font-size: px2vw(44, $scaleFactor);
+                font-size: px2vw(44, $m);
 
                 &::after {
                     display: block;
-                    width: px2vw(50, $scaleFactor);
-                    height: px2vw(6, $scaleFactor);
-                    margin-top: px2vw(40, $scaleFactor);
-                    margin-left: px2vw(148, $scaleFactor);
+                    width: px2vw(50, $m);
+                    height: px2vw(6, $m);
+                    margin-top: px2vw(40, $m);
+                    margin-left: px2vw(148, $m);
                     background-color: $titleAfterColor;
                     content: '';
                 }
@@ -319,21 +319,21 @@
         }
 
         p {
-            width: px2vw(406, $scaleFactor);
-            margin-top: px2vw(36, $scaleFactor);
-            margin-left: px2vw(8, $scaleFactor);
-            font-size: px2vw(28, $scaleFactor);
-            line-height: px2vw(36, $scaleFactor);
+            width: px2vw(406, $m);
+            margin-top: px2vw(36, $m);
+            margin-left: px2vw(8, $m);
+            font-size: px2vw(28, $m);
+            line-height: px2vw(36, $m);
             text-align: center;
         }
 
         .providerSearch {
             position: relative;
-            width: px2vw(356, $scaleFactor);
-            margin: px2vw(146, $scaleFactor) auto 0;
-            padding-left: px2vw(16, $scaleFactor);
+            width: px2vw(356, $m);
+            margin: px2vw(146, $m) auto 0;
+            padding-left: px2vw(16, $m);
             color: $providerSearchColor;
-            font-size: px2vw(28, $scaleFactor);
+            font-size: px2vw(28, $m);
             font-style: italic;
             font-weight: bold;
             z-index: 1;
@@ -341,11 +341,11 @@
             &::before {
                 display: block;
                 position: absolute;
-                top: px2vw(-40, $scaleFactor);
+                top: px2vw(-40, $m);
                 left: 50%;
-                width: px2vw(70, $scaleFactor);
+                width: px2vw(70, $m);
                 height: 1px;
-                margin-left: px2vw(-26, $scaleFactor);
+                margin-left: px2vw(-26, $m);
                 background: $providerSearchBeforeColor;
                 content: '';
             }
@@ -353,26 +353,26 @@
             &::after {
                 display: block;
                 position: absolute;
-                top: px2vw(56, $scaleFactor);
+                top: px2vw(56, $m);
                 left: 50%;
-                width: px2vw(230, $scaleFactor);
-                height: px2vw(212, $scaleFactor);
-                margin-left: px2vw(-100, $scaleFactor);
+                width: px2vw(230, $m);
+                height: px2vw(212, $m);
+                margin-left: px2vw(-100, $m);
                 background-color: $backgroundColor;
                 background-image: url($componentRoot + 'Images/arrowMapDownIcon-bg.svg');
                 background-repeat: no-repeat;
                 content: '';
-                background-position-x: px2vw(70, $scaleFactor);
+                background-position-x: px2vw(70, $m);
             }
         }
 
         .btn.btnSearch {
-            padding: 0 0 0 px2vw(26, $scaleFactor);
+            padding: 0 0 0 px2vw(26, $m);
 
             &::before {
-                width: px2vw(39, $scaleFactor);
-                height: px2vw(39, $scaleFactor);
-                margin-right: px2vw(30, $scaleFactor);
+                width: px2vw(39, $m);
+                height: px2vw(39, $m);
+                margin-right: px2vw(30, $m);
                 background: url($componentRoot + 'Images/search-bg.svg') no-repeat;
                 content: '';
             }
@@ -390,26 +390,26 @@
     .btn {
         display: flex;
         align-items: center;
-        width: px2vw(380, $scaleFactor);
-        height: px2vw(100, $scaleFactor);
-        margin: px2vw(52, $scaleFactor) auto 0;
-        padding: 0 px2vw(26, $scaleFactor);
+        width: px2vw(380, $m);
+        height: px2vw(100, $m);
+        margin: px2vw(52, $m) auto 0;
+        padding: 0 px2vw(26, $m);
         border: 1px solid $btnColor;
         border-radius: 6px;
         color: $btnColor;
-        font-size: px2vw(30, $scaleFactor);
+        font-size: px2vw(30, $m);
         text-decoration: none;
 
         &.btnTuner {
             &::before {
-                margin-right: px2vw(16, $scaleFactor);
+                margin-right: px2vw(16, $m);
             }
         }
 
         &::before {
-            width: px2vw(39, $scaleFactor);
-            height: px2vw(39, $scaleFactor);
-            margin-right: px2vw(26, $scaleFactor);
+            width: px2vw(39, $m);
+            height: px2vw(39, $m);
+            margin-right: px2vw(26, $m);
             background: url($componentRoot + 'Images/play-bg.svg') no-repeat;
             content: '';
 
@@ -430,7 +430,7 @@
     }
 
     .btnTuner {
-        margin: px2vw(26, $scaleFactor) auto 0;
-        padding: 0 0 0 px2vw(26, $scaleFactor);
+        margin: px2vw(26, $m) auto 0;
+        padding: 0 0 0 px2vw(26, $m);
     }
 }
