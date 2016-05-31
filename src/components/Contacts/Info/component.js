@@ -30,10 +30,9 @@ export default class Info extends Component {
     render() {
         const { browser } = this.props;
 
-        const socialTitle = [BreakPoints.phonePortrait.name,
-                             BreakPoints.phoneLandscape.name,
-                             BreakPoints.tabletLandscape.name
-                            ].indexOf(browser.mediaType) !== -1 ? 'Ищите в соц. сетях' : 'Ищите нас в социальных сетях';
+        const socialTitle = browser.mediaType === BreakPoints.tabletPortrait.name ?
+            'Ищите нас в социальных сетях'
+            : 'Ищите в соц. сетях';
 
         return (
             <section className={ Grids.container }>
