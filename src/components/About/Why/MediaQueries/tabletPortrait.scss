@@ -1,72 +1,72 @@
 @import 'theme/MediaQueries';
 
 @media #{$tabletPortrait} {
-    $scaleFactor: .065106;
+    $m: tabletPortrait;
 
     @import '../desktop';
 
     .why {
         header {
             i {
-                width: px2vw(166, $scaleFactor);
-                margin-top: px2vw(100, $scaleFactor);
-                margin-right: px2vw(2, $scaleFactor);
+                width: px2vw(166, $m);
+                margin-top: px2vw(100, $m);
+                margin-right: px2vw(2, $m);
                 margin-left: 0;
             }
 
             h1 {
-                margin-top: px2vw(56, $scaleFactor);
-                font-size: px2vw(50, $scaleFactor);
+                margin-top: px2vw(56, $m);
+                font-size: px2vw(50, $m);
 
                 &::after {
-                    width: px2vw(66, $scaleFactor);
-                    margin-top: px2vw(62, $scaleFactor);
+                    width: px2vw(66, $m);
+                    margin-top: px2vw(62, $m);
                 }
             }
         }
 
         .arguments {
-            width: px2vw(1300, $scaleFactor);
-            margin-top: px2vw(60, $scaleFactor);
-            padding-right: px2vw(54, $scaleFactor);
+            width: px2vw(1300, $m);
+            margin-top: px2vw(60, $m);
+            padding-right: px2vw(54, $m);
 
             div {
                 i {
-                    width: px2vw(120, $scaleFactor);
-                    margin-left: px2vw(4, $scaleFactor);
+                    width: px2vw(120, $m);
+                    margin-left: px2vw(4, $m);
                 }
 
                 .label {
-                    width: px2vw(66, $scaleFactor);
-                    height: px2vw(38, $scaleFactor);
-                    margin-top: px2vw(-82, $scaleFactor);
-                    margin-left: px2vw(-42, $scaleFactor);
-                    padding-top: px2vw(2, $scaleFactor);
-                    font-size: px2vw(24, $scaleFactor);
+                    width: px2vw(66, $m);
+                    height: px2vw(38, $m);
+                    margin-top: px2vw(-82, $m);
+                    margin-left: px2vw(-42, $m);
+                    padding-top: px2vw(2, $m);
+                    font-size: px2vw(24, $m);
                 }
 
                 .text {
-                    margin-left: px2vw(-20, $scaleFactor);
-                    font-size: px2vw(40, $scaleFactor);
+                    margin-left: px2vw(-20, $m);
+                    font-size: px2vw(40, $m);
                 }
             }
 
             .violence {
-                margin-right: px2vw(12, $scaleFactor);
+                margin-right: px2vw(12, $m);
                 margin-left: 0;
 
                 .label {
-                    margin-left: px2vw(-38, $scaleFactor);
+                    margin-left: px2vw(-38, $m);
                 }
 
                 .text {
-                    margin-left: px2vw(-26, $scaleFactor);
+                    margin-left: px2vw(-26, $m);
                 }
             }
 
             .advert {
                 i {
-                    margin-left: px2vw(-38, $scaleFactor);
+                    margin-left: px2vw(-38, $m);
                 }
             }
         }
@@ -74,82 +74,82 @@
 
     .aroundTheClock {
         header {
-            margin-top: px2vw(60, $scaleFactor);
+            margin-top: px2vw(60, $m);
 
             span {
-                width: px2vw(190, $scaleFactor);
-                height: px2vw(190, $scaleFactor);
-                font-size: px2vw(42, $scaleFactor);
+                width: px2vw(190, $m);
+                height: px2vw(190, $m);
+                font-size: px2vw(42, $m);
 
                 &::before {
-                    left: px2vw(-650, $scaleFactor);
-                    width: px2vw(580, $scaleFactor);
-                    height: px2vw(6, $scaleFactor);
+                    left: px2vw(-650, $m);
+                    width: px2vw(580, $m);
+                    height: px2vw(6, $m);
                 }
 
                 &::after {
-                    right: px2vw(-650, $scaleFactor);
-                    width: px2vw(580, $scaleFactor);
-                    height: px2vw(6, $scaleFactor);
+                    right: px2vw(-650, $m);
+                    width: px2vw(580, $m);
+                    height: px2vw(6, $m);
                 }
             }
 
             h1 {
-                margin-top: px2vw(58, $scaleFactor);
-                font-size: px2vw(46, $scaleFactor);
+                margin-top: px2vw(58, $m);
+                font-size: px2vw(46, $m);
             }
 
             h2 {
-                font-size: px2vw(40, $scaleFactor);
+                font-size: px2vw(40, $m);
             }
         }
 
         ul {
-            margin-top: px2vw(58, $scaleFactor);
-            padding-right: px2vw(24, $scaleFactor);
+            margin-top: px2vw(58, $m);
+            padding-right: px2vw(24, $m);
 
             li {
                 div {
-                    font-size: px2vw(32, $scaleFactor);
-                    line-height: px2vw(36, $scaleFactor);
+                    font-size: px2vw(32, $m);
+                    line-height: px2vw(36, $m);
                 }
 
                 i {
-                    width: px2vw(52, $scaleFactor);
-                    margin-top: px2vw(2, $scaleFactor);
+                    width: px2vw(52, $m);
+                    margin-top: px2vw(2, $m);
                 }
             }
 
             &::before {
-                width: px2vw(240, $scaleFactor);
-                height: px2vw(258, $scaleFactor);
+                width: px2vw(240, $m);
+                height: px2vw(258, $m);
             }
 
             .everydaySpeech {
-                margin-top: px2vw(30, $scaleFactor);
-                margin-right: px2vw(80, $scaleFactor);
-                margin-bottom: px2vw(60, $scaleFactor);
+                margin-top: px2vw(30, $m);
+                margin-right: px2vw(80, $m);
+                margin-bottom: px2vw(60, $m);
             }
 
             .varietyPrograms {
-                margin-right: px2vw(80, $scaleFactor);
+                margin-right: px2vw(80, $m);
             }
 
             .interactiveCommunication {
-                margin-top: px2vw(30, $scaleFactor);
-                margin-bottom: px2vw(60, $scaleFactor);
-                margin-left: px2vw(80, $scaleFactor);
+                margin-top: px2vw(30, $m);
+                margin-bottom: px2vw(60, $m);
+                margin-left: px2vw(80, $m);
 
                 i {
-                    margin-right: px2vw(42, $scaleFactor);
+                    margin-right: px2vw(42, $m);
                 }
             }
 
             .holisticChristianity {
-                margin-left: px2vw(80, $scaleFactor);
+                margin-left: px2vw(80, $m);
 
                 i {
-                    margin-right: px2vw(42, $scaleFactor);
+                    margin-right: px2vw(42, $m);
                 }
             }
         }
