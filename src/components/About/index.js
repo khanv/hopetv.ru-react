@@ -1,1 +1,1 @@
-export Why from './Why/component.tpl';
+export Why from './Why/component';

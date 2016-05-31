@@ -9,24 +9,24 @@
             align-items: center;
 
             i {
-                width: px2vw(180, $scaleFactor);
-                margin-top: px2vw(80, $scaleFactor);
-                margin-left: px2vw(22, $scaleFactor);
+                width: px2vw(180, $m);
+                margin-top: px2vw(80, $m);
+                margin-left: px2vw(22, $m);
             }
 
             h1 {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: px2vw(44, $scaleFactor);
+                margin-top: px2vw(44, $m);
                 color: $color1;
-                font-size: px2vw(56 , $scaleFactor);
+                font-size: px2vw(56 , $m);
 
                 &::after {
                     display: block;
-                    width: px2vw(80, $scaleFactor);
-                    height: px2vw(6, $scaleFactor);
-                    margin-top: px2vw(46, $scaleFactor);
+                    width: px2vw(80, $m);
+                    height: px2vw(6, $m);
+                    margin-top: px2vw(46, $m);
                     border-radius: 2px;
                     background-color: $color2;
                     content: '';
@@ -37,8 +37,8 @@
         .arguments {
             display: flex;
             justify-content: space-between;
-            width: px2vw(1382, $scaleFactor);
-            margin: px2vw(82, $scaleFactor) auto 0;
+            width: px2vw(1382, $m);
+            margin: px2vw(82, $m) auto 0;
 
             div {
                 display: flex;
@@ -46,7 +46,7 @@
                 align-items: center;
 
                 i {
-                    width: px2vw(132, $scaleFactor);
+                    width: px2vw(132, $m);
                     margin-left: 0;
                     color: $color3;
                     font-size: 34px;
@@ -56,42 +56,42 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: px2vw(74, $scaleFactor);
-                    height: px2vw(40, $scaleFactor);
-                    margin-top: px2vw(-86, $scaleFactor);
+                    width: px2vw(74, $m);
+                    height: px2vw(40, $m);
+                    margin-top: px2vw(-86, $m);
                     margin-right: 0;
-                    margin-left: px2vw(-44, $scaleFactor);
+                    margin-left: px2vw(-44, $m);
                     transform: rotate(-30deg);
-                    border: px2vw(4, $scaleFactor) solid $color4;
-                    border-radius: px2vw(4, $scaleFactor);
+                    border: px2vw(4, $m) solid $color4;
+                    border-radius: px2vw(4, $m);
                     background: $color4;
                     color: $color5;
-                    font-size: px2vw(26, $scaleFactor);
+                    font-size: px2vw(26, $m);
                     font-weight: bold;
                     text-transform: uppercase;
                 }
 
                 .text {
-                    margin-top: px2vw(-22, $scaleFactor);
-                    margin-left: px2vw(-22, $scaleFactor);
-                    font-size: px2vw(44, $scaleFactor);
+                    margin-top: px2vw(-22, $m);
+                    margin-left: px2vw(-22, $m);
+                    font-size: px2vw(44, $m);
                     font-weight: bold;
                 }
             }
 
             .policy {
-                margin-left: px2vw(48, $scaleFactor);
+                margin-left: px2vw(48, $m);
             }
 
             .violence {
-                margin-left: px2vw(24, $scaleFactor);
+                margin-left: px2vw(24, $m);
 
                 i {
                     margin-left: 0;
                 }
 
                 .label {
-                    margin-right: px2vw(10, $scaleFactor);
+                    margin-right: px2vw(10, $m);
                 }
             }
 
@@ -99,8 +99,8 @@
                 margin-left: 0;
 
                 i {
-                    margin-right: px2vw(10, $scaleFactor);
-                    margin-left: px2vw(2, $scaleFactor);
+                    margin-right: px2vw(10, $m);
+                    margin-left: px2vw(2, $m);
                 }
             }
         }
@@ -111,27 +111,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: px2vw(74, $scaleFactor);
+            margin-top: px2vw(74, $m);
 
             span {
                 display: flex;
                 position: relative;
                 align-items: center;
                 justify-content: center;
-                width: px2vw(200, $scaleFactor);
-                height: px2vw(200, $scaleFactor);
+                width: px2vw(200, $m);
+                height: px2vw(200, $m);
                 background-image: url($componentRoot + '24hBackground-bg.svg');
                 color: $color1;
-                font-size: px2vw(48, $scaleFactor);
+                font-size: px2vw(48, $m);
 
                 &::before {
                     display: block;
                     position: absolute;
                     top: 50%;
-                    left: px2vw(-760, $scaleFactor);
-                    width: px2vw(680, $scaleFactor);
-                    height: px2vw(8, $scaleFactor);
-                    margin-top: px2vw(-4, $scaleFactor);
+                    left: px2vw(-760, $m);
+                    width: px2vw(680, $m);
+                    height: px2vw(8, $m);
+                    margin-top: px2vw(-4, $m);
                     background-image: url($componentRoot + 'divider-bg.svg');
                     content: '';
                 }
@@ -140,19 +140,19 @@
                     display: block;
                     position: absolute;
                     top: 50%;
-                    right: px2vw(-760, $scaleFactor);
-                    width: px2vw(680, $scaleFactor);
-                    height: px2vw(8, $scaleFactor);
-                    margin-top: px2vw(-4, $scaleFactor);
+                    right: px2vw(-760, $m);
+                    width: px2vw(680, $m);
+                    height: px2vw(8, $m);
+                    margin-top: px2vw(-4, $m);
                     background-image: url($componentRoot + 'divider-bg.svg');
                     content: '';
                 }
             }
 
             h1 {
-                margin-top: px2vw(76, $scaleFactor);
+                margin-top: px2vw(76, $m);
                 color: $color1;
-                font-size: px2vw(52, $scaleFactor);
+                font-size: px2vw(52, $m);
                 font-weight: bold;
             }
 
@@ -160,9 +160,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: px2vw(8, $scaleFactor);
+                margin-top: px2vw(8, $m);
                 color: $color1;
-                font-size: px2vw(44, $scaleFactor);
+                font-size: px2vw(44, $m);
                 font-weight: 100;
             }
         }
@@ -173,15 +173,15 @@
             flex-wrap: wrap;
             align-content: center;
             width: 100%;
-            height: px2vw(360, $scaleFactor);
-            margin-top: px2vw(80, $scaleFactor);
-            padding-right: px2vw(18, $scaleFactor);
+            height: px2vw(360, $m);
+            margin-top: px2vw(80, $m);
+            padding-right: px2vw(18, $m);
 
             &::before {
                 display: block;
                 order: 3;
-                width: px2vw(262, $scaleFactor);
-                height: px2vw(282, $scaleFactor);
+                width: px2vw(262, $m);
+                height: px2vw(282, $m);
                 background-image: url($componentRoot + 'why_family-bg.svg');
                 content: '';
             }
@@ -189,14 +189,14 @@
             li {
                 display: flex;
                 align-items: center;
-                margin-top: px2vw(42, $scaleFactor);
-                margin-left: px2vw(60, $scaleFactor);
+                margin-top: px2vw(42, $m);
+                margin-left: px2vw(60, $m);
 
                 div {
                     display: flex;
                     flex-direction: column;
-                    font-size: px2vw(36, $scaleFactor);
-                    line-height: px2vw(40, $scaleFactor);
+                    font-size: px2vw(36, $m);
+                    line-height: px2vw(40, $m);
 
                     b {
                         color: $color1;
@@ -204,24 +204,24 @@
                 }
 
                 i {
-                    width: px2vw(58, $scaleFactor);
-                    margin-top: px2vw(-2, $scaleFactor);
-                    margin-right: px2vw(50, $scaleFactor);
+                    width: px2vw(58, $m);
+                    margin-top: px2vw(-2, $m);
+                    margin-right: px2vw(50, $m);
                 }
             }
 
             .everydaySpeech {
                 flex-direction: row-reverse;
                 order: 1;
-                margin-top: px2vw(34, $scaleFactor);
-                margin-right: px2vw(98, $scaleFactor);
-                margin-bottom: px2vw(68, $scaleFactor);
+                margin-top: px2vw(34, $m);
+                margin-right: px2vw(98, $m);
+                margin-bottom: px2vw(68, $m);
                 margin-left: 0;
                 text-align: right;
 
                 i {
                     margin-right: 0;
-                    margin-left: px2vw(46, $scaleFactor);
+                    margin-left: px2vw(46, $m);
                 }
             }
 
@@ -229,34 +229,34 @@
                 flex-direction: row-reverse;
                 order: 2;
                 margin-top: 0;
-                margin-right: px2vw(98, $scaleFactor);
+                margin-right: px2vw(98, $m);
                 margin-left: 0;
                 text-align: right;
 
                 i {
                     margin-right: 0;
-                    margin-left: px2vw(46, $scaleFactor);
+                    margin-left: px2vw(46, $m);
                 }
             }
 
             .interactiveCommunication {
                 order: 4;
-                margin-top: px2vw(34, $scaleFactor);
-                margin-bottom: px2vw(68, $scaleFactor);
-                margin-left: px2vw(90, $scaleFactor);
+                margin-top: px2vw(34, $m);
+                margin-bottom: px2vw(68, $m);
+                margin-left: px2vw(90, $m);
 
                 i {
-                    margin-right: px2vw(48, $scaleFactor);
+                    margin-right: px2vw(48, $m);
                 }
             }
 
             .holisticChristianity {
                 order: 5;
                 margin-top: 0;
-                margin-left: px2vw(90, $scaleFactor);
+                margin-left: px2vw(90, $m);
 
                 i {
-                    margin-right: px2vw(48, $scaleFactor);
+                    margin-right: px2vw(48, $m);
                 }
             }
         }
