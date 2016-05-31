@@ -17,7 +17,7 @@ export default class Contacts extends Component {
 
     componentDidMount = () => {
         /* eslint-disable no-undef */
-        if ($) {
+        if (typeof ($) !== 'undefined') {
             $('.header__small-breadcrumbs .container-content')
                 .append('<span class="header__small-breadcrumbs-title">Контакты</span>');
         }

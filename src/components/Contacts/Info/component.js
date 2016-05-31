@@ -47,6 +47,13 @@ export default class Info extends Component {
         })(document, 'script');
     };
 
+    startChat = (event) => {
+        event.preventDefault();
+        /* eslint-disable no-undef */
+        SenderWidget.showWidget();
+        /* eslint-enable no-undef */
+    };
+
     render() {
         const { browser } = this.props;
 
@@ -64,7 +71,7 @@ export default class Info extends Component {
                         </header>
                         <div className={ Styles.chat }>
                             <p>Онлайн чат работает каждый день с <b>8:00 до 20:00</b></p>
-                            <a href="#">Написать в онлайн чат</a>
+                            <a href="#" onClick={ this.startChat }>Написать в онлайн чат</a>
                         </div>
                         <div className={ Styles.call }>
                             <p>Контакт-центр работает каждый день с <b>8:00 до 20:00</b></p>
