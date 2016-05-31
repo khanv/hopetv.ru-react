@@ -67,7 +67,7 @@ export default class Info extends Component {
                             </a>
                         </div>
                         <p className={ Styles.watchOnline }>Смотрите вещание в сети Интернет</p>
-                        <a className={ Styles.btn } href="#">
+                        <a className={ Styles.btn } id="watchUsLive" href="#">
                             ТВ «Надія» Онлайн
                         </a>
                     </section>

@@ -16,6 +16,16 @@ export default class WatchUs extends Component {
         browser: PropTypes.object.isRequired
     };
 
+    componentDidMount = () => {
+        if ($) {
+            $('.header__small-breadcrumbs .container-content')
+                .append('<span class="header__small-breadcrumbs-title">Где смотреть телеканал?</span>');
+            $('#watchUsLive').click(() => {
+                $('.liveStream-show').click();
+            });
+        }
+    };
+
     render() {
         const { t, browser } = this.props;
 
