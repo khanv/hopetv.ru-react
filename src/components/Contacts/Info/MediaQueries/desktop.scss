@@ -1,7 +1,7 @@
 @import 'theme/MediaQueries';
 
 @media #{$desktop} {
-    $scaleFactor: .04882826;
+    $m: desktop;
 
-    @import '../mobile';
+    @import '../desktop';
 }

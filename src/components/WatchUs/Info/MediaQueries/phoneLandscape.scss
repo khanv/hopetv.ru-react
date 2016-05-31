@@ -1,15 +1,15 @@
 @import 'theme/MediaQueries';
 
 @media #{$phoneLandscape} {
-    $scaleFactor: .08803;
+    $m: phoneLandscape;
 
     @import '../mobile';
 
     > section {
         &::after {
             order: 10;
-            width: px2vw(1126, $scaleFactor);
-            margin: px2vw(45, $scaleFactor) auto;
+            width: px2vw(1126, $m);
+            margin: px2vw(45, $m) auto;
         }
     }
 
@@ -18,36 +18,36 @@
 
         header {
             flex-direction: inherit;
-            padding-left: px2vw(162, $scaleFactor);
+            padding-left: px2vw(162, $m);
 
             h1 {
                 display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
-                width: px2vw(550, $scaleFactor);
-                margin-top: px2vw(28, $scaleFactor);
-                margin-left: px2vw(80, $scaleFactor);
+                width: px2vw(550, $m);
+                margin-top: px2vw(28, $m);
+                margin-left: px2vw(80, $m);
 
                 &::after {
-                    width: px2vw(6, $scaleFactor);
-                    height: px2vw(60, $scaleFactor);
+                    width: px2vw(6, $m);
+                    height: px2vw(60, $m);
                     margin-top: 0;
                     margin-left: 0;
                 }
             }
 
             i {
-                margin-top: px2vw(34, $scaleFactor);
+                margin-top: px2vw(34, $m);
             }
         }
 
         .searchUs {
-            margin-right: px2vw(38, $scaleFactor);
-            margin-left: px2vw(86, $scaleFactor);
+            margin-right: px2vw(38, $m);
+            margin-left: px2vw(86, $m);
         }
 
         .apps {
-            margin: px2vw(48, $scaleFactor) px2vw(42, $scaleFactor);
+            margin: px2vw(48, $m) px2vw(42, $m);
 
             a {
                 margin-top: 0;
@@ -55,24 +55,24 @@
         }
 
         p {
-            margin-top: px2vw(76, $scaleFactor);
-            margin-right: px2vw(28, $scaleFactor);
+            margin-top: px2vw(76, $m);
+            margin-right: px2vw(28, $m);
             text-align: right;
         }
 
         .watchOnline {
-            margin-top: px2vw(46, $scaleFactor);
-            margin-right: px2vw(86, $scaleFactor);
-            margin-left: px2vw(82, $scaleFactor);
+            margin-top: px2vw(46, $m);
+            margin-right: px2vw(86, $m);
+            margin-left: px2vw(82, $m);
         }
 
         a {
-            margin: px2vw(16, $scaleFactor) 0 0;
+            margin: px2vw(16, $m) 0 0;
         }
 
         .btn {
-            margin-top: px2vw(36, $scaleFactor);
-            margin-bottom: px2vw(52, $scaleFactor);
+            margin-top: px2vw(36, $m);
+            margin-bottom: px2vw(52, $m);
         }
     }
 
@@ -82,23 +82,23 @@
         header {
             flex-direction: row-reverse;
             justify-content: flex-end;
-            padding-left: px2vw(64, $scaleFactor);
+            padding-left: px2vw(64, $m);
 
             h1 {
                 display: flex;
                 align-items: center;
-                margin: px2vw(50, $scaleFactor) px2vw(190, $scaleFactor) 0 0;
+                margin: px2vw(50, $m) px2vw(190, $m) 0 0;
 
                 &::after {
-                    width: px2vw(6, $scaleFactor);
-                    height: px2vw(60, $scaleFactor);
+                    width: px2vw(6, $m);
+                    height: px2vw(60, $m);
                     margin-top: 0;
-                    margin-left: px2vw(70, $scaleFactor);
+                    margin-left: px2vw(70, $m);
                 }
             }
 
             i {
-                margin-top: px2vw(58, $scaleFactor);
+                margin-top: px2vw(58, $m);
             }
         }
 
@@ -112,8 +112,8 @@
                 flex-basis: 50%;
                 flex-direction: column;
                 align-items: flex-start;
-                height: px2vw(62, $scaleFactor);
-                margin-bottom: px2vw(48, $scaleFactor);
+                height: px2vw(62, $m);
+                margin-bottom: px2vw(48, $m);
 
                 span {
                     &:nth-child(2) {
@@ -144,7 +144,7 @@
         }
 
         a {
-            margin: px2vw(56, $scaleFactor) 0 0 px2vw(90, $scaleFactor);
+            margin: px2vw(56, $m) 0 0 px2vw(90, $m);
         }
 
         .tunerContainer {
@@ -154,11 +154,11 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: px2vw(40, $scaleFactor);
-                padding-right: px2vw(8, $scaleFactor);
+                margin-top: px2vw(40, $m);
+                padding-right: px2vw(8, $m);
 
                 i {
-                    width: px2vw(60, $scaleFactor);
+                    width: px2vw(60, $m);
                     transform: rotate(-90deg);
 
                     path {
@@ -167,12 +167,12 @@
                 }
 
                 p {
-                    width: px2vw(370, $scaleFactor);
-                    margin-top: px2vw(36, $scaleFactor);
+                    width: px2vw(370, $m);
+                    margin-top: px2vw(36, $m);
                     color: $textTuner;
-                    font-size: px2vw(24, $scaleFactor);
+                    font-size: px2vw(24, $m);
                     font-style: italic;
-                    line-height: px2vw(28, $scaleFactor);
+                    line-height: px2vw(28, $m);
                     text-align: center;
                 }
             }
@@ -190,39 +190,39 @@
             display: flex;
             flex-direction: row-reverse;
             justify-content: flex-end;
-            padding-left: px2vw(64, $scaleFactor);
+            padding-left: px2vw(64, $m);
 
             h1 {
                 display: flex;
                 align-items: center;
-                margin: px2vw(12, $scaleFactor) 0 0 px2vw(62, $scaleFactor);
+                margin: px2vw(12, $m) 0 0 px2vw(62, $m);
 
                 &::after {
-                    width: px2vw(6, $scaleFactor);
-                    height: px2vw(60, $scaleFactor);
+                    width: px2vw(6, $m);
+                    height: px2vw(60, $m);
                     margin-top: 0;
-                    margin-left: px2vw(128, $scaleFactor);
+                    margin-left: px2vw(128, $m);
                 }
             }
 
             i {
-                width: px2vw(132, $scaleFactor);
-                margin-top: px2vw(10, $scaleFactor);
-                margin-left: px2vw(198, $scaleFactor);
+                width: px2vw(132, $m);
+                margin-top: px2vw(10, $m);
+                margin-left: px2vw(198, $m);
             }
         }
 
         p {
             order: 4;
-            margin-top: px2vw(50, $scaleFactor);
-            margin-right: px2vw(60, $scaleFactor);
+            margin-top: px2vw(50, $m);
+            margin-right: px2vw(60, $m);
             text-align: left;
         }
 
         .btnSearch {
             order: 3;
-            margin-top: px2vw(110, $scaleFactor);
-            margin-left: px2vw(92, $scaleFactor);
+            margin-top: px2vw(110, $m);
+            margin-left: px2vw(92, $m);
         }
     }
 }

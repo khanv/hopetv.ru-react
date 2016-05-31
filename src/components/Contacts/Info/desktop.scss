@@ -1,3 +1,275 @@
 & {
-    display: block;
+    @import 'mobile';
+
+    & {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section {
+        flex-basis: 33%;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .contacts {
+        order: 1;
+        margin-left: px2vw(88, $m);
+
+        header {
+            i {
+                width: px2vw(130, $m);
+                margin-left: px2vw(4, $m);
+            }
+
+            h1 {
+                margin-top: px2vw(36, $m);
+                margin-left: px2vw(4, $m);
+
+                &::after {
+                    width: px2vw(50, $m);
+                    margin-top: px2vw(38, $m);
+                }
+            }
+        }
+
+        >div {
+            margin-left: px2vw(40, $m);
+        }
+
+        .phone {
+            margin-top: px2vw(40, $m);
+
+            .row {
+                margin-right: px2vw(54, $m);
+
+                i {
+                    width: px2vw(44, $m);
+                }
+
+                span {
+                    margin-top: px2vw(2, $m);
+                    margin-left: px2vw(50, $m);
+                    font-size: px2vw(40, $m);
+
+                    &::before {
+                        left: px2vw(-26, $m);
+                        height: px2vw(36, $m);
+                    }
+                }
+            }
+
+            div {
+                p {
+                    margin-top: 0;
+                    margin-left: px2vw(32, $m);
+                    font-size: px2vw(28, $m);
+                    line-height: px2vw(36, $m);
+                }
+            }
+        }
+
+        .skype {
+            margin-top: px2vw(28, $m);
+
+            .row {
+                margin-top: px2vw(4, $m);
+                margin-right: px2vw(50, $m);
+
+                i {
+                    width: px2vw(44, $m);
+                }
+
+                a {
+                    margin-top: px2vw(2, $m);
+                    margin-left: px2vw(50, $m);
+                    font-size: px2vw(40, $m);
+
+                    &::before {
+                        left: px2vw(-26, $m);
+                        height: px2vw(36, $m);
+                    }
+                }
+            }
+
+            div {
+                p {
+                    margin-top: px2vw(6, $m);
+                    margin-left: px2vw(32, $m);
+                    font-size: px2vw(28, $m);
+                    line-height: px2vw(36, $m);
+                }
+            }
+        }
+
+        .mail {
+            margin-top: px2vw(10, $m);
+
+            .row {
+                margin-top: px2vw(4, $m);
+                margin-right: 0;
+
+                i {
+                    width: px2vw(44, $m);
+                }
+
+                a {
+                    margin-top: px2vw(2, $m);
+                    margin-left: px2vw(52, $m);
+                    font-size: px2vw(40, $m);
+
+                    &::before {
+                        left: px2vw(-26, $m);
+                        height: px2vw(36, $m);
+                    }
+                }
+            }
+
+            div {
+                margin-right: px2vw(52, $m);
+
+                p {
+                    margin-top: px2vw(6, $m);
+                    margin-right: 0;
+                    margin-left: px2vw(32, $m);
+                    font-size: px2vw(28, $m);
+                    line-height: px2vw(36, $m);
+                }
+            }
+        }
+    }
+
+    .live {
+        order: 2;
+
+        header {
+            i {
+                width: px2vw(162, $m);
+                margin-top: px2vw(80, $m);
+                margin-right: px2vw(8, $m);
+            }
+
+            h1 {
+                margin-top: px2vw(36, $m);
+                margin-right: px2vw(4, $m);
+
+                &::after {
+                    width: px2vw(50, $m);
+                    margin-top: px2vw(38, $m);
+                }
+            }
+        }
+
+        .chat {
+            p {
+                margin-top: px2vw(24, $m);
+                font-size: px2vw(28, $m);
+                line-height: px2vw(36, $m);
+            }
+
+            a {
+                width: px2vw(420, $m);
+                height: px2vw(80, $m);
+                margin-top: px2vw(26, $m);
+                border-radius: px2vw(8, $m);
+                font-size: px2vw(28, $m);
+
+                &::before {
+                    width: px2vw(84, $m);
+                    margin-right: px2vw(28, $m);
+                    background-size: px2vw(38, $m);
+                }
+            }
+
+            &::after {
+                width: px2vw(50, $m);
+                margin-top: px2vw(36, $m);
+            }
+        }
+
+        .call {
+            margin-top: px2vw(24, $m);
+
+            p {
+                margin-top: px2vw(0, $m);
+                font-size: px2vw(28, $m);
+                line-height: px2vw(36, $m);
+            }
+
+            a {
+                width: px2vw(420, $m);
+                height: px2vw(80, $m);
+                margin-top: px2vw(28, $m);
+                border-radius: px2vw(8, $m);
+                font-size: px2vw(28, $m);
+
+                &::before {
+                    width: px2vw(84, $m);
+                    margin-right: px2vw(28, $m);
+                    background-size: px2vw(38, $m);
+                }
+            }
+        }
+    }
+
+    .social {
+        order: 3;
+        margin-right: px2vw(88, $m);
+
+        header {
+            i {
+                width: px2vw(158, $m);
+                margin-top: px2vw(80, $m);
+                margin-right: px2vw(38, $m);
+            }
+
+            h1 {
+                margin-top: px2vw(36, $m);
+                margin-right: px2vw(32, $m);
+
+                &::after {
+                    width: px2vw(50, $m);
+                    margin-top: px2vw(38, $m);
+                }
+            }
+        }
+
+        .list {
+            width: px2vw(404, $m);
+            margin-right: px2vw(124, $m);
+
+            .item {
+                margin-top: px2vw(68, $m);
+                margin-bottom: px2vw(4, $m);
+
+                i {
+                    width: px2vw(88, $m);
+                }
+
+                span {
+                    width: px2vw(60, $m);
+                    height: px2vw(56, $m);
+                    margin-top: px2vw(26, $m);
+                    font-size: px2vw(28, $m);
+
+                    &::before {
+                        top: px2vw(-10, $m);
+                        left: 50%;
+                        width: px2vw(14, $m);
+                        height: px2vw(14, $m);
+                        margin-left: px2vw(-8, $m);
+                        border-radius: 0 px2vw(2, $m) 0 0;
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::after {
+                        bottom: px2vw(-40, $m);
+                    }
+                }
+            }
+        }
+    }
 }
