@@ -17,6 +17,7 @@ export default class WatchUs extends Component {
     };
 
     componentDidMount = () => {
+        /* eslint-disable no-undef */
         if ($) {
             $('.header__small-breadcrumbs .container-content')
                 .append('<span class="header__small-breadcrumbs-title">Где смотреть телеканал?</span>');
@@ -24,6 +25,7 @@ export default class WatchUs extends Component {
                 $('.liveStream-show').click();
             });
         }
+        /* eslint-enable no-undef */
     };
 
     render() {
