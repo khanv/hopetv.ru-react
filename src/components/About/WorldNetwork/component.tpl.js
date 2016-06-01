@@ -5,9 +5,10 @@ import BreakPoints from 'components/PixelPerfect/breakpoints';
 export default function WorldNetwork(props) {
     const { mediaType } =  props;
 
-    const text = [BreakPoints.phonePortrait.name,
-                  BreakPoints.phoneLandscape.name
-                 ].indexOf(mediaType) !== -1 ?
+    const text = [
+        BreakPoints.phonePortrait.name,
+        BreakPoints.phoneLandscape.name
+    ].indexOf(mediaType) !== -1 ?
         'Український телеканал «Надія» — один із <b>43 каналів</b> всесвітньої мережі Hope&nbsp;Channel'
         : 'Український телеканал «Надія» — один із <b>43 каналів</b> всесвітньої мережі Hope Channel, яка здійснює '
         + 'мовлення в таких країнах як Англія, Німеччина, Норвегія, Іспанія, Китай, Бразилія, Португалія, США та інші';
