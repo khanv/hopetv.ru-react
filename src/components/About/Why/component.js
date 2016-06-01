@@ -11,7 +11,7 @@ import SvgViolence from 'theme/components/About/Why/why_violence.svg';
 import SvgCheck from 'theme/components/About/Why/checkCircle.svg';
 
 export default function Why(props) {
-    const { mediaType } =  props;
+    const { mediaType, t } =  props;
 
     return (
         <section className={ Grids.container }>
@@ -35,53 +35,53 @@ export default function Why(props) {
                         <div className={ Styles.policy }>
                             <InlineSvg content={ SvgPolitics }/>
                             <span className={ Styles.label }>без</span>
-                            <span className={ Styles.text }>політики</span>
+                            <span className={ Styles.text }>{ t('політики') }</span>
                         </div>
                         <div className={ Styles.violence }>
                             <InlineSvg content={ SvgViolence }/>
                             <span className={ Styles.label }>без</span>
-                            <span className={ Styles.text }>насилля</span>
+                            <span className={ Styles.text }>{ t('насилля') }</span>
                         </div>
                         <div className={ Styles.advert }>
                             <InlineSvg content={ SvgAdvert }/>
                             <span className={ Styles.label }>без</span>
-                            <span className={ Styles.text }>реклами</span>
+                            <span className={ Styles.text }>{ t('реклами') }</span>
                         </div>
                     </div>
                 </section>
                 <section className={ Styles.aroundTheClock }>
                     <header>
                         <span><b>24</b>/<b>7</b></span>
-                        <h1>Позитивне цілодобове</h1>
-                        <h2>мовлення для всієї родини</h2>
+                        <h1>{ t('Позитивне цілодобове') }</h1>
+                        <h2>{ t('мовлення для всієї родини') }</h2>
                     </header>
                     <ul>
                         <li className={ Styles.everydaySpeech }>
                             <InlineSvg content={ SvgCheck }/>
                             <div>
-                                <b>Щоденне мовлення</b>
-                                програм з сурдоперекладом
+                                <b>{ t('Щоденне мовлення') }</b>
+                                { t('програм з сурдоперекладом') }
                             </div>
                         </li>
                         <li className={ Styles.varietyPrograms }>
                             <InlineSvg content={ SvgCheck }/>
                             <div>
-                                <b>Різноманітність програм</b>
-                                для всієї родини
+                                <b>{ t('Різноманітність програм') }</b>
+                                { t('для всієї родини') }
                             </div>
                         </li>
                         <li className={ Styles.interactiveCommunication }>
                             <InlineSvg content={ SvgCheck }/>
                             <div>
-                                <b>Інтерактивний зв'язок</b>
-                                з глядачем
+                                <b>{ t('Інтерактивний зв`язок') }</b>
+                                { t('з глядачем') }
                             </div>
                         </li>
                         <li className={ Styles.holisticChristianity }>
                             <InlineSvg content={ SvgCheck }/>
                             <div>
-                                <b>Цілісне християнство в ТБ:</b>
-                                здоров`я, сім`я, духовність
+                                <b>{ t('Цілісне християнство в ТБ') }:</b>
+                                { t('здоров`я, сім`я, духовність') }
                             </div>
                         </li>
                     </ul>
@@ -92,5 +92,6 @@ export default function Why(props) {
 }
 
 Why.propTypes = {
-    mediaType: PropTypes.string.isRequired
+    mediaType: PropTypes.string.isRequired,
+    t: PropTypes.func.isRequired
 };

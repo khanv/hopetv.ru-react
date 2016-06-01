@@ -34,8 +34,11 @@ export default class About extends Component {
                     description={ t('headDescription') }
                     mediaType={ browser.mediaType }
                 />
-                <Why mediaType={ browser.mediaType }/>
-                <Banner/>
+                <Why
+                    mediaType={ browser.mediaType }
+                    t={ t }
+                />
+                <Banner text={ t('goal') }/>
             </section>
         );
     }
