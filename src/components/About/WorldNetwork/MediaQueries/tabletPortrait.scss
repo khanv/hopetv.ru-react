@@ -1,0 +1,36 @@
+@import 'theme/MediaQueries';
+
+@media #{$tabletPortrait} {
+    $m: tabletPortrait;
+
+    @import '../desktop';
+
+    header {
+        h1 {
+            margin-top: px2vw(72, $m);
+            font-size: px2vw(46, $m);
+        }
+
+        h2 {
+            margin-top: px2vw(8, $m);
+            font-size: px2vw(40, $m);
+
+            &::after {
+                width: px2vw(66, $m);
+            }
+        }
+    }
+
+    p {
+        font-size: px2vw(32, $m);
+        line-height: px2vw(42, $m);
+    }
+
+    div {
+        width: 100%;
+        height: px2vw(872, $m);
+        margin-top: px2vw(6, $m);
+        background-image: url($componentRoot + 'worldMap.png');
+        background-size: 100%;
+    }
+}

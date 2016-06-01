@@ -1,0 +1,7 @@
+@import 'theme/MediaQueries';
+
+@media #{$tabletLandscape} {
+    $m: tabletLandscape;
+
+    @import '../desktop';
+}
