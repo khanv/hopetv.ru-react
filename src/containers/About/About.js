@@ -39,7 +39,10 @@ export default class About extends Component {
                     t={ t }
                 />
                 <Banner text={ t('goal') }/>
-                <WorldNetwork mediaType={ browser.mediaType }/>
+                <WorldNetwork
+                    mediaType={ browser.mediaType }
+                    t={ t }
+                />
             </section>
         );
     }
