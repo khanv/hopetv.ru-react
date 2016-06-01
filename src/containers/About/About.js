@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Why } from 'components/About';
+import { Why, WorldNetwork } from 'components/About';
 
 /* eslint-disable react/prefer-stateless-function */
 @connect(({ browser }) => {
@@ -17,6 +17,7 @@ export default class About extends Component {
         return (
             <section>
                 <Why mediaType={ browser.mediaType }/>
+                <WorldNetwork mediaType={ browser.mediaType }/>
             </section>
         );
     }

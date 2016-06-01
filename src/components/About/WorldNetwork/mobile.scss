@@ -1,0 +1,55 @@
+& {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: px2vw(60, $m);
+    border-bottom: px2vw(4, $m) solid $color3;
+    background-image: url($componentRoot + 'worldNetwork_background.jpg');
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin-top: px2vw(76, $m);
+            color: $color1;
+            font-size: px2vw(44, $m);
+        }
+
+        h2 {
+            margin-top: px2vw(6, $m);
+            color: $color1;
+            font-size: px2vw(34, $m);
+            font-weight: 100;
+
+            &::after {
+                display: block;
+                width: px2vw(60, $m);
+                height: px2vw(6, $m);
+                margin: px2vw(48, $m) auto 0;
+                background-color: $color2;
+                content: '';
+            }
+        }
+    }
+
+    p {
+        width: px2vw(530, $m);
+        margin-top: px2vw(50, $m);
+        color: $color1;
+        font-size: px2vw(30, $m);
+        line-height: px2vw(36, $m);
+        text-align: center;
+    }
+
+    div {
+        width: 100%;
+        height: px2vw(396, $m);
+        margin-top: px2vw(48, $m);
+        background-image: url($componentRoot + 'worldMap.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 122%;
+    }
+}
