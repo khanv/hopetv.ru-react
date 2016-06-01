@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import { Why } from 'components/About';
-import { PageHead } from 'components/Shared';
-import { translate } from 'react-i18next';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
+import { Why, Banner } from 'components/About';
+import { PageHead } from 'components/Shared';
 
 /* eslint-disable react/prefer-stateless-function */
 @translate(['About'])
@@ -35,6 +35,7 @@ export default class About extends Component {
                     mediaType={ browser.mediaType }
                 />
                 <Why mediaType={ browser.mediaType }/>
+                <Banner/>
             </section>
         );
     }
