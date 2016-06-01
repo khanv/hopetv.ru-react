@@ -1,0 +1,64 @@
+& {
+    position: relative;
+    padding-top: px2vw(128, $m);
+
+    .container {
+        position: relative;
+        width: 102vw;
+        height: px2vw(564, $m);
+        margin-left: -1vw;
+        transform: rotate(-2.9deg);
+        overflow: hidden;
+        z-index: 3;
+
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: px2vw(564, $m);
+            background-color: $color1;
+            content: '';
+            opacity: .8;
+            z-index: 1;
+        }
+
+        h1 {
+            position: absolute;
+            top: px2vw(242, $m);
+            left: 50%;
+            width: px2vw(1374, $m);
+            margin-left: px2vw(-687, $m);
+            transform: rotate(2.9deg);
+            color: $color2;
+            font-size: px2vw(48, $m);
+            line-height: px2vw(54, $m);
+            text-align: center;
+            z-index: 1;
+
+            span {
+                color: $color3;
+                font-weight: bold;
+            }
+        }
+
+        .poster {
+            position: relative;
+            width: 100%;
+            height: px2vw(680, $m);
+            margin-top: -3vw;
+            transform: rotate(2.9deg);
+            background: url($componentRoot + 'banner.jpg') no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        bottom: px2vw(-18, $m);
+        width: 100%;
+        height: px2vw(30, $m);
+        transform: rotate(-2.2deg);
+        background-color: $color4;
+        content: '';
+        z-index: 2;
+    }
+}

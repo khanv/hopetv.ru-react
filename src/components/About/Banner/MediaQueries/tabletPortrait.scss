@@ -1,0 +1,26 @@
+@import 'theme/MediaQueries';
+
+@media #{$tabletPortrait} {
+    $m: tabletPortrait;
+
+    @import '../desktop';
+
+    & {
+        padding-top: px2vw(110, $m);
+
+        .container {
+            height: px2vw(604, $m);
+
+            &::before {
+                height: px2vw(604, $m);
+            }
+
+            h1 {
+                top: px2vw(268, $m);
+                width: px2vw(1200, $m);
+                margin-left: px2vw(-600, $m);
+                font-size: px2vw(42, $m);
+            }
+        }
+    }
+}
