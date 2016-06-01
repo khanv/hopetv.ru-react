@@ -44,7 +44,12 @@ export default class Info extends Component {
                         </header>
                         <p className={ Styles.searchUs }>Ищите нас на мобильных устройствах</p>
                         <div className={ Styles.apps }>
-                            <a className={ Styles.androidLink } href="#">
+                            <a
+                                className={ Styles.androidLink }
+                                href="https://play.google.com/store/apps/details?id=ua.hope"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <InlineSvg content={ SvgAndroid }/>
                             </a>
                             <div>
@@ -52,12 +57,17 @@ export default class Info extends Component {
                                 <span>скачать приложение</span>
                                 <InlineSvg className={ Styles.androidArrow } content={ SvgArrow }/>
                             </div>
-                            <a className={ Styles.appleLink } href="#">
+                            <a
+                                className={ Styles.appleLink }
+                                href="https://itunes.apple.com/ua/app/hope-channel-ukraine-telekanal/id504194933?l=ru&mt=8"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <InlineSvg content={ SvgApple }/>
                             </a>
                         </div>
                         <p className={ Styles.watchOnline }>Смотрите вещание в сети Интернет</p>
-                        <a className={ Styles.btn } href="#">
+                        <a className={ Styles.btn } id="watchUsLive" href="#">
                             ТВ «Надія» Онлайн
                         </a>
                     </section>

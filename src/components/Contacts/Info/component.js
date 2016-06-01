@@ -27,6 +27,33 @@ export default class Info extends Component {
         browser: PropTypes.object.isRequired
     };
 
+    componentDidMount = () => {
+        /* eslint-disable no-undef */
+        window.senderCallback = () => {
+            SenderWidget.init({
+                companyId: 'i20076624232',
+                autostart: false,
+                showButton: false
+            });
+        };
+        /* eslint-enable no-undef */
+
+        ((d, s, id) => {
+            const fjs = d.getElementsByTagName(s)[0];
+            const js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://widget.sender.mobi/build/init.js';
+            fjs.parentNode.insertBefore(js, fjs, 'sender-widget');
+        })(document, 'script');
+    };
+
+    startChat = (event) => {
+        event.preventDefault();
+        /* eslint-disable no-undef */
+        SenderWidget.showWidget();
+        /* eslint-enable no-undef */
+    };
+
     render() {
         const { browser } = this.props;
 
@@ -43,12 +70,12 @@ export default class Info extends Component {
                             <h1>Общайтесь онлайн</h1>
                         </header>
                         <div className={ Styles.chat }>
-                            <p>Онлайн чат работает каждый день с <b>8:00 до 20:00</b></p>
-                            <a href="#">Написать в онлайн чат</a>
+                            <p>Онлайн чат работает каждый день с <b>9:00 до 17:00</b></p>
+                            <a href="#" onClick={ this.startChat }>Написать в онлайн чат</a>
                         </div>
                         <div className={ Styles.call }>
-                            <p>Онлайн чат работает каждый день с <b>8:00 до 20:00</b></p>
-                            <a href="#">Позвонить нам сейчас</a>
+                            <p>Контакт-центр работает каждый день с <b>9:00 до 21:00</b></p>
+                            <a href="skype:contact-hope?call">Позвонить нам сейчас</a>
                         </div>
                     </section>
                     <section className={ Styles.contacts }>
@@ -62,22 +89,22 @@ export default class Info extends Component {
                                 <span>0 800 30 20 20</span>
                             </div>
                             <div>
-                                <p><span>Звоните</span> ежедневно: <b>8:00-20:00</b></p>
+                                <p><span>Звоните</span> ежедневно: <b>9:00-21:00</b></p>
                             </div>
                         </div>
                         <div className={ Styles.skype }>
                             <div className={ Styles.row }>
                                 <InlineSvg content={ SvgSkype }/>
-                                <a href="#">contact-hope</a>
+                                <a href="skype:contact-hope?chat">contact-hope</a>
                             </div>
                             <div>
-                                <p>Ответ <span>в сети Skype</span> в течение <b>1 мин</b></p>
+                                <p>Ответ <span>в сети Skype</span> в течение <b>5 мин</b></p>
                             </div>
                         </div>
                         <div className={ Styles.mail }>
                             <div className={ Styles.row }>
                                 <InlineSvg content={ SvgMail }/>
-                                <a href="#">contact@hope.ua</a>
+                                <a href="mailto:contact@hope.ua">contact@hope.ua</a>
                             </div>
                             <div>
                                 <p>Ответ <span>по почте</span> в течение <b>24 часов</b></p>
@@ -90,30 +117,30 @@ export default class Info extends Component {
                             <h1>{ socialTitle }</h1>
                         </header>
                         <div className={ Styles.list }>
-                            <div className={ Styles.item }>
+                            <a href="https://twitter.com/ua_hope" className={ Styles.item }>
                                 <InlineSvg content={ SvgTwitter }/>
-                                <span>5k</span>
-                            </div>
-                            <div className={ Styles.item }>
-                                <InlineSvg content={ SvgVk }/>
                                 <span>1k</span>
-                            </div>
-                            <div className={ Styles.item }>
+                            </a>
+                            <a href="https://vk.com/hopechannel" className={ Styles.item }>
+                                <InlineSvg content={ SvgVk }/>
+                                <span>5k</span>
+                            </a>
+                            <a href="https://www.facebook.com/hope.ua/" className={ Styles.item }>
                                 <InlineSvg content={ SvgFacebook }/>
-                                <span>3k</span>
-                            </div>
-                            <div className={ Styles.item }>
+                                <span>2k</span>
+                            </a>
+                            <a href="https://ok.ru/hopechannel" className={ Styles.item }>
                                 <InlineSvg content={ SvgOk }/>
-                                <span>6k</span>
-                            </div>
-                            <div className={ Styles.item }>
-                                <InlineSvg content={ SvgYouTube }/>
                                 <span>3k</span>
-                            </div>
-                            <div className={ Styles.item }>
+                            </a>
+                            <a href="https://www.youtube.com/user/HopeChannelUkraine" className={ Styles.item }>
+                                <InlineSvg content={ SvgYouTube }/>
+                                <span>7k</span>
+                            </a>
+                            <a href="https://www.instagram.com/ua_hope/" className={ Styles.item }>
                                 <InlineSvg content={ SvgInstgram }/>
                                 <span>1k</span>
-                            </div>
+                            </a>
                         </div>
                     </section>
                 </section>

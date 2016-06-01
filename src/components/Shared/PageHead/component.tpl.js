@@ -8,7 +8,7 @@ import Styles from './main.scss';
 @connect(({ browser }) => {
     return { browser };
 })
-export default class Info extends Component {
+export default class PageHead extends Component {
     static propTypes = {
         browser: PropTypes.object.isRequired
     };
