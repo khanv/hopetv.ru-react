@@ -3,22 +3,22 @@
 
     h1 {
         margin-top: 0;
-        font-size: px2vw(52, $scaleFactor);
+        font-size: px2vw(52, $m);
         font-weight: 100;
 
         &::after {
-            width: px2vw(48, $scaleFactor);
-            margin-top: px2vw(52, $scaleFactor);
+            width: px2vw(48, $m);
+            margin-top: px2vw(52, $m);
         }
     }
 
     p {
-        width: px2vw(816, $scaleFactor);
-        margin-top: px2vw(54, $scaleFactor);
+        width: px2vw(816, $m);
+        margin-top: px2vw(54, $m);
         color: $color1;
-        font-size: px2vw(26, $scaleFactor);
+        font-size: px2vw(26, $m);
         font-style: italic;
-        line-height: px2vw(32, $scaleFactor);
+        line-height: px2vw(32, $m);
         text-align: center;
 
         b {
