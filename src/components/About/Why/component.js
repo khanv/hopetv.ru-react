@@ -29,7 +29,7 @@ export default function Why(props) {
                         ].indexOf(mediaType) !== -1 ? (
                             <InlineSvg content={ SvgHope }/>
                         ) : null }
-                        <h1>Чому саме ТК «Надія»</h1>
+                        <h1>{ t('Чому саме ТК «Надія»') }</h1>
                     </header>
                     <div className={ Styles.arguments }>
                         <div className={ Styles.policy }>
