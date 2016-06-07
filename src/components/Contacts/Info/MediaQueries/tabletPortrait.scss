@@ -1,316 +1,310 @@
-@import 'theme/MediaQueries';
+@import '../mobile';
 
-@media #{$tabletPortrait} {
-    $m: tabletPortrait;
+& {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-    @import '../mobile';
+.live {
+    flex-basis: 50%;
 
-    & {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    &::after {
+        display: none;
     }
 
-    .live {
-        flex-basis: 50%;
-
-        &::after {
-            display: none;
+    header {
+        i {
+            width: px(204);
+            margin-top: px(106);
+            margin-left: px(34);
         }
 
-        header {
-            i {
-                width: px2vw(204, $m);
-                margin-top: px2vw(106, $m);
-                margin-left: px2vw(34, $m);
-            }
-
-            h1 {
-                margin-top: px2vw(76, $m);
-                margin-left: px2vw(34, $m);
-                font-size: px2vw(50, $m);
-
-                &::after {
-                    width: px2vw(66, $m);
-                    margin-top: px2vw(62, $m);
-                    border-radius: 1px;
-                }
-            }
-        }
-
-        .chat {
-            p {
-                line-height: px2vw(44, $m);
-            }
-
-            a {
-                margin-top: px2vw(48, $m);
-
-                &::before {
-                    margin-right: px2vw(36, $m);
-                    background-size: px2vw(50, $m);
-                }
-            }
+        h1 {
+            margin-top: px(76);
+            margin-left: px(34);
+            font-size: px(50);
 
             &::after {
-                width: px2vw(66, $m);
-                margin-top: px2vw(60, $m);
-            }
-        }
-
-        .call {
-            margin-top: px2vw(50, $m);
-
-            p {
-                line-height: px2vw(44, $m);
-            }
-
-            a {
-                margin-top: px2vw(48, $m);
-
-                &::before {
-                    margin-right: px2vw(38, $m);
-                    background-size: px2vw(50, $m);
-                }
-            }
-        }
-
-        div {
-            margin-top: px2vw(28, $m);
-            margin-left: px2vw(34, $m);
-
-            p {
-                width: px2vw(460, $m);
-                font-size: px2vw(34, $m);
-            }
-
-            a {
-                width: px2vw(516, $m);
-                height: px2vw(112, $m);
-                font-size: px2vw(34, $m);
-
-                &::before {
-                    width: px2vw(105, $m);
-                }
+                width: px(66);
+                margin-top: px(62);
+                border-radius: 1px;
             }
         }
     }
 
-    .contacts {
-        flex-basis: 50%;
+    .chat {
+        p {
+            line-height: px(44);
+        }
+
+        a {
+            margin-top: px(48);
+
+            &::before {
+                margin-right: px(36);
+                background-size: px(50);
+            }
+        }
 
         &::after {
-            display: none;
+            width: px(66);
+            margin-top: px(60);
+        }
+    }
+
+    .call {
+        margin-top: px(50);
+
+        p {
+            line-height: px(44);
         }
 
-        header {
-            i {
-                width: px2vw(166, $m);
-                margin-top: px2vw(106, $m);
-                margin-right: px2vw(52, $m);
-            }
+        a {
+            margin-top: px(48);
 
-            h1 {
-                margin-top: px2vw(74, $m);
-                margin-right: px2vw(52, $m);
-                font-size: px2vw(50, $m);
-
-                &::after {
-                    width: px2vw(66, $m);
-                    margin-top: px2vw(62, $m);
-                    border-radius: 1px;
-                }
-            }
-        }
-
-        div {
-            div {
-                width: px2vw(354, $m);
-            }
-        }
-
-        .phone {
-            margin-top: px2vw(72, $m);
-            margin-right: px2vw(86, $m);
-
-            .row {
-                span {
-                    margin-top: px2vw(2, $m);
-                    margin-left: px2vw(62, $m);
-                    font-size: px2vw(50, $m);
-                    font-weight: bold;
-
-                    &::before {
-                        left: px2vw(-32, $m);
-                        height: px2vw(40, $m);
-                    }
-                }
-
-                i {
-                    width: px2vw(58, $m);
-                }
-            }
-
-            div {
-                margin-top: px2vw(10, $m);
-                margin-right: px2vw(48, $m);
-
-                p {
-                    font-size: px2vw(34, $m);
-                    line-height: px2vw(46, $m);
-                }
-            }
-        }
-
-        .skype {
-            margin-top: px2vw(72, $m);
-            margin-right: px2vw(86, $m);
-
-            .row {
-                margin-top: 0;
-                margin-right: px2vw(60, $m);
-
-                a {
-                    margin-top: 0;
-                    margin-left: px2vw(64, $m);
-                    font-size: px2vw(50, $m);
-                    font-weight: bold;
-
-                    &::before {
-                        left: px2vw(-32, $m);
-                        height: px2vw(40, $m);
-                    }
-
-                    &::after {
-                        right: px2vw(-64, $m);
-                    }
-                }
-
-                i {
-                    width: px2vw(58, $m);
-                    margin-top: px2vw(-2, $m);
-                }
-            }
-
-            div {
-                margin-top: px2vw(2, $m);
-                margin-right: px2vw(52, $m);
-
-                p {
-                    font-size: px2vw(34, $m);
-                    line-height: px2vw(46, $m);
-                }
-            }
-        }
-
-        .mail {
-            margin-top: px2vw(48, $m);
-            margin-right: px2vw(56, $m);
-
-            .row {
-                a {
-                    margin-left: px2vw(66, $m);
-                    font-size: px2vw(50, $m);
-                    font-weight: bold;
-
-                    &::before {
-                        left: px2vw(-32, $m);
-                        height: px2vw(40, $m);
-                    }
-                }
-
-                i {
-                    width: px2vw(58, $m);
-                }
-            }
-
-            div {
-                margin-top: px2vw(4, $m);
-                margin-right: px2vw(88, $m);
-
-                p {
-                    font-size: px2vw(34, $m);
-                    line-height: px2vw(46, $m);
-                }
+            &::before {
+                margin-right: px(38);
+                background-size: px(50);
             }
         }
     }
 
-    .social {
-        header {
-            h1 {
-                margin-top: px2vw(76, $m);
-                margin-right: px2vw(2, $m);
-                font-size: px2vw(52, $m);
+    div {
+        margin-top: px(28);
+        margin-left: px(34);
 
-                &::after {
-                    width: px2vw(66, $m);
-                    margin-top: px2vw(72, $m);
+        p {
+            width: px(460);
+            font-size: px(34);
+        }
+
+        a {
+            width: px(516);
+            height: px(112);
+            font-size: px(34);
+
+            &::before {
+                width: px(105);
+            }
+        }
+    }
+}
+
+.contacts {
+    flex-basis: 50%;
+
+    &::after {
+        display: none;
+    }
+
+    header {
+        i {
+            width: px(166);
+            margin-top: px(106);
+            margin-right: px(52);
+        }
+
+        h1 {
+            margin-top: px(74);
+            margin-right: px(52);
+            font-size: px(50);
+
+            &::after {
+                width: px(66);
+                margin-top: px(62);
+                border-radius: 1px;
+            }
+        }
+    }
+
+    div {
+        div {
+            width: px(354);
+        }
+    }
+
+    .phone {
+        margin-top: px(72);
+        margin-right: px(86);
+
+        .row {
+            span {
+                margin-top: px(2);
+                margin-left: px(62);
+                font-size: px(50);
+                font-weight: bold;
+
+                &::before {
+                    left: px(-32);
+                    height: px(40);
                 }
             }
 
             i {
-                position: relative;
-                width: px2vw(202, $m);
-                margin-top: px2vw(86, $m);
-                margin-right: px2vw(2, $m);
-
-                &::after {
-                    display: block;
-                    position: absolute;
-                    top: 63%;
-                    right: px2vw(-590, $m);
-                    width: px2vw(500, $m);
-                    height: 3px;
-                    background-image: url($componentRoot + 'divider-bg.svg');
-                    content: '';
-
-                }
-
-                &::before {
-                    display: block;
-                    position: absolute;
-                    top: 63%;
-                    left: px2vw(-580, $m);
-                    width: px2vw(500, $m);
-                    height: 3px;
-                    background-image: url($componentRoot + 'divider-bg.svg');
-                    content: '';
-                }
+                width: px(58);
             }
         }
 
-        .list {
-            width: px2vw(1174, $m);
+        div {
+            margin-top: px(10);
+            margin-right: px(48);
 
-            .item {
-                flex-basis: auto;
-                margin-top: px2vw(106, $m);
+            p {
+                font-size: px(34);
+                line-height: px(46);
+            }
+        }
+    }
 
-                &:nth-child(2) {
-                    &::after {
-                        display: none;
-                    }
+    .skype {
+        margin-top: px(72);
+        margin-right: px(86);
+
+        .row {
+            margin-top: 0;
+            margin-right: px(60);
+
+            a {
+                margin-top: 0;
+                margin-left: px(64);
+                font-size: px(50);
+                font-weight: bold;
+
+                &::before {
+                    left: px(-32);
+                    height: px(40);
                 }
 
-                i {
-                    width: px2vw(114, $m);
+                &::after {
+                    right: px(-64);
                 }
+            }
 
-                span {
-                    width: px2vw(82, $m);
-                    height: px2vw(78, $m);
-                    margin-top: px2vw(30, $m);
-                    font-size: px2vw(36, $m);
+            i {
+                width: px(58);
+                margin-top: px(-2);
+            }
+        }
 
-                    &::before {
-                        top: px2vw(-10, $m);
-                        left: 50%;
-                        width: px2vw(20, $m);
-                        height: px2vw(20, $m);
-                        margin-left: px2vw(-8, $m);
-                        border-radius: 0 px2vw(2, $m) 0 0;
-                    }
+        div {
+            margin-top: px(2);
+            margin-right: px(52);
+
+            p {
+                font-size: px(34);
+                line-height: px(46);
+            }
+        }
+    }
+
+    .mail {
+        margin-top: px(48);
+        margin-right: px(56);
+
+        .row {
+            a {
+                margin-left: px(66);
+                font-size: px(50);
+                font-weight: bold;
+
+                &::before {
+                    left: px(-32);
+                    height: px(40);
+                }
+            }
+
+            i {
+                width: px(58);
+            }
+        }
+
+        div {
+            margin-top: px(4);
+            margin-right: px(88);
+
+            p {
+                font-size: px(34);
+                line-height: px(46);
+            }
+        }
+    }
+}
+
+.social {
+    header {
+        h1 {
+            margin-top: px(76);
+            margin-right: px(2);
+            font-size: px(52);
+
+            &::after {
+                width: px(66);
+                margin-top: px(72);
+            }
+        }
+
+        i {
+            position: relative;
+            width: px(202);
+            margin-top: px(86);
+            margin-right: px(2);
+
+            &::after {
+                display: block;
+                position: absolute;
+                top: 63%;
+                right: px(-590);
+                width: px(500);
+                height: 3px;
+                background-image: url($componentRoot + 'divider-bg.svg');
+                content: '';
+
+            }
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: 63%;
+                left: px(-580);
+                width: px(500);
+                height: 3px;
+                background-image: url($componentRoot + 'divider-bg.svg');
+                content: '';
+            }
+        }
+    }
+
+    .list {
+        width: px(1174);
+
+        .item {
+            flex-basis: auto;
+            margin-top: px(106);
+
+            &:nth-child(2) {
+                &::after {
+                    display: none;
+                }
+            }
+
+            i {
+                width: px(114);
+            }
+
+            span {
+                width: px(82);
+                height: px(78);
+                margin-top: px(30);
+                font-size: px(36);
+
+                &::before {
+                    top: px(-10);
+                    left: 50%;
+                    width: px(20);
+                    height: px(20);
+                    margin-left: px(-8);
+                    border-radius: 0 px(2) 0 0;
                 }
             }
         }
