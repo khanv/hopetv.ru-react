@@ -16,47 +16,47 @@
 
     .contacts {
         order: 1;
-        margin-left: px2vw(88, $m);
+        margin-left: px(88);
 
         header {
             i {
-                width: px2vw(130, $m);
-                margin-left: px2vw(4, $m);
+                width: px(130);
+                margin-left: px(4);
             }
 
             h1 {
-                margin-top: px2vw(36, $m);
-                margin-left: px2vw(4, $m);
+                margin-top: px(36);
+                margin-left: px(4);
 
                 &::after {
-                    width: px2vw(50, $m);
-                    margin-top: px2vw(38, $m);
+                    width: px(50);
+                    margin-top: px(38);
                 }
             }
         }
 
         >div {
-            margin-left: px2vw(40, $m);
+            margin-left: px(40);
         }
 
         .phone {
-            margin-top: px2vw(40, $m);
+            margin-top: px(40);
 
             .row {
-                margin-right: px2vw(54, $m);
+                margin-right: px(54);
 
                 i {
-                    width: px2vw(44, $m);
+                    width: px(44);
                 }
 
                 span {
-                    margin-top: px2vw(2, $m);
-                    margin-left: px2vw(50, $m);
-                    font-size: px2vw(40, $m);
+                    margin-top: px(2);
+                    margin-left: px(50);
+                    font-size: px(40);
 
                     &::before {
-                        left: px2vw(-26, $m);
-                        height: px2vw(36, $m);
+                        left: px(-26);
+                        height: px(36);
                     }
                 }
             }
@@ -64,78 +64,78 @@
             div {
                 p {
                     margin-top: 0;
-                    margin-left: px2vw(32, $m);
-                    font-size: px2vw(28, $m);
-                    line-height: px2vw(36, $m);
+                    margin-left: px(32);
+                    font-size: px(28);
+                    line-height: px(36);
                 }
             }
         }
 
         .skype {
-            margin-top: px2vw(28, $m);
+            margin-top: px(28);
 
             .row {
-                margin-top: px2vw(4, $m);
-                margin-right: px2vw(50, $m);
+                margin-top: px(4);
+                margin-right: px(50);
 
                 i {
-                    width: px2vw(44, $m);
+                    width: px(44);
                 }
 
                 a {
-                    margin-top: px2vw(2, $m);
-                    margin-left: px2vw(50, $m);
-                    font-size: px2vw(40, $m);
+                    margin-top: px(2);
+                    margin-left: px(50);
+                    font-size: px(40);
 
                     &::before {
-                        left: px2vw(-26, $m);
-                        height: px2vw(36, $m);
+                        left: px(-26);
+                        height: px(36);
                     }
                 }
             }
 
             div {
                 p {
-                    margin-top: px2vw(6, $m);
-                    margin-left: px2vw(32, $m);
-                    font-size: px2vw(28, $m);
-                    line-height: px2vw(36, $m);
+                    margin-top: px(6);
+                    margin-left: px(32);
+                    font-size: px(28);
+                    line-height: px(36);
                 }
             }
         }
 
         .mail {
-            margin-top: px2vw(10, $m);
+            margin-top: px(10);
 
             .row {
-                margin-top: px2vw(4, $m);
+                margin-top: px(4);
                 margin-right: 0;
 
                 i {
-                    width: px2vw(44, $m);
+                    width: px(44);
                 }
 
                 a {
-                    margin-top: px2vw(2, $m);
-                    margin-left: px2vw(52, $m);
-                    font-size: px2vw(40, $m);
+                    margin-top: px(2);
+                    margin-left: px(52);
+                    font-size: px(40);
 
                     &::before {
-                        left: px2vw(-26, $m);
-                        height: px2vw(36, $m);
+                        left: px(-26);
+                        height: px(36);
                     }
                 }
             }
 
             div {
-                margin-right: px2vw(52, $m);
+                margin-right: px(52);
 
                 p {
-                    margin-top: px2vw(6, $m);
+                    margin-top: px(6);
                     margin-right: 0;
-                    margin-left: px2vw(32, $m);
-                    font-size: px2vw(28, $m);
-                    line-height: px2vw(36, $m);
+                    margin-left: px(32);
+                    font-size: px(28);
+                    line-height: px(36);
                 }
             }
         }
@@ -146,69 +146,69 @@
 
         header {
             i {
-                width: px2vw(162, $m);
-                margin-top: px2vw(80, $m);
-                margin-right: px2vw(8, $m);
+                width: px(162);
+                margin-top: px(80);
+                margin-right: px(8);
             }
 
             h1 {
-                margin-top: px2vw(36, $m);
-                margin-right: px2vw(4, $m);
+                margin-top: px(36);
+                margin-right: px(4);
 
                 &::after {
-                    width: px2vw(50, $m);
-                    margin-top: px2vw(38, $m);
+                    width: px(50);
+                    margin-top: px(38);
                 }
             }
         }
 
         .chat {
             p {
-                margin-top: px2vw(24, $m);
-                font-size: px2vw(28, $m);
-                line-height: px2vw(36, $m);
+                margin-top: px(24);
+                font-size: px(28);
+                line-height: px(36);
             }
 
             a {
-                width: px2vw(420, $m);
-                height: px2vw(80, $m);
-                margin-top: px2vw(26, $m);
-                border-radius: px2vw(8, $m);
-                font-size: px2vw(28, $m);
+                width: px(420);
+                height: px(80);
+                margin-top: px(26);
+                border-radius: px(8);
+                font-size: px(28);
 
                 &::before {
-                    width: px2vw(84, $m);
-                    margin-right: px2vw(28, $m);
-                    background-size: px2vw(38, $m);
+                    width: px(84);
+                    margin-right: px(28);
+                    background-size: px(38);
                 }
             }
 
             &::after {
-                width: px2vw(50, $m);
-                margin-top: px2vw(36, $m);
+                width: px(50);
+                margin-top: px(36);
             }
         }
 
         .call {
-            margin-top: px2vw(24, $m);
+            margin-top: px(24);
 
             p {
-                margin-top: px2vw(0, $m);
-                font-size: px2vw(28, $m);
-                line-height: px2vw(36, $m);
+                margin-top: px(0);
+                font-size: px(28);
+                line-height: px(36);
             }
 
             a {
-                width: px2vw(420, $m);
-                height: px2vw(80, $m);
-                margin-top: px2vw(28, $m);
-                border-radius: px2vw(8, $m);
-                font-size: px2vw(28, $m);
+                width: px(420);
+                height: px(80);
+                margin-top: px(28);
+                border-radius: px(8);
+                font-size: px(28);
 
                 &::before {
-                    width: px2vw(84, $m);
-                    margin-right: px2vw(28, $m);
-                    background-size: px2vw(38, $m);
+                    width: px(84);
+                    margin-right: px(28);
+                    background-size: px(38);
                 }
             }
         }
@@ -216,57 +216,57 @@
 
     .social {
         order: 3;
-        margin-right: px2vw(88, $m);
+        margin-right: px(88);
 
         header {
             i {
-                width: px2vw(158, $m);
-                margin-top: px2vw(80, $m);
-                margin-right: px2vw(38, $m);
+                width: px(158);
+                margin-top: px(80);
+                margin-right: px(38);
             }
 
             h1 {
-                margin-top: px2vw(36, $m);
-                margin-right: px2vw(32, $m);
+                margin-top: px(36);
+                margin-right: px(32);
 
                 &::after {
-                    width: px2vw(50, $m);
-                    margin-top: px2vw(38, $m);
+                    width: px(50);
+                    margin-top: px(38);
                 }
             }
         }
 
         .list {
-            width: px2vw(404, $m);
-            margin-right: px2vw(124, $m);
+            width: px(404);
+            margin-right: px(124);
 
             .item {
-                margin-top: px2vw(68, $m);
-                margin-bottom: px2vw(4, $m);
+                margin-top: px(68);
+                margin-bottom: px(4);
 
                 i {
-                    width: px2vw(88, $m);
+                    width: px(88);
                 }
 
                 span {
-                    width: px2vw(60, $m);
-                    height: px2vw(56, $m);
-                    margin-top: px2vw(26, $m);
-                    font-size: px2vw(28, $m);
+                    width: px(60);
+                    height: px(56);
+                    margin-top: px(26);
+                    font-size: px(28);
 
                     &::before {
-                        top: px2vw(-10, $m);
+                        top: px(-10);
                         left: 50%;
-                        width: px2vw(14, $m);
-                        height: px2vw(14, $m);
-                        margin-left: px2vw(-8, $m);
-                        border-radius: 0 px2vw(2, $m) 0 0;
+                        width: px(14);
+                        height: px(14);
+                        margin-left: px(-8);
+                        border-radius: 0 px(2) 0 0;
                     }
                 }
 
                 &:nth-child(2) {
                     &::after {
-                        bottom: px2vw(-40, $m);
+                        bottom: px(-40);
                     }
                 }
             }

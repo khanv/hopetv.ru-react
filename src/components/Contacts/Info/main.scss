@@ -1,5 +1,6 @@
 .infoComponent {
-    @import 'theme/mixins/px2vw-media';
+    @import 'theme/MediaQueries';
+    @import 'theme/PxFunction';
     @import 'variables';
     @import 'MediaQueries/all';
 }

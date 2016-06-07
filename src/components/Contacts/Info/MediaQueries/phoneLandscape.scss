@@ -1,261 +1,255 @@
-@import 'theme/MediaQueries';
+@import '../mobile';
 
-@media #{$phoneLandscape} {
-    $m: phoneLandscape;
+section::after {
+    width: 100%;
+    margin-top: px(100);
+}
 
-    @import '../mobile';
+.live {
+    align-items: center;
 
-    section::after {
-        width: 100%;
-        margin-top: px2vw(100, $m);
+    header {
+        flex-direction: row-reverse;
+        justify-content: center;
+
+        i {
+            margin-right: px(114);
+        }
+
+        h1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: px(472);
+            margin-top: px(48);
+            margin-right: px(178);
+            margin-left: 0;
+
+            &::after {
+                width: px(6);
+                height: px(60);
+                margin-top: 0;
+                margin-right: 0;
+            }
+        }
     }
 
-    .live {
-        align-items: center;
+    div {
+        flex-direction: row;
 
-        header {
+        p {
+            text-align: right;
+        }
+    }
+
+    .chat {
+        margin-top: px(20);
+
+        a {
+            margin-right: px(38);
+            margin-left: px(80);
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .call {
+        a {
+            margin-top: px(38);
+            margin-right: px(38);
+            margin-left: px(80);
+        }
+
+        p {
+            margin-top: px(38);
+        }
+    }
+}
+
+.contacts {
+    &::after {
+        margin-top: px(98);
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: center;
+
+        h1 {
+            display: flex;
             flex-direction: row-reverse;
-            justify-content: center;
+            align-items: center;
+            width: px(386);
+            margin-top: px(74);
+            margin-right: px(154);
+            margin-left: px(100);
 
-            i {
-                margin-right: px2vw(114, $m);
+            &::after {
+                width: px(6);
+                height: px(60);
+                margin-top: 0;
+                margin-left: 0;
+            }
+        }
+
+        i {
+            margin-top: px(80);
+        }
+    }
+
+    .phone {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: px(68);
+        margin-right: px(132);
+
+        span {
+            width: max-content;
+        }
+
+        .row {
+            margin-top: px(8);
+
+            span {
+                margin-left: px(54);
+
+                &::before {
+                    left: px(-30);
+                }
             }
 
-            h1 {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                width: px2vw(472, $m);
-                margin-top: px2vw(48, $m);
-                margin-right: px2vw(178, $m);
-                margin-left: 0;
+            i {
+                margin-top: px(-2);
+            }
+        }
 
-                &::after {
-                    width: px2vw(6, $m);
-                    height: px2vw(60, $m);
-                    margin-top: 0;
-                    margin-right: 0;
+        div {
+            margin-right: px(74);
+
+            p {
+                width: max-content;
+                margin-top: 0;
+                margin-left: 0;
+                text-transform: lowercase;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .skype {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: px(66);
+        margin-right: px(142);
+        margin-bottom: 0;
+
+        .row {
+            margin-top: px(8);
+
+            a {
+                margin-left: px(52);
+
+                &::before {
+                    left: px(-28);
                 }
             }
         }
 
         div {
-            flex-direction: row;
+            margin-right: px(82);
 
             p {
-                text-align: right;
-            }
-        }
-
-        .chat {
-            margin-top: px2vw(20, $m);
-
-            a {
-                margin-right: px2vw(38, $m);
-                margin-left: px2vw(80, $m);
-            }
-
-            &::after {
-                display: none;
-            }
-        }
-
-        .call {
-            a {
-                margin-top: px2vw(38, $m);
-                margin-right: px2vw(38, $m);
-                margin-left: px2vw(80, $m);
-            }
-
-            p {
-                margin-top: px2vw(38, $m);
-            }
-        }
-    }
-
-    .contacts {
-        &::after {
-            margin-top: px2vw(98, $m);
-        }
-
-        header {
-            flex-direction: row;
-            justify-content: center;
-
-            h1 {
-                display: flex;
-                flex-direction: row-reverse;
-                align-items: center;
-                width: px2vw(386, $m);
-                margin-top: px2vw(74, $m);
-                margin-right: px2vw(154, $m);
-                margin-left: px2vw(100, $m);
-
-                &::after {
-                    width: px2vw(6, $m);
-                    height: px2vw(60, $m);
-                    margin-top: 0;
-                    margin-left: 0;
-                }
-            }
-
-            i {
-                margin-top: px2vw(80, $m);
-            }
-        }
-
-        .phone {
-            flex-direction: row-reverse;
-            align-items: center;
-            margin-top: px2vw(68, $m);
-            margin-right: px2vw(132, $m);
-
-            span {
                 width: max-content;
-            }
-
-            .row {
-                margin-top: px2vw(8, $m);
+                margin-top: px(6);
+                margin-left: 0;
+                text-transform: lowercase;
 
                 span {
-                    margin-left: px2vw(54, $m);
-
-                    &::before {
-                        left: px2vw(-30, $m);
-                    }
-                }
-
-                i {
-                    margin-top: px2vw(-2, $m);
-                }
-            }
-
-            div {
-                margin-right: px2vw(74, $m);
-
-                p {
-                    width: max-content;
-                    margin-top: 0;
-                    margin-left: 0;
-                    text-transform: lowercase;
-
-                    span {
-                        display: none;
-                    }
-                }
-            }
-        }
-
-        .skype {
-            flex-direction: row-reverse;
-            align-items: center;
-            margin-top: px2vw(66, $m);
-            margin-right: px2vw(142, $m);
-            margin-bottom: 0;
-
-            .row {
-                margin-top: px2vw(8, $m);
-
-                a {
-                    margin-left: px2vw(52, $m);
-
-                    &::before {
-                        left: px2vw(-28, $m);
-                    }
-                }
-            }
-
-            div {
-                margin-right: px2vw(82, $m);
-
-                p {
-                    width: max-content;
-                    margin-top: px2vw(6, $m);
-                    margin-left: 0;
-                    text-transform: lowercase;
-
-                    span {
-                        display: none;
-                    }
-                }
-            }
-        }
-
-        .mail {
-            flex-direction: row-reverse;
-            align-items: center;
-            margin-top: px2vw(64, $m);
-            margin-right: px2vw(82, $m);
-
-            .row {
-                margin-top: px2vw(4, $m);
-                margin-left: 0;
-
-                a {
-                    margin-left: px2vw(54, $m);
-
-                    &::before {
-                        left: px2vw(-28, $m);
-                    }
-                }
-            }
-
-            div {
-                width: max-content;
-                margin-right: px2vw(38, $m);
-                margin-left: 0;
-
-                p {
-                    width: max-content;
-                    margin-top: px2vw(6, $m);
-                    text-transform: lowercase;
-
-                    span {
-                        display: none;
-                    }
+                    display: none;
                 }
             }
         }
     }
 
-    .social {
-        header {
-            flex-direction: row-reverse;
-            justify-content: center;
+    .mail {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: px(64);
+        margin-right: px(82);
 
-            i {
-                margin-top: px2vw(56, $m);
-                margin-right: px2vw(104, $m);
-            }
+        .row {
+            margin-top: px(4);
+            margin-left: 0;
 
-            h1 {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                width: px2vw(462, $m);
-                margin-top: px2vw(58, $m);
-                margin-right: px2vw(180, $m);
-                margin-left: 0;
+            a {
+                margin-left: px(54);
 
-                &::after {
-                    width: px2vw(6, $m);
-                    height: px2vw(60, $m);
-                    margin-top: 0;
-                    margin-right: 0;
+                &::before {
+                    left: px(-28);
                 }
             }
         }
 
-        .list {
-            width: px2vw(982, $m);
+        div {
+            width: max-content;
+            margin-right: px(38);
+            margin-left: 0;
 
-            .item {
-                flex-basis: auto;
+            p {
+                width: max-content;
+                margin-top: px(6);
+                text-transform: lowercase;
 
-                &:nth-child(2) {
-                    &::after {
-                        display: none;
-                    }
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.social {
+    header {
+        flex-direction: row-reverse;
+        justify-content: center;
+
+        i {
+            margin-top: px(56);
+            margin-right: px(104);
+        }
+
+        h1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: px(462);
+            margin-top: px(58);
+            margin-right: px(180);
+            margin-left: 0;
+
+            &::after {
+                width: px(6);
+                height: px(60);
+                margin-top: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .list {
+        width: px(982);
+
+        .item {
+            flex-basis: auto;
+
+            &:nth-child(2) {
+                &::after {
+                    display: none;
                 }
             }
         }
