@@ -1,6 +1,7 @@
 @function px($px) {
     @return pxMedia($px, phonePortrait)
 }
+
 @media #{$phonePortrait} {
     @import 'phonePortrait';
 }
@@ -8,6 +9,7 @@
 @function px($px) {
     @return pxMedia($px, phoneLandscape)
 }
+
 @media #{$phoneLandscape} {
     @import 'phoneLandscape';
 }
@@ -15,6 +17,7 @@
 @function px($px) {
     @return pxMedia($px, tabletPortrait)
 }
+
 @media #{$tabletPortrait} {
     @import 'tabletPortrait';
 }
@@ -22,6 +25,7 @@
 @function px($px) {
     @return pxMedia($px, tabletLandscape)
 }
+
 @media #{$tabletLandscape} {
     @import 'tabletLandscape';
 }
@@ -29,6 +33,7 @@
 @function px($px) {
     @return pxMedia($px, desktop)
 }
+
 @media #{$desktop} {
     @import 'desktop';
 }
@@ -36,6 +41,7 @@
 @function px($px) {
     @return pxMedia($px, desktopWide)
 }
+
 @media #{$desktopWide} {
     @import 'desktopWide';
 }
@@ -43,6 +49,7 @@
 @function px($px) {
     @return pxMedia($px, desktopHD)
 }
+
 @media #{$desktopHD} {
     @import 'desktopHD';
 }
@@ -50,6 +57,7 @@
 @function px($px) {
     @return pxMedia($px, desktopMega)
 }
+
 @media #{$desktopMega} {
     @import 'desktopMega';
 }
