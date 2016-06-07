@@ -1,0 +1,66 @@
+@import 'theme/MediaQueries';
+
+@media #{$phoneLandscape} {
+    $m: phoneLandscape;
+
+    @import '../mobile';
+
+    & {
+        flex-direction: row;
+        height: px2vw(490, $m);
+        background-color: #fff;
+
+        div {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: px2vw(490, $m);
+            margin-top: px2vw(80, $m);
+
+            &:nth-child(2n+1){
+                background: none;
+            }
+
+            i {
+                margin-right: 0;
+            }
+
+            p {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: auto;
+                margin-right: 0;
+
+                &::before {
+                    position: static;
+                    width: px2vw(60, $m);
+                    height: px2vw(6, $m);
+                    margin-top: px2vw(50, $m);
+                    margin-left: 0;
+                    margin-bottom: px2vw(44, $m);
+                }
+
+                b {
+                    margin-top: px2vw(8, $m);
+                    font-size: px2vw(36, $m);
+                }
+            }
+        }
+
+        .signLanguage {
+            order: 1;
+            margin-left: px2vw(88, $m);
+            margin-right: px2vw(74, $m);
+        }
+
+        .live {
+            order: 2;
+            margin-right: px2vw(54, $m);
+        }
+
+        .uk {
+            order: 3;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import 'theme/MediaQueries';
+
+@media #{$tabletPortrait} {
+    $m: tabletPortrait;
+
+    @import '../desktop';
+
+    height: px2vw(516, $m);
+
+    div {
+        i {
+            width: px2vw(188, $m);
+        }
+
+        p {
+            font-size: px2vw(32, $m);
+
+            b {
+                margin-top: px2vw(8, $m);
+                font-size: px2vw(42, $m);
+            }
+
+            &::before {
+                width: px2vw(66, $m);
+                margin-top: px2vw(50, $m);
+                margin-bottom: px2vw(46, $m);
+            }
+        }
+    }
+
+    .signLanguage {
+        order: 1;
+        margin-left: px2vw(102, $m);
+        margin-right: px2vw(140, $m);
+    }
+
+    .live {
+        order: 3;
+    }
+
+    .uk {
+        order: 2;
+        margin-right: px2vw(178, $m);
+    }
+}
