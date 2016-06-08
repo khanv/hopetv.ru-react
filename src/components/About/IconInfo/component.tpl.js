@@ -53,4 +53,3 @@ export default function IconInfo(props) {
 IconInfo.propTypes = {
     mediaType: PropTypes.string.isRequired
 };
-// <p dangerouslySetInnerHTML={ { __html: liveText } }/>
