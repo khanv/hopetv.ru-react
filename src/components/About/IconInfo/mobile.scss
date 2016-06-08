@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: px(288);
+
+        &:nth-child(2n+1) {
+            background-color: $color2;
+        }
+
+        i {
+            flex-shrink: 0;
+            width: px(168);
+            margin-right: px(92);
+        }
+
+        p {
+            position: relative;
+            width: px(200);
+            margin-right: px(8);
+            color: $color1;
+            font-size: px(30);
+            line-height: px(28);
+
+            b {
+                display: block;
+                margin-top: px(12);
+                font-size: px(38);
+                line-height: px(36);
+            }
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: px(-48);
+                width: px(6);
+                height: px(60);
+                margin-top: px(-30);
+                border-radius: 2px;
+                background-color: $color3;
+                content: '';
+            }
+        }
+    }
+}

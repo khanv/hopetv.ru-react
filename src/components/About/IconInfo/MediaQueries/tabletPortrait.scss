@@ -1,0 +1,41 @@
+@import '../desktop';
+
+.container {
+    padding-bottom: px(78);
+
+    div {
+        i {
+            width: px(188);
+        }
+
+        p {
+            font-size: px(32);
+
+            b {
+                margin-top: px(8);
+                font-size: px(42);
+            }
+
+            &::before {
+                width: px(66);
+                margin-top: px(50);
+                margin-bottom: px(46);
+            }
+        }
+    }
+
+    .signLanguage {
+        order: 1;
+        margin-right: px(140);
+        margin-left: px(102);
+    }
+
+    .live {
+        order: 3;
+    }
+
+    .uk {
+        order: 2;
+        margin-right: px(190);
+    }
+}
