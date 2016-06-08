@@ -1,156 +1,150 @@
-@import 'theme/MediaQueries';
+@import '../desktop';
 
-@media #{$tabletPortrait} {
-    $m: tabletPortrait;
-
-    @import '../desktop';
-
-    .why {
-        header {
-            i {
-                width: px2vw(166, $m);
-                margin-top: px2vw(100, $m);
-                margin-right: px2vw(2, $m);
-                margin-left: 0;
-            }
-
-            h1 {
-                margin-top: px2vw(56, $m);
-                font-size: px2vw(50, $m);
-
-                &::after {
-                    width: px2vw(66, $m);
-                    margin-top: px2vw(62, $m);
-                }
-            }
+.why {
+    header {
+        i {
+            width: px(166);
+            margin-top: px(100);
+            margin-right: px(2);
+            margin-left: 0;
         }
 
-        .arguments {
-            width: px2vw(1300, $m);
-            margin-top: px2vw(60, $m);
-            padding-right: px2vw(54, $m);
+        h1 {
+            margin-top: px(56);
+            font-size: px(50);
 
-            div {
-                i {
-                    width: px2vw(120, $m);
-                    margin-left: px2vw(4, $m);
-                }
-
-                .label {
-                    width: px2vw(66, $m);
-                    height: px2vw(38, $m);
-                    margin-top: px2vw(-82, $m);
-                    margin-left: px2vw(-42, $m);
-                    padding-top: px2vw(2, $m);
-                    font-size: px2vw(24, $m);
-                }
-
-                .text {
-                    margin-left: px2vw(-20, $m);
-                    font-size: px2vw(40, $m);
-                }
-            }
-
-            .violence {
-                margin-right: px2vw(12, $m);
-                margin-left: 0;
-
-                .label {
-                    margin-left: px2vw(-38, $m);
-                }
-
-                .text {
-                    margin-left: px2vw(-26, $m);
-                }
-            }
-
-            .advert {
-                i {
-                    margin-left: px2vw(-38, $m);
-                }
+            &::after {
+                width: px(66);
+                margin-top: px(62);
             }
         }
     }
 
-    .aroundTheClock {
-        header {
-            margin-top: px2vw(60, $m);
+    .arguments {
+        width: px(1300);
+        margin-top: px(60);
+        padding-right: px(54);
 
-            span {
-                width: px2vw(190, $m);
-                height: px2vw(190, $m);
-                font-size: px2vw(42, $m);
-
-                &::before {
-                    left: px2vw(-650, $m);
-                    width: px2vw(580, $m);
-                    height: px2vw(6, $m);
-                }
-
-                &::after {
-                    right: px2vw(-650, $m);
-                    width: px2vw(580, $m);
-                    height: px2vw(6, $m);
-                }
+        div {
+            i {
+                width: px(120);
+                margin-left: px(4);
             }
 
-            h1 {
-                margin-top: px2vw(58, $m);
-                font-size: px2vw(46, $m);
+            .label {
+                width: px(66);
+                height: px(38);
+                margin-top: px(-82);
+                margin-left: px(-42);
+                padding-top: px(2);
+                font-size: px(24);
             }
 
-            h2 {
-                font-size: px2vw(40, $m);
+            .text {
+                margin-left: px(-20);
+                font-size: px(40);
             }
         }
 
-        ul {
-            margin-top: px2vw(58, $m);
-            padding-right: px2vw(24, $m);
+        .violence {
+            margin-right: px(12);
+            margin-left: 0;
 
-            li {
-                div {
-                    font-size: px2vw(32, $m);
-                    line-height: px2vw(36, $m);
-                }
-
-                i {
-                    width: px2vw(52, $m);
-                    margin-top: px2vw(2, $m);
-                }
+            .label {
+                margin-left: px(-38);
             }
+
+            .text {
+                margin-left: px(-26);
+            }
+        }
+
+        .advert {
+            i {
+                margin-left: px(-38);
+            }
+        }
+    }
+}
+
+.aroundTheClock {
+    header {
+        margin-top: px(60);
+
+        span {
+            width: px(190);
+            height: px(190);
+            font-size: px(42);
 
             &::before {
-                width: px2vw(240, $m);
-                height: px2vw(258, $m);
+                left: px(-650);
+                width: px(580);
+                height: px(6);
             }
 
-            .everydaySpeech {
-                margin-top: px2vw(30, $m);
-                margin-right: px2vw(80, $m);
-                margin-bottom: px2vw(60, $m);
+            &::after {
+                right: px(-650);
+                width: px(580);
+                height: px(6);
+            }
+        }
+
+        h1 {
+            margin-top: px(58);
+            font-size: px(46);
+        }
+
+        h2 {
+            font-size: px(40);
+        }
+    }
+
+    ul {
+        margin-top: px(58);
+        padding-right: px(24);
+
+        li {
+            div {
+                font-size: px(32);
+                line-height: px(36);
             }
 
-            .varietyPrograms {
-                margin-right: px2vw(80, $m);
+            i {
+                width: px(52);
+                margin-top: px(2);
             }
+        }
 
-            .interactiveCommunication {
-                margin-top: px2vw(30, $m);
-                margin-bottom: px2vw(60, $m);
-                margin-left: px2vw(80, $m);
+        &::before {
+            width: px(240);
+            height: px(258);
+        }
 
-                i {
-                    margin-right: px2vw(42, $m);
-                }
+        .everydaySpeech {
+            margin-top: px(30);
+            margin-right: px(80);
+            margin-bottom: px(60);
+        }
+
+        .varietyPrograms {
+            margin-right: px(80);
+        }
+
+        .interactiveCommunication {
+            margin-top: px(30);
+            margin-bottom: px(60);
+            margin-left: px(80);
+
+            i {
+                margin-right: px(42);
             }
+        }
 
-            .holisticChristianity {
-                margin-left: px2vw(80, $m);
+        .holisticChristianity {
+            margin-left: px(80);
 
-                i {
-                    margin-right: px2vw(42, $m);
-                }
+            i {
+                margin-right: px(42);
             }
         }
     }

@@ -9,7 +9,7 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 import InlineSvg from 'components/InlineSvg/component';
 import Styles from './main.scss';
 
-import SvgCloseIcon from 'theme/components/Locator/Images/closeListIcon.svg';
+import SvgCloseIcon from 'components/WatchUs/Locator/Assets/closeListIcon.svg';
 
 import {
     region as selectRegion,
@@ -220,7 +220,7 @@ export default class Locator extends Component {
             // };
 
             return (
-                <section className={ Styles.locator }>
+                <section className={ Styles.locatorComponent }>
                     <header>
                         { backButton }
                         <h1>{ title }</h1>
@@ -351,7 +351,7 @@ export default class Locator extends Component {
         ) : null;
 
         return (
-            <section className={ Styles.locator }>
+            <section className={ Styles.locatorComponent }>
                 <section className={ Styles.map }>
                     <Country regions={ regions } selectRegion={ fullRegion } state={ state }/>
                     <div className={ Styles.hint }>

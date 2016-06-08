@@ -4,11 +4,11 @@ import Grids from 'theme/Grid.scss';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 import InlineSvg from 'components/InlineSvg/component';
 
-import SvgHope from 'theme/components/About/Why/hope.svg';
-import SvgAdvert from 'theme/components/About/Why/why_advert.svg';
-import SvgPolitics from 'theme/components/About/Why/why_politics.svg';
-import SvgViolence from 'theme/components/About/Why/why_violence.svg';
-import SvgCheck from 'theme/components/About/Why/checkCircle.svg';
+import SvgHope from 'components/About/Why/Assets/hope.svg';
+import SvgAdvert from 'components/About/Why/Assets/why_advert.svg';
+import SvgPolitics from 'components/About/Why/Assets/why_politics.svg';
+import SvgViolence from 'components/About/Why/Assets/why_violence.svg';
+import SvgCheck from 'components/About/Why/Assets/checkCircle.svg';
 
 export default function Why(props) {
     const { mediaType, t } =  props;

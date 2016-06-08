@@ -1,27 +1,21 @@
-@import 'theme/MediaQueries';
+@import '../mobile';
 
-@media #{$phoneLandscape} {
-    $m: phoneLandscape;
+& {
+    padding-bottom: px(60);
 
-    @import '../mobile';
-
-    & {
-        padding-bottom: px2vw(60, $m);
-
-        header {
-            h2 {
-                margin-top: px2vw(8, $m);
-            }
+    header {
+        h2 {
+            margin-top: px(8);
         }
+    }
 
-        p {
-            width: px2vw(700, $m);
-        }
+    p {
+        width: px(700);
+    }
 
-        div {
-            height: px2vw(576, $m);
-            background-size: 100%;
-            background-position-y: 0;
-        }
+    div {
+        height: px(576);
+        background-size: 100%;
+        background-position-y: 0;
     }
 }

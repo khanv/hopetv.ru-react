@@ -1,26 +1,20 @@
-@import 'theme/MediaQueries';
+@import '../desktop';
 
-@media #{$tabletPortrait} {
-    $m: tabletPortrait;
+& {
+    padding-top: px(110);
 
-    @import '../desktop';
+    .container {
+        height: px(604);
 
-    & {
-        padding-top: px2vw(110, $m);
+        &::before {
+            height: px(604);
+        }
 
-        .container {
-            height: px2vw(604, $m);
-
-            &::before {
-                height: px2vw(604, $m);
-            }
-
-            h1 {
-                top: px2vw(268, $m);
-                width: px2vw(1200, $m);
-                margin-left: px2vw(-600, $m);
-                font-size: px2vw(42, $m);
-            }
+        h1 {
+            top: px(268);
+            width: px(1200);
+            margin-left: px(-600);
+            font-size: px(42);
         }
     }
 }

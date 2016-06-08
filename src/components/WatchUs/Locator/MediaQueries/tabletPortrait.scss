@@ -1,156 +1,150 @@
-@import 'theme/MediaQueries';
+@import '../desktop';
 
-@media #{$tabletPortrait} {
-    $m: tabletPortrait;
+.map {
+    width: px(1436);
+}
 
-    @import '../desktop';
+.region {
+    position: fixed;
+    top: 0;
+    max-height: 85vh;
+    overflow-y: scroll;
 
-    .map {
-        width: px2vw(1436, $m);
+    header {
+        margin-top: px(90);
+        padding-right: px(100);
+
+        h1 {
+            margin-top: px(16);
+            font-size: px(52);
+        }
+
+        .close {
+            width: px(92);
+            height: px(92);
+        }
     }
 
-    .region {
-        position: fixed;
-        top: 0;
-        max-height: 85vh;
-        overflow-y: scroll;
+    .head {
+        margin-top: px(120);
+        padding-left: px(96);
 
-        header {
-            margin-top: px2vw(90, $m);
-            padding-right: px2vw(100, $m);
+        .cities {
+            width: px(570);
+            font-size: px(34);
 
-            h1 {
-                margin-top: px2vw(16, $m);
-                font-size: px2vw(52, $m);
+            &::before {
+                width: px(74);
+                height: px(60);
+                margin-right: px(47);
             }
 
-            .close {
-                width: px2vw(92, $m);
-                height: px2vw(92, $m);
-            }
-        }
-
-        .head {
-            margin-top: px2vw(120, $m);
-            padding-left: px2vw(96, $m);
-
-            .cities {
-                width: px2vw(570, $m);
-                font-size: px2vw(34, $m);
-
-                &::before {
-                    width: px2vw(74, $m);
-                    height: px2vw(60, $m);
-                    margin-right: px2vw(47, $m);
-                }
-
-                &::after {
-                    width: px2vw(243, $m);
-                    margin-left: px2vw(50, $m);
-                }
-            }
-
-            .operators {
-                font-size: px2vw(34, $m);
-
-                &::before {
-                    width: px2vw(54, $m);
-                    height: px2vw(50, $m);
-                    margin-right: px2vw(47, $m);
-                }
-
-                &::after {
-                    width: px2vw(280, $m);
-                    margin-left: px2vw(44, $m);
-                }
+            &::after {
+                width: px(243);
+                margin-left: px(50);
             }
         }
 
-        .content {
-            .cities {
-                width: px2vw(515, $m);
-                margin-top: px2vw(56, $m);
-                padding-left: px2vw(71, $m);
+        .operators {
+            font-size: px(34);
 
-                li {
-                    padding-top: px2vw(50, $m);
-                    padding-bottom: px2vw(50, $m);
-                    padding-left: px2vw(46, $m);
-                    font-size: px2vw(34, $m);
+            &::before {
+                width: px(54);
+                height: px(50);
+                margin-right: px(47);
+            }
 
-                    &:first-child {
-                        &::after {
-                            top: px2vw(-28, $m);
-                            height: px2vw(163, $m);
-                        }
-                    }
+            &::after {
+                width: px(280);
+                margin-left: px(44);
+            }
+        }
+    }
 
-                    &:last-child {
-                        &::after {
-                            height: px2vw(152, $m);
-                        }
-                    }
+    .content {
+        .cities {
+            width: px(515);
+            margin-top: px(56);
+            padding-left: px(71);
 
+            li {
+                padding-top: px(50);
+                padding-bottom: px(50);
+                padding-left: px(46);
+                font-size: px(34);
+
+                &:first-child {
                     &::after {
-                        right: px2vw(-76, $m);
-                    }
-
-                    &.selected {
-                        width: px2vw(526, $m);
-                        padding-top: px2vw(50, $m);
-                        padding-bottom: px2vw(48, $m);
-                        padding-left: px2vw(48, $m);
+                        top: px(-28);
+                        height: px(163);
                     }
                 }
+
+                &:last-child {
+                    &::after {
+                        height: px(152);
+                    }
+                }
+
+                &::after {
+                    right: px(-76);
+                }
+
+                &.selected {
+                    width: px(526);
+                    padding-top: px(50);
+                    padding-bottom: px(48);
+                    padding-left: px(48);
+                }
             }
+        }
 
-            .operators {
-                width: px2vw(748, $m);
-                margin-left: px2vw(74, $m);
-                padding-top: px2vw(110, $m);
-                padding-left: px2vw(76, $m);
+        .operators {
+            width: px(748);
+            margin-left: px(74);
+            padding-top: px(110);
+            padding-left: px(76);
 
-                li {
-                    margin-bottom: px2vw(100, $m);
-                    font-size: px2vw(34, $m);
+            li {
+                margin-bottom: px(100);
+                font-size: px(34);
 
-                    &.selected {
-                        margin-bottom: px2vw(68, $m);
+                &.selected {
+                    margin-bottom: px(68);
 
-                        .contacts {
-                            width: px2vw(654, $m);
-                            margin-top: px2vw(64, $m);
+                    .contacts {
+                        width: px(654);
+                        margin-top: px(64);
 
-                            ul {
-                                padding-left: px2vw(100, $m);
+                        ul {
+                            padding-left: px(100);
 
-                                &::before {
-                                    left: px2vw(34, $m);
-                                    width: px2vw(42, $m);
-                                    height: px2vw(42, $m);
-                                }
-
-                                li {
-                                    margin-bottom: px2vw(28, $m);
-                                }
+                            &::before {
+                                left: px(34);
+                                width: px(42);
+                                height: px(42);
                             }
 
-                            a {
-                                margin-bottom: px2vw(32, $m);
-                                margin-left: px2vw(32, $m);
-                                padding-left: px2vw(70, $m);
-                                font-size: px2vw(34, $m);
+                            li {
+                                margin-bottom: px(28);
+                            }
+                        }
 
-                                &::before {
-                                    top: px2vw(6, $m);
-                                    left: px2vw(4, $m);
-                                    width: px2vw(42, $m);
-                                    height: px2vw(42, $m);
-                                }
+                        a {
+                            margin-bottom: px(32);
+                            margin-left: px(32);
+                            padding-left: px(70);
+                            font-size: px(34);
 
-                                &::after {
-                                    font-size: px2vw(34, $m);
-                                }
+                            &::before {
+                                top: px(6);
+                                left: px(4);
+                                width: px(42);
+                                height: px(42);
+                            }
+
+                            &::after {
+                                font-size: px(34);
                             }
                         }
                     }

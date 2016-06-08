@@ -1,18 +1,18 @@
 & {
     position: relative;
-    padding-top: px2vw(76, $m);
+    padding-top: px(76);
 
     .container {
         position: relative;
         width: 100vw;
-        height: px2vw(396, $m);
+        height: px(396);
         overflow: hidden;
         z-index: 3;
 
         &::before {
             position: absolute;
             width: 100%;
-            height: px2vw(396, $m);
+            height: px(396);
             background-color: $color1;
             content: '';
             opacity: .8;
@@ -21,13 +21,13 @@
 
         h1 {
             position: absolute;
-            top: px2vw(130, $m);
+            top: px(130);
             left: 50%;
-            width: px2vw(518, $m);
-            margin-left: px2vw(-259, $m);
+            width: px(518);
+            margin-left: px(-259);
             color: $color2;
-            font-size: px2vw(38, $m);
-            line-height: px2vw(44, $m);
+            font-size: px(38);
+            line-height: px(44);
             text-align: center;
             z-index: 1;
 
@@ -40,7 +40,7 @@
         .poster {
             position: relative;
             width: 100%;
-            height: px2vw(396, $m);
+            height: px(396);
             background: url($componentRoot + 'banner.jpg') no-repeat;
             background-size: cover;
         }
@@ -48,10 +48,10 @@
 
     &::after {
         position: absolute;
-        bottom: px2vw(-10, $m);
+        bottom: px(-10);
         width: 100%;
-        height: px2vw(10, $m);
-        background-color: $color4;
+        height: px(10);
+        background-color: $color3;
         content: '';
         z-index: 2;
     }

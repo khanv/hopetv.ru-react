@@ -1,7 +1,1 @@
-@import 'theme/MediaQueries';
-
-@media #{$phoneLandscape} {
-    $m: phoneLandscape;
-
-    @import '../mobile';
-}
+@import '../mobile';

@@ -1,7 +1,1 @@
-@import 'theme/MediaQueries';
-
-@media #{$desktopMega} {
-    $m: desktopMega;
-
-    @import '../desktop';
-}
+@import '../desktop';

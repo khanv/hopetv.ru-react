@@ -1,7 +1,1 @@
-@import 'theme/MediaQueries';
-
-@media #{$desktopHD} {
-    $m: desktopHD;
-
-    @import '../desktop';
-}
+@import '../desktop';

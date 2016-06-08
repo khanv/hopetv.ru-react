@@ -1,31 +1,25 @@
-@import 'theme/MediaQueries';
+@import '../mobile';
 
-@media #{$phoneLandscape} {
-    $m: phoneLandscape;
+header {
+    padding: 0 px(58) 0 px(60);
+}
 
-    @import '../mobile';
+.listItems {
+    padding-left: px(60);
 
-    header {
-        padding: 0 px2vw(58, $m) 0 px2vw(60, $m);
-    }
-
-    .listItems {
-        padding-left: px2vw(60, $m);
-
-        >li {
-            .title {
-                &::after {
-                    top: px2vw(16, $m);
-                }
+    >li {
+        .title {
+            &::after {
+                top: px(16);
             }
         }
+    }
 
-        &.operators {
-            li {
-                &.opened {
-                    margin-left: px2vw(-60, $m);
-                    padding-left: px2vw(60, $m);
-                }
+    &.operators {
+        li {
+            &.opened {
+                margin-left: px(-60);
+                padding-left: px(60);
             }
         }
     }

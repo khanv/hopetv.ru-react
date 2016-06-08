@@ -10,17 +10,17 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        height: px2vw(140, $m);
-        padding: 0 px2vw(42, $m) 0 px2vw(40, $m);
+        height: px(140);
+        padding: 0 px(42) 0 px(40);
         background-color: $color1;
 
         a:first-child {
             &::before {
                 display: block;
-                width: px2vw(23, $m);
-                height: px2vw(40, $m);
-                margin-right: px2vw(40, $m);
-                background: url($componentRoot + 'Images/arrowBackIcon-bg.svg') no-repeat;
+                width: px(23);
+                height: px(40);
+                margin-right: px(40);
+                background: url($componentRoot + 'arrowBackIcon-bg.svg') no-repeat;
                 content: '';
             }
         }
@@ -29,10 +29,10 @@
             display: block;
             flex-grow: 1;
             width: 100%;
-            margin-top: px2vw(-4, $m);
-            padding-right: px2vw(57, $m);
+            margin-top: px(-4);
+            padding-right: px(57);
             color: $color2;
-            font-size: px2vw(44, $m);
+            font-size: px(44);
             font-weight: bold;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -41,7 +41,7 @@
 
         a:last-child {
             i {
-                width: px2vw(41, $m);
+                width: px(41);
             }
         }
     }
@@ -54,7 +54,7 @@
         .listItems {
             flex-shrink: 0;
             width: 100%;
-            padding-left: px2vw(40, $m);
+            padding-left: px(40);
             background-color: $color3;
 
             // Forward Animations
@@ -98,29 +98,29 @@
             > li {
                 display: flex;
                 align-items: center;
-                height: px2vw(135, $m);
+                height: px(135);
                 border-bottom: 1px solid $color4;
 
                 .title {
                     display: flex;
                     position: relative;
                     width: 100%;
-                    padding: px2vw(12, $m) px2vw(54, $m) 0 px2vw(18, $m);
+                    padding: px(12) px(54) 0 px(18);
                     color: $color5;
-                    font-size: px2vw(34, $m);
+                    font-size: px(34);
                     font-weight: bold;
                     text-decoration: none;
 
                     span {
                         display: inline-block;
-                        min-width: px2vw(46, $m);
-                        margin-top: px2vw(-6, $m);
-                        margin-left: px2vw(24, $m);
-                        padding: px2vw(6, $m) px2vw(8, $m) px2vw(4, $m);
+                        min-width: px(46);
+                        margin-top: px(-6);
+                        margin-left: px(24);
+                        padding: px(6) px(8) px(4);
                         border: 1px solid $color6;
-                        border-radius: px2vw(24, $m);
+                        border-radius: px(24);
                         color: $color6;
-                        font-size: px2vw(30, $m);
+                        font-size: px(30);
                         font-weight: normal;
                         text-align: center;
                     }
@@ -128,24 +128,24 @@
                     &::after {
                         display: block;
                         position: absolute;
-                        top: px2vw(20, $m);
-                        right: px2vw(48, $m);
-                        width: px2vw(24, $m);
-                        height: px2vw(24, $m);
-                        background: url($componentRoot + 'Images/rightMenuIcon-bg.svg') no-repeat;
+                        top: px(20);
+                        right: px(48);
+                        width: px(24);
+                        height: px(24);
+                        background: url($componentRoot + 'rightMenuIcon-bg.svg') no-repeat;
                         content: '';
                     }
                 }
 
                 &.select {
-                    height: px2vw(133, $m);
-                    margin-left: px2vw(-40, $m);
-                    padding-left: px2vw(40, $m);
+                    height: px(133);
+                    margin-left: px(-40);
+                    padding-left: px(40);
                     border-bottom: 0;
                     background-color: $color7;
 
                     .title {
-                        margin-top: px2vw(-2, $m);
+                        margin-top: px(-2);
                         color: $color8;
 
                         span {
@@ -154,8 +154,8 @@
                         }
 
                         &::after {
-                            margin-top: px2vw(2, $m);
-                            background: url($componentRoot + 'Images/rightMenuIconSelect-bg.svg') no-repeat;
+                            margin-top: px(2);
+                            background: url($componentRoot + 'rightMenuIconSelect-bg.svg') no-repeat;
                             opacity: .5;
                         }
                     }
@@ -173,53 +173,53 @@
                     &.opened {
                         flex-wrap: wrap;
                         height: auto;
-                        margin-top: px2vw(-2, $m);
-                        margin-left: px2vw(-40, $m);
-                        padding-right: px2vw(40, $m);
-                        padding-left: px2vw(40, $m);
+                        margin-top: px(-2);
+                        margin-left: px(-40);
+                        padding-right: px(40);
+                        padding-left: px(40);
                         background-color: $color1;
 
                         .title {
-                            margin-top: px2vw(41, $m);
-                            padding-bottom: px2vw(44, $m);
+                            margin-top: px(41);
+                            padding-bottom: px(44);
                             color: $color8;
 
                             &::after {
-                                top: px2vw(6, $m);
-                                right: px2vw(8, $m);
+                                top: px(6);
+                                right: px(8);
                                 transform: rotate(270deg);
                             }
                         }
 
                         div {
                             width: 100%;
-                            min-height: px2vw(132, $m);
+                            min-height: px(132);
                             overflow: hidden;
 
                             ul {
                                 position: relative;
                                 width: 100%;
-                                padding-top: px2vw(54, $m);
-                                padding-bottom: px2vw(42, $m);
-                                padding-left: px2vw(74, $m);
+                                padding-top: px(54);
+                                padding-bottom: px(42);
+                                padding-left: px(74);
                                 border-top: 1px solid $color4;
                                 border-bottom: 1px solid $color4;
 
                                 &::before {
                                     display: block;
                                     position: absolute;
-                                    top: px2vw(50, $m);
-                                    left: px2vw(4, $m);
-                                    width: px2vw(40, $m);
-                                    height: px2vw(40, $m);
-                                    background: url($componentRoot + 'Images/phoneMenuIcon-bg.svg') no-repeat;
+                                    top: px(50);
+                                    left: px(4);
+                                    width: px(40);
+                                    height: px(40);
+                                    background: url($componentRoot + 'phoneMenuIcon-bg.svg') no-repeat;
                                     content: '';
                                 }
 
                                 li {
-                                    margin-bottom: px2vw(22, $m);
+                                    margin-bottom: px(22);
                                     color: $color8;
-                                    font-size: px2vw(34, $m);
+                                    font-size: px(34);
 
                                     &:last-child {
                                         margin-bottom: 0;
@@ -230,29 +230,29 @@
 
                         .website {
                             display: flex;
-                            margin-top: px2vw(48, $m);
-                            margin-bottom: px2vw(48, $m);
-                            margin-left: px2vw(4, $m);
+                            margin-top: px(48);
+                            margin-bottom: px(48);
+                            margin-left: px(4);
                             padding-top: 1px;
                             color: $color8;
-                            font-size: px2vw(34, $m);
+                            font-size: px(34);
                             text-decoration: none;
 
                             &::before {
                                 display: block;
-                                width: px2vw(40, $m);
-                                height: px2vw(40, $m);
-                                margin-top: px2vw(-4, $m);
-                                margin-right: px2vw(28, $m);
-                                background: url($componentRoot + 'Images/earthMenuIcon-bg.svg') no-repeat;
+                                width: px(40);
+                                height: px(40);
+                                margin-top: px(-4);
+                                margin-right: px(28);
+                                background: url($componentRoot + 'earthMenuIcon-bg.svg') no-repeat;
                                 content: '';
                             }
 
                             &::after {
-                                margin-top: px2vw(4, $m);
-                                margin-left: px2vw(22, $m);
+                                margin-top: px(4);
+                                margin-left: px(22);
                                 font-family: Arial;
-                                font-size: px2vw(26, $m);
+                                font-size: px(26);
                                 content: '→';
                             }
                         }
@@ -265,17 +265,17 @@
     footer {
         flex-grow: 0;
         width: 100%;
-        height: px2vw(236, $m);
-        padding-top: px2vw(80, $m);
+        height: px(236);
+        padding-top: px(80);
         background-color: $color3;
 
         &::after {
             display: block;
-            bottom: px2vw(74, $m);
-            width: px2vw(258, $m);
-            height: px2vw(80, $m);
+            bottom: px(74);
+            width: px(258);
+            height: px(80);
             margin: 0 auto;
-            background: url($componentRoot + 'Images/logo-bg.svg') no-repeat;
+            background: url($componentRoot + 'logo-bg.svg') no-repeat;
             content: '';
             opacity: .2;
         }

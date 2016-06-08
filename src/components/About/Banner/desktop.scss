@@ -1,11 +1,11 @@
 & {
     position: relative;
-    padding-top: px2vw(128, $m);
+    padding-top: px(128);
 
     .container {
         position: relative;
         width: 102vw;
-        height: px2vw(564, $m);
+        height: px(564);
         margin-left: -1vw;
         transform: rotate(-2.9deg);
         overflow: hidden;
@@ -14,7 +14,7 @@
         &::before {
             position: absolute;
             width: 100%;
-            height: px2vw(564, $m);
+            height: px(564);
             background-color: $color1;
             content: '';
             opacity: .8;
@@ -23,14 +23,14 @@
 
         h1 {
             position: absolute;
-            top: px2vw(242, $m);
+            top: px(242);
             left: 50%;
-            width: px2vw(1374, $m);
-            margin-left: px2vw(-687, $m);
+            width: px(1374);
+            margin-left: px(-687);
             transform: rotate(2.9deg);
             color: $color2;
-            font-size: px2vw(48, $m);
-            line-height: px2vw(54, $m);
+            font-size: px(48);
+            line-height: px(54);
             text-align: center;
             z-index: 1;
 
@@ -43,7 +43,7 @@
         .poster {
             position: relative;
             width: 100%;
-            height: px2vw(680, $m);
+            height: px(680);
             margin-top: -3vw;
             transform: rotate(2.9deg);
             background: url($componentRoot + 'banner.jpg') no-repeat;
@@ -53,11 +53,11 @@
 
     &::after {
         position: absolute;
-        bottom: px2vw(-18, $m);
+        bottom: px(-18);
         width: 100%;
-        height: px2vw(30, $m);
+        height: px(30);
         transform: rotate(-2.2deg);
-        background-color: $color4;
+        background-color: $color3;
         content: '';
         z-index: 2;
     }

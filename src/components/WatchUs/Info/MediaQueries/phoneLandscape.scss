@@ -1,228 +1,222 @@
-@import 'theme/MediaQueries';
+@import '../mobile';
 
-@media #{$phoneLandscape} {
-    $m: phoneLandscape;
-
-    @import '../mobile';
-
-    > section {
-        &::after {
-            order: 10;
-            width: px2vw(1126, $m);
-            margin: px2vw(45, $m) auto;
-        }
+> section {
+    &::after {
+        order: 10;
+        width: px(1126);
+        margin: px(45) auto;
     }
+}
 
-    .internet {
-        order: 2;
+.internet {
+    order: 2;
 
-        header {
-            flex-direction: inherit;
-            padding-left: px2vw(162, $m);
+    header {
+        flex-direction: inherit;
+        padding-left: px(162);
 
-            h1 {
-                display: flex;
-                flex-direction: row-reverse;
-                align-items: center;
-                width: px2vw(550, $m);
-                margin-top: px2vw(28, $m);
-                margin-left: px2vw(80, $m);
-
-                &::after {
-                    width: px2vw(6, $m);
-                    height: px2vw(60, $m);
-                    margin-top: 0;
-                    margin-left: 0;
-                }
-            }
-
-            i {
-                margin-top: px2vw(34, $m);
-            }
-        }
-
-        .searchUs {
-            margin-right: px2vw(38, $m);
-            margin-left: px2vw(86, $m);
-        }
-
-        .apps {
-            margin: px2vw(48, $m) px2vw(42, $m);
-
-            a {
-                margin-top: 0;
-            }
-        }
-
-        p {
-            margin-top: px2vw(76, $m);
-            margin-right: px2vw(28, $m);
-            text-align: right;
-        }
-
-        .watchOnline {
-            margin-top: px2vw(46, $m);
-            margin-right: px2vw(86, $m);
-            margin-left: px2vw(82, $m);
-        }
-
-        a {
-            margin: px2vw(16, $m) 0 0;
-        }
-
-        .btn {
-            margin-top: px2vw(36, $m);
-            margin-bottom: px2vw(52, $m);
-        }
-    }
-
-    .satellite {
-        order: 1;
-
-        header {
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-            padding-left: px2vw(64, $m);
-
-            h1 {
-                display: flex;
-                align-items: center;
-                margin: px2vw(50, $m) px2vw(190, $m) 0 0;
-
-                &::after {
-                    width: px2vw(6, $m);
-                    height: px2vw(60, $m);
-                    margin-top: 0;
-                    margin-left: px2vw(70, $m);
-                }
-            }
-
-            i {
-                margin-top: px2vw(58, $m);
-            }
-        }
-
-        ul {
+        h1 {
             display: flex;
-            flex-basis: 50%;
-            flex-wrap: wrap;
-            order: 3;
+            flex-direction: row-reverse;
+            align-items: center;
+            width: px(550);
+            margin-top: px(28);
+            margin-left: px(80);
 
-            li {
-                flex-basis: 50%;
-                flex-direction: column;
-                align-items: flex-start;
-                height: px2vw(62, $m);
-                margin-bottom: px2vw(48, $m);
-
-                span {
-                    &:nth-child(2) {
-                        margin-bottom: 1px;
-                    }
-                }
-            }
-
-            .itemChannel {
-                order: 1;
-            }
-
-            .itemSatellite {
-                order: 4;
-            }
-
-            .itemReceivingFrequency {
-                order: 5;
-            }
-
-            .itemPolarization {
-                order: 2;
-            }
-
-            .itemFlowRate {
-                order: 3;
+            &::after {
+                width: px(6);
+                height: px(60);
+                margin-top: 0;
+                margin-left: 0;
             }
         }
 
-        a {
-            margin: px2vw(56, $m) 0 0 px2vw(90, $m);
-        }
-
-        .tunerContainer {
-            flex-basis: 50%;
-
-            .tunerInfo {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-top: px2vw(40, $m);
-                padding-right: px2vw(8, $m);
-
-                i {
-                    width: px2vw(60, $m);
-                    transform: rotate(-90deg);
-
-                    path {
-                        fill: $arrowTuner;
-                    }
-                }
-
-                p {
-                    width: px2vw(370, $m);
-                    margin-top: px2vw(36, $m);
-                    color: $textTuner;
-                    font-size: px2vw(24, $m);
-                    font-style: italic;
-                    line-height: px2vw(28, $m);
-                    text-align: center;
-                }
-            }
+        i {
+            margin-top: px(34);
         }
     }
 
-    .cable {
+    .searchUs {
+        margin-right: px(38);
+        margin-left: px(86);
+    }
+
+    .apps {
+        margin: px(48) px(42);
+
+        a {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        margin-top: px(76);
+        margin-right: px(28);
+        text-align: right;
+    }
+
+    .watchOnline {
+        margin-top: px(46);
+        margin-right: px(86);
+        margin-left: px(82);
+    }
+
+    a {
+        margin: px(16) 0 0;
+    }
+
+    .btn {
+        margin-top: px(36);
+        margin-bottom: px(52);
+    }
+}
+
+.satellite {
+    order: 1;
+
+    header {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding-left: px(64);
+
+        h1 {
+            display: flex;
+            align-items: center;
+            margin: px(50) px(190) 0 0;
+
+            &::after {
+                width: px(6);
+                height: px(60);
+                margin-top: 0;
+                margin-left: px(70);
+            }
+        }
+
+        i {
+            margin-top: px(58);
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-basis: 50%;
+        flex-wrap: wrap;
         order: 3;
 
-        &::after {
-            display: none;
+        li {
+            flex-basis: 50%;
+            flex-direction: column;
+            align-items: flex-start;
+            height: px(62);
+            margin-bottom: px(48);
+
+            span {
+                &:nth-child(2) {
+                    margin-bottom: 1px;
+                }
+            }
         }
 
-        header {
+        .itemChannel {
+            order: 1;
+        }
+
+        .itemSatellite {
+            order: 4;
+        }
+
+        .itemReceivingFrequency {
+            order: 5;
+        }
+
+        .itemPolarization {
+            order: 2;
+        }
+
+        .itemFlowRate {
+            order: 3;
+        }
+    }
+
+    a {
+        margin: px(56) 0 0 px(90);
+    }
+
+    .tunerContainer {
+        flex-basis: 50%;
+
+        .tunerInfo {
             display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-            padding-left: px2vw(64, $m);
+            flex-direction: column;
+            align-items: center;
+            margin-top: px(40);
+            padding-right: px(8);
 
-            h1 {
-                display: flex;
-                align-items: center;
-                margin: px2vw(12, $m) 0 0 px2vw(62, $m);
+            i {
+                width: px(60);
+                transform: rotate(-90deg);
 
-                &::after {
-                    width: px2vw(6, $m);
-                    height: px2vw(60, $m);
-                    margin-top: 0;
-                    margin-left: px2vw(128, $m);
+                path {
+                    fill: $arrowTuner;
                 }
             }
 
-            i {
-                width: px2vw(132, $m);
-                margin-top: px2vw(10, $m);
-                margin-left: px2vw(198, $m);
+            p {
+                width: px(370);
+                margin-top: px(36);
+                color: $textTuner;
+                font-size: px(24);
+                font-style: italic;
+                line-height: px(28);
+                text-align: center;
+            }
+        }
+    }
+}
+
+.cable {
+    order: 3;
+
+    &::after {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding-left: px(64);
+
+        h1 {
+            display: flex;
+            align-items: center;
+            margin: px(12) 0 0 px(62);
+
+            &::after {
+                width: px(6);
+                height: px(60);
+                margin-top: 0;
+                margin-left: px(128);
             }
         }
 
-        p {
-            order: 4;
-            margin-top: px2vw(50, $m);
-            margin-right: px2vw(60, $m);
-            text-align: left;
+        i {
+            width: px(132);
+            margin-top: px(10);
+            margin-left: px(198);
         }
+    }
 
-        .btnSearch {
-            order: 3;
-            margin-top: px2vw(110, $m);
-            margin-left: px2vw(92, $m);
-        }
+    p {
+        order: 4;
+        margin-top: px(50);
+        margin-right: px(60);
+        text-align: left;
+    }
+
+    .btnSearch {
+        order: 3;
+        margin-top: px(110);
+        margin-left: px(92);
     }
 }
