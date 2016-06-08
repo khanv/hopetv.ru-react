@@ -1,48 +1,48 @@
-& {
+.container {
     display: flex;
     flex-direction: column;
 
     div {
         display: flex;
-        justify-content: center;
         align-items: center;
-        height: px2vw(288, $m);
+        justify-content: center;
+        height: px(288);
 
-        &:nth-child(2n+1){
-            background-color: #fff;
+        &:nth-child(2n+1) {
+            background-color: $color2;
         }
 
         i {
             flex-shrink: 0;
-            width: px2vw(168, $m);
-            margin-right: px2vw(92, $m);
+            width: px(168);
+            margin-right: px(92);
         }
 
         p {
             position: relative;
-            width: px2vw(200, $m);
-            margin-right: px2vw(8, $m);
-            color: #516569;
-            font-size: px2vw(30, $m);
-            line-height: px2vw(28, $m);
+            width: px(200);
+            margin-right: px(8);
+            color: $color1;
+            font-size: px(30);
+            line-height: px(28);
 
             b {
                 display: block;
-                margin-top: px2vw(12, $m);
-                font-size: px2vw(38, $m);
-                line-height: px2vw(36, $m);
+                margin-top: px(12);
+                font-size: px(38);
+                line-height: px(36);
             }
 
             &::before {
                 display: block;
                 position: absolute;
                 top: 50%;
-                left: px2vw(-48, $m);
-                margin-top: px2vw(-30, $m);
-                width: px2vw(6, $m);
-                height: px2vw(60, $m);
-                background-color: #facb0e;
+                left: px(-48);
+                width: px(6);
+                height: px(60);
+                margin-top: px(-30);
                 border-radius: 2px;
+                background-color: $color3;
                 content: '';
             }
         }

@@ -1,66 +1,61 @@
-@import 'theme/MediaQueries';
+@import '../mobile';
 
-@media #{$phoneLandscape} {
-    $m: phoneLandscape;
+.container {
+    flex-direction: row;
+    height: px(490);
+    background-color: $color2;
 
-    @import '../mobile';
+    div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: px(490);
+        margin-top: px(80);
 
-    & {
-        flex-direction: row;
-        height: px2vw(490, $m);
-        background-color: #fff;
+        &:nth-child(2n+1) {
+            background: none;
+        }
 
-        div {
+        i {
+            margin-right: 0;
+        }
+
+        p {
+            display: flex;
             flex-direction: column;
-            justify-content: flex-start;
             align-items: center;
-            height: px2vw(490, $m);
-            margin-top: px2vw(80, $m);
+            width: auto;
+            margin-right: 0;
 
-            &:nth-child(2n+1){
-                background: none;
+            &::before {
+                position: static;
+                width: px(60);
+                height: px(6);
+                margin-top: px(50);
+                margin-bottom: px(44);
+                margin-left: 0;
             }
 
-            i {
-                margin-right: 0;
+            b {
+                margin-top: px(8);
+                font-size: px(36);
             }
-
-            p {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: auto;
-                margin-right: 0;
-
-                &::before {
-                    position: static;
-                    width: px2vw(60, $m);
-                    height: px2vw(6, $m);
-                    margin-top: px2vw(50, $m);
-                    margin-left: 0;
-                    margin-bottom: px2vw(44, $m);
-                }
-
-                b {
-                    margin-top: px2vw(8, $m);
-                    font-size: px2vw(36, $m);
-                }
-            }
-        }
-
-        .signLanguage {
-            order: 1;
-            margin-left: px2vw(88, $m);
-            margin-right: px2vw(74, $m);
-        }
-
-        .live {
-            order: 2;
-            margin-right: px2vw(54, $m);
-        }
-
-        .uk {
-            order: 3;
         }
     }
+
+    .signLanguage {
+        order: 1;
+        margin-right: px(74);
+        margin-left: px(88);
+    }
+
+    .live {
+        order: 2;
+        margin-right: px(54);
+    }
+
+    .uk {
+        order: 3;
+    }
 }
+

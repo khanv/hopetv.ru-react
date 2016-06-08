@@ -1,7 +1,2 @@
-@import 'theme/MediaQueries';
+@import '../desktop';
 
-@media #{$desktopWide} {
-    $m: desktopWide;
-
-    @import '../desktop';
-}
