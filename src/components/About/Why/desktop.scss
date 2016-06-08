@@ -9,24 +9,24 @@
             align-items: center;
 
             i {
-                width: px2vw(180, $m);
-                margin-top: px2vw(80, $m);
-                margin-left: px2vw(22, $m);
+                width: px(180);
+                margin-top: px(80);
+                margin-left: px(22);
             }
 
             h1 {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: px2vw(44, $m);
+                margin-top: px(44);
                 color: $color1;
-                font-size: px2vw(56 , $m);
+                font-size: px(56);
 
                 &::after {
                     display: block;
-                    width: px2vw(80, $m);
-                    height: px2vw(6, $m);
-                    margin-top: px2vw(46, $m);
+                    width: px(80);
+                    height: px(6);
+                    margin-top: px(46);
                     border-radius: 2px;
                     background-color: $color2;
                     content: '';
@@ -37,8 +37,8 @@
         .arguments {
             display: flex;
             justify-content: space-between;
-            width: px2vw(1382, $m);
-            margin: px2vw(82, $m) auto 0;
+            width: px(1382);
+            margin: px(82) auto 0;
 
             div {
                 display: flex;
@@ -46,7 +46,7 @@
                 align-items: center;
 
                 i {
-                    width: px2vw(132, $m);
+                    width: px(132);
                     margin-left: 0;
                     color: $color3;
                     font-size: 34px;
@@ -56,42 +56,42 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: px2vw(74, $m);
-                    height: px2vw(40, $m);
-                    margin-top: px2vw(-86, $m);
+                    width: px(74);
+                    height: px(40);
+                    margin-top: px(-86);
                     margin-right: 0;
-                    margin-left: px2vw(-44, $m);
+                    margin-left: px(-44);
                     transform: rotate(-30deg);
-                    border: px2vw(4, $m) solid $color4;
-                    border-radius: px2vw(4, $m);
+                    border: px(4) solid $color4;
+                    border-radius: px(4);
                     background: $color4;
                     color: $color5;
-                    font-size: px2vw(26, $m);
+                    font-size: px(26);
                     font-weight: bold;
                     text-transform: uppercase;
                 }
 
                 .text {
-                    margin-top: px2vw(-22, $m);
-                    margin-left: px2vw(-22, $m);
-                    font-size: px2vw(44, $m);
+                    margin-top: px(-22);
+                    margin-left: px(-22);
+                    font-size: px(44);
                     font-weight: bold;
                 }
             }
 
             .policy {
-                margin-left: px2vw(48, $m);
+                margin-left: px(48);
             }
 
             .violence {
-                margin-left: px2vw(24, $m);
+                margin-left: px(24);
 
                 i {
                     margin-left: 0;
                 }
 
                 .label {
-                    margin-right: px2vw(10, $m);
+                    margin-right: px(10);
                 }
             }
 
@@ -99,8 +99,8 @@
                 margin-left: 0;
 
                 i {
-                    margin-right: px2vw(10, $m);
-                    margin-left: px2vw(2, $m);
+                    margin-right: px(10);
+                    margin-left: px(2);
                 }
             }
         }
@@ -111,27 +111,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: px2vw(74, $m);
+            margin-top: px(74);
 
             span {
                 display: flex;
                 position: relative;
                 align-items: center;
                 justify-content: center;
-                width: px2vw(200, $m);
-                height: px2vw(200, $m);
+                width: px(200);
+                height: px(200);
                 background-image: url($componentRoot + '24hBackground-bg.svg');
                 color: $color1;
-                font-size: px2vw(48, $m);
+                font-size: px(48);
 
                 &::before {
                     display: block;
                     position: absolute;
                     top: 50%;
-                    left: px2vw(-760, $m);
-                    width: px2vw(680, $m);
-                    height: px2vw(8, $m);
-                    margin-top: px2vw(-4, $m);
+                    left: px(-760);
+                    width: px(680);
+                    height: px(8);
+                    margin-top: px(-4);
                     background-image: url($componentRoot + 'divider-bg.svg');
                     content: '';
                 }
@@ -140,19 +140,19 @@
                     display: block;
                     position: absolute;
                     top: 50%;
-                    right: px2vw(-760, $m);
-                    width: px2vw(680, $m);
-                    height: px2vw(8, $m);
-                    margin-top: px2vw(-4, $m);
+                    right: px(-760);
+                    width: px(680);
+                    height: px(8);
+                    margin-top: px(-4);
                     background-image: url($componentRoot + 'divider-bg.svg');
                     content: '';
                 }
             }
 
             h1 {
-                margin-top: px2vw(76, $m);
+                margin-top: px(76);
                 color: $color1;
-                font-size: px2vw(52, $m);
+                font-size: px(52);
                 font-weight: bold;
             }
 
@@ -160,9 +160,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: px2vw(8, $m);
+                margin-top: px(8);
                 color: $color1;
-                font-size: px2vw(44, $m);
+                font-size: px(44);
                 font-weight: 100;
             }
         }
@@ -173,15 +173,15 @@
             flex-wrap: wrap;
             align-content: center;
             width: 100%;
-            height: px2vw(360, $m);
-            margin-top: px2vw(80, $m);
-            padding-right: px2vw(18, $m);
+            height: px(360);
+            margin-top: px(80);
+            padding-right: px(18);
 
             &::before {
                 display: block;
                 order: 3;
-                width: px2vw(262, $m);
-                height: px2vw(282, $m);
+                width: px(262);
+                height: px(282);
                 background-image: url($componentRoot + 'why_family-bg.svg');
                 content: '';
             }
@@ -189,14 +189,14 @@
             li {
                 display: flex;
                 align-items: center;
-                margin-top: px2vw(42, $m);
-                margin-left: px2vw(60, $m);
+                margin-top: px(42);
+                margin-left: px(60);
 
                 div {
                     display: flex;
                     flex-direction: column;
-                    font-size: px2vw(36, $m);
-                    line-height: px2vw(40, $m);
+                    font-size: px(36);
+                    line-height: px(40);
 
                     b {
                         color: $color1;
@@ -204,24 +204,24 @@
                 }
 
                 i {
-                    width: px2vw(58, $m);
-                    margin-top: px2vw(-2, $m);
-                    margin-right: px2vw(50, $m);
+                    width: px(58);
+                    margin-top: px(-2);
+                    margin-right: px(50);
                 }
             }
 
             .everydaySpeech {
                 flex-direction: row-reverse;
                 order: 1;
-                margin-top: px2vw(34, $m);
-                margin-right: px2vw(98, $m);
-                margin-bottom: px2vw(68, $m);
+                margin-top: px(34);
+                margin-right: px(98);
+                margin-bottom: px(68);
                 margin-left: 0;
                 text-align: right;
 
                 i {
                     margin-right: 0;
-                    margin-left: px2vw(46, $m);
+                    margin-left: px(46);
                 }
             }
 
@@ -229,34 +229,34 @@
                 flex-direction: row-reverse;
                 order: 2;
                 margin-top: 0;
-                margin-right: px2vw(98, $m);
+                margin-right: px(98);
                 margin-left: 0;
                 text-align: right;
 
                 i {
                     margin-right: 0;
-                    margin-left: px2vw(46, $m);
+                    margin-left: px(46);
                 }
             }
 
             .interactiveCommunication {
                 order: 4;
-                margin-top: px2vw(34, $m);
-                margin-bottom: px2vw(68, $m);
-                margin-left: px2vw(90, $m);
+                margin-top: px(34);
+                margin-bottom: px(68);
+                margin-left: px(90);
 
                 i {
-                    margin-right: px2vw(48, $m);
+                    margin-right: px(48);
                 }
             }
 
             .holisticChristianity {
                 order: 5;
                 margin-top: 0;
-                margin-left: px2vw(90, $m);
+                margin-left: px(90);
 
                 i {
-                    margin-right: px2vw(48, $m);
+                    margin-right: px(48);
                 }
             }
         }

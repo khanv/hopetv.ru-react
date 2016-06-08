@@ -1,31 +1,25 @@
-@import 'theme/MediaQueries';
+@import '../mobile';
 
-@media #{$tabletPortrait} {
-    $m: tabletPortrait;
+h1 {
+    margin-top: px(-4);
+    font-size: px(52);
 
-    @import '../mobile';
-
-    h1 {
-        margin-top: px2vw(-4, $m);
-        font-size: px2vw(52, $m);
-
-        &::after {
-            width: px2vw(66, $m);
-            margin-top: px2vw(68, $m);
-        }
+    &::after {
+        width: px(66);
+        margin-top: px(68);
     }
+}
 
-    p {
-        width: px2vw(744, $m);
-        margin-top: px2vw(72, $m);
-        color: $color1;
-        font-size: px2vw(34, $m);
-        font-style: italic;
-        line-height: px2vw(42, $m);
-        text-align: center;
+p {
+    width: px(744);
+    margin-top: px(72);
+    color: $color1;
+    font-size: px(34);
+    font-style: italic;
+    line-height: px(42);
+    text-align: center;
 
-        b {
-            display: block;
-        }
+    b {
+        display: block;
     }
 }

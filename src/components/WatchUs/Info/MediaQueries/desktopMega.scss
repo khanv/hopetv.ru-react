@@ -1,19 +1,13 @@
-@import 'theme/MediaQueries';
+@import '../desktop';
 
-@media #{$desktopMega} {
-    $m: desktopMega;
+.internet {
+    .watchOnline {
+        margin-right: px(70);
+        margin-left: 0;
+    }
 
-    @import '../desktop';
-
-    .internet {
-        .watchOnline {
-            margin-right: px2vw(70, $m);
-            margin-left: 0;
-        }
-
-        .btn {
-            margin-right: px2vw(66, $m);
-            margin-left: 0;
-        }
+    .btn {
+        margin-right: px(66);
+        margin-left: 0;
     }
 }

@@ -1,210 +1,204 @@
-@import 'theme/MediaQueries';
+@import '../mobile';
 
-@media #{$tabletPortrait} {
-    $m: tabletPortrait;
+> section {
+    &::after {
+        display: none;
+    }
+}
 
-    @import '../mobile';
+.satellite {
+    flex-basis: 50%;
+    order: 1;
 
-    > section {
-        &::after {
-            display: none;
+    header {
+        i {
+            width: px(136);
+            margin: px(104) px(20) 0 0;
+        }
+
+        h1 {
+            margin: px(74) 0 0  px(28);
+            font-size: px(50);
+
+            &::after {
+                width: px(66);
+                margin-top: px(60);
+            }
         }
     }
 
-    .satellite {
-        flex-basis: 50%;
-        order: 1;
+    ul {
+        margin-top: px(74);
 
-        header {
-            i {
-                width: px2vw(136, $m);
-                margin: px2vw(104, $m) px2vw(20, $m) 0 0;
-            }
+        li {
+            margin-bottom: px(57);
 
-            h1 {
-                margin: px2vw(74, $m) 0 0  px2vw(28, $m);
-                font-size: px2vw(50, $m);
-
-                &::after {
-                    width: px2vw(66, $m);
-                    margin-top: px2vw(60, $m);
-                }
-            }
-        }
-
-        ul {
-            margin-top: px2vw(74, $m);
-
-            li {
-                margin-bottom: px2vw(57, $m);
-
-                span {
-                    &:nth-child(1) {
-                        margin: 0 px2vw(32, $m) 0 px2vw(24, $m);
-                        font-size: px2vw(34, $m);
-                    }
-
-                    &:nth-child(2) {
-                        font-size: px2vw(34, $m);
-                    }
-                }
-            }
-        }
-
-    }
-
-    .internet {
-        flex-basis: 50%;
-        flex-direction: column;
-        order: 2;
-
-        header {
-            i {
-                width: px2vw(163, $m);
-                margin: px2vw(104, $m) 0 0;
-            }
-
-            h1 {
-                margin: px2vw(74, $m) px2vw(50, $m) 0 0;
-                font-size: px2vw(50, $m);
-
-                &::after {
-                    width: px2vw(66, $m);
-                    margin-top: px2vw(60, $m);
-                }
-            }
-        }
-
-        .searchUs {
-            width: px2vw(570, $m);
-            height: px2vw(70, $m);
-            margin-top: px2vw(70, $m);
-            margin-left: px2vw(62, $m);
-            font-size: px2vw(34, $m);
-        }
-
-        .apps {
-            width: px2vw(570, $m);
-            height: px2vw(146, $m);
-            margin-top: px2vw(84, $m);
-            margin-right: px2vw(130, $m);
-
-            a {
-                flex-shrink: 0;
-                width: px2vw(146, $m);
-                height: px2vw(146, $m);
-
-            }
-
-            div {
-                span {
-                    margin-bottom: px2vw(12, $m);
-                    padding-right: px2vw(8, $m);
-                    font-size: px2vw(35, $m);
-                    font-weight: bold;
-                    line-height: px2vw(36, $m);
+            span {
+                &:nth-child(1) {
+                    margin: 0 px(32) 0 px(24);
+                    font-size: px(34);
                 }
 
-                i {
-                    width: px2vw(78, $m);
+                &:nth-child(2) {
+                    font-size: px(34);
                 }
             }
-
-            .androidLink {
-                i {
-                    width: px2vw(87, $m);
-                }
-            }
-
-            .appleLink {
-                i {
-                    width: px2vw(78, $m);
-                }
-            }
-        }
-
-        .watchOnline {
-            width: px2vw(600, $m);
-            margin-top: px2vw(16, $m);
-            margin-left: px2vw(56, $m);
-            font-size: px2vw(34, $m);
         }
     }
 
-    .cable {
-        flex-basis: 100%;
-        order: 3;
+}
 
-        header {
-            margin-top: px2vw(96, $m);
+.internet {
+    flex-basis: 50%;
+    flex-direction: column;
+    order: 2;
+
+    header {
+        i {
+            width: px(163);
+            margin: px(104) 0 0;
+        }
+
+        h1 {
+            margin: px(74) px(50) 0 0;
+            font-size: px(50);
+
+            &::after {
+                width: px(66);
+                margin-top: px(60);
+            }
+        }
+    }
+
+    .searchUs {
+        width: px(570);
+        height: px(70);
+        margin-top: px(70);
+        margin-left: px(62);
+        font-size: px(34);
+    }
+
+    .apps {
+        width: px(570);
+        height: px(146);
+        margin-top: px(84);
+        margin-right: px(130);
+
+        a {
+            flex-shrink: 0;
+            width: px(146);
+            height: px(146);
+
+        }
+
+        div {
+            span {
+                margin-bottom: px(12);
+                padding-right: px(8);
+                font-size: px(35);
+                font-weight: bold;
+                line-height: px(36);
+            }
 
             i {
-                position: relative;
-                width: px2vw(159, $m);
-
-                &::after {
-                    display: block;
-                    position: absolute;
-                    top: 63%;
-                    right: px2vw(-590, $m);
-                    width: px2vw(540, $m);
-                    height: 3px;
-                    background-image: url($componentRoot + 'Images/divider-bg.svg');
-                    content: '';
-
-                }
-
-                &::before {
-                    display: block;
-                    position: absolute;
-                    top: 63%;
-                    left: px2vw(-580, $m);
-                    width: px2vw(540, $m);
-                    height: 3px;
-                    background-image: url($componentRoot + 'Images/divider-bg.svg');
-                    content: '';
-                }
-            }
-
-            h1 {
-                margin-top: px2vw(76, $m);
-                font-size: px2vw(52, $m);
-
-                &::after {
-                    margin-top: px2vw(71, $m);
-                }
+                width: px(78);
             }
         }
 
-        p {
-            width: px2vw(1075, $m);
-            margin-top: px2vw(75, $m);
-            margin-left: px2vw(228, $m);
-            font-size: px2vw(34, $m);
-            line-height: px2vw(43, $m);
+        .androidLink {
+            i {
+                width: px(87);
+            }
+        }
+
+        .appleLink {
+            i {
+                width: px(78);
+            }
         }
     }
 
-    .btn {
-        width: px2vw(460, $m);
-        height: px2vw(112, $m);
-        margin: px2vw(92, $m) 0 0 px2vw(128, $m);
-        padding: 0 px2vw(26, $m) 0 px2vw(44, $m);
-        font-size: px2vw(34, $m);
+    .watchOnline {
+        width: px(600);
+        margin-top: px(16);
+        margin-left: px(56);
+        font-size: px(34);
+    }
+}
+
+.cable {
+    flex-basis: 100%;
+    order: 3;
+
+    header {
+        margin-top: px(96);
+
+        i {
+            position: relative;
+            width: px(159);
+
+            &::after {
+                display: block;
+                position: absolute;
+                top: 63%;
+                right: px(-590);
+                width: px(540);
+                height: 3px;
+                background-image: url($componentRoot + 'divider-bg.svg');
+                content: '';
+
+            }
+
+            &::before {
+                display: block;
+                position: absolute;
+                top: 63%;
+                left: px(-580);
+                width: px(540);
+                height: 3px;
+                background-image: url($componentRoot + 'divider-bg.svg');
+                content: '';
+            }
+        }
+
+        h1 {
+            margin-top: px(76);
+            font-size: px(52);
+
+            &::after {
+                margin-top: px(71);
+            }
+        }
+    }
+
+    p {
+        width: px(1075);
+        margin-top: px(75);
+        margin-left: px(228);
+        font-size: px(34);
+        line-height: px(43);
+    }
+}
+
+.btn {
+    width: px(460);
+    height: px(112);
+    margin: px(92) 0 0 px(128);
+    padding: 0 px(26) 0 px(44);
+    font-size: px(34);
+
+    &::before {
+        margin-right: px(32);
+    }
+
+    &.btnTuner {
+        margin-top: px(34);
+        margin-left: px(36);
+        padding-left: px(34);
+        font-size: px(34);
 
         &::before {
-            margin-right: px2vw(32, $m);
-        }
-    }
-
-    .btn.btnTuner {
-        margin-top: px2vw(34, $m);
-        margin-left: px2vw(36, $m);
-        padding-left: px2vw(34, $m);
-        font-size: px2vw(34, $m);
-
-        &::before {
-            margin-right: px2vw(24, $m);
+            margin-right: px(24);
         }
     }
 }

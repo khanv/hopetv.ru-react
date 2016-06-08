@@ -1,6 +1,5 @@
-@import 'theme/Palette';
-$componentRoot: 'theme/components/About/Banner/';
+$componentRoot: 'components/About/Banner/Assets/';
+
 $color1: #061214;
-$color2: #fff;
-$color3: #f9cb18;
-$color4: #f8ca16;
+$color2: $paletteColor6;
+$color3: $paletteColor1;

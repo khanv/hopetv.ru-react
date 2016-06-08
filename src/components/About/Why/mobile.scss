@@ -9,23 +9,23 @@
             align-items: center;
 
             i {
-                width: px2vw(180, $m);
-                margin-top: px2vw(96, $m);
+                width: px(180);
+                margin-top: px(96);
             }
 
             h1 {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: px2vw(46, $m);
+                margin-top: px(46);
                 color: $color1;
-                font-size: px2vw(44, $m);
+                font-size: px(44);
 
                 &::after {
                     display: block;
-                    width: px2vw(60, $m);
-                    height: px2vw(6, $m);
-                    margin-top: px2vw(52, $m);
+                    width: px(60);
+                    height: px(6);
+                    margin-top: px(52);
                     border-radius: 2px;
                     background-color: $color2;
                     content: '';
@@ -36,8 +36,8 @@
         .arguments {
             display: flex;
             justify-content: space-between;
-            width: px2vw(498, $m);
-            margin: px2vw(60, $m) auto 0;
+            width: px(498);
+            margin: px(60) auto 0;
 
             div {
                 display: flex;
@@ -45,8 +45,8 @@
                 align-items: center;
 
                 i {
-                    width: px2vw(84, $m);
-                    margin-left: px2vw(18, $m);
+                    width: px(84);
+                    margin-left: px(18);
                     color: $color3;
                     font-size: 34px;
                 }
@@ -55,20 +55,20 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: px2vw(66, $m);
-                    height: px2vw(40, $m);
-                    margin-top: px2vw(20, $m);
-                    border: px2vw(4, $m) solid $color4;
-                    border-radius: px2vw(4, $m);
+                    width: px(66);
+                    height: px(40);
+                    margin-top: px(20);
+                    border: px(4) solid $color4;
+                    border-radius: px(4);
                     color: $color4;
-                    font-size: px2vw(22, $m);
+                    font-size: px(22);
                     font-weight: bold;
                     text-transform: uppercase;
                 }
 
                 .text {
-                    margin-top: px2vw(12, $m);
-                    font-size: px2vw(34, $m);
+                    margin-top: px(12);
+                    font-size: px(34);
                     font-weight: bold;
                 }
             }
@@ -80,27 +80,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: px2vw(52, $m);
+            margin-top: px(52);
 
             span {
                 display: flex;
                 position: relative;
                 align-items: center;
                 justify-content: center;
-                width: px2vw(150, $m);
-                height: px2vw(150, $m);
+                width: px(150);
+                height: px(150);
                 background-image: url($componentRoot + '24hBackground-bg.svg');
                 color: $color1;
-                font-size: px2vw(34, $m);
+                font-size: px(34);
 
                 &::before {
                     display: block;
                     position: absolute;
                     top: 50%;
-                    left: px2vw(-210, $m);
-                    width: px2vw(170, $m);
-                    height: px2vw(6, $m);
-                    margin-top: px2vw(-2, $m);
+                    left: px(-210);
+                    width: px(170);
+                    height: px(6);
+                    margin-top: px(-2);
                     background-image: url($componentRoot + 'divider-bg.svg');
                     content: '';
                 }
@@ -109,19 +109,19 @@
                     display: block;
                     position: absolute;
                     top: 50%;
-                    right: px2vw(-210, $m);
-                    width: px2vw(170, $m);
-                    height: px2vw(6, $m);
-                    margin-top: px2vw(-2, $m);
+                    right: px(-210);
+                    width: px(170);
+                    height: px(6);
+                    margin-top: px(-2);
                     background-image: url($componentRoot + 'divider-bg.svg');
                     content: '';
                 }
             }
 
             h1 {
-                margin-top: px2vw(46, $m);
+                margin-top: px(46);
                 color: $color1;
-                font-size: px2vw(44, $m);
+                font-size: px(44);
                 font-weight: bold;
             }
 
@@ -129,16 +129,16 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: px2vw(8, $m);
+                margin-top: px(8);
                 color: $color1;
-                font-size: px2vw(34, $m);
+                font-size: px(34);
                 font-weight: 100;
 
                 &::after {
                     display: block;
-                    width: px2vw(60, $m);
-                    height: px2vw(6, $m);
-                    margin-top: px2vw(46, $m);
+                    width: px(60);
+                    height: px(6);
+                    margin-top: px(46);
                     border-radius: 2px;
                     background-color: $color2;
                     content: '';
@@ -150,26 +150,26 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            margin-top: px2vw(8, $m);
+            margin-top: px(8);
 
             li {
                 display: flex;
                 align-items: center;
-                margin-top: px2vw(42, $m);
-                margin-left: px2vw(60, $m);
+                margin-top: px(42);
+                margin-left: px(60);
 
 
                 i {
-                    width: px2vw(50, $m);
-                    margin-top: px2vw(-2, $m);
-                    margin-right: px2vw(40, $m);
+                    width: px(50);
+                    margin-top: px(-2);
+                    margin-right: px(40);
                 }
 
                 div {
                     display: flex;
                     flex-direction: column;
-                    font-size: px2vw(30, $m);
-                    line-height: px2vw(34, $m);
+                    font-size: px(30);
+                    line-height: px(34);
 
                     b {
                         color: $color1;

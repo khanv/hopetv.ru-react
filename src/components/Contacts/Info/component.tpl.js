@@ -6,18 +6,18 @@ import PixelPerfect from 'components/PixelPerfect/component';
 import Styles from './main.scss';
 import Grids from 'theme/Grid.scss';
 
-import SvgLive from 'theme/components/Contacts/Info/contactUs.svg';
-import SvgContacts from 'theme/components/Contacts/Info/phoneAndInternet.svg';
-import SvgPhone from 'theme/components/Contacts/Info/phoneContact.svg';
-import SvgSkype from 'theme/components/Contacts/Info/skypeContact.svg';
-import SvgMail from 'theme/components/Contacts/Info/mailContact.svg';
-import SvgSocial from 'theme/components/Contacts/Info/socialNetworks.svg';
-import SvgTwitter from 'theme/components/Contacts/Info/twitterIcon.svg';
-import SvgVk from 'theme/components/Contacts/Info/vkIcon.svg';
-import SvgFacebook from 'theme/components/Contacts/Info/facebookIcon.svg';
-import SvgOk from 'theme/components/Contacts/Info/odnoklassnikiIcon.svg';
-import SvgYouTube from 'theme/components/Contacts/Info/youtubeIcon.svg';
-import SvgInstgram from 'theme/components/Contacts/Info/instagramIcon.svg';
+import SvgLive from 'components/Contacts/Info/Assets/contactUs.svg';
+import SvgContacts from 'components/Contacts/Info/Assets/phoneAndInternet.svg';
+import SvgPhone from 'components/Contacts/Info/Assets/phoneContact.svg';
+import SvgSkype from 'components/Contacts/Info/Assets/skypeContact.svg';
+import SvgMail from 'components/Contacts/Info/Assets/mailContact.svg';
+import SvgSocial from 'components/Contacts/Info/Assets/socialNetworks.svg';
+import SvgTwitter from 'components/Contacts/Info/Assets/twitterIcon.svg';
+import SvgVk from 'components/Contacts/Info/Assets/vkIcon.svg';
+import SvgFacebook from 'components/Contacts/Info/Assets/facebookIcon.svg';
+import SvgOk from 'components/Contacts/Info/Assets/odnoklassnikiIcon.svg';
+import SvgYouTube from 'components/Contacts/Info/Assets/youtubeIcon.svg';
+import SvgInstgram from 'components/Contacts/Info/Assets/instagramIcon.svg';
 
 /* eslint-disable react/prefer-stateless-function */
 @connect(({ browser }) => {

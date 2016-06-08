@@ -1,28 +1,22 @@
-@import 'theme/MediaQueries';
+@import '../mobile';
 
-@media #{$phoneLandscape} {
-    $m: phoneLandscape;
+& {
+    padding-top: px(66);
 
-    @import '../mobile';
+    .container {
+        height: px(404);
 
-    & {
-        padding-top: px2vw(66, $m);
-
-        .container {
-            height: px2vw(404, $m);
-
-            &::before {
-                height: px2vw(404, $m);
-            }
-
-            h1 {
-                top: px2vw(138, $m);
-                font-size: px2vw(36, $m);
-            }
+        &::before {
+            height: px(404);
         }
 
-        .poster {
-            height: px2vw(404, $m);
+        h1 {
+            top: px(138);
+            font-size: px(36);
         }
+    }
+
+    .poster {
+        height: px(404);
     }
 }

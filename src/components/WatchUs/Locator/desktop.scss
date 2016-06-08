@@ -3,41 +3,41 @@
 
     .map {
         position: relative;
-        width: px2vw(1812, $m);
+        width: px(1812);
         margin: 0 auto;
-        padding-top: px2vw(110, $m);
+        padding-top: px(110);
 
         .hint {
             position: absolute;
-            bottom: px2vw(280, $m);
-            left: px2vw(200, $m);
+            bottom: px(280);
+            left: px(200);
 
             p {
                 color: $color10;
-                font-size: px2vw(30, $m);
+                font-size: px(30);
                 font-weight: bold;
                 text-align: right;
             }
 
             span {
                 display: inline-block;
-                width: px2vw(286, $m);
-                margin-top: px2vw(15, $m);
+                width: px(286);
+                margin-top: px(15);
                 color: $color10;
-                font-size: px2vw(26, $m);
+                font-size: px(26);
                 font-style: italic;
-                line-height: px2vw(30, $m);
+                line-height: px(30);
                 text-align: right;
             }
 
             &::before {
                 display: block;
                 position: absolute;
-                top: px2vw(-106, $m);
-                right: px2vw(-148, $m);
-                width: px2vw(128, $m);
-                height: px2vw(130, $m);
-                background: url($componentRoot + 'Images/arrowsIcon-bg.svg') no-repeat;
+                top: px(-106);
+                right: px(-148);
+                width: px(128);
+                height: px(130);
+                background: url($componentRoot + 'arrowsIcon-bg.svg') no-repeat;
                 content: '';
             }
         }
@@ -45,7 +45,7 @@
 
     .region {
         position: absolute;
-        top: px2vw(500, $m);
+        top: px(500);
         width: 100%;
         background-color: $color8;
         z-index: 1;
@@ -53,28 +53,28 @@
         header {
             display: flex;
             justify-content: space-between;
-            height: px2vw(90, $m);
-            margin-top: px2vw(64, $m);
-            padding-right: px2vw(122, $m);
-            padding-left: px2vw(96, $m);
+            height: px(90);
+            margin-top: px(64);
+            padding-right: px(122);
+            padding-left: px(96);
 
             h1 {
                 position: relative;
                 width: 100%;
-                margin-top: px2vw(10, $m);
-                margin-left: px2vw(100, $m);
+                margin-top: px(10);
+                margin-left: px(100);
                 color: $color11;
-                font-size: px2vw(44, $m);
+                font-size: px(44);
                 font-weight: bold;
                 text-align: center;
 
                 &::after {
                     position: absolute;
-                    top: px2vw(78, $m);
+                    top: px(78);
                     left: 50%;
-                    width: px2vw(50, $m);
-                    height: px2vw(6, $m);
-                    margin-left: px2vw(-25, $m);
+                    width: px(50);
+                    height: px(6);
+                    margin-left: px(-25);
                     border-radius: 3px;
                     background-color: $color12;
                     content: '';
@@ -83,44 +83,44 @@
 
             .close {
                 display: block;
-                width: px2vw(90, $m);
-                height: px2vw(90, $m);
-                background: url($componentRoot + 'Images/closeOperatorsIcon-bg.svg') no-repeat;
+                width: px(90);
+                height: px(90);
+                background: url($componentRoot + 'closeOperatorsIcon-bg.svg') no-repeat;
             }
         }
 
         .head {
             display: flex;
-            width: px2vw(1828, $m);
-            margin: px2vw(84, $m) auto 0;
+            width: px(1828);
+            margin: px(84) auto 0;
 
             .mapTitle {
                 display: flex;
-                width: px2vw(620, $m);
-                margin-right: px2vw(12, $m);
+                width: px(620);
+                margin-right: px(12);
                 color: $color10;
-                font-size: px2vw(28, $m);
+                font-size: px(28);
                 font-weight: bold;
 
                 span {
-                    margin-top: px2vw(10, $m);
-                    margin-left: px2vw(2, $m);
+                    margin-top: px(10);
+                    margin-left: px(2);
                 }
 
                 &::before {
                     display: block;
-                    width: px2vw(42, $m);
-                    height: px2vw(50, $m);
-                    margin-right: px2vw(30, $m);
-                    background: url($componentRoot + 'Images/mapIcon-bg.svg') no-repeat;
+                    width: px(42);
+                    height: px(50);
+                    margin-right: px(30);
+                    background: url($componentRoot + 'mapIcon-bg.svg') no-repeat;
                     content: '';
                 }
 
                 &::after {
-                    width: px2vw(300, $m);
-                    height: px2vw(2, $m);
-                    margin-top: px2vw(26, $m);
-                    margin-left: px2vw(40, $m);
+                    width: px(300);
+                    height: px(2);
+                    margin-top: px(26);
+                    margin-left: px(40);
                     background-color: $color13;
                     content: '';
                 }
@@ -128,30 +128,30 @@
 
             .cities {
                 display: flex;
-                width: px2vw(500, $m);
+                width: px(500);
                 color: $color10;
-                font-size: px2vw(28, $m);
+                font-size: px(28);
                 font-weight: bold;
 
                 span {
-                    margin-top: px2vw(10, $m);
-                    margin-left: px2vw(2, $m);
+                    margin-top: px(10);
+                    margin-left: px(2);
                 }
 
                 &::before {
                     display: block;
-                    width: px2vw(64, $m);
-                    height: px2vw(48, $m);
-                    margin-right: px2vw(34, $m);
-                    background: url($componentRoot + 'Images/cityIcon-bg.svg') no-repeat;
+                    width: px(64);
+                    height: px(48);
+                    margin-right: px(34);
+                    background: url($componentRoot + 'cityIcon-bg.svg') no-repeat;
                     content: '';
                 }
 
                 &::after {
-                    width: px2vw(230, $m);
-                    height: px2vw(2, $m);
-                    margin-top: px2vw(26, $m);
-                    margin-left: px2vw(46, $m);
+                    width: px(230);
+                    height: px(2);
+                    margin-top: px(26);
+                    margin-left: px(46);
                     background-color: $color13;
                     content: '';
                 }
@@ -160,27 +160,27 @@
             .operators {
                 display: flex;
                 color: $color10;
-                font-size: px2vw(28, $m);
+                font-size: px(28);
                 font-weight: bold;
 
                 span {
-                    margin-top: px2vw(10, $m);
+                    margin-top: px(10);
                 }
 
                 &::before {
                     display: block;
-                    width: px2vw(46, $m);
-                    height: px2vw(42, $m);
-                    margin-right: px2vw(34, $m);
-                    background: url($componentRoot + 'Images/cablesIcon-bg.svg') no-repeat;
+                    width: px(46);
+                    height: px(42);
+                    margin-right: px(34);
+                    background: url($componentRoot + 'cablesIcon-bg.svg') no-repeat;
                     content: '';
                 }
 
                 &::after {
-                    width: px2vw(278, $m);
-                    height: px2vw(2, $m);
-                    margin-top: px2vw(26, $m);
-                    margin-left: px2vw(40, $m);
+                    width: px(278);
+                    height: px(2);
+                    margin-top: px(26);
+                    margin-left: px(40);
                     background-color: $color13;
                     content: '';
                 }
@@ -189,33 +189,33 @@
 
         .content {
             display: flex;
-            width: px2vw(1652, $m);
+            width: px(1652);
             margin: 0 auto;
 
             .regionMap {
-                width: px2vw(590, $m);
-                margin-top: px2vw(108, $m);
-                margin-bottom: px2vw(60, $m);
-                margin-left: px2vw(20, $m);
+                width: px(590);
+                margin-top: px(108);
+                margin-bottom: px(60);
+                margin-left: px(20);
             }
 
             .cities {
-                width: px2vw(500, $m);
-                max-height: px2vw(800, $m);
-                margin-top: px2vw(66, $m);
-                margin-bottom: px2vw(96, $m);
-                padding-top: px2vw(8, $m);
-                padding-left: px2vw(110, $m);
+                width: px(500);
+                max-height: px(800);
+                margin-top: px(66);
+                margin-bottom: px(96);
+                padding-top: px(8);
+                padding-left: px(110);
                 overflow-y: scroll;
 
                 li {
                     position: relative;
-                    padding-top: px2vw(30, $m);
-                    padding-bottom: px2vw(30, $m);
-                    padding-left: px2vw(28, $m);
+                    padding-top: px(30);
+                    padding-bottom: px(30);
+                    padding-left: px(28);
                     border-bottom: 1px solid $color13;
                     color: $color11;
-                    font-size: px2vw(28, $m);
+                    font-size: px(28);
 
                     &:hover {
                         color: $color16;
@@ -225,8 +225,8 @@
 
                     &:first-child {
                         &::after {
-                            top: px2vw(-36, $m);
-                            height: px2vw(126, $m);
+                            top: px(-36);
+                            height: px(126);
                         }
                     }
 
@@ -234,7 +234,7 @@
                         border-bottom: 0;
 
                         &::after {
-                            height: px2vw(122, $m);
+                            height: px(122);
                         }
                     }
 
@@ -242,20 +242,20 @@
                         display: block;
                         position: absolute;
                         top: 0;
-                        right: px2vw(-62, $m);
+                        right: px(-62);
                         width: 1px;
-                        height: px2vw(90, $m);
+                        height: px(90);
                         background-color: $color13;
                         content: '';
                     }
 
                     &.selected {
-                        width: px2vw(456, $m);
+                        width: px(456);
                         margin-top: -1px;
                         margin-left: -3px;
-                        padding-top: px2vw(30, $m);
-                        padding-bottom: px2vw(30, $m);
-                        padding-left: px2vw(30, $m);
+                        padding-top: px(30);
+                        padding-bottom: px(30);
+                        padding-left: px(30);
                         border-top: 1px solid $color13;
                         border-right: 0;
                         border-bottom: 1px solid $color13;
@@ -272,15 +272,15 @@
             }
 
             .operators {
-                width: px2vw(640, $m);
-                margin-left: px2vw(60, $m);
-                padding-top: px2vw(100, $m);
-                padding-left: px2vw(62, $m);
+                width: px(640);
+                margin-left: px(60);
+                padding-top: px(100);
+                padding-left: px(62);
 
                 li {
-                    margin-bottom: px2vw(54, $m);
+                    margin-bottom: px(54);
                     color: $color10;
-                    font-size: px2vw(28, $m);
+                    font-size: px(28);
 
                     .title {
                         display: inline-flex;
@@ -294,7 +294,7 @@
                     }
 
                     &.selected {
-                        margin-bottom: px2vw(44, $m);
+                        margin-bottom: px(44);
 
                         .title {
                             display: inline-flex;
@@ -307,33 +307,33 @@
                         }
 
                         .contacts {
-                            width: px2vw(560, $m);
-                            margin-top: px2vw(40, $m);
+                            width: px(560);
+                            margin-top: px(40);
                             border: 1px solid $color15;
                             border-radius: 6px;
                             background-color: $color14;
 
                             ul {
                                 position: relative;
-                                margin-top: px2vw(56, $m);
-                                margin-bottom: px2vw(56, $m);
-                                padding-top: px2vw(8, $m);
-                                padding-bottom: px2vw(0, $m);
-                                padding-left: px2vw(80, $m);
+                                margin-top: px(56);
+                                margin-bottom: px(56);
+                                padding-top: px(8);
+                                padding-bottom: px(0);
+                                padding-left: px(80);
 
                                 &::before {
                                     display: block;
                                     position: absolute;
                                     top: 0;
-                                    left: px2vw(30, $m);
-                                    width: px2vw(36, $m);
-                                    height: px2vw(36, $m);
-                                    background: url($componentRoot + 'Images/phoneMenuIcon-bg.svg') no-repeat;
+                                    left: px(30);
+                                    width: px(36);
+                                    height: px(36);
+                                    background: url($componentRoot + 'phoneMenuIcon-bg.svg') no-repeat;
                                     content: '';
                                 }
 
                                 li {
-                                    margin-bottom: px2vw(26, $m);
+                                    margin-bottom: px(26);
                                     font-weight: normal;
 
                                     &:last-child {
@@ -343,7 +343,7 @@
 
                                 &.withWebsite {
                                     margin-bottom: 0;
-                                    padding-bottom: px2vw(56, $m);
+                                    padding-bottom: px(56);
                                     border-bottom: 1px solid $color15;
                                 }
                             }
@@ -351,31 +351,31 @@
                             a {
                                 display: inline-block;
                                 position: relative;
-                                margin-top: px2vw(30, $m);
-                                margin-bottom: px2vw(34, $m);
-                                margin-left: px2vw(26, $m);
-                                padding-top: px2vw(14, $m);
-                                padding-left: px2vw(54, $m);
+                                margin-top: px(30);
+                                margin-bottom: px(34);
+                                margin-left: px(26);
+                                padding-top: px(14);
+                                padding-left: px(54);
                                 color: $color7;
-                                font-size: px2vw(28, $m);
+                                font-size: px(28);
                                 font-weight: bold;
                                 text-decoration: none;
 
                                 &::before {
                                     display: block;
                                     position: absolute;
-                                    top: px2vw(10, $m);
-                                    left: px2vw(0, $m);
-                                    width: px2vw(36, $m);
-                                    height: px2vw(36, $m);
-                                    background: url($componentRoot + 'Images/earthMenuIcon-bg.svg') no-repeat;
+                                    top: px(10);
+                                    left: px(0);
+                                    width: px(36);
+                                    height: px(36);
+                                    background: url($componentRoot + 'earthMenuIcon-bg.svg') no-repeat;
                                     content: '';
                                 }
 
                                 &::after {
-                                    margin-left: px2vw(8, $m);
+                                    margin-left: px(8);
                                     font-family: Arial;
-                                    font-size: px2vw(28, $m);
+                                    font-size: px(28);
                                     content: '→';
                                 }
                             }
