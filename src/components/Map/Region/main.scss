@@ -1,5 +1,6 @@
 .region {
     @import 'theme/mixins/px2vw-media';
+    @import 'theme/Palette';
     @import 'variables';
     @import 'MediaQueries/all';
 }
