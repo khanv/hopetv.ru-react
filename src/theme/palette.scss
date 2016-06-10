@@ -1,6 +1,31 @@
 $paletteColor1: #f8d449;
 $paletteColor2: #2793b2;
-$paletteColor3: #516569;
-$paletteColor4: #f3f4f4;
+$paletteColor3: #516569;  // Text primary
+$paletteColor4: #f3f4f4;  // Background main
 $paletteColor5: #0b2226;
 $paletteColor6: #fff;
+$paletteColor7: rgba(6, 18, 20, .8);  // Banner mask
+$paletteColor8: #ab493c;
+$paletteColor9: #6d7c7c;  // Text secondary
+$paletteColor10: #dfe0e1; // Divider
+$paletteColor11: #a5a8aa; // Text on dark background
+$paletteColor12: #b7c3c5; // Divider bold (Arrow hint)
+$paletteColor13: #d1dddd; // Divider 1px
+
+// Dark menu
+$paletteColor14: #0c262d; // Header background
+$paletteColor15: rgba(255, 255, 255, .2); // Header text
+$paletteColor16: #091a1e; // Menu background
+$paletteColor17: rgba(255, 255, 255, .06); // Menu divider
+$paletteColor18: #7f8e91; // Menu text primary
+$paletteColor19: #5e6b6e; // Menu text secondary
+$paletteColor20: rgba(255, 255, 255, .5); // Menu active text secondary
+$paletteColor21: #f9f8f8; // Contacts background in locator
+$paletteColor21: #e8eaea; // Contacts border in locator
+
+// Map
+$paletteColor22: #dee2e2; // Region background
+$paletteColor23: #e6e8e8; // Region background disabled
+$paletteColor24: #d1dddd; // City
+$paletteColor25: #6d7c7c; // City hover
+$paletteColor26: #ccc; // Bubble shadow
