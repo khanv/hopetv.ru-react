@@ -23,7 +23,7 @@
     "test": "karma start",
     "test-node": "./node_modules/mocha/bin/mocha $(find api -name '*-test.js') --compilers js:babel-core/register",
     "test-node-watch": "./node_modules/mocha/bin/mocha $(find api -name '*-test.js') --compilers js:babel-core/register --watch",
-    "generate:component": "yo hope"
+    "generate:component": "yo hope:component"
   },
   "betterScripts": {
     "start-prod": {
