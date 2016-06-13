@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
-import { Why, Banner, WorldNetwork, IconInfo } from 'components/About';
+import { Why, Banner, WorldNetwork, IconInfo, Buttons } from 'components/About';
 import { PageHead } from 'components/Shared';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -46,6 +46,7 @@ export default class About extends Component {
                 <IconInfo
                     mediaType={ browser.mediaType }
                 />
+                <Buttons/>
             </section>
         );
     }

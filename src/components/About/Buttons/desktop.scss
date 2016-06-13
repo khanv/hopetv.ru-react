@@ -1,0 +1,23 @@
+& {
+    display: flex;
+    justify-content: space-between;
+    padding: px(80) px(174) 0 px(168);
+
+    a {
+        display: block;
+        width: px(480);
+        padding: px(40) 0 px(30);
+        border: px(2) solid $color1;
+        border-radius: 4px;
+        color: $color1;
+        font-size: px(36);
+        text-align: center;
+        text-decoration: none;
+
+        &:hover,
+        &:active {
+            background-color: $color1;
+            color: $color2;
+        }
+    }
+}
