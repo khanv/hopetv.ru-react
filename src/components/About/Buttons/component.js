@@ -2,7 +2,6 @@ import React from 'react';
 import Styles from './main.scss';
 
 export default function Buttons() {
-
     return (
         <section className={ Styles.buttonsComponent }>
             <a href="#">Контакти ТК «Надія»</a>
