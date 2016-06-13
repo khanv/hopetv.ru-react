@@ -1,0 +1,10 @@
+@import '../desktop';
+
+& {
+    padding: px(80) px(100) 0;
+
+    a {
+        width: px(400);
+        font-size: px(34);
+    }
+}
