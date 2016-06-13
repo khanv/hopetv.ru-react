@@ -12,7 +12,7 @@ export default function Buttons() {
     return (
         <PixelPerfect templates={ templates } component="buttons">
             <section className={ Styles.buttonsComponent }>
-                <a href="#">Контакти ТК &#171;Надія&#187;</a>
+                <a href="#">Контакти ТК «Надія»</a>
                 <a href="#">Де нас дивитись?</a>
                 <a href="#">Дивитися прямий ефір</a>
             </section>
