@@ -7,7 +7,8 @@ export default function Divider() {
     const templates = [
         BreakPoints.phonePortrait.name,
         BreakPoints.phoneLandscape.name,
-        BreakPoints.tabletPortrait.name
+        BreakPoints.tabletPortrait.name,
+        BreakPoints.tabletLandscape.name
     ];
 
     return (
