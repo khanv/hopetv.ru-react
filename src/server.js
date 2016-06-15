@@ -47,7 +47,11 @@ app.use((req, res) => {
         return;
     }
 
-    match({ history, routes: getRoutes(store), location: req.originalUrl }, (error, redirectLocation, renderProps) => {
+    match({
+        history,
+        routes: getRoutes(store),
+        location: req.originalUrl
+    }, (error, redirectLocation, renderProps) => {
         if (redirectLocation) {
             res.redirect(redirectLocation.pathname + redirectLocation.search);
         } else if (error) {
@@ -55,7 +59,10 @@ app.use((req, res) => {
             res.status(500);
             hydrateOnClient();
         } else if (renderProps) {
-            loadOnServer({ ...renderProps, store }).then(() => {
+            loadOnServer({
+                ...renderProps,
+                store
+            }).then(() => {
                 const component = (
                     <Provider store={ store } key="provider">
                         <I18nextProvider i18n={ i18n }>
