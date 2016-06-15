@@ -1,6 +1,7 @@
 @import '../desktop';
 
 & {
+    height: px(884);
     padding-top: px(110);
 
     .container {
@@ -15,6 +16,10 @@
             width: px(1200);
             margin-left: px(-600);
             font-size: px(42);
+        }
+
+        .poster {
+            height: px(688);
         }
     }
 }

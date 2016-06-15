@@ -6,9 +6,11 @@ export default function Banner(props) {
 
     return (
         <section className={ Styles.bannerComponent }>
-            <div className={ Styles.container }>
-                <h1 dangerouslySetInnerHTML={ { __html: text } }/>
-                <div className={ Styles.poster }></div>
+            <div className={ Styles.banner }>
+                <div className={ Styles.container }>
+                    <h1 dangerouslySetInnerHTML={ { __html: text } }/>
+                    <div className={ Styles.poster }></div>
+                </div>
             </div>
         </section>
     );

@@ -1,6 +1,23 @@
 & {
-    position: relative;
-    padding-top: px(128);
+    height: px(752);
+    margin-bottom: px(-80);
+    overflow: hidden;
+
+    .banner {
+        position: relative;
+        padding-top: px(128);
+
+        &::after {
+            position: absolute;
+            bottom: px(-18);
+            width: 100%;
+            height: px(30);
+            transform: rotate(-2.2deg);
+            background-color: $color3;
+            content: '';
+            z-index: 2;
+        }
+    }
 
     .container {
         position: relative;
@@ -48,16 +65,5 @@
             background: url($componentRoot + 'banner.jpg') no-repeat;
             background-size: cover;
         }
-    }
-
-    &::after {
-        position: absolute;
-        bottom: px(-18);
-        width: 100%;
-        height: px(30);
-        transform: rotate(-2.2deg);
-        background-color: $color3;
-        content: '';
-        z-index: 2;
     }
 }

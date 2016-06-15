@@ -1,1 +1,11 @@
 @import '../desktop';
+
+& {
+    margin-bottom: px(-120);
+
+    .container {
+        .poster {
+            height: px(700);
+        }
+    }
+}
