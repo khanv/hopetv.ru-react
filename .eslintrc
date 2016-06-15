@@ -14,8 +14,5 @@
     "webpackIsomorphicTools": true,
     "fetch": true
   },
-  "rules": {
-    "space-in-brackets": 0,
-    "object-property-newline": 0
-  }
+  "rules": {}
 }

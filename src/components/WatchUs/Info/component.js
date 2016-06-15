@@ -16,7 +16,10 @@ import SvgTv from 'components/WatchUs/Info/Assets/tv.svg';
 
 /* eslint-disable react/prefer-stateless-function */
 @connect(({ browser, watchUs }) => {
-    return { browser, watchUs };
+    return {
+        browser,
+        watchUs
+    };
 })
 export default class Info extends Component {
     static propTypes = {
