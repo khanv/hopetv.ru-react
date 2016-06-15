@@ -1,1 +1,18 @@
 @import '../desktop';
+
+& {
+  height: px(776);
+  margin-bottom: px(-160);
+
+  .banner {
+    &::after {
+      transform: rotate(-2.45deg);
+    }
+  }
+
+  .container {
+    .poster {
+      height: px(720);
+    }
+  }
+}
