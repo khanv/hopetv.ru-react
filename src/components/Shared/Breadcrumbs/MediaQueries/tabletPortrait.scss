@@ -1,0 +1,19 @@
+@import '../desktop';
+
+ul {
+    padding-left: px(98);
+    font-size: px(34);
+
+    li {
+        padding: px(46) px(52) px(52) 0;
+
+        a {
+            padding-top: px(2);
+            line-height: px(30);
+        }
+
+        &::after {
+            top: px(44);
+        }
+    }
+}
