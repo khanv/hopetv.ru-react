@@ -1,8 +1,6 @@
 @import '../desktop';
 
 & {
-    height: px(104);
-
     .scheduler {
         .clock {
             left: px(450);
@@ -21,7 +19,7 @@
         }
 
         .episodes {
-            padding-top: px(48);
+            padding: px(48) 0 px(12);
 
             .episode1 {
                 .timeline {
