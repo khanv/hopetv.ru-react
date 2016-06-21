@@ -1,7 +1,6 @@
 & {
     position: relative;
     width: 100%;
-    height: px(160);
     margin-top: px(-15);
     overflow: hidden;
 
@@ -42,7 +41,7 @@
             display: flex;
             width: 10000px;
             height: 100%;
-            padding-top: px(50);
+            padding: px(50) 0 px(24);
 
             .episode1 {
                 .timeline {
