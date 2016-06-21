@@ -25,7 +25,7 @@ const history = syncHistoryWithStore(_browserHistory, store);
 /* eslint-disable react/jsx-no-bind, arrow-parens */
 const component = (
     <Router
-        render={ (props) => <ReduxAsyncConnect {...props} filter={ item => !item.deferred }/> }
+        render={ (props) => <ReduxAsyncConnect { ...props } filter={ item => !item.deferred }/> }
         history={ history }
     >
         { getRoutes(store) }

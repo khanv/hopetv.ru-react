@@ -1,0 +1,294 @@
+& {
+    position: relative;
+    width: 100%;
+    height: px(160);
+    margin-top: px(-15);
+    overflow: hidden;
+
+    .scheduler {
+        height: 100%;
+        background-color: $color1;
+
+        .clock {
+            position: absolute;
+            left: px(470);
+            width: px(75);
+            height: px(38);
+            border-radius: 3px;
+            background-color: $color2;
+
+            span {
+                display: block;
+                position: relative;
+                color: $color6;
+                font-size: px(24);
+                line-height: px(38);
+                text-align: center;
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: px(44);
+                    left: px(35);
+                    width: px(5);
+                    height: px(19);
+                    background-color: $color2;
+                    content: '';
+                }
+            }
+        }
+
+        .episodes {
+            display: flex;
+            width: 10000px;
+            height: 100%;
+            padding-top: px(50);
+
+            .episode1 {
+                .timeline {
+                    display: flex;
+                    width: px(278);
+
+                    .prev {
+                        width: px(278);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color7;
+                    }
+
+                    .next {
+                        width: px(0);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color5;
+                    }
+                }
+            }
+
+            .episode2 {
+                margin-left: px(30);
+
+                .timeline {
+                    display: flex;
+                    width: px(544);
+
+                    .prev {
+                        width: px(188);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color7;
+                    }
+
+                    .next {
+                        width: px(339);
+                        height: px(6);
+                        margin-left: px(17);
+                        border-radius: 10px;
+                        background-color: $color5;
+                    }
+                }
+
+                .info {
+                    margin: px(7) 0 0 px(4);
+
+                    .time {
+                        color: $color3;
+                        font-size: px(28);
+                        font-weight: 700;
+                    }
+                }
+
+                .title {
+                    margin: px(8) 0 0 px(4);
+                    font-size: px(28);
+                    font-style: italic;
+                }
+            }
+
+            .episode3 {
+                margin-left: px(26);
+
+                .timeline {
+                    display: flex;
+                    width: px(314);
+
+                    .prev {
+                        width: px(0);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color4;
+                    }
+
+                    .next {
+                        width: px(314);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color5;
+                    }
+                }
+
+                .info {
+                    margin: px(7) 0 0 px(6);
+
+                    .time {
+                        color: $color3;
+                        font-size: px(28);
+                        font-weight: 700;
+                    }
+
+                    .label {
+                        margin-left: px(16);
+                        color: $color2;
+                        font-size: px(28);
+                        font-weight: 700;
+                    }
+                }
+
+                .title {
+                    margin: px(8) 0 0 px(6);
+                    font-size: px(28);
+                    font-style: italic;
+                }
+            }
+
+            .episode4 {
+                margin-left: px(28);
+
+                .timeline {
+                    display: flex;
+                    width: px(435);
+
+                    .prev {
+                        width: px(0);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color4;
+                    }
+
+                    .next {
+                        width: px(435);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color5;
+                    }
+                }
+
+                .info {
+                    margin: px(7) 0 0 px(6);
+
+                    .time {
+                        color: $color3;
+                        font-size: px(28);
+                        font-weight: 700;
+                    }
+
+                    .label {
+                        margin-left: px(12);
+                        color: $color2;
+                        font-size: px(27);
+                        font-weight: 700;
+                    }
+                }
+
+                .title {
+                    margin: px(8) 0 0 px(4);
+                    font-size: px(28);
+                    font-style: italic;
+                }
+            }
+
+            .episode5 {
+                margin-left: px(30);
+
+                .timeline {
+                    display: flex;
+                    width: px(194);
+
+                    .prev {
+                        width: px(0);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color4;
+                    }
+
+                    .next {
+                        width: px(194);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color5;
+                    }
+                }
+
+                .info {
+                    margin: px(7) 0 0 px(4);
+
+                    .time {
+                        color: $color3;
+                        font-size: px(28);
+                        font-weight: 700;
+                    }
+
+                    .label {
+                        margin-left: px(12);
+                        color: $color2;
+                        font-size: px(27);
+                        font-weight: 700;
+                    }
+                }
+
+                .title {
+                    margin: px(8) 0 0 px(2);
+                    font-size: px(28);
+                    font-style: italic;
+                }
+            }
+
+            .episode6 {
+                margin-left: px(34);
+
+                .timeline {
+                    display: flex;
+                    width: px(314);
+
+                    .prev {
+                        width: px(0);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color4;
+                    }
+
+                    .next {
+                        width: px(314);
+                        height: px(6);
+                        border-radius: 10px;
+                        background-color: $color5;
+                    }
+                }
+
+                .info {
+                    margin: px(7) 0 0 px(6);
+
+                    .time {
+                        color: $color3;
+                        font-size: px(28);
+                        font-weight: 700;
+                    }
+
+                    .label {
+                        margin-left: px(12);
+                        color: $color2;
+                        font-size: px(27);
+                        font-weight: 700;
+                    }
+                }
+
+                .title {
+                    margin: px(8) 0 0 px(2);
+                    font-size: px(28);
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+}
