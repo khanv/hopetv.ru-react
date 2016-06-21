@@ -6,6 +6,7 @@
             left: px(450);
             width: px(72);
             height: px(36);
+            padding-left: px(8);
 
             span {
                 font-size: px(22);
@@ -13,7 +14,7 @@
 
                 &::after {
                     top: px(42);
-                    left: px(34);
+                    left: px(26);
                 }
             }
         }
@@ -32,11 +33,13 @@
             }
 
             .episode2 {
+                margin-left: px(28);
+
                 .timeline {
-                    width: px(522);
+                    width: px(523);
 
                     .prev {
-                        width: px(184);
+                        width: px(185);
                     }
 
                     .next {
@@ -46,7 +49,7 @@
                 }
 
                 .info {
-                    margin-left: px(2);
+                    //margin-left: px(2);
 
                     .time {
                         font-size: px(26);
@@ -55,11 +58,13 @@
             }
 
             .episode3 {
+                margin-left: px(27);
+
                 .timeline {
-                    width: px(300);
+                    width: px(302);
 
                     .next {
-                        width: px(300);
+                        width: px(302);
                     }
                 }
 
@@ -78,11 +83,13 @@
             }
 
             .episode4 {
+                margin-left: px(26);
+
                 .timeline {
-                    width: px(416);
+                    width: px(418);
 
                     .next {
-                        width: px(416);
+                        width: px(418);
                     }
                 }
 
@@ -95,14 +102,16 @@
 
             .episode5 {
                 .timeline {
-                    width: px(186);
+                    width: px(187);
 
                     .next {
-                        width: px(186);
+                        width: px(187);
                     }
                 }
 
                 .info {
+                    margin-left: px(3);
+
                     .time {
                         font-size: px(26);
                     }
@@ -110,6 +119,8 @@
             }
 
             .episode6 {
+                margin-left: px(33);
+
                 .timeline {
                     width: px(306);
 
@@ -119,6 +130,8 @@
                 }
 
                 .info {
+                    margin-left: px(5);
+
                     .time {
                         font-size: px(26);
                     }

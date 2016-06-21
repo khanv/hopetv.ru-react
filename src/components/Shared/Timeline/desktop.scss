@@ -13,7 +13,8 @@
             left: px(470);
             width: px(75);
             height: px(38);
-            border-radius: 3px;
+            padding-left: px(7);
+            border-radius: 4px;
             background-color: $color2;
 
             span {
@@ -22,13 +23,12 @@
                 color: $color6;
                 font-size: px(24);
                 line-height: px(38);
-                text-align: center;
 
                 &::after {
                     display: block;
                     position: absolute;
                     top: px(44);
-                    left: px(35);
+                    left: px(28);
                     width: px(5);
                     height: px(19);
                     background-color: $color2;
@@ -72,7 +72,7 @@
                     width: px(544);
 
                     .prev {
-                        width: px(188);
+                        width: px(193);
                         height: px(6);
                         border-radius: 10px;
                         background-color: $color7;
@@ -81,7 +81,7 @@
                     .next {
                         width: px(339);
                         height: px(6);
-                        margin-left: px(17);
+                        margin-left: px(12);
                         border-radius: 10px;
                         background-color: $color5;
                     }
@@ -91,6 +91,7 @@
                     margin: px(7) 0 0 px(4);
 
                     .time {
+                        transition: color .4s;
                         color: $color3;
                         font-size: px(28);
                         font-weight: 700;
@@ -99,13 +100,28 @@
 
                 .title {
                     margin: px(8) 0 0 px(4);
+                    transition: color .4s;
                     font-size: px(28);
                     font-style: italic;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .info {
+                        .time {
+                            color: $color6;
+                        }
+                    }
+
+                    .title {
+                        color: $color3;
+                    }
                 }
             }
 
             .episode3 {
-                margin-left: px(26);
+                margin-left: px(27);
 
                 .timeline {
                     display: flex;
@@ -127,16 +143,17 @@
                 }
 
                 .info {
-                    margin: px(7) 0 0 px(6);
+                    margin: px(7) 0 0 px(5);
 
                     .time {
+                        transition: color .4s;
                         color: $color3;
                         font-size: px(28);
                         font-weight: 700;
                     }
 
                     .label {
-                        margin-left: px(16);
+                        margin-left: px(12);
                         color: $color2;
                         font-size: px(28);
                         font-weight: 700;
@@ -144,9 +161,24 @@
                 }
 
                 .title {
-                    margin: px(8) 0 0 px(6);
+                    margin: px(8) 0 0 px(5);
+                    transition: color .4s;
                     font-size: px(28);
                     font-style: italic;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .info {
+                        .time {
+                            color: $color6;
+                        }
+                    }
+
+                    .title {
+                        color: $color3;
+                    }
                 }
             }
 
@@ -176,6 +208,7 @@
                     margin: px(7) 0 0 px(6);
 
                     .time {
+                        transition: color .4s;
                         color: $color3;
                         font-size: px(28);
                         font-weight: 700;
@@ -190,14 +223,29 @@
                 }
 
                 .title {
-                    margin: px(8) 0 0 px(4);
+                    margin: px(8) 0 0 px(3);
+                    transition: color .4s;
                     font-size: px(28);
                     font-style: italic;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .info {
+                        .time {
+                            color: $color6;
+                        }
+                    }
+
+                    .title {
+                        color: $color3;
+                    }
                 }
             }
 
             .episode5 {
-                margin-left: px(30);
+                margin-left: px(29);
 
                 .timeline {
                     display: flex;
@@ -222,6 +270,7 @@
                     margin: px(7) 0 0 px(4);
 
                     .time {
+                        transition: color .4s;
                         color: $color3;
                         font-size: px(28);
                         font-weight: 700;
@@ -237,8 +286,23 @@
 
                 .title {
                     margin: px(8) 0 0 px(2);
+                    transition: color .4s;
                     font-size: px(28);
                     font-style: italic;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .info {
+                        .time {
+                            color: $color6;
+                        }
+                    }
+
+                    .title {
+                        color: $color3;
+                    }
                 }
             }
 
@@ -268,6 +332,7 @@
                     margin: px(7) 0 0 px(6);
 
                     .time {
+                        transition: color .4s;
                         color: $color3;
                         font-size: px(28);
                         font-weight: 700;
@@ -283,8 +348,23 @@
 
                 .title {
                     margin: px(8) 0 0 px(2);
+                    transition: color .4s;
                     font-size: px(28);
                     font-style: italic;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .info {
+                        .time {
+                            color: $color6;
+                        }
+                    }
+
+                    .title {
+                        color: $color3;
+                    }
                 }
             }
         }
