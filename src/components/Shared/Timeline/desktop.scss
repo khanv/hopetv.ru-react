@@ -51,14 +51,20 @@
                     .prev {
                         width: px(278);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color7;
                     }
 
                     .next {
                         width: px(0);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color5;
                     }
                 }
@@ -74,7 +80,10 @@
                     .prev {
                         width: px(193);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 0;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 0;
                         background-color: $color7;
                     }
 
@@ -82,7 +91,10 @@
                         width: px(339);
                         height: px(6);
                         margin-left: px(12);
-                        border-radius: 10px;
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color5;
                     }
                 }
@@ -91,7 +103,7 @@
                     margin: px(7) 0 0 px(4);
 
                     .time {
-                        transition: color .4s;
+                        transition: color $transitionDuration;
                         color: $color3;
                         font-size: px(28);
                         font-weight: 700;
@@ -99,8 +111,8 @@
                 }
 
                 .title {
-                    margin: px(8) 0 0 px(4);
-                    transition: color .4s;
+                    margin: px(9) 0 0 px(4);
+                    transition: color $transitionDuration;
                     font-size: px(28);
                     font-style: italic;
                 }
@@ -130,30 +142,36 @@
                     .prev {
                         width: px(0);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color4;
                     }
 
                     .next {
                         width: px(314);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color5;
                     }
                 }
 
                 .info {
-                    margin: px(7) 0 0 px(5);
+                    margin: px(7) 0 0 px(4);
 
                     .time {
-                        transition: color .4s;
+                        transition: color $transitionDuration;
                         color: $color3;
                         font-size: px(28);
                         font-weight: 700;
                     }
 
                     .label {
-                        margin-left: px(12);
+                        margin-left: px(14);
                         color: $color2;
                         font-size: px(28);
                         font-weight: 700;
@@ -161,8 +179,8 @@
                 }
 
                 .title {
-                    margin: px(8) 0 0 px(5);
-                    transition: color .4s;
+                    margin: px(9) 0 0 px(5);
+                    transition: color $transitionDuration;
                     font-size: px(28);
                     font-style: italic;
                 }
@@ -192,14 +210,20 @@
                     .prev {
                         width: px(0);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color4;
                     }
 
                     .next {
                         width: px(435);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color5;
                     }
                 }
@@ -208,23 +232,16 @@
                     margin: px(7) 0 0 px(6);
 
                     .time {
-                        transition: color .4s;
+                        transition: color $transitionDuration;
                         color: $color3;
                         font-size: px(28);
-                        font-weight: 700;
-                    }
-
-                    .label {
-                        margin-left: px(12);
-                        color: $color2;
-                        font-size: px(27);
                         font-weight: 700;
                     }
                 }
 
                 .title {
-                    margin: px(8) 0 0 px(3);
-                    transition: color .4s;
+                    margin: px(9) 0 0 px(3);
+                    transition: color $transitionDuration;
                     font-size: px(28);
                     font-style: italic;
                 }
@@ -254,39 +271,38 @@
                     .prev {
                         width: px(0);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color4;
                     }
 
                     .next {
                         width: px(194);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color5;
                     }
                 }
 
                 .info {
-                    margin: px(7) 0 0 px(4);
+                    margin: px(7) 0 0 px(3);
 
                     .time {
-                        transition: color .4s;
+                        transition: color $transitionDuration;
                         color: $color3;
                         font-size: px(28);
-                        font-weight: 700;
-                    }
-
-                    .label {
-                        margin-left: px(12);
-                        color: $color2;
-                        font-size: px(27);
                         font-weight: 700;
                     }
                 }
 
                 .title {
-                    margin: px(8) 0 0 px(2);
-                    transition: color .4s;
+                    margin: px(9) 0 0 px(2);
+                    transition: color $transitionDuration;
                     font-size: px(28);
                     font-style: italic;
                 }
@@ -316,14 +332,20 @@
                     .prev {
                         width: px(0);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color4;
                     }
 
                     .next {
                         width: px(314);
                         height: px(6);
-                        border-radius: 10px;
+                        border-top-left-radius: 4px 2px;
+                        border-top-right-radius: 4px 2px;
+                        border-bottom-left-radius: 4px 2px;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color5;
                     }
                 }
@@ -332,23 +354,16 @@
                     margin: px(7) 0 0 px(6);
 
                     .time {
-                        transition: color .4s;
+                        transition: color $transitionDuration;
                         color: $color3;
                         font-size: px(28);
-                        font-weight: 700;
-                    }
-
-                    .label {
-                        margin-left: px(12);
-                        color: $color2;
-                        font-size: px(27);
                         font-weight: 700;
                     }
                 }
 
                 .title {
-                    margin: px(8) 0 0 px(2);
-                    transition: color .4s;
+                    margin: px(9) 0 0 px(2);
+                    transition: color $transitionDuration;
                     font-size: px(28);
                     font-style: italic;
                 }
@@ -369,5 +384,4 @@
             }
         }
     }
-
 }
