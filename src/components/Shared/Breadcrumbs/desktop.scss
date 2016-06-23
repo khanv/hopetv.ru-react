@@ -1,0 +1,46 @@
+& {
+    width: 100%;
+    background-color: $color1;
+
+    ul {
+        display: inline-flex;
+        justify-content: flex-start;
+        padding-left: px(120);
+        color: $color2;
+        font-size: px(28);
+
+        li {
+            position: relative;
+            padding: px(36) px(42) px(36) 0;
+
+            a {
+                display: block;
+                padding-top: px(2);
+                border-bottom: 1px solid $color2;
+                color: $color2;
+                line-height: px(26);
+                text-decoration: none;
+
+                &:hover {
+                    border-bottom: 1px solid transparent;
+                    color: $color3;
+                }
+            }
+
+            &::after {
+                display: block;
+                position: absolute;
+                top: px(34);
+                right: px(8);
+                font-family: Arial, sans-serif;
+                content: '→';
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

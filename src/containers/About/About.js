@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
+import { PageHead, Breadcrumbs } from 'components/Shared';
 import { Why, Banner, WorldNetwork, IconInfo, Buttons } from 'components/About';
-import { PageHead } from 'components/Shared';
 
 /* eslint-disable react/prefer-stateless-function */
 @translate(['About'])
@@ -29,6 +29,9 @@ export default class About extends Component {
 
         return (
             <section>
+                <Breadcrumbs
+                    mediaType={ browser.mediaType }
+                />
                 <PageHead
                     title={ t('headTitle') }
                     description={ t('headDescription') }
