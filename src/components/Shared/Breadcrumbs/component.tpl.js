@@ -24,16 +24,16 @@ export default function Breadcrumbs(props) {
                 <div className={ Grids.container }>
                     <ul>
                         <li><a href="#">Главная</a></li>
-                            { [
-                                BreakPoints.tabletLandscape.name
-                            ].indexOf(mediaType) !== -1 ? (
-                                <li><span>Список программ</span></li>
-                            ) : null }
-                            { [
-                                BreakPoints.tabletPortrait.name
-                            ].indexOf(mediaType) !== -1 ? (
-                                <li><span>Где нас смотреть?</span></li>
-                            ) : null }
+                        { [
+                            BreakPoints.tabletLandscape.name
+                        ].indexOf(mediaType) !== -1 ? (
+                            <li><span>Список программ</span></li>
+                        ) : null }
+                        { [
+                            BreakPoints.tabletPortrait.name
+                        ].indexOf(mediaType) !== -1 ? (
+                            <li><span>Где нас смотреть?</span></li>
+                        ) : null }
                     </ul>
                 </div>
             </section>

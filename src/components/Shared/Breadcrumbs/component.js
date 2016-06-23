@@ -6,23 +6,27 @@ import BreakPoints from 'components/PixelPerfect/breakpoints';
 export default function Breadcrumbs(props) {
     const { mediaType } =  props;
 
+    if ([
+        BreakPoints.phonePortrait.name,
+        BreakPoints.phoneLandscape.name].indexOf(mediaType) !== -1) {
+        return null;
+    }
+
     return (
         <section className={ Styles.breadcrumbsComponent }>
             <div className={ Grids.container }>
                 <ul>
                     <li><a href="#">Главная</a></li>
-                    <li>
-                        { [
-                            BreakPoints.tabletLandscape.name
-                        ].indexOf(mediaType) !== -1 ? (
-                            <span>Список программ</span>
-                        ) : null }
-                        { [
-                            BreakPoints.tabletPortrait.name
-                        ].indexOf(mediaType) !== -1 ? (
-                            <span>Где нас смотреть?</span>
-                        ) : null }
-                    </li>
+                    { [
+                        BreakPoints.tabletLandscape.name
+                    ].indexOf(mediaType) !== -1 ? (
+                        <li><span>Список программ</span></li>
+                    ) : null }
+                    { [
+                        BreakPoints.tabletPortrait.name
+                    ].indexOf(mediaType) !== -1 ? (
+                        <li><span>Где нас смотреть?</span></li>
+                    ) : null }
                 </ul>
             </div>
         </section>
