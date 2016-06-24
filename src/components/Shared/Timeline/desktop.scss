@@ -5,7 +5,6 @@
     overflow: hidden;
 
     .scheduler {
-        height: 100%;
         background-color: $color1;
 
         .clock {
@@ -42,115 +41,26 @@
             width: 10000px;
             height: 100%;
             padding: px(50) 0 px(20);
+            transform: translateX(-196px);
 
-            .episode1 {
-                .timeline {
-                    display: flex;
-                    width: px(278);
-
-                    .prev {
-                        width: px(278);
-                        height: px(6);
-                        border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color7;
-                    }
-
-                    .next {
-                        width: px(0);
-                        height: px(6);
-                        border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color5;
-                    }
-                }
-            }
-
-            .episode2 {
+            .episode {
                 margin-left: px(30);
 
                 .timeline {
                     display: flex;
-                    width: px(544);
+                    width: 100%;
 
                     .prev {
-                        width: px(193);
                         height: px(6);
                         border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 0;
+                        border-top-right-radius: 4px 2px;
                         border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 0;
+                        border-bottom-right-radius: 4px 2px;
                         background-color: $color7;
                     }
 
                     .next {
-                        width: px(339);
-                        height: px(6);
-                        margin-left: px(12);
-                        border-top-left-radius: 0;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 0;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color5;
-                    }
-                }
-
-                .info {
-                    margin: px(7) 0 0 px(4);
-
-                    .time {
-                        transition: color $transitionDuration;
-                        color: $color3;
-                        font-size: px(28);
-                        font-weight: 700;
-                    }
-                }
-
-                .title {
-                    margin: px(9) 0 0 px(4);
-                    transition: color $transitionDuration;
-                    font-size: px(28);
-                    font-style: italic;
-                }
-
-                &:hover {
-                    cursor: pointer;
-
-                    .info {
-                        .time {
-                            color: $color6;
-                        }
-                    }
-
-                    .title {
-                        color: $color3;
-                    }
-                }
-            }
-
-            .episode3 {
-                margin-left: px(27);
-
-                .timeline {
-                    display: flex;
-                    width: px(314);
-
-                    .prev {
-                        width: px(0);
-                        height: px(6);
-                        border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color4;
-                    }
-
-                    .next {
-                        width: px(314);
+                        width: 100%;
                         height: px(6);
                         border-top-left-radius: 4px 2px;
                         border-top-right-radius: 4px 2px;
@@ -161,7 +71,7 @@
                 }
 
                 .info {
-                    margin: px(7) 0 0 px(4);
+                    margin: px(6) 0 0 px(4);
 
                     .time {
                         transition: color $transitionDuration;
@@ -179,7 +89,7 @@
                 }
 
                 .title {
-                    margin: px(9) 0 0 px(5);
+                    margin: px(10) 0 0 px(4);
                     transition: color $transitionDuration;
                     font-size: px(28);
                     font-style: italic;
@@ -198,187 +108,39 @@
                         color: $color3;
                     }
                 }
-            }
 
-            .episode4 {
-                margin-left: px(28);
+                &:first-child {
+                    margin-left: 0;
 
-                .timeline {
-                    display: flex;
-                    width: px(435);
+                    .timeline {
+                        .prev {
+                            width: px(832);
+                        }
 
-                    .prev {
-                        width: px(0);
-                        height: px(6);
-                        border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color4;
-                    }
-
-                    .next {
-                        width: px(435);
-                        height: px(6);
-                        border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color5;
-                    }
-                }
-
-                .info {
-                    margin: px(7) 0 0 px(6);
-
-                    .time {
-                        transition: color $transitionDuration;
-                        color: $color3;
-                        font-size: px(28);
-                        font-weight: 700;
-                    }
-                }
-
-                .title {
-                    margin: px(9) 0 0 px(3);
-                    transition: color $transitionDuration;
-                    font-size: px(28);
-                    font-style: italic;
-                }
-
-                &:hover {
-                    cursor: pointer;
-
-                    .info {
-                        .time {
-                            color: $color6;
+                        .next {
+                            width: 0;
                         }
                     }
-
-                    .title {
-                        color: $color3;
-                    }
-                }
-            }
-
-            .episode5 {
-                margin-left: px(29);
-
-                .timeline {
-                    display: flex;
-                    width: px(194);
-
-                    .prev {
-                        width: px(0);
-                        height: px(6);
-                        border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color4;
-                    }
-
-                    .next {
-                        width: px(194);
-                        height: px(6);
-                        border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color5;
-                    }
                 }
 
-                .info {
-                    margin: px(7) 0 0 px(3);
-
-                    .time {
-                        transition: color $transitionDuration;
-                        color: $color3;
-                        font-size: px(28);
-                        font-weight: 700;
-                    }
-                }
-
-                .title {
-                    margin: px(9) 0 0 px(2);
-                    transition: color $transitionDuration;
-                    font-size: px(28);
-                    font-style: italic;
-                }
-
-                &:hover {
-                    cursor: pointer;
-
-                    .info {
-                        .time {
-                            color: $color6;
+                &#active {
+                    .timeline {
+                        .prev {
+                            width: px(193);
+                            border-top-left-radius: 4px 2px;
+                            border-top-right-radius: 0;
+                            border-bottom-left-radius: 4px 2px;
+                            border-bottom-right-radius: 0;
                         }
-                    }
 
-                    .title {
-                        color: $color3;
-                    }
-                }
-            }
-
-            .episode6 {
-                margin-left: px(34);
-
-                .timeline {
-                    display: flex;
-                    width: px(314);
-
-                    .prev {
-                        width: px(0);
-                        height: px(6);
-                        border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color4;
-                    }
-
-                    .next {
-                        width: px(314);
-                        height: px(6);
-                        border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color5;
-                    }
-                }
-
-                .info {
-                    margin: px(7) 0 0 px(6);
-
-                    .time {
-                        transition: color $transitionDuration;
-                        color: $color3;
-                        font-size: px(28);
-                        font-weight: 700;
-                    }
-                }
-
-                .title {
-                    margin: px(9) 0 0 px(2);
-                    transition: color $transitionDuration;
-                    font-size: px(28);
-                    font-style: italic;
-                }
-
-                &:hover {
-                    cursor: pointer;
-
-                    .info {
-                        .time {
-                            color: $color6;
+                        .next {
+                            width: px(339);
+                            margin-left: px(12);
+                            border-top-left-radius: 0;
+                            border-top-right-radius: 4px 2px;
+                            border-bottom-left-radius: 0;
+                            border-bottom-right-radius: 4px 2px;
                         }
-                    }
-
-                    .title {
-                        color: $color3;
                     }
                 }
             }

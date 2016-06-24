@@ -20,53 +20,11 @@
         }
 
         .episodes {
-            padding: px(48) 0 px(12);
+            padding: px(49) 0 px(12);
+            transform: translateX(-197px);
 
-            .episode1 {
-                .timeline {
-                    width: px(266);
-
-                    .prev {
-                        width: px(266);
-                    }
-                }
-            }
-
-            .episode2 {
+            .episode {
                 margin-left: px(28);
-
-                .timeline {
-                    width: px(523);
-
-                    .prev {
-                        width: px(185);
-                    }
-
-                    .next {
-                        width: px(326);
-                        margin-left: px(12);
-                    }
-                }
-
-                .info {
-                    //margin-left: px(2);
-
-                    .time {
-                        font-size: px(26);
-                    }
-                }
-            }
-
-            .episode3 {
-                margin-left: px(27);
-
-                .timeline {
-                    width: px(302);
-
-                    .next {
-                        width: px(302);
-                    }
-                }
 
                 .info {
                     margin-left: px(4);
@@ -80,60 +38,28 @@
                         font-size: px(26);
                     }
                 }
-            }
 
-            .episode4 {
-                margin-left: px(26);
+                &:first-child {
+                    .timeline {
+                        .prev {
+                            width: px(660);
+                        }
 
-                .timeline {
-                    width: px(418);
-
-                    .next {
-                        width: px(418);
+                        .next {
+                            width: 0;
+                        }
                     }
                 }
 
-                .info {
-                    .time {
-                        font-size: px(26);
-                    }
-                }
-            }
+                &#active {
+                    .timeline {
+                        .prev {
+                            width: px(185);
+                        }
 
-            .episode5 {
-                .timeline {
-                    width: px(187);
-
-                    .next {
-                        width: px(187);
-                    }
-                }
-
-                .info {
-                    margin-left: px(3);
-
-                    .time {
-                        font-size: px(26);
-                    }
-                }
-            }
-
-            .episode6 {
-                margin-left: px(33);
-
-                .timeline {
-                    width: px(306);
-
-                    .next {
-                        width: px(306);
-                    }
-                }
-
-                .info {
-                    margin-left: px(5);
-
-                    .time {
-                        font-size: px(26);
+                        .next {
+                            width: px(326);
+                        }
                     }
                 }
             }

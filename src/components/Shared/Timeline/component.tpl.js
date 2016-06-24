@@ -21,6 +21,25 @@ export default function Timeline(props) {
         return null;
     }
 
+    let episode1Style = {
+        width: 330
+    };
+    let episode2Style = {
+        width: 262
+    };
+    let episode3Style = {
+        width: 151
+    };
+    let episode4Style = {
+        width: 209
+    };
+    let episode5Style = {
+        width: 94
+    };
+    let episode6Style = {
+        width: 151
+    };
+
     return (
         <PixelPerfect templates={ templates } component="timeline">
             <section className={ Styles.timelineComponent }>
@@ -29,13 +48,13 @@ export default function Timeline(props) {
                         <span>12:50</span>
                     </div>
                     <div className={ Styles.episodes }>
-                        <div className={ Styles.episode1 }>
+                        <div className={ Styles.episode } style={ episode1Style }>
                             <div className={ Styles.timeline }>
                                 <div className={ Styles.prev }></div>
                                 <div className={ Styles.next }></div>
                             </div>
                             <div className={ Styles.info }>
-                                <span className={ Styles.time }></span>
+                                <span className={ Styles.time }>11:40</span>
                                 <span className={ Styles.label }></span>
                             </div>
                             { [
@@ -44,11 +63,11 @@ export default function Timeline(props) {
                                 BreakPoints.desktopHD.name,
                                 BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
-                                <p className={ Styles.title }></p>
+                                <p className={ Styles.title }>Богослужение в храме</p>
                             ) : null }
                         </div>
 
-                        <div className={ Styles.episode2 }>
+                        <div className={ Styles.episode } id={ Styles.active }style={ episode2Style }>
                             <div className={ Styles.timeline }>
                                 <div className={ Styles.prev }></div>
                                 <div className={ Styles.next }></div>
@@ -66,7 +85,7 @@ export default function Timeline(props) {
                             ) : null }
                         </div>
 
-                        <div className={ Styles.episode3 }>
+                        <div className={ Styles.episode } style={ episode3Style }>
                             <div className={ Styles.timeline }>
                                 <div className={ Styles.prev }></div>
                                 <div className={ Styles.next }></div>
@@ -85,7 +104,7 @@ export default function Timeline(props) {
                             ) : null }
                         </div>
 
-                        <div className={ Styles.episode4 }>
+                        <div className={ Styles.episode } style={ episode4Style }>
                             <div className={ Styles.timeline }>
                                 <div className={ Styles.prev }></div>
                                 <div className={ Styles.next }></div>
@@ -103,7 +122,7 @@ export default function Timeline(props) {
                             ) : null }
                         </div>
 
-                        <div className={ Styles.episode5 }>
+                        <div className={ Styles.episode } style={ episode5Style }>
                             <div className={ Styles.timeline }>
                                 <div className={ Styles.prev }></div>
                                 <div className={ Styles.next }></div>
@@ -121,7 +140,7 @@ export default function Timeline(props) {
                             ) : null }
                         </div>
 
-                        <div className={ Styles.episode6 }>
+                        <div className={ Styles.episode } style={ episode6Style }>
                             <div className={ Styles.timeline }>
                                 <div className={ Styles.prev }></div>
                                 <div className={ Styles.next }></div>
