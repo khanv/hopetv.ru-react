@@ -21,22 +21,22 @@ export default function Timeline(props) {
         return null;
     }
 
-    let episode1Style = {
+    const episode1Style = {
         width: 330
     };
-    let episode2Style = {
+    const episode2Style = {
         width: 262
     };
-    let episode3Style = {
+    const episode3Style = {
         width: 151
     };
-    let episode4Style = {
+    const episode4Style = {
         width: 209
     };
-    let episode5Style = {
+    const episode5Style = {
         width: 94
     };
-    let episode6Style = {
+    const episode6Style = {
         width: 151
     };
 
@@ -67,7 +67,7 @@ export default function Timeline(props) {
                             ) : null }
                         </div>
 
-                        <div className={ Styles.episode } id={ Styles.active }style={ episode2Style }>
+                        <div className={ Styles.episodeActive } style={ episode2Style }>
                             <div className={ Styles.timeline }>
                                 <div className={ Styles.prev }></div>
                                 <div className={ Styles.next }></div>
