@@ -43,75 +43,6 @@
             padding: px(50) 0 px(20);
             transform: translateX(-196px);
 
-            .episodeActive {
-                margin-left: px(30);
-
-                .timeline {
-                    display: flex;
-                    width: 100%;
-
-                    .prev {
-                        width: px(193);
-                        height: px(6);
-                        border-top-left-radius: 4px 2px;
-                        border-top-right-radius: 0;
-                        border-bottom-left-radius: 4px 2px;
-                        border-bottom-right-radius: 0;
-                        background-color: $color7;
-                    }
-
-                    .next {
-                        width: px(339);
-                        height: px(6);
-                        margin-left: px(12);
-                        border-top-left-radius: 0;
-                        border-top-right-radius: 4px 2px;
-                        border-bottom-left-radius: 0;
-                        border-bottom-right-radius: 4px 2px;
-                        background-color: $color5;
-                    }
-                }
-
-                .info {
-                    margin: px(6) 0 0 px(4);
-
-                    .time {
-                        transition: color $transitionDuration;
-                        color: $color3;
-                        font-size: px(28);
-                        font-weight: 700;
-                    }
-
-                    .label {
-                        margin-left: px(14);
-                        color: $color2;
-                        font-size: px(28);
-                        font-weight: 700;
-                    }
-                }
-
-                .title {
-                    margin: px(10) 0 0 px(4);
-                    transition: color $transitionDuration;
-                    font-size: px(28);
-                    font-style: italic;
-                }
-
-                &:hover {
-                    cursor: pointer;
-
-                    .info {
-                        .time {
-                            color: $color6;
-                        }
-                    }
-
-                    .title {
-                        color: $color3;
-                    }
-                }
-            }
-
             .episode {
                 margin-left: px(30);
 
@@ -188,6 +119,30 @@
 
                         .next {
                             width: 0;
+                        }
+                    }
+                }
+
+                &.active {
+                    .timeline {
+                        display: flex;
+                        width: 100%;
+
+                        .prev {
+                            width: px(193);
+                            border-top-left-radius: 4px 2px;
+                            border-top-right-radius: 0;
+                            border-bottom-left-radius: 4px 2px;
+                            border-bottom-right-radius: 0;
+                        }
+
+                        .next {
+                            width: px(339);
+                            margin-left: px(12);
+                            border-top-left-radius: 0;
+                            border-top-right-radius: 4px 2px;
+                            border-bottom-left-radius: 0;
+                            border-bottom-right-radius: 4px 2px;
                         }
                     }
                 }

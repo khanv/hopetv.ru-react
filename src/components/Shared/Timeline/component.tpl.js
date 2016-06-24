@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import Styles from './main.scss';
 import PixelPerfect from 'components/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
+import cx from 'classnames';
 
 export default function Timeline(props) {
     const templates = [
@@ -39,6 +40,10 @@ export default function Timeline(props) {
     const episode6Style = {
         width: 151
     };
+    const episodeActiveClass = cx({
+        [Styles.episode]: true,
+        [Styles.active]: true
+    });
 
     return (
         <PixelPerfect templates={ templates } component="timeline">
@@ -67,7 +72,7 @@ export default function Timeline(props) {
                             ) : null }
                         </div>
 
-                        <div className={ Styles.episodeActive } style={ episode2Style }>
+                        <div className={ episodeActiveClass } style={ episode2Style }>
                             <div className={ Styles.timeline }>
                                 <div className={ Styles.prev }></div>
                                 <div className={ Styles.next }></div>

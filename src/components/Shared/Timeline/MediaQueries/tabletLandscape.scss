@@ -23,33 +23,6 @@
             padding: px(49) 0 px(12);
             transform: translateX(-197px);
 
-            .episodeActive {
-                margin-left: px(28);
-
-                .timeline {
-                    .prev {
-                        width: px(185);
-                    }
-
-                    .next {
-                        width: px(326);
-                    }
-                }
-
-                .info {
-                    margin-left: px(4);
-
-                    .time {
-                        font-size: px(26);
-                    }
-
-                    .label {
-                        margin-left: px(13);
-                        font-size: px(26);
-                    }
-                }
-            }
-
             .episode {
                 margin-left: px(28);
 
@@ -74,6 +47,18 @@
 
                         .next {
                             width: 0;
+                        }
+                    }
+                }
+
+                &.active {
+                    .timeline {
+                        .prev {
+                            width: px(185);
+                        }
+
+                        .next {
+                            width: px(326);
                         }
                     }
                 }
