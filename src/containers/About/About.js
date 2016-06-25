@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { PageHead, Breadcrumbs } from 'components/Shared';
 import { Why, Banner, WorldNetwork, IconInfo, Buttons } from 'components/About';
+import { Shows } from 'components/Footer';
 
 /* eslint-disable react/prefer-stateless-function */
 @translate(['About'])
@@ -50,6 +51,9 @@ export default class About extends Component {
                     mediaType={ browser.mediaType }
                 />
                 <Buttons/>
+                <Shows
+                    mediaType={ browser.mediaType }
+                />
             </section>
         );
     }
