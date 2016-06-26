@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
+import { PageHead, Breadcrumbs } from 'components/Shared';
 import { Why, Banner, WorldNetwork, IconInfo, Buttons } from 'components/About';
-import { PageHead, Timeline } from 'components/Shared';
 
 /* eslint-disable react/prefer-stateless-function */
 @translate(['About'])
@@ -29,7 +29,7 @@ export default class About extends Component {
 
         return (
             <section>
-                <Timeline
+                <Breadcrumbs
                     mediaType={ browser.mediaType }
                 />
                 <PageHead
@@ -54,7 +54,3 @@ export default class About extends Component {
         );
     }
 }
-
-Timeline.propTypes = {
-    mediaType: PropTypes.string.isRequired
-};
