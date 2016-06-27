@@ -1,7 +1,7 @@
 @import '../desktop';
 
 & {
-    padding-top: px(86);
+    padding-top: px(84);
     padding-left: px(98);
 
     .shows {
@@ -10,7 +10,8 @@
             padding-right: px(50);
 
             a {
-                margin-top: px(8);
+                height: px(30);
+                margin-top: px(10);
                 font-size: px(28);
 
                 &::after {
@@ -21,15 +22,14 @@
         }
 
         .col1 {
-            width: px(364);
-            margin-top: px(80);
-            margin-left: 0;
-
-            h2 {
-                font-size: px(34);
-            }
+            width: px(528);
+            margin-top: px(84);
 
             div {
+
+                h2 {
+                    font-size: px(34);
+                }
 
                 ul {
                     padding-left: px(28);
@@ -51,7 +51,6 @@
                         }
 
                         &:nth-last-child(-n+3) {
-                            display: block;
                             margin-bottom: px(24);
                         }
                     }
@@ -60,22 +59,19 @@
         }
 
         .col2 {
-            margin-top: px(80);
-            margin-left: px(154);
-
-            h2 {
-                font-size: px(34);
-            }
+            width: px(362);
+            margin-top: px(84);
 
             div {
                 margin-bottom: px(110);
 
                 h2 {
-                    margin-bottom: px(38);
+                    margin-bottom: px(36);
+                    font-size: px(34);
                 }
 
                 ul {
-                    padding-left: px(30);
+                    padding-left: px(28);
 
                     li {
                         margin-bottom: px(24);
@@ -93,22 +89,22 @@
 
                 &:last-child {
                     ul {
-                        padding-left: px(32);
+                        padding-left: px(30);
                     }
                 }
             }
         }
 
         .col3 {
-            margin-top: px(80);
-            margin-right: px(-20);
-
-            h2 {
-                font-size: px(34);
-            }
+            width: px(210);
+            margin-top: px(84);
 
             div {
                 margin-bottom: px(112);
+
+                h2 {
+                    font-size: px(34);
+                }
 
                 ul {
                     padding-left: px(32);
@@ -121,14 +117,22 @@
                         }
 
                         .label {
-                            right: px(116);
                             bottom: px(10);
+                            left: px(108);
                         }
                     }
                 }
 
                 &:nth-last-child(2) {
                     margin-bottom: px(126);
+
+                    h2 {
+                        margin-bottom: px(34);
+                    }
+
+                    ul {
+                        padding-left: px(30);
+                    }
                 }
 
                 &:last-child {

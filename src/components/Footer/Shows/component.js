@@ -1,14 +1,8 @@
 import React, { PropTypes } from 'react';
 import Styles from './main.scss';
-import PixelPerfect from 'components/PixelPerfect/component';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
 
 export default function Shows(props) {
-    const templates = [
-        BreakPoints.tabletPortrait.name,
-        BreakPoints.tabletLandscape.name
-    ];
-
     const { mediaType } = props;
 
     if ([
