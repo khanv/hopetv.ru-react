@@ -15,10 +15,7 @@ export default function Timeline(props) {
     if ([
         BreakPoints.phonePortrait.name,
         BreakPoints.phoneLandscape.name,
-        BreakPoints.tabletPortrait.name,
-        BreakPoints.desktopWide.name,
-        BreakPoints.desktopHD.name,
-        BreakPoints.desktopMega.name].indexOf(mediaType) !== -1) {
+        BreakPoints.tabletPortrait.name].indexOf(mediaType) !== -1) {
         return null;
     }
 
