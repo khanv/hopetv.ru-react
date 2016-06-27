@@ -129,12 +129,10 @@ export default function Shows(props) {
     );
 
     return (
-        <PixelPerfect templates={ templates } component="shows">
-            <section className={ Styles.showsComponent }>
+        <section className={ Styles.showsComponent }>
                 { shows }
                 { about }
-            </section>
-        </PixelPerfect>
+        </section>
     );
 }
 Shows.propTypes = {
