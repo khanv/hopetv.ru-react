@@ -130,8 +130,8 @@ export default function Shows(props) {
 
     return (
         <section className={ Styles.showsComponent }>
-                { shows }
-                { about }
+            { shows }
+            { about }
         </section>
     );
 }
