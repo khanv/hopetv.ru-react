@@ -1,0 +1,140 @@
+& {
+    position: relative;
+    width: 100%;
+    margin-top: px(-15);
+    overflow: hidden;
+
+    .scheduler {
+        background-color: $color1;
+
+        .clock {
+            position: absolute;
+            left: px(470);
+            width: px(75);
+            height: px(38);
+            padding-left: px(7);
+            border-radius: 4px;
+            background-color: $color2;
+
+            span {
+                display: block;
+                position: relative;
+                color: $color6;
+                font-size: px(24);
+                line-height: px(38);
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: px(44);
+                    left: px(28);
+                    width: px(5);
+                    height: px(19);
+                    background-color: $color2;
+                    content: '';
+                }
+            }
+        }
+
+        .episodes {
+            display: flex;
+            width: 10000px;
+            height: 100%;
+            padding: px(50) 0 px(20);
+            transform: translateX(-196px);
+
+            .episode {
+                margin-left: px(30);
+
+                .timeline {
+                    display: flex;
+                    width: 100%;
+
+                    .prev {
+                        height: px(6);
+                        border-radius: 4px 2px 4px 2px / 2px 4px 2px 4px;
+                        background-color: $color7;
+                    }
+
+                    .next {
+                        width: 100%;
+                        height: px(6);
+                        border-radius: 4px 2px 4px 2px / 2px 4px 2px 4px;
+                        background-color: $color5;
+                    }
+                }
+
+                .info {
+                    margin: px(6) 0 0 px(4);
+
+                    .time {
+                        transition: color $transitionDuration;
+                        color: $color3;
+                        font-size: px(28);
+                        font-weight: 700;
+                    }
+
+                    .label {
+                        margin-left: px(14);
+                        color: $color2;
+                        font-size: px(28);
+                        font-weight: 700;
+                    }
+                }
+
+                .title {
+                    margin: px(10) 0 0 px(4);
+                    transition: color $transitionDuration;
+                    font-size: px(28);
+                    font-style: italic;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .info {
+                        .time {
+                            color: $color6;
+                        }
+                    }
+
+                    .title {
+                        color: $color3;
+                    }
+                }
+
+                &:first-child {
+                    margin-left: 0;
+
+                    .timeline {
+                        .prev {
+                            width: px(832);
+                        }
+
+                        .next {
+                            width: 0;
+                        }
+                    }
+                }
+
+                &.active {
+                    .timeline {
+                        display: flex;
+                        width: 100%;
+
+                        .prev {
+                            width: px(193);
+                            border-radius: 4px 0 0 4px / 2px 0 0 2px;
+                        }
+
+                        .next {
+                            width: px(339);
+                            margin-left: px(12);
+                            border-radius: 0 4px 4px 0 / 0 2px 2px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

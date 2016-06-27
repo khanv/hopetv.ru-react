@@ -1,0 +1,68 @@
+@import '../desktop';
+
+& {
+    .scheduler {
+        .clock {
+            left: px(450);
+            width: px(72);
+            height: px(36);
+            padding-left: px(8);
+
+            span {
+                font-size: px(22);
+                line-height: px(36);
+
+                &::after {
+                    top: px(42);
+                    left: px(26);
+                }
+            }
+        }
+
+        .episodes {
+            padding: px(49) 0 px(12);
+            transform: translateX(-197px);
+
+            .episode {
+                margin-left: px(28);
+
+                .info {
+                    margin-left: px(4);
+
+                    .time {
+                        font-size: px(26);
+                    }
+
+                    .label {
+                        margin-left: px(13);
+                        font-size: px(26);
+                    }
+                }
+
+                &:first-child {
+                    .timeline {
+                        .prev {
+                            width: px(660);
+                        }
+
+                        .next {
+                            width: 0;
+                        }
+                    }
+                }
+
+                &.active {
+                    .timeline {
+                        .prev {
+                            width: px(185);
+                        }
+
+                        .next {
+                            width: px(326);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

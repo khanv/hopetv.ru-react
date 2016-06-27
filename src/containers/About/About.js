@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
-import { PageHead, Breadcrumbs } from 'components/Shared';
+import { PageHead, Timeline, Breadcrumbs } from 'components/Shared';
 import { Why, Banner, WorldNetwork, IconInfo, Buttons } from 'components/About';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -29,6 +29,10 @@ export default class About extends Component {
 
         return (
             <section>
+                <Timeline
+                    mediaType={ browser.mediaType }
+                />
+
                 <Breadcrumbs
                     mediaType={ browser.mediaType }
                 />
