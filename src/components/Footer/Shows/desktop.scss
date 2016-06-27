@@ -74,14 +74,6 @@
                                 cursor: pointer;
                             }
                         }
-
-                        &:nth-last-child(-n+7) {
-                            margin-bottom: px(18);
-                        }
-
-                        &:nth-last-child(-n+3) {
-                            margin-bottom: px(22);
-                        }
                     }
                 }
             }
@@ -117,13 +109,6 @@
                                 cursor: pointer;
                             }
                         }
-                    }
-                }
-
-                &:last-child {
-
-                    ul {
-                        padding-left: px(42);
                     }
                 }
             }

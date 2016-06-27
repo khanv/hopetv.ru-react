@@ -1,1 +1,1 @@
-export Shows from './Shows/component.tpl';
+export Shows from './Shows/component';

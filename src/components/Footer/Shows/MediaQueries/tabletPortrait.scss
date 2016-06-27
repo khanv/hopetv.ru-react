@@ -41,18 +41,6 @@
                             font-size: px(28);
 
                         }
-
-                        &:nth-last-child(-n+9) {
-                            margin-bottom: px(24);
-                        }
-
-                        &:nth-last-child(-n+6) {
-                            margin-bottom: px(22);
-                        }
-
-                        &:nth-last-child(-n+3) {
-                            margin-bottom: px(24);
-                        }
                     }
                 }
             }
@@ -80,16 +68,6 @@
                             font-size: px(28);
 
                         }
-                    }
-                }
-
-                &:nth-last-child(2) {
-                    margin-bottom: px(126);
-                }
-
-                &:last-child {
-                    ul {
-                        padding-left: px(30);
                     }
                 }
             }
@@ -120,24 +98,6 @@
                             bottom: px(10);
                             left: px(108);
                         }
-                    }
-                }
-
-                &:nth-last-child(2) {
-                    margin-bottom: px(126);
-
-                    h2 {
-                        margin-bottom: px(34);
-                    }
-
-                    ul {
-                        padding-left: px(30);
-                    }
-                }
-
-                &:last-child {
-                    ul {
-                        padding-left: px(36);
                     }
                 }
             }
