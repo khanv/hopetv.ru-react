@@ -63,7 +63,10 @@ export default function Timeline(props) {
                                 <span className={ Styles.label }></span>
                             </div>
                             { [
-                                BreakPoints.desktop.name
+                                BreakPoints.desktop.name,
+                                BreakPoints.desktopWide.name,
+                                BreakPoints.desktopHD.name,
+                                BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>Богослужение в храме</p>
                             ) : null }
@@ -78,7 +81,10 @@ export default function Timeline(props) {
                                 <span className={ Styles.time }>12:40</span>
                             </div>
                             { [
-                                BreakPoints.desktop.name
+                                BreakPoints.desktop.name,
+                                BreakPoints.desktopWide.name,
+                                BreakPoints.desktopHD.name,
+                                BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>В центре внимания</p>
                             ) : null }
@@ -94,7 +100,10 @@ export default function Timeline(props) {
                                 <span className={ Styles.label }>live</span>
                             </div>
                             { [
-                                BreakPoints.desktop.name
+                                BreakPoints.desktop.name,
+                                BreakPoints.desktopWide.name,
+                                BreakPoints.desktopHD.name,
+                                BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>Богослужение в храме на</p>
                             ) : null }
@@ -109,7 +118,10 @@ export default function Timeline(props) {
                                 <span className={ Styles.time }>14:00</span>
                             </div>
                             { [
-                                BreakPoints.desktop.name
+                                BreakPoints.desktop.name,
+                                BreakPoints.desktopWide.name,
+                                BreakPoints.desktopHD.name,
+                                BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>В центре внимания</p>
                             ) : null }
@@ -124,7 +136,10 @@ export default function Timeline(props) {
                                 <span className={ Styles.time }>15:20</span>
                             </div>
                             { [
-                                BreakPoints.desktop.name
+                                BreakPoints.desktop.name,
+                                BreakPoints.desktopWide.name,
+                                BreakPoints.desktopHD.name,
+                                BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>Вечер молитвы</p>
                             ) : null }
@@ -139,7 +154,10 @@ export default function Timeline(props) {
                                 <span className={ Styles.time }>15:35</span>
                             </div>
                             { [
-                                BreakPoints.desktop.name
+                                BreakPoints.desktop.name,
+                                BreakPoints.desktopWide.name,
+                                BreakPoints.desktopHD.name,
+                                BreakPoints.desktopMega.name
                             ].indexOf(mediaType) !== -1 ? (
                                 <p className={ Styles.title }>Богослужение в храме</p>
                             ) : null }
