@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { PageHead, Timeline, Breadcrumbs } from 'components/Shared';
 import { Why, Banner, WorldNetwork, IconInfo, Buttons } from 'components/About';
-import { Shows } from 'components/Footer';
+import { Shows, Form } from 'components/Footer';
 
 /* eslint-disable react/prefer-stateless-function */
 @translate(['About'])
@@ -56,6 +56,9 @@ export default class About extends Component {
                 />
                 <Buttons/>
                 <Shows
+                    mediaType={ browser.mediaType }
+                />
+                <Form
                     mediaType={ browser.mediaType }
                 />
             </section>

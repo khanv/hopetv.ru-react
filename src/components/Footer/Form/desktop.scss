@@ -1,0 +1,82 @@
+& {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: px(62) px(118) px(62) px(120);
+    background-color: $color2;
+    color: $color4;
+
+    header {
+        flex: 1 100%;
+        margin-bottom: px(100);
+
+        h1 {
+            position: relative;
+            color: $color6;
+            font-size: px(44);
+            text-align: center;
+
+            &::after {
+                display: block;
+                position: absolute;
+                top: px(84);
+                left: 50%;
+                width: px(50);
+                height: px(6);
+                margin-left: px(-25);
+                background-color: $color1;
+                content: '';
+            }
+        }
+
+    }
+
+    .name {
+        flex: 1 auto;
+        margin-right: px(54);
+        padding: px(14) px(20) px(20) px(24);
+        border: 1px solid $color3;
+        border-radius: 4px;
+        font-size: px(32);
+    }
+
+    .email {
+        flex: 1 auto;
+        padding: px(14) px(20) px(20) px(24);
+        border: 1px solid $color3;
+        border-radius: 4px;
+        font-size: px(32);
+    }
+
+    textarea {
+        flex: 1 100%;
+        height: px(320);
+        margin-top: px(52);
+        padding: px(18) px(18) px(20) px(22);
+        border: 1px solid $color3;
+        border-radius: 4px;
+        font-size: px(32);
+    }
+
+    a {
+        width: px(400);
+        height: px(80);
+        margin-top: px(52);
+        padding: px(20) 0 0 px(60);
+        transition: background-image $transitionDuration, background-color $transitionDuration, color $transitionDuration;
+        border: 1px solid $color5;
+        border-radius: 4px;
+        background: url($componentRoot + 'letter-bg.svg') no-repeat px(24) center;
+        background-size: px(48);
+        color: $color5;
+        font-size: px(32);
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $color5;
+            background-image: url($componentRoot + 'letterHover-bg.svg');
+            color: $color2;
+        }
+    }
+}
