@@ -39,7 +39,11 @@ export default function Navigation(props) {
         <section className={ Styles.networks }>
             { [
                 BreakPoints.tabletPortrait.name,
-                BreakPoints.tabletLandscape.name
+                BreakPoints.tabletLandscape.name,
+                BreakPoints.desktop.name,
+                BreakPoints.desktopHD.name,
+                BreakPoints.desktopMega.name,
+                BreakPoints.desktopWide.name
             ].indexOf(mediaType) !== -1 ? (
                 <h1>Соц. сети</h1>
             ) : null }
@@ -70,7 +74,11 @@ export default function Navigation(props) {
             </div>
             { [
                 BreakPoints.tabletPortrait.name,
-                BreakPoints.tabletLandscape.name
+                BreakPoints.tabletLandscape.name,
+                BreakPoints.desktop.name,
+                BreakPoints.desktopHD.name,
+                BreakPoints.desktopMega.name,
+                BreakPoints.desktopWide.name
             ].indexOf(mediaType) !== -1 ? (
                 <a href="#"><InlineSvg className={ Styles.arrow } content={ Top }/></a>
             ) : null }
@@ -96,7 +104,11 @@ export default function Navigation(props) {
                         { [
                             BreakPoints.phoneLandscape.name,
                             BreakPoints.tabletPortrait.name,
-                            BreakPoints.tabletLandscape.name
+                            BreakPoints.tabletLandscape.name,
+                            BreakPoints.desktop.name,
+                            BreakPoints.desktopHD.name,
+                            BreakPoints.desktopMega.name,
+                            BreakPoints.desktopWide.name
                         ].indexOf(mediaType) !== -1 ? (
                             info
                         ) : null }
@@ -112,7 +124,11 @@ export default function Navigation(props) {
                         { [
                             BreakPoints.phonePortrait.name,
                             BreakPoints.tabletPortrait.name,
-                            BreakPoints.tabletLandscape.name
+                            BreakPoints.tabletLandscape.name,
+                            BreakPoints.desktop.name,
+                            BreakPoints.desktopHD.name,
+                            BreakPoints.desktopMega.name,
+                            BreakPoints.desktopWide.name
                         ].indexOf(mediaType) !== -1 ? (
                             networks
                         ) : null }
@@ -125,14 +141,22 @@ export default function Navigation(props) {
                         { [
                             BreakPoints.phoneLandscape.name,
                             BreakPoints.tabletPortrait.name,
-                            BreakPoints.tabletLandscape.name
+                            BreakPoints.tabletLandscape.name,
+                            BreakPoints.desktop.name,
+                            BreakPoints.desktopHD.name,
+                            BreakPoints.desktopMega.name,
+                            BreakPoints.desktopWide.name
                         ].indexOf(mediaType) !== -1 ? (
                             rights
                         ) : null }
 
                         { [
                             BreakPoints.tabletPortrait.name,
-                            BreakPoints.tabletLandscape.name
+                            BreakPoints.tabletLandscape.name,
+                            BreakPoints.desktop.name,
+                            BreakPoints.desktopHD.name,
+                            BreakPoints.desktopMega.name,
+                            BreakPoints.desktopWide.name
                         ].indexOf(mediaType) !== -1 ? (
                             copyright
                         ) : null }
