@@ -39,8 +39,17 @@
         width: px(380);
         margin-top: px(56);
         padding-left: px(68);
-        background-position: px(16);
-        background-size: px(70) px(40);
         font-size: px(30);
+
+        span {
+            top: px(18);
+            left: px(24);
+
+            i {
+                svg {
+                    width: px(54);
+                }
+            }
+        }
     }
 }

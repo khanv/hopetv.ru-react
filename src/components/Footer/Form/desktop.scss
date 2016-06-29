@@ -37,7 +37,13 @@
         padding: px(14) px(20) px(20) px(24);
         border: 1px solid $color3;
         border-radius: 4px;
+        outline: none;
+        color: $color6;
         font-size: px(32);
+
+        &:focus {
+            box-shadow: 0 0 0 1px $color3;
+        }
     }
 
     .email {
@@ -45,7 +51,13 @@
         padding: px(14) px(20) px(20) px(24);
         border: 1px solid $color3;
         border-radius: 4px;
+        outline: none;
+        color: $color6;
         font-size: px(32);
+
+        &:focus {
+            box-shadow: 0 0 0 1px $color3;
+        }
     }
 
     textarea {
@@ -55,28 +67,59 @@
         padding: px(18) px(18) px(20) px(22);
         border: 1px solid $color3;
         border-radius: 4px;
+        outline: none;
+        color: $color6;
         font-size: px(32);
+
+        &:focus {
+            box-shadow: 0 0 0 1px $color3;
+        }
     }
 
     a {
+        position: relative;
         width: px(400);
         height: px(80);
         margin-top: px(52);
         padding: px(20) 0 0 px(60);
-        transition: background-image $transitionDuration, background-color $transitionDuration, color $transitionDuration;
+        transition: background-color $transitionDuration, color $transitionDuration;
         border: 1px solid $color5;
         border-radius: 4px;
-        background: url($componentRoot + 'letter-bg.svg') no-repeat px(24) center;
-        background-size: px(48);
         color: $color5;
         font-size: px(32);
         text-align: center;
         text-decoration: none;
 
+        span {
+            position: absolute;
+            top: px(20);
+            left: px(24);
+
+            i {
+                svg {
+                    width: px(46);
+
+                    path {
+                        transition: fill $transitionDuration;
+                        fill: $color5;
+                    }
+                }
+            }
+        }
+
         &:hover {
             background-color: $color5;
-            background-image: url($componentRoot + 'letterHover-bg.svg');
             color: $color2;
+
+            span {
+                i {
+                    svg {
+                        path {
+                            fill: $color2;
+                        }
+                    }
+                }
+            }
         }
     }
 }

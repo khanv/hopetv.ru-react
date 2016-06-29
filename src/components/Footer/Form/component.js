@@ -1,6 +1,9 @@
 import React, { PropTypes } from 'react';
 import Styles from './main.scss';
 import BreakPoints from 'components/PixelPerfect/breakpoints';
+import InlineSvg from 'components/InlineSvg/component';
+
+import SvgLetter from 'components/Footer/Form/Assets/letter.svg';
 
 export default function Form(props) {
     const { mediaType } = props;
@@ -18,9 +21,9 @@ export default function Form(props) {
                 <h1>Контакт Центр «Надія»</h1>
             </header>
             <input type="text" className={ Styles.name } placeholder="Miroslav"/>
-            <input type="email" className={ Styles.email }placeholder="Ваш E-MAIL:"/>
+            <input type="email" className={ Styles.email } placeholder="Ваш E-MAIL:"/>
             <textarea placeholder="Текст сообщения..."></textarea>
-            <a href="#">Отправить письмо</a>
+            <a href="#"><span><InlineSvg content={ SvgLetter }/></span>Отправить письмо</a>
         </section>
     );
 }
