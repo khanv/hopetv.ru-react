@@ -1,0 +1,205 @@
+& {
+    width: 100%;
+    background-color: $color1;
+
+    .mainContent {
+        display: flex;
+        position: relative;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: px(74) px(78) 0 px(80);
+
+        section {
+            h1 {
+                margin-bottom: px(32);
+                color: $color2;
+                font-size: px(32);
+            }
+
+            ul {
+                li {
+                    padding-bottom: px(16);
+                }
+            }
+
+            a {
+                transition: color $transitionDuration;
+                color: $color2;
+                font-size: px(26);
+                text-decoration: none;
+
+                &:hover {
+                    color: $color11;
+                }
+            }
+
+            div {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .menu {
+            margin-left: px(82);
+        }
+
+        .information {
+            margin-left: px(4);
+        }
+
+        .networks {
+            margin-right: px(48);
+            margin-left: px(98);
+
+            h1 {
+                margin-bottom: px(38);
+            }
+
+            i {
+                width: px(48);
+            }
+
+            div {
+                display: flex;
+
+                a {
+                    margin-right: px(32);
+                }
+
+                .twitterIcon {
+                    order: 1;
+
+                    i {
+                        path {
+                            fill: $color3;
+                        }
+                    }
+                }
+
+                .facebookIcon {
+                    order: 2;
+
+                    i {
+                        path {
+                            fill: $color4;
+                        }
+                    }
+                }
+
+                .okIcon {
+                    order: 3;
+
+                    i {
+                        path {
+                            fill: $color5;
+                        }
+                    }
+                }
+
+                .youtubeIcon {
+                    order: 4;
+
+                    i {
+                        path,
+                        polygon {
+                            fill: $color6;
+                        }
+                    }
+                }
+
+                .vkIcon {
+                    order: 5;
+
+                    i {
+                        width: px(46);
+
+                        path {
+                            fill: $color7;
+                        }
+                    }
+                }
+
+                .instagramIcon {
+                    order: 6;
+
+                    i {
+                        path {
+                            fill: $color8;
+                        }
+                    }
+                }
+            }
+        }
+        // END networks
+
+        .phoneNumber {
+            position: absolute;
+            top: px(280);
+            right: px(882);
+
+            h1 {
+                margin-bottom: px(12);
+            }
+
+            span {
+                font-size: px(26);
+            }
+        }
+
+        .rights {
+            position: absolute;
+            top: px(260);
+            right: px(168);
+
+            h1 {
+                margin-bottom: px(38);
+            }
+
+            span {
+                display: block;
+                font-size: px(26);
+
+                &::after {
+                    position: relative;
+                    left: px(10);
+                    font-family: Arial, sans-serif;
+                    content: '→';
+                }
+            }
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            width: 100vw;
+            margin-top: px(78);
+            margin-bottom: px(56);
+
+            p {
+                margin-top: px(6);
+                margin-bottom: px(-2);
+                font-size: px(26);
+            }
+
+            span {
+                padding-left: px(38);
+                color: $color10;
+                font-size: px(22);
+            }
+
+            .arrow {
+                width: px(80);
+
+                path {
+                    fill: $color9;
+                }
+            }
+        }
+        // END footer
+    }
+
+    .additionalContent {
+        display: none;
+    }
+}

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { PageHead, Breadcrumbs } from 'components/Shared';
 import { Why, Banner, WorldNetwork, IconInfo, Buttons } from 'components/About';
+import { Navigation } from 'components/Footer';
 
 /* eslint-disable react/prefer-stateless-function */
 @translate(['About'])
@@ -29,6 +30,9 @@ export default class About extends Component {
 
         return (
             <section>
+                <Navigation
+                    mediaType={ browser.mediaType }
+                />
                 <Breadcrumbs
                     mediaType={ browser.mediaType }
                 />

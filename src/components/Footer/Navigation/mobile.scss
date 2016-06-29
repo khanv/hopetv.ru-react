@@ -1,0 +1,202 @@
+& {
+    width: 100%;
+
+    .mainContent {
+        display: flex;
+        position: relative;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: px(70) px(46) 0 px(40);
+        background-color: $color12;
+    }
+
+    .additionalContent {
+        display: flex;
+        position: relative;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: px(58) px(80) px(62) px(58);
+        background-color: $color1;
+    }
+
+    section {
+        h1 {
+            margin-bottom: px(28);
+            color: $color2;
+            font-size: px(30);
+        }
+
+        ul {
+            li {
+                padding-bottom: px(16);
+            }
+        }
+
+        a {
+            transition: color $transitionDuration;
+            color: $color2;
+            font-size: px(24);
+            text-decoration: none;
+
+            &:active {
+                color: $color11;
+            }
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .menu {
+        margin-left: px(18);
+    }
+
+    .information {
+        h1 {
+            margin-bottom: px(26);
+        }
+
+        ul {
+            li {
+                padding-bottom: px(14);
+            }
+        }
+    }
+
+    .connection {
+        margin-right: px(38);
+    }
+
+    .networks {
+        width: 100%;
+        margin-top: px(38);
+        margin-bottom: px(44);
+
+        i {
+            width: px(60);
+        }
+
+        div {
+            display: flex;
+
+            .twitterIcon {
+                order: 3;
+
+                i {
+                    path {
+                        fill: $color3;
+                    }
+                }
+            }
+
+            .facebookIcon {
+                order: 5;
+
+                i {
+                    path {
+                        fill: $color4;
+                    }
+                }
+            }
+
+            .okIcon {
+                order: 6;
+
+                i {
+                    path {
+                        fill: $color5;
+                    }
+                }
+            }
+
+            .youtubeIcon {
+                order: 1;
+
+                i {
+                    path,
+                    polygon {
+                        fill: $color6;
+                    }
+                }
+            }
+
+            .vkIcon {
+                order: 4;
+
+                i {
+                    path {
+                        fill: $color7;
+                    }
+                }
+            }
+
+            .instagramIcon {
+                order: 2;
+
+                i {
+                    path {
+                        fill: $color8;
+                    }
+                }
+            }
+        }
+    }
+    // END networks
+
+    .phoneNumber {
+        position: absolute;
+        top: px(282);
+        left: px(318);
+
+        h1 {
+            margin-bottom: px(8);
+        }
+
+        span {
+            font-size: px(24);
+        }
+    }
+
+    .rights {
+        width: px(242);
+
+        h1 {
+            margin-bottom: px(34);
+        }
+
+        span {
+            display: block;
+            font-size: px(26);
+
+            &::after {
+                position: relative;
+                top: px(2);
+                left: px(6);
+                font-family: Arial, sans-serif;
+                content: '→';
+            }
+        }
+    }
+
+    footer {
+        position: absolute;
+        top: px(212);
+        left: px(320);
+        width: px(254);
+
+        p {
+            margin-bottom: px(-6);
+            font-size: px(20);
+            line-height: px(24);
+        }
+
+        span {
+            color: $color10;
+            font-size: px(18);
+        }
+    }
+}
