@@ -1,0 +1,116 @@
+@import '../desktop';
+
+& {
+    .mainContent {
+        padding: px(72) px(50) 0 px(48);
+
+        section {
+            h1 {
+                margin-bottom: px(30);
+                font-size: px(30);
+            }
+
+            ul {
+                li {
+                    padding-bottom: px(12);
+                }
+            }
+
+            a {
+                font-size: px(24);
+            }
+        }
+
+        .menu {
+            margin-left: px(52);
+        }
+
+        .information {
+            margin-left: px(-8);
+        }
+
+        .networks {
+            margin: 0 px(-34) 0 0;
+
+            h1 {
+                margin-bottom: px(32);
+            }
+
+            div {
+                display: flex;
+
+                a {
+                    margin-right: px(30);
+
+                    i {
+                        width: px(50);
+                    }
+                }
+
+                .twitterIcon {
+                    order: 1;
+                }
+
+                .facebookIcon {
+                    order: 3;
+                }
+
+                .okIcon {
+                    order: 4;
+                }
+
+                .youtubeIcon {
+                    order: 5;
+                }
+
+                .vkIcon {
+                    order: 2;
+
+                    i {
+                        width: px(50);
+                    }
+                }
+
+                .instagramIcon {
+                    order: 6;
+                }
+            }
+        }
+
+        .phoneNumber {
+            top: px(274);
+            right: px(612);
+
+            h1 {
+                margin-bottom: px(4);
+            }
+
+            span {
+                font-size: px(24);
+            }
+        }
+
+        .rights {
+            top: px(250);
+            right: px(92);
+
+            h1 {
+                margin-bottom: px(36);
+            }
+        }
+
+        footer {
+            margin-top: px(80);
+
+            p {
+                margin-top: px(14);
+                margin-bottom: 0;
+                font-size: px(24);
+            }
+
+            span {
+                padding-left: px(30);
+            }
+        }
+    }
+}

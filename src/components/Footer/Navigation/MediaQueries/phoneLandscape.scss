@@ -1,0 +1,43 @@
+@import '../mobile';
+
+& {
+    .mainContent {
+        padding: px(72) px(60) px(56) px(58);
+    }
+
+    .additionalContent {
+        align-items: center;
+        padding: px(36) px(60);
+    }
+
+    .menu {
+        margin: 0;
+    }
+
+    .connection {
+        margin: 0 px(24);
+    }
+
+    .networks {
+        width: px(555);
+        margin: 0;
+    }
+
+    .phoneNumber {
+        top: px(284);
+        left: px(584);
+    }
+
+    .rights {
+        width: px(166);
+
+        h1 {
+            margin-top: px(2);
+        }
+    }
+
+    footer {
+        position: static;
+        margin-top: px(2);
+    }
+}
