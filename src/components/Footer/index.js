@@ -1,1 +1,1 @@
-export Navigation from './Navigation/component.tpl';
+export Navigation from './Navigation/component';
