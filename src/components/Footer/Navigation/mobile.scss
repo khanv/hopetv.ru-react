@@ -184,7 +184,7 @@
 
     footer {
         position: absolute;
-        top: px(212);
+        top: px(210);
         left: px(320);
         width: px(254);
 
@@ -192,6 +192,11 @@
             margin-bottom: px(-6);
             font-size: px(20);
             line-height: px(24);
+
+            span {
+                font-weight: bold;
+                color: $color2;
+            }
         }
 
         span {

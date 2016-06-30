@@ -60,8 +60,8 @@ export default function Navigation(props) {
     const copyright = (
         <footer>
             <div>
-                <p><strong>&copy; &shy; 2009-2016</strong> Телеканал <strong>«Надія»</strong>. Всі
-                права захищені.</p>
+                <p><strong><span>&copy;</span> 2009-2016</strong> Телеканал
+                    <strong> «Надія»</strong>. Всі права захищені.</p>
                 <span>Дизайн: Мирослав Джулай</span>
             </div>
             { [
@@ -153,29 +153,34 @@ export default function Navigation(props) {
                     ) : null }
                 </div>
 
-                <div className={ Styles.additionalContent }>
-                    { [
-                        BreakPoints.phonePortrait.name
-                    ].indexOf(mediaType) !== -1 ? (
-                        info
-                    ) : null }
-                    { [
-                        BreakPoints.phonePortrait.name
-                    ].indexOf(mediaType) !== -1 ? (
-                        rights
-                    ) : null }
-                    { [
-                        BreakPoints.phonePortrait.name,
-                        BreakPoints.phoneLandscape.name
-                    ].indexOf(mediaType) !== -1 ? (
-                        copyright
-                    ) : null }
-                    { [
-                        BreakPoints.phoneLandscape.name
-                    ].indexOf(mediaType) !== -1 ? (
-                        networks
-                    ) : null }
-                </div>
+                { [
+                    BreakPoints.phonePortrait.name,
+                    BreakPoints.phoneLandscape.name
+                ].indexOf(mediaType) !== -1 ? (
+                    <div className={ Styles.additionalContent }>
+                        { [
+                            BreakPoints.phonePortrait.name
+                        ].indexOf(mediaType) !== -1 ? (
+                            info
+                        ) : null }
+                        { [
+                            BreakPoints.phonePortrait.name
+                        ].indexOf(mediaType) !== -1 ? (
+                            rights
+                        ) : null }
+                        { [
+                            BreakPoints.phonePortrait.name,
+                            BreakPoints.phoneLandscape.name
+                        ].indexOf(mediaType) !== -1 ? (
+                            copyright
+                        ) : null }
+                        { [
+                            BreakPoints.phoneLandscape.name
+                        ].indexOf(mediaType) !== -1 ? (
+                            networks
+                        ) : null }
+                    </div>
+                ) : null }
             </div>
         </section>
     );

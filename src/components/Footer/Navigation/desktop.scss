@@ -180,6 +180,13 @@
                 margin-top: px(6);
                 margin-bottom: px(-2);
                 font-size: px(26);
+
+                span {
+                    font-size: px(26);
+                    font-weight: bold;
+                    color: $color2;
+                    padding: 0 px(6) 0 0;
+                }
             }
 
             span {
@@ -197,9 +204,5 @@
             }
         }
         // END footer
-    }
-
-    .additionalContent {
-        display: none;
     }
 }
