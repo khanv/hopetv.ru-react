@@ -13,3 +13,4 @@ export * as About from './About';
 export * as Shared from './Shared';
 export * as Shared from './Shared';
 export * as Footer from './Footer';
+export * as Footer from './Footer';

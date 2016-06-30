@@ -1,0 +1,53 @@
+@import '../desktop';
+
+& {
+    padding: px(84) px(100);
+
+    header {
+        margin-bottom: px(104);
+
+        h1 {
+
+            &::after {
+                top: px(86);
+                width: px(40);
+                margin-left: px(-22);
+            }
+        }
+    }
+
+    .name {
+        padding-left: px(20);
+        font-size: px(30);
+
+    }
+
+    .email {
+        padding-top: px(18);
+        padding-right: px(18);
+        font-size: px(30);
+    }
+
+    textarea {
+        height: px(258);
+        margin-top: px(56);
+        padding-top: px(20);
+        font-size: px(30);
+    }
+
+    a {
+        width: px(380);
+        margin-top: px(56);
+        padding-left: px(68);
+        font-size: px(30);
+
+        i {
+            top: px(18);
+            left: px(24);
+
+            svg {
+                width: px(54);
+            }
+        }
+    }
+}
