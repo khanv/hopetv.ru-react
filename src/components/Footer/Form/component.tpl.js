@@ -30,7 +30,7 @@ export default function Form(props) {
                 <input type="text" className={ Styles.name } placeholder="Miroslav"/>
                 <input type="email" className={ Styles.email } placeholder="Ваш E-MAIL:"/>
                 <textarea placeholder="Текст сообщения..."></textarea>
-                <a href="#"><span><InlineSvg content={ SvgLetter }/></span>Отправить письмо</a>
+                <a href="#"><InlineSvg content={ SvgLetter }/>Отправить письмо</a>
             </section>
         </PixelPerfect>
     );

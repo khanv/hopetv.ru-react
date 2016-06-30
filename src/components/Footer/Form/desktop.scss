@@ -90,20 +90,18 @@
         text-align: center;
         text-decoration: none;
 
-        span {
+        i {
             position: absolute;
             top: px(20);
             left: px(24);
 
-            i {
-                svg {
-                    width: px(46);
+            svg {
+                width: px(46);
 
-                    path {
-                        transition: fill $transitionDuration;
-                        fill: $color5;
+                path {
+                    transition: fill $transitionDuration;
+                    fill: $color5;
                     }
-                }
             }
         }
 
@@ -111,15 +109,14 @@
             background-color: $color5;
             color: $color2;
 
-            span {
-                i {
-                    svg {
-                        path {
-                            fill: $color2;
-                        }
+            i {
+                svg {
+                    path {
+                        fill: $color2;
                     }
                 }
             }
+
         }
     }
 }

@@ -20,10 +20,10 @@ export default function Form(props) {
             <header>
                 <h1>Контакт Центр «Надія»</h1>
             </header>
-            <input type="text" className={ Styles.name } placeholder="Miroslav"/>
+            <input type="text" className={ Styles.name } placeholder="Ваше имя"/>
             <input type="email" className={ Styles.email } placeholder="Ваш E-MAIL:"/>
             <textarea placeholder="Текст сообщения..."></textarea>
-            <a href="#"><span><InlineSvg content={ SvgLetter }/></span>Отправить письмо</a>
+            <a href="#"><InlineSvg content={ SvgLetter }/>Отправить письмо</a>
         </section>
     );
 }
