@@ -107,6 +107,13 @@
         .mail {
             margin-top: px(10);
 
+            .text {
+                text-align: center;
+                width: px(600);
+                font-style: italic;
+                margin: px(16) 0;
+            }
+
             .row {
                 margin-top: px(4);
                 margin-right: 0;
@@ -137,6 +144,12 @@
                     font-size: px(28);
                     line-height: px(36);
                 }
+            }
+
+            p {
+                margin-top: px(0);
+                font-size: px(28);
+                line-height: px(36);
             }
         }
     }
@@ -243,6 +256,7 @@
             .item {
                 margin-top: px(68);
                 margin-bottom: px(4);
+                text-decoration: none;
 
                 i {
                     width: px(88);

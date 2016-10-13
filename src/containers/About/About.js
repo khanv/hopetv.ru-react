@@ -1,9 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
-import { PageHead, Timeline, Breadcrumbs } from 'components/Shared';
-import { Why, Banner, WorldNetwork, IconInfo, Buttons } from 'components/About';
-import { Navigation, Shows, Form } from 'components/Footer';
+import { PageHead } from 'components/Shared';
+import { Why, Banner, WorldNetwork } from 'components/About';
 
 /* eslint-disable react/prefer-stateless-function */
 @translate(['About'])
@@ -30,15 +29,6 @@ export default class About extends Component {
 
         return (
             <section>
-                <Timeline
-                    mediaType={ browser.mediaType }
-                />
-                <Navigation
-                    mediaType={ browser.mediaType }
-                />
-                <Breadcrumbs
-                    mediaType={ browser.mediaType }
-                />
                 <PageHead
                     title={ t('headTitle') }
                     description={ t('headDescription') }
@@ -52,16 +42,6 @@ export default class About extends Component {
                 <WorldNetwork
                     mediaType={ browser.mediaType }
                     t={ t }
-                />
-                <IconInfo
-                    mediaType={ browser.mediaType }
-                />
-                <Buttons/>
-                <Shows
-                    mediaType={ browser.mediaType }
-                />
-                <Form
-                    mediaType={ browser.mediaType }
                 />
             </section>
         );

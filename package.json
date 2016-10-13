@@ -1,9 +1,9 @@
 {
-  "name": "tv.hope.ua",
-  "description": "Tv.Hope.UA on React",
+  "name": "hopetv.ru",
+  "description": "HopeTV.RU on React",
   "author": "Sergey Sadovoi <sergey@hope.ua>",
   "version": "3.0.0-dev",
-  "homepage": "https://tv.hope.ua",
+  "homepage": "https://hopetv.ru",
   "repository": {
     "type": "git",
     "url": "https://github.com"
